@@ -1,0 +1,148 @@
+{
+  "campaign_id": "COMPATIBILITY_DROPSHIP_FINLAND_001",
+  "thesis_id": "COMPATIBILITY_DROPSHIP_002",
+  "title": "Finnish Heat Pump Controller Specialist",
+  "status": "EXPERIMENT",
+  "created": "2026-09-07",
+  "description": "Specialist store for heat pump controllers, remotes, and Wi-Fi modules in Finland. Photo/model identification → exact part → compatibility validation → dropship from cheapest supplier.",
+  
+  "market_intelligence": {
+    "finnish_heat_pump_market": {
+      "installed_base": "1.8 million",
+      "annual_growth": "63% in first half of year",
+      "replacement_pressure": "High (Right to Repair 7-10 years)",
+      "controller_failure_rate": "Moderate (electronics fail before compressors)",
+      "competitor_landscape": "Few good online sellers, existing merchants inadequately resolve controller selection"
+    },
+    "appliance_market": {
+      "uk_market_size": "£11.92 billion",
+      "repairable_market": "USD 156.6 billion globally",
+      "right_to_repair": "Manufacturers must hold parts 7-10 years",
+      "online_share": "48.5%"
+    },
+    "finnish_specific": {
+      "language": "Finnish",
+      "currency": "EUR",
+      "payment_methods": ["MobilePay", "Online banking", "Credit card"],
+      "shipping": "Posti, Matkahuolto",
+      "popular_brands": ["Daikin", "Panasonic", "Mitsubishi Electric", "NIBE", "Viessmann"]
+    }
+  },
+
+  "architecture": {
+    "customer_flow": [
+      "Customer takes photo of broken controller",
+      "System identifies: brand, model, generation, component",
+      "Checks compatibility graph",
+      "Shows: 'Yes — this is Daikin BRC1E52. Compatible with S/M series. EUR 189.'",
+      "One-click buy via Shopify",
+      "Dropship from EU distributor"
+    ],
+    "supplier_normalization": {
+      "problem": "Suppliers have: warehouse, purchasing relationships, stock. They're terrible at: titles, images, structured compatibility, model mappings, supersessions.",
+      "solution": "We fix the bad half. Margin = compensation for solving information entropy."
+    }
+  },
+
+  "product_catalog": {
+    "categories": [
+      {
+        "name": "Heat Pump Controllers",
+        "brands": ["Daikin", "Panasonic", "Mitsubishi Electric", "NIBE", "Viessmann"],
+        "price_range": "EUR 100-500",
+        "margin": "30-40%",
+        "compatibility_complexity": "High"
+      },
+      {
+        "name": "Wi-Fi Modules",
+        "brands": ["Daikin", "Panasonic", "Mitsubishi Electric"],
+        "price_range": "EUR 50-200",
+        "margin": "25-35%",
+        "compatibility_complexity": "Medium"
+      },
+      {
+        "name": "Remote Controls",
+        "brands": ["Daikin", "Panasonic", "Mitsubishi Electric"],
+        "price_range": "EUR 30-150",
+        "margin": "30-40%",
+        "compatibility_complexity": "High"
+      },
+      {
+        "name": "Sensors & Thermostats",
+        "brands": ["Daikin", "Panasonic", "Mitsubishi Electric"],
+        "price_range": "EUR 20-100",
+        "margin": "35-45%",
+        "compatibility_complexity": "Medium"
+      }
+    ],
+    "initial_sku_count": "100-200"
+  },
+
+  "unit_economics": {
+    "average_order_value": "EUR 200",
+    "margin_percent": "30%",
+    "gross_profit": "EUR 60",
+    "ai_cost_per_order": "EUR 2",
+    "shipping_cost": "EUR 10-20",
+    "payment_processing": "2.7%",
+    "net_per_order": "EUR 40-50",
+    "break_even_orders_per_month": "50"
+  },
+
+  "campaign_plan": {
+    "phase_1": {
+      "name": "Build Catalog",
+      "duration": "Weeks 1-4",
+      "actions": [
+        "Research top 20 heat pump models in Finland",
+        "Map controller compatibility for each model",
+        "Identify EU distributors (DistriHUB, ELKO Group)",
+        "Build product pages with compatibility evidence",
+        "Create Finnish-language SEO content"
+      ],
+      "success_metric": "100 products listed with compatibility data"
+    },
+    "phase_2": {
+      "name": "Generate Traffic",
+      "duration": "Weeks 5-8",
+      "actions": [
+        "SEO: 'Daikin ohjauspaneeli hinta' (Daikin controller price)",
+        "Google Shopping campaigns",
+        "Content: 'How to identify your heat pump controller'",
+        "Photo identification tool on website"
+      ],
+      "success_metric": "100 free listing impressions/day"
+    },
+    "phase_3": {
+      "name": "Convert & Fulfill",
+      "duration": "Weeks 9-12",
+      "actions": [
+        "Optimize checkout flow",
+        "Set up DistriHUB dropship integration",
+        "Implement compatibility validation",
+        "Track returns and customer satisfaction"
+      ],
+      "success_metric": "50 orders/month"
+    }
+  },
+
+  "distribution_channels": [
+    "Google free listings",
+    "Google Shopping (paid, EUR 10/day)",
+    "SEO content in Finnish",
+    "DistriHUB (400+ brands, no MOQ)",
+    "ELKO Group (Nordic distributor)",
+    "Prisjakt.fi (price comparison)"
+  ],
+
+  "success_metrics": {
+    "products_listed": "100-200",
+    "orders_month_3": "50",
+    "revenue_month_3": "EUR 10,000",
+    "profit_month_3": "EUR 2,000",
+    "return_rate": "<5%",
+    "delivery_time": "<5 days"
+  },
+
+  "moat": "Visual Compatibility Graph — 21 indexed views, 4 label variants, 3 historical generations, connector close-up, dimension diagram, installed photo, old-part photo, replacement comparison, supersession mapping."
+}

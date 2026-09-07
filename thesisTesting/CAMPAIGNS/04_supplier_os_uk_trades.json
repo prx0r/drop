@@ -1,0 +1,153 @@
+{
+  "campaign_id": "SUPPLIER_OS_UK_TRADES_001",
+  "thesis_id": "SUPPLIER_OS_004",
+  "title": "AI Receptionist for UK Trades — Nottingham Pilot",
+  "status": "EXPERIMENT",
+  "created": "2026-09-07",
+  "description": "Free AI receptionist for contractors. Voice/SMS/WhatsApp/Web chat. Qualify leads, check availability, draft quotes, book appointments. We get: proprietary supply data. Monetize: procurement affiliate, financing, payments.",
+  
+  "market_intelligence": {
+    "ai_receptionist_market": {
+      "price_range": "£25-£2,000/month",
+      "typical_cost": "£149-£399/month",
+      "key_providers": ["Moneypenny", "IONOS", "RingCentral AIR", "AI Workforce", "VoxHive"],
+      "ionos_pricing": {
+        "basic": "£39/month (30 calls, then £0.49/call)",
+        "standard": "£69/month",
+        "premium": "£99/month"
+      },
+      "custom_build_cost": "£2,500-£4,000 one-off + £200-£400/month",
+      "human_receptionist_cost": "£22,000+/year"
+    },
+    "probook": {
+      "funding": "$40M from a16z and Sequoia",
+      "daily_interactions": "58,000+",
+      "automation_rate": "82% handled end-to-end",
+      "dispatch_focus": true,
+      "positioning": "AI Operating System for Home Services"
+    },
+    "contractor_pain_points": [
+      "Missing calls while on job",
+      "Phone tag with customers",
+      "Manual scheduling",
+      "No-shows",
+      "Administrative overhead",
+      "5-10 hours/week unbillable admin"
+    ],
+    "uk_trade_market": {
+      "electrician_hourly_rate": "£40-£70",
+      "electrician_day_rate": "£250-£350",
+      "missed_call_rate": "30-50% of inbound leads",
+      "quote_follow_up_time": "Hours of unbillable time"
+    }
+  },
+
+  "architecture": {
+    "contractor_flow": [
+      "Contractor forwards missed calls to our number",
+      "System answers, qualifies the job, sends everything to WhatsApp",
+      "Can book work into free slots",
+      "Free trial - no learning curve"
+    ],
+    "customer_flow": [
+      "Customer calls/WhatsApp/web chat",
+      "AI receptionist qualifies: what, where, when, budget",
+      "Checks availability",
+      "Drafts quote",
+      "Books appointment",
+      "Sends confirmation"
+    ],
+    "data_captured": [
+      "service_area",
+      "acceptance_behaviour",
+      "actual_availability",
+      "price",
+      "job_types_accepted",
+      "equipment_supported",
+      "response_time",
+      "conversion",
+      "completion",
+      "cancellations",
+      "actual_invoice",
+      "duration",
+      "travel_time",
+      "customer_satisfaction"
+    ]
+  },
+
+  "revenue_layers": {
+    "platform_fee": {
+      "percent": "8-12%",
+      "average_job_value": "£1,100",
+      "platform_fee": "£88-£132",
+      "net_per_job": "£43-£87"
+    },
+    "parts_affiliate": {
+      "commission": "5-10%",
+      "average_parts_per_job": "£200",
+      "affiliate_fee": "£10-£20",
+      "monthly_per_contractor": "£25-£200"
+    },
+    "invoicing_payments": {
+      "invoice_fee": "£5-£10/invoice",
+      "payment_processing": "2.7%",
+      "monthly_per_contractor": "£100-£200"
+    }
+  },
+
+  "campaign_plan": {
+    "phase_1": {
+      "name": "Seed Contractors",
+      "duration": "Weeks 1-2",
+      "actions": [
+        "Identify 50 EV installers in Nottingham area",
+        "Outreach: 'Free AI receptionist for your missed calls'",
+        "Onboard 10 contractors with WhatsApp forwarding",
+        "Set up AI receptionist for each contractor"
+      ],
+      "success_metric": "10 contractors onboarded"
+    },
+    "phase_2": {
+      "name": "Capture Data",
+      "duration": "Weeks 3-6",
+      "actions": [
+        "Monitor AI receptionist performance",
+        "Capture: availability, pricing, job types, response times",
+        "Build contractor profiles",
+        "Identify patterns and optimization opportunities"
+      ],
+      "success_metric": "100 calls handled, 50 qualified leads"
+    },
+    "phase_3": {
+      "name": "Monetize",
+      "duration": "Weeks 7-12",
+      "actions": [
+        "Introduce platform fee for completed jobs",
+        "Add parts affiliate recommendations",
+        "Implement invoicing automation",
+        "Measure retention and revenue"
+      ],
+      "success_metric": "20 completed jobs/month, £1,600 revenue"
+    }
+  },
+
+  "distribution_channels": [
+    "Direct outreach to OZEV/MCS/Gas Safe registered installers",
+    "Google Search for customer acquisition",
+    "AI chatbot on website",
+    "Insurance partnerships",
+    "Grant processing partnerships"
+  ],
+
+  "success_metrics": {
+    "contractors_onboarded": "10",
+    "calls_handled_month_1": "100",
+    "qualified_leads": "50",
+    "completed_jobs_month_3": "20",
+    "platform_revenue_month_3": "£1,600",
+    "contractor_retention": "75-80%",
+    "data_captured": "Real-time availability, pricing, quality scores"
+  },
+
+  "moat": "If you save a contractor an hour of admin work per job, you create data that makes the platform indispensable. The contractor never leaves the app because the app knows when parts are low, handles their calendar, chases invoices, and builds their reputation."
+}
