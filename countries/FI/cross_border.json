@@ -1,0 +1,14 @@
+{
+  "country_code": "FI",
+  "source_countries": ["DE", "SE", "NL", "GB", "PL", "CZ", "CN"],
+  "major_marketplaces": ["hinta.fi", "tori.fi", "huuto.net", "amazon.de"],
+  "import_propensity": 0.80,
+  "shipping_expectations": {
+    "free_shipping": "expected for >50 EUR",
+    "delivery_days": "2-5 days standard",
+    "tracking": "required",
+    "locker": "preferred"
+  },
+  "cross_border_vat": "ioss_under_150eur",
+  "created_at": "2026-09-08T00:00:00Z"
+}
