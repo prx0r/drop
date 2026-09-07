@@ -110,5 +110,38 @@
         "error": "400 Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: probe_reports, message: Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 38a37d79-2785-4675-8ed8-7be50afa2269\n"
       }
     ]
+  },
+  "market_intelligence": {
+    "screwfix": {
+      "annual_sales_uk": "\u00a32.755 billion",
+      "sales_growth": "+4.5%",
+      "trade_customer_share": "75%",
+      "e_commerce_share": "59.4%",
+      "e_commerce_growth": "+5.2%",
+      "market_share_gains": true,
+      "stores": "900+",
+      "rewards_customers": "2.2 million"
+    },
+    "uk_electrical_wholesale": {
+      "market_size": "\u00a34.28 billion",
+      "annual_growth": "3-4%",
+      "independent_wholesalers_margin_pressure": "High from online sellers",
+      "stockholding_increase": "72.88% due to supply chain issues",
+      "pricing_volatility": "86.44% experienced severe volatility",
+      "manual_data_input_pain": "42% cite as biggest operational headache"
+    },
+    "trade_procurement_pain": [
+      "Identifying obscure parts",
+      "Calling wholesalers",
+      "Checking branch inventory",
+      "Finding compatible substitutes",
+      "Purchase-order admin",
+      "Reconciling receipts"
+    ],
+    "wholesale_market_structure": {
+      "major_players": "Edmundson Electrical, Rexel, CEF (70% market share)",
+      "independent_operators": "Regional, service flexibility, local trade relationships",
+      "key_challenges": "Rising business overheads, staffing shortages, margin pressure"
+    }
   }
 }

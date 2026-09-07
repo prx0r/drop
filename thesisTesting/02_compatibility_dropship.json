@@ -136,5 +136,35 @@
         "error": "400 Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: probe_reports, message: Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 27636c31-0340-4e97-91e9-c8c8737f6c75\n"
       }
     ]
+  },
+  "market_intelligence": {
+    "uk_appliance_market": {
+      "market_size_2026": "\u00a311.92 billion",
+      "projected_2035": "\u00a320.42 billion",
+      "cagr": "3.8%",
+      "online_share": "48.5%",
+      "online_growth": "4.06% CAGR"
+    },
+    "repairable_appliances": {
+      "global_market_size_2026": "USD 156.6 billion",
+      "projected_2036": "USD 272.1 billion",
+      "cagr": "5.7%",
+      "uk_cagr": "5.9%",
+      "online_channel_share": "48.5%"
+    },
+    "right_to_repair": {
+      "spare_parts_availability": "7-10 years",
+      "design_accessibility": "Modular, non-glued components",
+      "repairability_score": "0-10 at point of sale",
+      "green_taxes_below_6": true
+    },
+    "replacement_patterns": {
+      "consumer_behavior": "60% buy new only when old breaks",
+      "average_lifespan": "Up to 10 years",
+      "washing_machine_parts": "Drum assemblies, motor controllers, water inlet systems",
+      "dishwasher_parts": "Pump and seal failures generate moderate service revenue",
+      "refrigerator_parts": "Strongest growth segment"
+    },
+    "key_insight": "Right to Repair legislation is creating a structural shift from planned obsolescence to modular product ecosystems. Manufacturers must hold functional parts for 7-10 years."
   }
 }

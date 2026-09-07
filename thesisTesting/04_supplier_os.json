@@ -177,5 +177,61 @@
         "error": "400 Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: probe_reports, message: Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 70f6cab2-e958-4c35-a30d-779b7449f4b1\n"
       }
     ]
+  },
+  "market_intelligence": {
+    "ai_receptionist_market": {
+      "price_range": "\u00a325-\u00a32,000/month",
+      "typical_cost": "\u00a3149-\u00a3399/month",
+      "key_providers": [
+        "Moneypenny",
+        "IONOS",
+        "RingCentral AIR",
+        "AI Workforce",
+        "VoxHive"
+      ],
+      "ionos_pricing": {
+        "basic": "\u00a339/month (30 calls, then \u00a30.49/call)",
+        "standard": "\u00a369/month",
+        "premium": "\u00a399/month"
+      },
+      "custom_build_cost": "\u00a32,500-\u00a34,000 one-off + \u00a3200-\u00a3400/month",
+      "human_receptionist_cost": "\u00a322,000+/year"
+    },
+    "probook\u7ade\u4e89\u5bf9\u624b": {
+      "probook": {
+        "funding": "0M from a16z and Sequoia",
+        "daily_interactions": "58,000+",
+        "automation_rate": "82% handled end-to-end",
+        "dispatch_focus": true,
+        "positioning": "AI Operating System for Home Services"
+      },
+      "avoca": {
+        "funding": "25M raised",
+        "focus": "AI receptionist for home services",
+        "us_only": true
+      },
+      "servicetitan": {
+        "voice_agent": true,
+        "features": [
+          "booking",
+          "rescheduling",
+          "cancellation",
+          "real-time availability",
+          "automated dispatch"
+        ]
+      }
+    },
+    "contractor_pain_points": [
+      "Missing calls while on job",
+      "Phone tag with customers",
+      "Manual scheduling",
+      "No-shows",
+      "Administrative overhead"
+    ],
+    "uk_trade_market": {
+      "checkatrade_members": "Thousands",
+      "mybuilder_users": "Large UK presence since 2004",
+      "lead_generation_pain": "High cost, low conversion"
+    }
   }
 }
