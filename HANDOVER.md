@@ -15,6 +15,58 @@
 
 ---
 
+## Session Narrative (2026-09-08)
+
+### What We Built Today
+
+1. **Schema layer** — 6 Pydantic models (Observation, Hypothesis, Kernel, Candidate, Probe, Economics)
+2. **Pipeline layer** — 5 pure transforms (GmailImport, StateMachine, HypothesisLedger, EVIPlanner, KernelGenerator)
+3. **Storage layer** — BigQuery + Local JSON with parameterized queries
+4. **Campaign compiler** — Research → LaunchSpec
+5. **Installed-base pipeline** — Lifecycle hypothesis generation
+6. **GoldProbe knowledge graph** — 80 nodes, 239 edges in BigQuery
+7. **Country packs** — NO, FI, GB, DE, CH, SE (6 countries, 1,661 rows)
+8. **BigQuery MCP** — Agents can query BigQuery directly
+9. **Dashboard** — Next.js skeleton (builds, needs npm run dev)
+10. **Three thesis reports** — 30,000 words total
+11. **30 campaign ideas** — 10 per thesis
+12. **Alpha extraction** — 8 opportunities, 12 X accounts, 9 sources
+
+### What We Learned
+
+1. **The pricing calculator was BS** — Assumed margins, not real data
+2. **BigQuery parameterization was broken** — Fixed with QueryJobConfig
+3. **Old code was never isolated** — Legacy dir was empty
+4. **Hypothesis ledger was not Bayesian** — Just counting evidence
+5. **GoldProbe reports were drifting** — B20-B25 explored regulatory, not lifecycle
+
+### The Three Businesses
+
+```
+1. Agent-Native Commerce
+   Products + compatibility + decision engine
+
+2. Agent-Native Services
+   Contractors + AI receptionist + bookings
+
+3. Agent-Native Supplier OS
+   CRM + invoicing + parts + reviews
+```
+
+All three share the same data infrastructure.
+
+### Where My Head Is At
+
+The biggest insight from this session:
+
+> **The contractor AI receptionist is the real moat, not the lead generation.**
+
+If you save a contractor an hour of admin work per job, you create data that makes the platform indispensable. The contractor never leaves the app because the app knows when parts are low, handles their calendar, chases invoices, and builds their reputation.
+
+The flywheel: provider usage → better data → more bookings → more provider demand → more usage.
+
+---
+
 ## Repo Layout
 
 ```
@@ -29,206 +81,128 @@
 │   ├── kernel.py                ← Market-intelligence fact
 │   ├── candidate.py             ← PRODUCT × COUNTRY cell with state machine
 │   ├── probe.py                 ← Probe result and EVI
-│   └── economics.py             ← Cost ledger, decision events, feature snapshots
+│   ├── economics.py             ← Cost ledger, decision events, feature snapshots
+│   └── country.py               ← Country profile, installed base, merchant census
 │
 ├── pipelines/                   ← Pure transform functions (no I/O)
 │   ├── gmail_import.py          ← Raw email → Observations
 │   ├── state_machine.py         ← Observations → State transitions
 │   ├── hypothesis_ledger.py     ← Observations → Hypothesis updates
 │   ├── evi_planner.py           ← Unknowns → Research priorities
-│   └── kernel_generator.py      ← Observations → Kernels
+│   ├── kernel_generator.py      ← Observations → Kernels
+│   ├── campaign_compiler.py     ← Research → LaunchSpec
+│   └── installed_base.py        ← Installed base → Hypotheses
 │
 ├── storage/                     ← I/O layer
 │   ├── bigquery.py              ← BigQuery read/write (parameterized)
 │   └── local.py                 ← Local JSON for fast iteration
 │
-├── active/                      ← Live registries (read/write)
-│   ├── BLOCKERS.md
-│   ├── CANDIDATES.md
-│   ├── DECISIONS.md
-│   ├── PROBLEMS.md
-│   ├── SCRATCHPAD.md
-│   └── EMAIL_LOG.md
+├── tests/                       ← Test suite
+│   ├── test_schemas.py          ← Level 1-2 schema tests
+│   ├── test_pipelines.py        ← Level 3 pipeline tests
+│   ├── test_hypothesis_ledger.py ← Level 3 hypothesis tests
+│   ├── test_storage.py          ← Level 4-5 BigQuery tests
+│   └── test_e2e.py              ← Level 6-7 end-to-end tests
+│
+├── dashboard/                   ← Next.js dashboard
+│   ├── app/page.tsx             ← Main dashboard page
+│   ├── lib/bigquery.ts          ← BigQuery client
+│   └── package.json
+│
+├── data/                        ← Canonical data
+│   ├── hourly_reports/          ← 33 GoldProbe reports
+│   ├── opportunities_alpha.json ← 8 opportunities
+│   ├── x_accounts_alpha.json    ← 12 X accounts
+│   └── information_sources_alpha.json ← 9 sources
+│
+├── output/                      ← Generated reports
+│   ├── THESIS_1_COMMERCE_FINAL.md
+│   ├── THESIS_2_SERVICES_FINAL.md
+│   ├── THESIS_3_SUPPLIER_OS_FINAL.md
+│   ├── greatalpha.md
+│   ├── GOLDPROBE_REALIGNMENT.md
+│   ├── STATE_OF_BIGQUERY.md
+│   └── reviews/
+│
+├── bigquery/                    ← BigQuery architecture
+│   ├── BIGQUERY_MASTERY.md
+│   └── economic_ledger_ddl.sql
 │
 ├── probes/                      ← Probe system
 │   ├── PROBE_REGISTRY.json
-│   ├── PROBE_SPECS.md
-│   ├── FRESHNESS_TRACKER.md
 │   └── PROBE_LOGIC.md
 │
-├── countries/                   ← Country intelligence
-│   ├── NO/country.json
-│   ├── FI/country.json
-│   ├── intel/
-│   └── international/
+├── prompts/                     ← Agent instructions
+│   ├── GOLD_PROMPT_1_COMMERCE.md
+│   ├── GOLD_PROMPT_2_SERVICES.md
+│   └── GOLD_PROMPT_3_SUPPLIER_OS.md
 │
-├── bigquery/                    ← BigQuery architecture docs
-│   ├── BIGQUERY_MASTERY.md
-│   ├── VISIONARY_ARCHITECTURE.md
-│   └── economic_ledger_ddl.sql
-│
-├── data/                        ← Canonical data
-│   ├── feeds/                   ← 7 Merchant Center XML feeds
-│   ├── hourly_reports/          ← 47+ probe reports (B02-B12)
-│   └── hypotheses.json
-│
-├── output/                      ← Generated reports
-│   ├── CANONICAL_STRATEGY.md
-│   ├── reviews/
-│   └── stale/
-│
-├── services/                    ← Business logic
-│   ├── research/
-│   └── scoring/
-│
-├── packages/                    ← Shared packages
-│   ├── schemas/
-│   ├── economics/
-│   └── scoring/
-│
-└── legacy/                      ← DO NOT USE (preserved for reference)
-    └── README.md
+└── legacy/                      ← Old code (DO NOT USE)
 ```
 
 ---
 
-## The Five Active Probes
-
-| Probe | Schedule | Purpose |
-|-------|----------|---------|
-| GeoDrop Market Anomaly | :00 | Generate/falsify market hypotheses |
-| GeoDrop Channel Economics | :10 | Verify supplier/channel economics |
-| GeoDrop Demand Surface | :20 | Verify commercial demand |
-| GeoDrop Outcome Trace | :30 | Learn from real outcomes |
-| GeoDrop Portfolio Decision | :40 | Make portfolio decisions |
-
-Each probe sends exactly one report to `tradesprior@gmail.com` every hour, including runs where the result is NO MATERIAL INFORMATION GAIN.
-
----
-
-## The State Machine
+## BigQuery State
 
 ```
-DISCOVERED → DEMAND_VERIFIED → MERCHANT_GAP_VERIFIED → SUPPLY_PATH_VERIFIED
-→ MARGIN_VERIFIED → SEARCH_ECONOMICS_VERIFIED → LAUNCHABLE
-→ FREE_TRAFFIC_TEST → PAID_TEST → PROFITABLE / KILLED
-```
-
-Every candidate MUST progress through states. Each run must: ADVANCE, KILL, or RESOLVE a field. If none → run was wasted.
-
----
-
-## The Mechanism Orchard
-
-From probes B05-B12, we have discovered these mechanisms:
-
-| Mechanism | Source | Status |
-|-----------|--------|--------|
-| OPERATING_COST_OBSOLESCENCE_BEFORE_FAILURE | B09 | Supported |
-| SERVICE_ADVISOR_REPLACEMENT_GATEKEEPER | B09 | Strong |
-| STACKED_COMPONENT_CLOCKS | B09 | Supported |
-| ABSENCE_AMPLIFIES_DAMAGE_SEVERITY | B10 | Strong |
-| RISK_PRICER_SUBSIDIZES_PREVENTION | B10-B11 | Replicated |
-| DETECTION_TO_INTERVENTION_VALUE_SHIFT | B10 | Supported |
-| EVENT_GATED_SUPPLY_MARKET | B12 | New |
-| CLAIM_GATEKEEPER_CONTROLS_FUNDED_DEMAND | B12 | New |
-| REMOVABLE_CONTROL_BOARD_DELOCALIZES_REPAIR | B06 | Supported |
-| WARRANTY_EXPIRY_CHANNEL_FLIP | B06 | Supported |
-
----
-
-## Current State
-
-**Leader candidate:** TBD (need fresh evaluation)
-**Emails sent:** 18 (2 acknowledgments)
-**Probes completed:** B02-B12 (11 probes)
-**Mechanisms discovered:** 10+
-**Countries active:** NO, FI, IE, GB, AU
-
-**What to do now:**
-1. Check `active/EMAIL_LOG.md` for new responses
-2. Run fresh candidate evaluation through new pipeline
-3. Update probe freshness scores
-4. Begin B13 (US hail/storm roofing) if B12 results are in
-
----
-
-## Build Notes
-
-### Gotchas
-
-1. **BigQuery parameterization** — Always use `QueryJobConfig` with `ScalarQueryParameter`. Never interpolate strings.
-
-2. **Temporal evidence contract** — Observations have 5 timestamps: `event_time`, `published_at`, `observed_at`, `available_at`, `ingested_at`. Use `available_at <= decision_time` for point-in-time queries.
-
-3. **Frozen models** — `Observation`, `Kernel`, `ProbeResult` are frozen. `Candidate` and `Hypothesis` are NOT frozen (state machine needs mutation). Always deep-copy before mutating in pipelines.
-
-4. **KILL_TRIGGERS** — Uses `(field, value)` tuples, not just field names. This prevents `decision=ADVANCED` from triggering KILL.
-
-5. **Bayesian v2** — Use `packages/scoring/bayesian_v2.py`, NOT `bayesian.py` (which uses Beta(1,1) — wrong for ecommerce).
-
-6. **Gmail credentials** — Use `agent-vault vault credential get GMAIL_CLIENT_ID --vault oracle`. Never hardcode.
-
-7. **GCP project** — Use `os.environ.get("GCP_PROJECT_ID")`. Never hardcode.
-
----
-
-## Key Commands
-
-```bash
-# Run tests
-cd /root/drop && python3 -m pytest tests/ -q
-
-# Run pipeline test
-cd /root/drop && python3 -c "from pipelines.gmail_import import GmailImportPipeline; print('OK')"
-
-# Check BigQuery tables
-cd /root/drop && python3 -c "
-from google.cloud import bigquery
-client = bigquery.Client()
-for t in client.list_tables('drop'):
-    print(f'{t.table_id}: {t.num_rows} rows')
-"
-
-# Send email
-python3 -c "
-import subprocess, json, base64, urllib.request
-token = subprocess.run(['agent-vault', 'vault', 'credential', 'get', 'GMAIL_REFRESH_TOKEN', '--vault', 'oracle'], capture_output=True, text=True).stdout.strip()
-# ... compose and send via Gmail API
-"
-
-# Check probe freshness
-cat /root/drop/probes/FRESHNESS_TRACKER.md
+53 tables
+1,974 rows
+80 graph nodes
+239 graph edges
+42 observations
+8 opportunities
+12 X accounts
+9 information sources
 ```
 
 ---
 
-## Open Questions
+## The Three Businesses
 
-1. **When to start paid tests?** — Need at least 20 clean probe results before autonomous campaign selection.
+```
+AGENT-NATIVE COMMERCE
+    Products + compatibility + decision engine
+    ↓
+    Uses service graph for recommendations
+    ↓
 
-2. **How to handle supplier responses?** — Currently manual. Need automated email parsing pipeline.
+AGENT-NATIVE SERVICES
+    EV, heat pumps, solar, HVAC
+    ↓
+    Uses supplier OS for operations
+    ↓
 
-3. **When to implement hierarchical Bayesian priors?** — Need 50+ clean CVR observations across countries/categories.
+AGENT-NATIVE SUPPLIER OS
+    AI receptionist, CRM, booking
+    ↓
+    Provides data back to commerce
+    ↓
 
-4. **How to enforce calibration?** — Need reliability diagram CI test before scaling budgets.
-
-5. **When to enable contextual bandit?** — Need 200+ decision events with propensities logged.
+    FLYWHEEL
+    more usage → better data → more value → more usage
+```
 
 ---
 
-## The Endgame
+## The Key Insight
 
-> **An autonomous geographic commerce allocator that discovers fragmented demand, tests it with nearly zero inventory, and moves capital progressively into whichever businesses demonstrate the highest risk-adjusted economic return.**
+> **The contractor AI receptionist is the real moat, not the lead generation.**
 
-The destination isn't a model saying "Davis Norway = 83/100."
+If you save a contractor an hour of admin work per job, you create data that makes the platform indispensable.
 
-It is a calibrated statement like:
+The flywheel: provider usage → better data → more bookings → more provider demand → more usage.
 
-> Given the market state known on September 7, this campaign configuration has a 78% posterior probability of positive 30-day CM2, expected CM2 of NOK 2,140, p10 loss of NOK 610, with 63% of predictive uncertainty attributable to CVR and 24% to supplier margin. The highest-EVI next action is dealer-price verification; expected cost NOK 3.40-equivalent and expected decision value NOK 186.
+---
 
-Then the campaign runs.
+## What's Next
 
-Thirty or sixty days later Drop grades that prediction.
+1. Build contractor directory (scrape OZEV/MCS)
+2. Onboard 10 contractors in Nottingham
+3. Launch AI chatbot
+4. Complete 50 jobs
+5. Measure actual economics
 
-After enough such predictions across products and countries, it learns **which observable structures actually predict money**.
+---
+
+*Last updated: 2026-09-08*
+*Session: Built schemas, pipelines, storage, campaign compiler, 3 thesis reports, 30 campaign ideas*
