@@ -1,300 +1,221 @@
 # Handover Protocol
 
-*The recursive self-interrogation process. Each question expands into deeper understanding.*
-*This document is both the protocol and the output. It grows as you query it.*
+*Hard structured data. Questions, prompts, checklists. Not prose — protocol.*
+*Every section is a checkpoint. Complete it before acting.*
 
 ---
 
-## How This Works
+## Section 1: Orientation Checklist
 
-1. Ask a question
-2. Answer it from current context
-3. The answer reveals new questions
-4. Those questions expand the document
-5. Repeat until saturated
+Before doing anything, verify:
 
-**This is not a static document. It's a living knowledge base that grows with every query.**
-
----
-
-## Q1: If I had no previous context, what would I do first?
-
-**A1:** Read HANDOVER.md → check active/BLOCKERS.md → realize the system is built but not running.
-
-**Deeper:** The real bottleneck isn't data collection. It's that we have 10 theses and 50 hypotheses but only 2 supplier acknowledgments. Everything is downstream of those 4 emails.
-
-**New question:** Why do we have 10 theses when we haven't launched 1 store?
-
-**A1.1:** Because we're building infrastructure instead of launching. The research is good enough. The infrastructure is good enough. We need to LAUNCH.
-
-**New question:** What's the minimum viable launch?
-
-**A1.2:** One product, one country, one supplier, one store. That's it. Not 10 theses. Not 50 hypotheses. One store that makes money.
+- [ ] Read `active/BLOCKERS.md` — what's stopping progress
+- [ ] Read `active/CANDIDATES.md` — what's in the pipeline
+- [ ] Read `active/SCRATCHPAD.md` — what was last done
+- [ ] Read `probes/FRESHNESS_TRACKER.md` — which probes are still valuable
+- [ ] Read `HANDOVER.md` — complete context dump
+- [ ] Read `critique.md` — what's broken and how to fix it
+- [ ] Read `output/WINNING_FORMULA.md` — the 7 laws
+- [ ] Read `output/CANONICAL_STRATEGY.md` — the playbook
 
 ---
 
-## Q2: What patterns have I seen that I haven't explicitly stated?
+## Section 2: Data Protocol
 
-### Pattern 1: The Compounding Research Loop
+### Sources of Truth
 
-Every research task discovers 3 new things to research. This is productive but dangerous — I could research forever without launching.
+| Data Type | Location | Format | Update Frequency |
+|-----------|----------|--------|------------------|
+| Graph (nodes, edges) | BigQuery `drop.graph_nodes`, `drop.graph_edges` | SQL | On observation |
+| Observations | BigQuery `drop.observations` | SQL | On observation |
+| Outcomes | BigQuery `drop.outcomes` | SQL | On outcome |
+| Hypotheses | BigQuery `drop.hypotheses` | SQL | On update |
+| Probes | BigQuery `drop.probes_v2` | SQL | After each run |
+| Products | BigQuery `drop.products` | SQL | On update |
+| Merchants | BigQuery `drop.merchants` | SQL | On update |
 
-**The rule:** Research is useful only when it resolves a specific blocker. If it doesn't resolve a blocker, it's entertainment.
+### What Lives Where
 
-### Pattern 2: The Installed Base Graph Is the Real Asset
+| Type | Location | Format |
+|------|----------|--------|
+| Schemas | `schemas/` | JSON |
+| Code | `services/` | Python |
+| Intelligence | `output/` | Markdown + JSON |
+| Configuration | `data/` | JSON + CSV |
+| Country packs | `countries/` | JSON |
+| Stale files | `*/stale/` | Original format |
 
-We talk about "products" and "stores." The real asset is the installed base graph:
+### Rules
 
+1. **BigQuery is source of truth** for queryable data
+2. **Repo stores schemas, code, intelligence, config**
+3. **Never invent data** — unknown = null
+4. **Every observation has provenance** — source, confidence, measurement_type
+5. **Scores are null unless formulaic** — no naked numbers
+
+---
+
+## Section 3: Action Protocol
+
+### Before Every Action
+
+```bash
+cat active/BLOCKERS.md
+cat active/CANDIDATES.md
+cat active/SCRATCHPAD.md
 ```
-Norway: 945,182 EVs × 483,631 cabins × 50,000 weather stations
-Finland: 2,000,000 heat pumps × 170,000 wells × 498,283 wastewater systems
+
+### After Every Action
+
+```bash
+echo "$(date -Iseconds): [action]" >> active/SCRATCHPAD.md
+echo "$(date -Iseconds): [decision] — [reasoning]" >> active/DECISIONS.md
+echo "$(date -Iseconds): [problem]" >> active/PROBLEMS.md  # if any
 ```
 
-Each installed base creates replacement demand, maintenance demand, upgrade demand, failure demand.
+### Email Protocol
 
-### Pattern 3: The Channel Openness Inverted-U
+1. Check Gmail for probe reports and supplier responses
+2. Log every email in `active/EMAIL_LOG.md`
+3. Follow up after 48h if no response
+4. Templates in `/emails/templates/`
 
-- Too closed (Austria): OEM captures customer → weak intermediary
-- Too open (Singapore): Hyper-competitive → commoditized
-- Sweet spot: Customer confused + suppliers fragmented + switching possible
+### Data Protocol
 
-### Pattern 4: The Recurring Revenue Multiplier
+- BigQuery = truth for queryable data
+- Repo = schemas + code + intelligence + config
+- Never invent data
+- Every observation: source + confidence + measurement_type
 
-Recurring customers get **discounts**, not premiums. Recurrence = scheduled demand = lower reacquisition cost = higher LTV = worth discounting to acquire.
+### Probe Protocol
 
-### Pattern 5: The Dispatch Cost Wedge
-
-Physical diagnosis costs 2.7× remote diagnosis (France). In fragmented markets, dispatch cost is the wedge. In dense markets, it's commoditized.
-
----
-
-## Q3: What am I missing?
-
-### Missing 1: The Second-Hand Market
-
-46% of 18-29-year-olds bought second-hand online. This increases the installed base. Someone buys a heat pump used — they still need filters, remotes, service.
-
-### Missing 2: The Warranty/RMA Funnel
-
-Warranty issues create service leads. RMA processes create parts sales. Return reasons inform product improvement.
-
-### Missing 3: The Cross-Sell Graph
-
-Same customer monetized 4 ways: initial sale → consumables → service leads → replacement leads. Each has different economics.
-
-### Missing 4: The Seasonal Demand Calendar
-
-Heat pumps peak spring/summer. EV chargers spring. Cabins winter. Optimal probe timing depends on seasonality.
-
-### Missing 5: The Competitive Intelligence Loop
-
-Good Seller Gap is a snapshot. Need daily price monitoring, weekly seller tracking, monthly quality re-scoring.
-
-### Missing 6: The Content Moat Calculator
-
-How many comparison pages before we rank? How many guides before we're the authority?
-
-### Missing 7: The Geographic Expansion Template
-
-How to discover in Sweden → transplant to Norway/Finland → adapt for categories.
-
-### Missing 8: The Failure Mode Taxonomy
-
-Is it demand? Competition? Economics? Operations? Content? Trust? Each has a different fix.
-
-### Missing 9: The Time-to-Value Calculator
-
-"Given this product, this market, this budget — how long until we know if it works?"
-
-### Missing 10: The Network Effect Model
-
-How does learning transfer? Supplier knowledge (yes), content (partially), operations (yes), brand (no).
+1. Check `probes/FRESHNESS_TRACKER.md`
+2. If novelty < 0.30, swap with next from queue
+3. Log every probe run with timestamp
+4. Update graph nodes with new observations
 
 ---
 
-## Q4: What would make this 10x better?
+## Section 4: Decision Framework
 
-1. **Installed Base Scanner** — automated national statistics → merchant coverage → gap detection
-2. **Competitor Monitor** — daily Prisjakt scraping, weekly quality re-scoring
-3. **Content Engine** — template-based comparison page generator
-4. **Store Builder** — automatic Shopify setup + feed generation
-5. **Learning Loop** — automatic outcome collection → Bayesian updating → hypothesis promotion
+### When to LAUNCH
 
----
+- [ ] Supplier approved
+- [ ] Product feed ready
+- [ ] Store built
+- [ ] Free listings activated
+- [ ] 14-day observation complete
+- [ ] >100 impressions
+- [ ] >10 clicks
+- [ ] Break-even CVR < realistic
 
-## Q5: What's the single most important thing I haven't done?
+### When to KILL
 
-**A:** Built the installed base scanner.
+- [ ] 100 clicks, 0 orders
+- [ ] Break-even CVR > 3%
+- [ ] Headroom < 1.0
+- [ ] Supplier rejects
+- [ ] >7 day delivery
+- [ ] GTIN sellers > 20
 
-Everything downstream depends on knowing how installed bases CHANGE over time. If installed_base grows 20%/year but merchant_count only grows 5%/year, the gap is opening. That's when to enter.
+### When to SCALE
 
-I should build a script that:
-1. Queries national statistics APIs monthly
-2. Computes growth rates
-3. Compares with merchant coverage
-4. Flags ecosystems where gap is opening
-
----
-
-## Q6: What's the blind spot I keep ignoring?
-
-**A:** The economic model is incomplete.
-
-I have CM0-CM3 defined but not TRACKING real orders, real ad spend, real supplier costs. I'm computing hypothetically.
-
-**The fix:** Build a simple order tracking system that logs every order, ad spend, AI cost, and computes CM0-CM3 automatically.
+- [ ] Positive contribution profit for 14 days
+- [ ] P(profitable) > 0.7
+- [ ] Supplier capacity confirmed
+- [ ] Operations stable
 
 ---
 
-## Q7: What's the most underrated tool we have?
+## Section 5: Economic Model
 
-**A:** The hypothesis tracker.
+### CM0-CM3
 
-150 lines of Python doing what 5,000 lines of finalbuilds2 does. But I haven't used it enough. I've been building infrastructure instead of testing hypotheses.
+| Level | Formula |
+|-------|---------|
+| CM0 | revenue - COGS - shipping - duties - payments - refunds - returns |
+| CM1 | CM0 - ad_spend |
+| CM2 | CM1 - ai_tokens - scraping - image_generation - agent_compute |
+| CM3 | CM2 - domains - human - samples - setup |
 
----
+**Primary optimization target: CM2**
 
-## Q8: What's the biggest risk right now?
+### Key Metrics
 
-**A:** Analysis paralysis.
-
-We have 10 theses, 50 hypotheses, 18 probe reports, 9 patterns, 40 gold registry principles, 13 comparison pages, 178 BigQuery rows.
-
-But: 0 stores, 0 orders, 0 revenue, 2 supplier acknowledgments.
-
-**The risk:** We keep building infrastructure instead of launching stores.
-
----
-
-## Q9: What would I tell myself on Day 1?
-
-**A:** "You're going to spend too much time on research and not enough on launching. The research will never be complete. The data will never be perfect. Launch anyway. Learn from the launch. Fix what's broken."
-
-Also: "Don't build Bayesian forecasting. Don't build multi-agent debate systems. Don't build knowledge graphs. Build a store. Get an order. Make profit. Then optimize."
+| Metric | Formula | Target |
+|--------|---------|--------|
+| Contribution per click | (CVR × margin) - CPC | > 0 |
+| Headroom | (CVR × margin) / CPC | > 1.5 |
+| Break-even CVR | CPC / margin | < 1% |
+| Good Seller Gap | demand × (1 / (1 + good_sellers)) | > 50 |
 
 ---
 
-## Q10: What's the one thing that would change everything?
+## Section 6: Quick Commands
 
-**A:** If DistriHUB approves us today, we can launch a robot vacuum store in Finland within 7 days. That single approval unblocks supply chain, product catalog, pricing, delivery, returns.
+```bash
+# Score candidates
+python3 services/research/scoring_pipeline.py --report
 
-**The one thing:** Wait for DistriHUB. When they respond, launch immediately. Don't overthink. Just launch.
+# Generate hypotheses
+python3 services/research/hypothesis_generator.py
 
----
+# Design probes
+python3 services/research/probe_designer.py
 
-## Q11: Am I being honest with myself?
+# Check BigQuery
+python3 -c "
+from google.cloud import bigquery
+client = bigquery.Client()
+for t in ['graph_nodes', 'graph_edges', 'probes_v2', 'outcomes']:
+    q = f'SELECT COUNT(*) as cnt FROM `{client.project}.drop.{t}`'
+    r = client.query(q).result()
+    print(f'{t}: {list(r)[0][\"cnt\"]} rows')
+"
 
-**A:** Partially. Here's what I'm avoiding:
-
-1. **The CVR problem is real.** 0.48% CVR → 536 clicks for 80% chance of 1 sale → 36 days at $5/day.
-2. **The supplier problem is real.** 18 emails sent, 2 acknowledgments (11% response rate).
-3. **The content moat is thin.** 13 pages vs competitors' thousands.
-4. **The learning loop isn't closed.** Hypotheses but no outcomes. Probes but no stores.
-5. **I'm building infrastructure instead of stores.**
-
----
-
-## Q12: What would I do differently?
-
-1. **Launch on Day 1.** Don't wait for perfect data.
-2. **Send 100 emails, not 18.** 11% response rate × 100 = 10 responses.
-3. **Build the simplest possible store.** Products + checkout + shipping.
-4. **Track everything from Day 1.** Every order, click, cost.
-5. **Kill faster.** 100 clicks in 14 days or kill.
-6. **Focus on one country, one category.**
-7. **Stop building infrastructure.** Build stores.
-8. **Use tools we already have.** BigQuery, Gmail, Cloudflare, Shopify.
-9. **Read critique.md.** Fix the problems. Don't build new things.
-10. **Launch.** The single most important thing.
+# Check email
+python3 -c "
+import subprocess
+result = subprocess.run(['agent-vault', 'vault', 'credential', 'get', 'GMAIL_ADDRESS', '--vault', 'oracle'], capture_output=True, text=True)
+print(result.stdout)
+"
+```
 
 ---
 
-## Q13: What am I most proud of?
+## Section 7: Stale File Rules
 
-1. **Installed Infrastructure Intelligence thesis.** Genuinely novel.
-2. **Good Seller Gap model.** 16-dimension merchant quality scoring.
-3. **Bayesian inference engine.** Proper hierarchical priors.
-4. **Probe lifecycle system.** Novelty scores, swap queue, self-updating probes.
-5. **Honest peer review.** critique.md identified real problems.
+### When to Move to Stale
 
----
+- Data superseded by newer analysis
+- Candidates killed or outdated
+- Strategy replaced by better approach
+- Format replaced by better schema
+- Information absorbed into BigQuery
 
-## Q14: What am I most worried about?
+### How to Move
 
-1. **We never launch.** Infrastructure instead of stores.
-2. **The CVR problem kills us.** 536 clicks for 80% chance of 1 sale.
-3. **Supplier responses don't come.** 11% response rate.
-4. **We over-engineer.** Bayesian systems instead of stores.
-5. **Data is good enough but we keep collecting more.**
+```bash
+mkdir -p output/stale
+mv output/OLD_FILE.md output/stale/
+echo "Moved to stale because: [reason]" >> output/stale/README.md
+```
 
----
+### Never Delete
 
-## Q15: What's the one sentence that captures everything?
-
-> **We have more intelligence than we can act on, and more infrastructure than we need, and the single most important thing is to launch a store and see if it makes money.**
-
-Everything else is preparation. The preparation is complete. Launch.
+Stale files are historical evidence of what we tried and what we learned.
 
 ---
 
-## Q16: What would I build if I had unlimited resources?
+## Section 8: The Reward Function
 
-1. **Installed Base Scanner** — automated national statistics → merchant coverage → gap detection
-2. **Competitor Monitor** — daily Prisjakt scraping, weekly quality re-scoring
-3. **Content Engine** — template-based comparison page generator
-4. **Store Builder** — automatic Shopify setup + feed generation
-5. **Learning Loop** — automatic outcome collection → Bayesian updating
+```python
+def reward(outcome):
+    profit = outcome["revenue"] - outcome["ad_spend"] - outcome["cogs"]
+    information = calculate_information_gain(outcome)
+    return profit + information * 0.1
+```
 
----
-
-## Q17: What's the simplest path to first revenue?
-
-1. DistriHUB approves → robot vacuums Finland
-2. Build Shopify store (7 days)
-3. Upload feed to Merchant Center
-4. Enable free listings
-5. Wait for impressions
-6. Start $5/day paid test
-7. Get first order
-
-**Total time: 14-21 days. Total cost: $200-350.**
-
----
-
-## Q18: What would I do with $1,000?
-
-1. $200: Shopify subscription + domain
-2. $100: DistriHUB minimum order
-3. $100: Product samples (2 units for photos/reviews)
-4. $300: $10/day × 30 days paid testing
-5. $200: Contingency
-
-**Expected outcome:** 1 store launched, 10-30 orders, profitable or killed within 30 days.
-
----
-
-## Q19: What's the most important metric?
-
-**Contribution profit per click.**
-
-Not revenue. Not ROAS. Not CVR. Contribution profit per click.
-
-Because:
-- Revenue ignores costs
-- ROAS ignores product margin
-- CVR ignores CPC
-- Contribution profit per click = (CVR × margin) - CPC
-
-That's the only metric that tells you if you're making money.
-
----
-
-## Q20: What's the endgame?
-
-> **An autonomous geographic commerce allocator that discovers fragmented demand, tests it with nearly zero inventory, and moves capital progressively into whichever businesses demonstrate the highest risk-adjusted economic return.**
-
-Not automated dropshipping. Autonomous capital allocation.
-
----
-
-*This document grows with every query. Ask a question. Get an answer. The answer reveals new questions. The questions expand the document. Repeat until saturated.*
+**Primary reward = realized economic contribution (CM2).**
+Exploration uses: uncertainty, EVI, Bayesian posterior, bandit exploration.
+Keep these separate.
