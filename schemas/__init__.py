@@ -51,6 +51,24 @@ from schemas.economics import (
     PolicyAction,
     TreatmentAssignment,
 )
+from schemas.campaign import (
+    CampaignHypothesis,
+    LaunchSpec,
+    Deployment,
+    ActivationGate,
+    CampaignState,
+)
+from schemas.decision import (
+    BuildDecision,
+    DecisionType,
+    BuildDecisionRequest,
+    BuildDecisionResponse,
+)
+from schemas.mechanism import (
+    Mechanism,
+    MechanismType,
+    MechanismLibrary,
+)
 
 __all__ = [
     # Observations
@@ -87,4 +105,19 @@ __all__ = [
     "OutcomeMaturity",
     "PolicyAction",
     "TreatmentAssignment",
+    # Campaign
+    "CampaignHypothesis",
+    "LaunchSpec",
+    "Deployment",
+    "ActivationGate",
+    "CampaignState",
+    # Decision
+    "BuildDecision",
+    "DecisionType",
+    "BuildDecisionRequest",
+    "BuildDecisionResponse",
+    # Mechanism
+    "Mechanism",
+    "MechanismType",
+    "MechanismLibrary",
 ]
