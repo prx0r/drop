@@ -1,105 +1,122 @@
-[
-  {
-    "id": "H1.1",
-    "thesis": "GeoDrop",
-    "statement": "Language localization converts 2x+ better",
-    "metric": "cvr_ratio",
-    "target": 1.5,
-    "direction": ">",
-    "window_days": 30,
-    "status": "active",
-    "data_points": []
-  },
-  {
-    "id": "H1.3",
-    "thesis": "GeoDrop",
-    "statement": "Free listings validate before paid",
-    "metric": "impressions_per_day",
-    "target": 100,
-    "direction": ">",
-    "window_days": 14,
-    "status": "active",
-    "data_points": []
-  },
-  {
-    "id": "H2.1",
-    "thesis": "GeoDrop",
-    "statement": "Specialist positioning beats generic",
-    "metric": "ctr",
-    "target": 3.0,
-    "direction": ">",
-    "window_days": 30,
-    "status": "active",
-    "data_points": []
-  },
-  {
-    "id": "H3.1",
-    "thesis": "GeoDrop",
-    "statement": "Finnish robot vacuum market has merchant gap",
-    "metric": "good_seller_count",
-    "target": 5,
-    "direction": "<",
-    "window_days": 7,
-    "status": "passed",
-    "data_points": [
-      {
-        "value": 3.0,
-        "timestamp": "2026-09-07T00:58:44.815840"
-      },
-      {
-        "value": 4.0,
-        "timestamp": "2026-09-07T00:58:44.846883"
-      },
-      {
-        "value": 5.0,
-        "timestamp": "2026-09-07T00:58:44.878147"
-      }
-    ]
-  },
-  {
-    "id": "H5.1",
-    "thesis": "GeoDrop",
-    "statement": "High ticket solves small budgets",
-    "metric": "profit_per_click",
-    "target": 0,
-    "direction": ">",
-    "window_days": 30,
-    "status": "active",
-    "data_points": []
-  },
-  {
-    "id": "H6.1",
-    "thesis": "GeoDrop",
-    "statement": "Good seller gap predicts success",
-    "metric": "revenue_per_click",
-    "target": 5,
-    "direction": ">",
-    "window_days": 30,
-    "status": "active",
-    "data_points": []
-  },
-  {
-    "id": "H10.1",
-    "thesis": "GeoDrop",
-    "statement": "Free listings generate real signal",
-    "metric": "impressions_per_day",
-    "target": 100,
-    "direction": ">",
-    "window_days": 14,
-    "status": "failed",
-    "data_points": [
-      {
-        "value": 45.0,
-        "timestamp": "2026-09-07T00:58:44.704837"
-      },
-      {
-        "value": 78.0,
-        "timestamp": "2026-09-07T00:58:44.748435"
-      },
-      {
-        "value": 120.0,
-        "timestamp": "2026-09-07T00:58:44.782471"
-      }
-    ]
-  }
-]
+{
+  "version": "2.0.0",
+  "updated_at": "2026-09-07",
+  "notes": "Updated with proper thresholds from critique. No more naked LLM percentages.",
+  "hypotheses": [
+    {
+      "id": "H1.1",
+      "thesis": "GeoDrop",
+      "statement": "Language localization converts better than English-only",
+      "metric": "cvr_ratio",
+      "target": 1.5,
+      "direction": ">",
+      "window_days": 30,
+      "status": "active",
+      "minimum_data": 100,
+      "data_points": []
+    },
+    {
+      "id": "H1.3",
+      "thesis": "GeoDrop",
+      "statement": "Free listings generate real signal",
+      "metric": "impressions_per_day",
+      "target": 100,
+      "direction": ">",
+      "window_days": 14,
+      "status": "active",
+      "minimum_data": 14,
+      "notes": "F0 fidelity — not a gate, just evidence",
+      "data_points": []
+    },
+    {
+      "id": "H2.1",
+      "thesis": "GeoDrop",
+      "statement": "Specialist positioning beats generic",
+      "metric": "ctr",
+      "target": 3.0,
+      "direction": ">",
+      "window_days": 30,
+      "status": "active",
+      "minimum_data": 100,
+      "data_points": []
+    },
+    {
+      "id": "H3.1",
+      "thesis": "GeoDrop",
+      "statement": "Finnish heat pump aftermarket has merchant gap",
+      "metric": "good_seller_gap_score",
+      "target": 25,
+      "direction": ">",
+      "window_days": 14,
+      "status": "active",
+      "minimum_data": 5,
+      "notes": "GoodSellerGap model",
+      "data_points": []
+    },
+    {
+      "id": "H5.1",
+      "thesis": "GeoDrop",
+      "statement": "High ticket solves small budgets",
+      "metric": "profit_per_click",
+      "target": 0,
+      "direction": ">",
+      "window_days": 30,
+      "status": "active",
+      "minimum_data": 100,
+      "notes": "P(profit>0) > 0.5 to proceed",
+      "data_points": []
+    },
+    {
+      "id": "H6.1",
+      "thesis": "GeoDrop",
+      "statement": "Good seller gap predicts success",
+      "metric": "revenue_per_click",
+      "target": 5,
+      "direction": ">",
+      "window_days": 30,
+      "status": "active",
+      "minimum_data": 100,
+      "notes": "Must beat competing models out-of-sample",
+      "data_points": []
+    },
+    {
+      "id": "H7.1",
+      "thesis": "GeoDrop",
+      "statement": "Localized transaction quality increases profit per visitor",
+      "metric": "profit_per_visitor",
+      "target": 0,
+      "direction": ">",
+      "window_days": 30,
+      "status": "active",
+      "minimum_data": 200,
+      "notes": "Randomized visitor-level experiment",
+      "data_points": []
+    },
+    {
+      "id": "H8.1",
+      "thesis": "GeoDrop",
+      "statement": "One country first beats multi-country",
+      "metric": "time_to_profitable_sale",
+      "target": 60,
+      "direction": "<",
+      "window_days": 90,
+      "status": "active",
+      "minimum_data": 1,
+      "notes": "Single country profitable within 60 days",
+      "data_points": []
+    },
+    {
+      "id": "H10.1",
+      "thesis": "GeoDrop",
+      "statement": "Replication compounds learning",
+      "metric": "launch_time_days",
+      "target": 15,
+      "direction": "<",
+      "window_days": 180,
+      "status": "active",
+      "minimum_data": 5,
+      "notes": "Store 5 launches in <15 days",
+      "data_points": []
+    }
+  ]
+}
