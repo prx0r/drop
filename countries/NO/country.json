@@ -1,0 +1,68 @@
+{
+  "country_code": "NO",
+  "country_name": "Norway",
+  "currency": "NOK",
+  "language": "no",
+  "population": 5500000,
+  "ecommerce_market_usd": 10350000000,
+  "ecommerce_penetration": 0.86,
+  "cross_border_rate": 0.78,
+  "structural_markets": [
+    {
+      "system": "ev_charger",
+      "installed_base": 945182,
+      "installed_base_type": "registered_vehicles",
+      "growth_rate": 0.198,
+      "new_ev_share_2026": 0.987,
+      "source": "SSB",
+      "confidence": 0.95
+    },
+    {
+      "system": "cabin",
+      "installed_base": 484000,
+      "installed_base_type": "holiday_houses",
+      "growth_rate": 0.02,
+      "source": "SSB",
+      "confidence": 0.9
+    },
+    {
+      "system": "weather_station",
+      "installed_base": 50000,
+      "installed_base_type": "estimated",
+      "growth_rate": 0.05,
+      "source": "Estimated",
+      "confidence": 0.7
+    }
+  ],
+  "supplier_contacts": [
+    {
+      "name": "Flak AS",
+      "email": "Flak@flak.no",
+      "status": "acknowledged"
+    },
+    {
+      "name": "Hovdan-Poly",
+      "email": "Post@hovdan.no",
+      "status": "sent"
+    },
+    {
+      "name": "Helsport",
+      "email": "helsport@helsport.no",
+      "status": "sent"
+    },
+    {
+      "name": "XC Sports",
+      "email": "post@xcsports.com",
+      "status": "sent"
+    }
+  ],
+  "pages_live": [
+    "/davis",
+    "/davis/vantage-vue-vs-pro2",
+    "/davis/hytte",
+    "/davis/vinter-drift",
+    "/davis/home-assistant",
+    "/sovepose",
+    "/varmepumpe"
+  ]
+}
