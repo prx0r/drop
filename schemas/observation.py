@@ -87,12 +87,21 @@ class Observation(BaseModel):
     source_grade: EvidenceGrade = EvidenceGrade.C
     source_name: Optional[str] = None  # e.g. "CSMegastore", "Max Sievert"
 
+    # Temporal evidence contract
+    # event_time: when the event actually happened
+    # published_at: when the source published it
+    # observed_at: when GeoDrop observed it
+    # available_at: when it became available for decision-making
+    # ingested_at: when it was ingested into the system
+    event_time: Optional[datetime] = None
+    published_at: Optional[datetime] = None
+    observed_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    available_at: Optional[datetime] = None
+    ingested_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
     # Independence tracking (prevents double-counting)
     independence_cluster: Optional[str] = None  # Groups related observations
     independent_source_count: int = 1  # How many independent sources?
-
-    # Temporal
-    observed_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
     # Raw evidence (for audit trail)
     raw_snapshot: Optional[str] = None  # Raw text/HTML snapshot

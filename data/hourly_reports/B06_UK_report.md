@@ -1,5 +1,11 @@
 # GoldProbe B06 — UK Residential EV Charger Repair / Replacement
 
+**From:** Prior Trades <tradesprior@gmail.com>
+**Date:** Mon, 7 Sep 2026 04:52:03 +0200
+**Gmail ID:** 1a079c7ad3abf245
+
+---
+
 # GoldProbe B06 — UK Residential EV Charger Repair / Replacement
 
 **Date:** 2026-09-07  
@@ -220,3 +226,4 @@ B07 will specifically search:
 - repair vs replacement economics;
 - OEM vs independent channels;
 - whether removable electronics produce national repair services.
+

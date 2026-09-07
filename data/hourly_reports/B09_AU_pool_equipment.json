@@ -1,0 +1,589 @@
+{
+  "goldprobe_version": "2.1-research-native",
+  "probe_id": "B09_AU_POOL_EQUIPMENT_AFTERMARKET",
+  "date": "2026-09-07",
+  "score": null,
+  "score_policy": "NO_NAKED_SCORE",
+  "hypothesis_loop": {
+    "selection_reason": "B08 Finland heat pumps generated COHORT_READY_SHOCK_ACTIVATION: an ageing installed cohort may remain latent until a climate/performance shock causes owners to transact. Australian residential pools were selected as an unrelated high-load seasonal asset with a mature installed base, pumps/chlorinators/controllers, deep parts markets and measurable replacement data.",
+    "hypothesis": "Australian hot-season/high-use periods should activate latent failures/replacements in ageing pool pumps, chlorinators and controllers, while routine maintenance is commoditized; the stronger commercial cell should be model-specific diagnosis and rapid repair/replacement.",
+    "falsifiers": [
+      "No credible installed-base/replacement denominator exists.",
+      "No evidence links seasonal high use or heat to equipment demand/failure.",
+      "Pool equipment is standardized enough that model-specific compatibility adds little.",
+      "Routine and complex repairs are both already fully commoditized.",
+      "Owners overwhelmingly stay inside existing pool-service relationships, leaving little independent search/routing."
+    ]
+  },
+  "verdict": {
+    "routine_pool_cleaning_marketplace": "HOLD_MATURE",
+    "generic_pool_pump_parts_store": "HOLD_MATURE",
+    "pump_repair_vs_replace_router": "INVESTIGATE",
+    "model_generation_parts_identifier": "INVESTIGATE_STRONGLY",
+    "energy_efficiency_upgrade_router": "INVESTIGATE_STRONGLY",
+    "full_pool_equipment_passport": "INVESTIGATE",
+    "heatwave_failure_router": "UNRESOLVED_NOT_PROVEN"
+  },
+  "evidence_atoms": [
+    {
+      "id": "E-AU-POOL-HOMES-GOV",
+      "source_class": "A1",
+      "publisher": "Australian Government energy.gov.au",
+      "url": "https://www.energy.gov.au/households",
+      "metric": "homes_with_swimming_pool",
+      "value": 1100000,
+      "unit": "homes",
+      "reference_period": "current government guidance",
+      "exact_excerpt": "For the 1.1 million Australian homes with a swimming pool",
+      "limitations": [
+        "Household count is not equipment-unit count."
+      ]
+    },
+    {
+      "id": "E-AU-POOL-SPA-HOUSEHOLDS-NIEIR",
+      "source_class": "B0",
+      "publisher": "NIEIR / Endeavour Energy filing to Australian Energy Regulator",
+      "url": "https://www.aer.gov.au/system/files/Endeavour%20Energy%20-%20NIEIR%20-%207.02%20Post%20Modelling%20Adjustments%20for%20Demand%20Forecasts%20-%20June%202021%20-%20Public.pdf",
+      "reference_period": "2021 modelling",
+      "metric": "households_with_pool_or_spa",
+      "value": 1200000,
+      "unit": "households",
+      "context": {
+        "nsw_share": "around one third",
+        "annual_pool_pump_sales_range": [
+          150000,
+          200000
+        ],
+        "forecast_asset_life_years": 8
+      },
+      "exact_excerpt": "Approximately 1.2 million Australian households have a swimming pool or spa.",
+      "limitations": [
+        "Model input, not an administrative register.",
+        "Annual pump sales include both replacement and new-pool demand."
+      ]
+    },
+    {
+      "id": "E-AU-POOL-PUMP-REPLACEMENT-SURVEY",
+      "source_class": "B0",
+      "publisher": "Australian Government Department of the Environment and Energy / Energy Rating",
+      "url": "https://www.energyrating.gov.au/sites/default/files/2023-04/2016-Pool-Pump-Market-Research-Report_0.pdf",
+      "reference_period": "2016 survey",
+      "metric": "owner_experience_replacing_pool_pump",
+      "values": {
+        "respondents_with_pool_who_had_replaced_pump_pct": 50,
+        "replacement_age_distribution": {
+          "0_2_years_pct": 4,
+          "2_5_years_pct": 16,
+          "5_10_years_pct": 42,
+          "over_10_years_pct": 23,
+          "dont_know_pct": 15
+        },
+        "replacement_age_base_australia_n": 721
+      },
+      "exact_excerpt": "Pool pumps were much more likely to have been replaced (50 per cent of respondents indicated that they had replaced a pool pump).",
+      "limitations": [
+        "Survey is now 10 years old; useful for lifecycle structure, not current market share."
+      ]
+    },
+    {
+      "id": "E-AU-POOL-PUMP-SEASONAL-RUNTIME",
+      "source_class": "B0",
+      "publisher": "Australian Government Department of the Environment and Energy / Energy Rating",
+      "url": "https://www.energyrating.gov.au/sites/default/files/2023-04/2016-Pool-Pump-Market-Research-Report_0.pdf",
+      "reference_period": "2016 survey",
+      "metric": "seasonal_pump_runtime",
+      "values": {
+        "summer_5_8_hours_day_pct": 45,
+        "autumn_1_4_hours_day_pct": 52,
+        "winter_1_4_hours_day_pct": 63
+      },
+      "context": "Direct evidence of higher summer duty cycle, not equipment-failure incidence."
+    },
+    {
+      "id": "E-AU-LIKE-FOR-LIKE-REASONS",
+      "source_class": "B0",
+      "publisher": "Australian Government Department of the Environment and Energy / Energy Rating",
+      "url": "https://www.energyrating.gov.au/sites/default/files/2023-04/2016-Pool-Pump-Market-Research-Report_0.pdf",
+      "reference_period": "2016 survey",
+      "metric": "reasons_for_like_for_like_pool_pump_replacement",
+      "values": {
+        "installer_or_pool_shop_advice_pct": 62,
+        "size_space_pct": 32,
+        "existing_piping_pct": 22,
+        "warranty_pct": 7,
+        "ease_pct": 3,
+        "happy_with_brand_pct": 2
+      },
+      "denominator": "Australian respondents replacing pool pump like-for-like, n=133",
+      "exact_excerpt": "The most common reason was that it was done based on advice from the installer or pool shop (62 per cent)."
+    },
+    {
+      "id": "E-AU-POOL-ENERGY-BURDEN",
+      "source_class": "A1",
+      "publisher": "Australian Government energy.gov.au",
+      "url": "https://www.energy.gov.au/households/pool-pumps",
+      "metric": "pool_pump_energy_burden",
+      "values": {
+        "pool_pump_share_household_electricity_bill_pct": 18,
+        "in_ground_pool_total_energy_bill_share_up_to_pct": 30,
+        "five_star_variable_speed_energy_reduction_vs_one_star_single_speed_pct": 55
+      },
+      "context": "Government consumer guidance."
+    },
+    {
+      "id": "E-AU-POOL-PUMP-GEMS-2022",
+      "source_class": "A0",
+      "publisher": "Federal Register of Legislation / Energy Rating",
+      "url": "https://www.legislation.gov.au/F2022L00025/asmade",
+      "metric": "pool_pump_efficiency_regime",
+      "values": {
+        "mandatory_meps_and_labelling_effective_year": 2022,
+        "covered_product": "swimming pool pump-units"
+      },
+      "context": "Government energy guidance says MEPS and mandatory labels were introduced for swimming pool pumps in 2022."
+    },
+    {
+      "id": "E-AU-POOL-PUMP-DATASET",
+      "source_class": "A0",
+      "publisher": "Australian Government DCCEEW / Data.gov.au",
+      "url": "https://data.gov.au/data/dataset/energy-rating-for-household-appliances",
+      "metric": "machine_readable_pool_pump_product_registry",
+      "value": true,
+      "formats": [
+        "CSV",
+        "API/structured portal"
+      ],
+      "updated_at": "2026-02-07",
+      "fields": [
+        "brand",
+        "model",
+        "availability",
+        "star_rating",
+        "energy/performance fields"
+      ],
+      "context": "Supplier registration data for labelled products sold in Australia/New Zealand."
+    },
+    {
+      "id": "E-AU-POOL-ELECTRICITY-KWH",
+      "source_class": "A1",
+      "publisher": "Government of South Australia",
+      "url": "https://www.sa.gov.au/topics/energy-and-environment/using-saving-energy/swimming-pools-and-spas",
+      "metric": "typical_pool_electricity_use",
+      "value": [
+        2000,
+        3000
+      ],
+      "unit": "kWh/year",
+      "context": "Depends on pump type/size, runtime and heating."
+    },
+    {
+      "id": "E-AU-ASTRAL-WARRANTY-STACK",
+      "source_class": "C0",
+      "publisher": "AstralPool / Fluidra Australia",
+      "url": "https://www.astralpool.com.au/warranty",
+      "effective_date": "2026-02-01",
+      "metric": "component_specific_warranty_clocks",
+      "values": [
+        {
+          "component": "pool pump",
+          "years": [
+            2,
+            3
+          ]
+        },
+        {
+          "component": "pump mechanical seal",
+          "years": [
+            1,
+            2
+          ]
+        },
+        {
+          "component": "saltwater chlorinator",
+          "years": [
+            2,
+            3
+          ]
+        },
+        {
+          "component": "chlorinator sensor/dosing wear parts",
+          "years": [
+            1,
+            1
+          ]
+        },
+        {
+          "component": "replacement salt cell/electrode",
+          "years": [
+            2,
+            3
+          ]
+        },
+        {
+          "component": "pool controller",
+          "years": [
+            2,
+            2
+          ]
+        },
+        {
+          "component": "filter tank",
+          "years": [
+            5,
+            10
+          ]
+        },
+        {
+          "component": "pool heat pump base",
+          "years": [
+            3,
+            3
+          ]
+        },
+        {
+          "component": "pool heat-pump compressor",
+          "years": [
+            5,
+            5
+          ]
+        },
+        {
+          "component": "pool heat-pump heat exchanger",
+          "years": [
+            5,
+            25
+          ]
+        },
+        {
+          "component": "robot cleaner wearable parts",
+          "years": [
+            1,
+            1
+          ]
+        }
+      ],
+      "context": {
+        "authorized_dealer_condition": true,
+        "water_chemistry_condition": true,
+        "professional_monthly_water_test_recommended": true,
+        "home_weekly_testing_recommended": true,
+        "spare_parts_warranty_months": 12
+      },
+      "limitations": [
+        "Warranty length is not technical lifetime."
+      ]
+    },
+    {
+      "id": "E-AU-WATERWORKS-LABOUR",
+      "source_class": "C0",
+      "publisher": "Waterworks Perth",
+      "url": "https://waterworks.net.au/service-price/",
+      "metric": "current_pool_service_labour_prices",
+      "values": {
+        "standard_service_ex_gst_aud": 69,
+        "deluxe_service_ex_gst_aud": 105,
+        "green_pool_recovery_ex_gst_aud": 135,
+        "callout_ex_gst_aud": 135,
+        "pump_replacement_labour_ex_gst_aud": 135,
+        "pump_overhaul_labour_ex_gst_aud": 135,
+        "heat_pump_replacement_labour_ex_gst_aud": 135,
+        "salt_chlorinator_replacement_labour_ex_gst_aud": 135,
+        "salt_cell_replacement_labour_ex_gst_aud": 135
+      },
+      "context": "Labour before GST; parts/electrical charges can be additional."
+    },
+    {
+      "id": "E-AU-POOL-REPAIR-COST-GUIDE",
+      "source_class": "C1",
+      "publisher": "Pool Quotes",
+      "url": "https://thepoolquotes.com/guides/how-much-does-pool-repairs-cost-in-australia-2026-guide",
+      "metric": "indicative_repair_replacement_price_ranges",
+      "values": {
+        "callout_diagnosis_aud": [
+          80,
+          180
+        ],
+        "pump_repair_aud": [
+          150,
+          400
+        ],
+        "pump_replacement_installed_aud": [
+          800,
+          2200
+        ],
+        "chlorinator_or_cell_replacement_aud": [
+          600,
+          1500
+        ],
+        "heat_pump_repair_aud": [
+          300,
+          900
+        ],
+        "heat_pump_replacement_aud": [
+          3000,
+          8000
+        ]
+      },
+      "limitations": [
+        "Commercial guide, not audited transaction dataset."
+      ]
+    },
+    {
+      "id": "E-AU-CTX-PARTS-MARKET",
+      "source_class": "C0",
+      "publisher": "Pool Supermarket",
+      "url": "https://www.poolsupermarket.com.au/astral-hurlcon-ctx-pump-spares",
+      "metric": "model_specific_pool_pump_parts_snapshot",
+      "values": {
+        "lid_assembly_aud": 129,
+        "diffuser_small_aud": 88,
+        "mechanical_seal_aud": 15.95,
+        "seal_plate_new_style_aud": 196,
+        "seal_plate_old_style_aud": 193,
+        "motor_750w_aud": 980,
+        "motor_1100w_aud": 1146,
+        "motor_1500w_aud": 1355
+      },
+      "context": {
+        "old_style_pre_aug_2014_parts": true,
+        "new_style_aug_2014_onwards_parts": true,
+        "multiple_impellers_by_ctx_model": true
+      }
+    },
+    {
+      "id": "E-AU-CTX-GENERATION-COMPATIBILITY",
+      "source_class": "C0",
+      "publisher": "Heater and Spa Parts",
+      "url": "https://heaterandspaparts.com.au/en-nz/products/seal-plate-series2-ctx-aug14-o",
+      "metric": "pool_pump_generation_compatibility",
+      "values": {
+        "series1": "pre-Aug 2014",
+        "series2": "Aug 2014 to 2020",
+        "mkii": "Nov 2020 onwards",
+        "mixed_generation_volute_seal_plate_compatible": false
+      },
+      "exact_excerpt": "The seal plate and volute must come from the same generation as your pump",
+      "context": "Retailer asks customer for pump/data-plate photo when generation is uncertain."
+    },
+    {
+      "id": "E-AU-HOT-WEATHER-CHEMISTRY",
+      "source_class": "A1",
+      "publisher": "HealthyWA / Government of Western Australia",
+      "url": "https://www.ahs.health.wa.gov.au/sitecore/content/Healthy-WA/Articles/S_T/Swimming-pools-and-spas",
+      "metric": "hot_weather_pool_chemistry_load",
+      "value": true,
+      "context": {
+        "salt_chlorination_needs_more_frequent_checking_in_hot_weather": true,
+        "extra_chlorine_may_be_required": true,
+        "sunlight_breaks_down_chlorine": true
+      },
+      "limitations": [
+        "Shows operational load/chemistry pressure, not hardware failure incidence."
+      ]
+    },
+    {
+      "id": "E-AU-HEATWAVE-FAILURE-EVIDENCE-GAP",
+      "source_class": "META",
+      "metric": "direct_heatwave_equipment_failure_series_found",
+      "value": false,
+      "context": {
+        "found": "commercial providers state summer repair demand/green-pool calls rise and pumps run longer",
+        "not_found": "official/insurer/manufacturer cohort data quantifying heatwave-caused pool-pump/chlorinator failure rate or repair volume"
+      },
+      "quality_status": "NEGATIVE_EVIDENCE"
+    }
+  ],
+  "derived_metrics": [
+    {
+      "id": "D-AU-PUMP-MARKET-ANNUAL-SALES-AS-POOL-HOUSEHOLD-PCT",
+      "formula": "150k–200k annual pool-pump sales / 1.2m pool/spa households",
+      "inputs": [
+        "E-AU-POOL-SPA-HOUSEHOLDS-NIEIR"
+      ],
+      "value": [
+        12.5,
+        16.7
+      ],
+      "unit": "annual sales as % of household pool/spa denominator",
+      "comparability": "LIMITED",
+      "warning": "Sales include new pools as well as replacements; do not call this annual failure/replacement rate."
+    },
+    {
+      "id": "D-AU-REPLACEMENT-AGE-MODE",
+      "formula": "largest age bucket among replaced pumps in 2016 survey",
+      "inputs": [
+        "E-AU-POOL-PUMP-REPLACEMENT-SURVEY"
+      ],
+      "value": "5–10 years",
+      "share_pct": 42,
+      "context": "NIEIR later used an 8-year pump asset-life assumption, independently aligning with this survey age structure."
+    },
+    {
+      "id": "D-AU-REPAIR-VS-REPLACE-SPREAD",
+      "formula": "commercial indicative pump repair range compared with installed replacement range",
+      "inputs": [
+        "E-AU-POOL-REPAIR-COST-GUIDE"
+      ],
+      "values": {
+        "repair_aud": [
+          150,
+          400
+        ],
+        "replacement_installed_aud": [
+          800,
+          2200
+        ],
+        "repair_as_pct_of_replacement_extremes": [
+          6.8,
+          50.0
+        ]
+      },
+      "warning": "Ranges are not model-matched; no universal saving should be inferred."
+    },
+    {
+      "id": "D-AU-ENERGY-UPGRADE-POTENTIAL",
+      "formula": "government 5-star variable-speed vs 1-star single-speed energy comparison",
+      "inputs": [
+        "E-AU-POOL-ENERGY-BURDEN"
+      ],
+      "value": 55,
+      "unit": "percent lower energy use",
+      "interpretation": "A functioning legacy single-speed pump can have significant operating-cost obsolescence before mechanical failure."
+    },
+    {
+      "id": "D-AU-ADVISOR-AND-INTERFACE-LIKEFORLIKE",
+      "formula": "survey-reported reasons among n=133 Australian like-for-like replacements",
+      "inputs": [
+        "E-AU-LIKE-FOR-LIKE-REASONS"
+      ],
+      "values": {
+        "installer_or_shop_advice_pct": 62,
+        "size_space_pct": 32,
+        "piping_pct": 22
+      },
+      "interpretation": "Replacement choice is strongly influenced by both service-channel advice and physical legacy interfaces."
+    }
+  ],
+  "market_structure": {
+    "routine_pool_care": {
+      "state": "MATURE_AND_COMMODITIZED",
+      "signals": [
+        "large retail/service chains and local service operators",
+        "standard one-off cleaning/service offers",
+        "green-pool recovery packages",
+        "routine chemistry testing and consumables"
+      ]
+    },
+    "pool_pump_parts": {
+      "state": "MATURE_SPECIALIST_ECOMMERCE",
+      "signals": [
+        "deep exploded-parts catalogues",
+        "model-specific motors, impellers, seals, volutes, control parts",
+        "retailers already offer photo/data-plate identification"
+      ]
+    },
+    "repair_replacement_decision": {
+      "state": "OPEN_BUT_COMPLEX",
+      "signals": [
+        "repair can be materially below full replacement",
+        "motor price can approach complete-pump economics",
+        "energy savings can change the optimal decision",
+        "electrical work may require licensed trades",
+        "like-for-like is constrained by size/plumbing"
+      ]
+    }
+  },
+  "exact_analysis_questions": {
+    "how_much_more_for_convenience_certainty_speed": "No revealed WTP. Waterworks charges the same A$135 ex-GST labour line for callout, pump overhaul and many equipment replacements, suggesting diagnosis/fit rather than travel alone drives complexity. No clean urgent/summer premium was found.",
+    "which_problem_states_show_strongest_economics": "Ageing 5–10+ year pump with failed seal/bearing/motor; old single-speed pump where a high-efficiency variable-speed replacement materially reduces operating cost; generation-specific Astral CTX parts where an apparently correct part will not fit another production generation.",
+    "current_options": "Pool shops/service companies, OEM-authorized dealers, general pool technicians, licensed electricians where required, specialist parts ecommerce, repair workshops.",
+    "is_there_room_for_us": "Not in generic maintenance or parts. Better wedge: photo/data-plate model-generation identification + repair-vs-replace + energy-cost comparison + correctly specified replacement.",
+    "best_gtm": "model + fault queries; 'old vs new style' parts queries; repair-vs-variable-speed-upgrade calculator; summer readiness checks; pool-equipment passport; local licensed repair routing.",
+    "same_pattern_other_country": "B08 Finland supported cohort readiness plus cold-weather activation. Australia pools clearly have seasonal runtime and replacement cohorts, but direct hard data linking heatwaves to equipment failure is missing. Therefore shock activation does not replicate yet.",
+    "why_country_difference": "Pool pumps are continuously maintainable and many owners already have service relationships. Hot weather strongly raises chemistry and runtime load, but a pool-pump failure is less existential than a heating failure in Finland, which may weaken measurable shock urgency.",
+    "what_does_it_reveal_about_country": "Australia has enough pool penetration to justify national equipment regulation and a public model-level energy database. The market is mature enough that efficiency—not just mechanical failure—can drive replacement economics.",
+    "macro_pattern": "An asset can have both a mechanical replacement clock and an operating-cost obsolescence clock. For pools, the energy clock is unusually measurable because pumps are a large household load and are now regulated/labeled.",
+    "falsifier_result": "Core replacement/compatibility thesis supported. The specific B08 climate-shock-to-hardware-failure transfer is unresolved and should be treated as failed-to-replicate, not assumed."
+  },
+  "mechanism_candidates": [
+    {
+      "id": "MC-STACKED_COMPONENT_CLOCKS",
+      "status": "CANDIDATE",
+      "statement": "A single homeowner system contains nested components with materially different warranty/wear clocks, so the economically relevant aftermarket is a graph of sub-assets rather than one asset lifecycle.",
+      "evidence": [
+        "E-AU-ASTRAL-WARRANTY-STACK"
+      ],
+      "observed_examples": "1-year sensors/seals/wear parts; 2–3-year pumps/chlorinators/controllers; 5-year compressors; up to 25-year heat exchangers.",
+      "next_replication_test": "Test another multi-component installed system such as domestic water treatment, boiler plant or smart-home energy stack."
+    },
+    {
+      "id": "MC-OPERATING_COST_OBSOLESCENCE_BEFORE_FAILURE",
+      "status": "CANDIDATE",
+      "statement": "A functioning installed asset can become economically obsolete before mechanical failure when a successor has a large, measurable operating-cost advantage.",
+      "evidence": [
+        "E-AU-POOL-ENERGY-BURDEN",
+        "E-AU-POOL-PUMP-GEMS-2022",
+        "E-AU-POOL-ELECTRICITY-KWH"
+      ],
+      "observed_statistic": "Government guidance: 5-star variable-speed pump uses 55% less energy than a 1-star single-speed pump.",
+      "next_replication_test": "Test boilers, ventilation fans, refrigeration or pumps where energy-label changes create upgrade economics."
+    },
+    {
+      "id": "MC-SERVICE_ADVISOR_REPLACEMENT_GATEKEEPER",
+      "status": "CANDIDATE",
+      "statement": "In urgent/technical replacement markets, installer or specialist-shop advice can control successor choice more strongly than consumer independent comparison.",
+      "evidence": [
+        "E-AU-LIKE-FOR-LIKE-REASONS"
+      ],
+      "observed_statistic": "62% of surveyed Australian like-for-like replacers cited installer/pool-shop advice.",
+      "next_replication_test": "Look for measured advisor influence in heat pumps, stairlifts, boilers or EV charging."
+    }
+  ],
+  "cross_probe_updates": {
+    "MC-COHORT_READY_SHOCK_ACTIVATION": {
+      "status": "NOT_REPLICATED_IN_B09",
+      "new_learning": "B09 verifies higher summer duty cycle and hot-weather chemistry stress, but no sufficiently hard failure/repair-volume series was found. Do not promote climate shock activation from operational load alone."
+    },
+    "LEGACY_INTERFACE_LOCK_IN": {
+      "status": "FURTHER_SUPPORTED",
+      "new_evidence": "2016 Australian survey: among like-for-like replacements, 32% cited size/space and 22% existing piping; CTX components also fork by production generation."
+    },
+    "MC-MULTI_CLOCK_AFTERMARKET_TRIGGER": {
+      "status": "FURTHER_SUPPORTED",
+      "new_learning": "Pool pumps add mechanical-age, component-warranty, energy-cost and product-efficiency clocks, but the hypothesized heatwave failure clock remains unproven."
+    }
+  },
+  "data_quality_findings": [
+    {
+      "issue": "Commercial pool-repair pages state summer callouts spike, but no official or insurer series quantifying hardware failures was found.",
+      "action": "Do not encode a summer/heatwave hardware-failure multiplier."
+    },
+    {
+      "issue": "1.1m pool homes, 1.2m pool/spa households, and 1.63m pools/spas are different denominators.",
+      "action": "Keep separately typed; do not choose one as exact national stock."
+    },
+    {
+      "issue": "Warranty clocks are not lifetime/failure curves.",
+      "action": "Use warranty only as channel/risk-transfer boundary."
+    }
+  ],
+  "search_demand": {
+    "monthly_search_volume": null,
+    "cpc": null,
+    "missing_reason": "No authenticated Keyword Planner/Ads dataset used."
+  },
+  "next_probe": {
+    "probe_id": "B10_NO_CABIN_WATER_FROST_REMOTE",
+    "sector": "remote cabin water/frost/climate monitoring and remediation",
+    "country": "Norway",
+    "selection_reason": "B09 failed to replicate COHORT_READY_SHOCK_ACTIVATION because direct climate-to-hardware-failure evidence was weak. Norwegian cabins are a better causal test: remote properties, freezing conditions, water damage, insurer loss data, and large cabin stock allow us to test whether weather shocks create directly measured economic losses and whether monitoring/prevention can capture value.",
+    "hypothesis": "In remote properties, weather shocks create outsized loss because failures remain undetected. The strongest intermediary/ecommerce opportunity should therefore shift upstream from repair to prevention: sensing, automatic shutoff, frost/power monitoring and verified local response.",
+    "falsifiers": [
+      "No quantified cabin water/frost loss data exists.",
+      "Insurance already mandates/provides monitoring so the commercial wedge is closed.",
+      "Connectivity/power constraints make remote monitoring unreliable.",
+      "Integrated Norwegian smart-home/cabin providers already dominate the prevention stack.",
+      "Monitoring savings are too small relative to hardware/install cost."
+    ]
+  }
+}

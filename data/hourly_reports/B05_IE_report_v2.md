@@ -1,5 +1,11 @@
 # [GoldProbe B05] Ireland Domestic Wastewater — full research + structured evidence
 
+**From:** Prior Trades <tradesprior@gmail.com>
+**Date:** Mon, 7 Sep 2026 04:26:14 +0200
+**Gmail ID:** 1a079b008d58dd38
+
+---
+
 # GoldProbe B05 — Ireland Domestic Wastewater / Septic Systems
 
 **Run date:** 2026-09-07  
@@ -547,3 +553,4 @@ The actual intelligence gap is the layer immediately before a high-value transac
 That is the high-signal opportunity.
 
 More importantly, B05 directionally supports the channel-openness hypothesis while also exposing its confounder. B06 is selected specifically to remove that confounder.
+

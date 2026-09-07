@@ -1,5 +1,11 @@
 # GoldProbe B03 — Pellet Heating Hypothesis Test + JSON
 
+**From:** Prior Trades <tradesprior@gmail.com>
+**Date:** Sun, 6 Sep 2026 21:47:30 -0400
+**Gmail ID:** 1a0798c91ee7167f
+
+---
+
 # GoldProbe B03 — Pellet heating: seasonal capacity, mandatory maintenance, failure-parts and service capture
 
 ## Why this probe was chosen
@@ -380,3 +386,4 @@ Falsifiers for the Singapore probe are already stored in the JSON:
 - major brands/landlords capture demand before consumer search
 
 That is the next experiment because it maximizes information gain rather than merely finding another heating-adjacent opportunity.
+

@@ -135,7 +135,18 @@ class BigQueryStorage:
             LIMIT {limit}
         """
 
-        job = self.client.query(query, job_config=None)
+        # Build QueryJobConfig with parameters
+        job_config = None
+        if params:
+            from google.cloud.bigquery import QueryJobConfig, ScalarQueryParameter
+            job_config = QueryJobConfig(
+                query_parameters=[
+                    ScalarQueryParameter(name, "STRING", value)
+                    for name, value in params.items()
+                ]
+            )
+
+        job = self.client.query(query, job_config=job_config)
         return [dict(row) for row in job.result()]
 
     # --- Hypotheses ---
@@ -173,7 +184,17 @@ class BigQueryStorage:
             LIMIT {limit}
         """
 
-        job = self.client.query(query)
+        job_config = None
+        if params:
+            from google.cloud.bigquery import QueryJobConfig, ScalarQueryParameter
+            job_config = QueryJobConfig(
+                query_parameters=[
+                    ScalarQueryParameter(name, "STRING", value)
+                    for name, value in params.items()
+                ]
+            )
+
+        job = self.client.query(query, job_config=job_config)
         return [dict(row) for row in job.result()]
 
     # --- Kernels ---

@@ -1,5 +1,11 @@
 # [GoldProbe B04] Singapore Residential AC — schema hardening + full evidence report
 
+**From:** Prior Trades <tradesprior@gmail.com>
+**Date:** Mon, 7 Sep 2026 04:12:06 +0200
+**Gmail ID:** 1a079a319c113811
+
+---
+
 # GoldProbe B04 — Singapore Residential Air-Conditioning
 **Date:** 2026-09-07  
 **Method:** research-native GoldProbe 2.1  
@@ -265,3 +271,4 @@ The market is enormous: official 2023 ownership is **81.9%**, yielding an approx
 The high-signal opportunity, if any, is not another consumer aircon marketplace. It is narrower B2B orchestration around tenancy/property portfolios.
 
 And the more important orchard-level insight is that **channel openness may have an optimum rather than a monotonic relationship with opportunity**. B05 is selected specifically to test that.
+

@@ -1,5 +1,11 @@
 # GoldProbe B02 — Full research narrative + structured JSON
 
+**From:** Prior Trades <tradesprior@gmail.com>
+**Date:** Sun, 6 Sep 2026 21:42:14 -0400
+**Gmail ID:** 1a07987c0b5ec2b2
+
+---
+
 GoldProbe batch B02 is complete. I kept it deliberately comparative: five cells, including two controls/negative findings, rather than generating hundreds of speculative opportunities.
 
 CURRENT RANKING
@@ -107,3 +113,4 @@ Opportunity should not be a naked score. Each input should carry value, measurem
 
 NEXT RESEARCH LOGIC
 The next probe should deliberately test a mechanism not yet measured. Leading candidates: motorised shutters/awnings in Switzerland/Spain (climate + motor/controller compatibility), pellet/wood stoves in Alpine/Nordic markets (seasonal forcing and emergency premium), and domestic/sump/sewage pumps (urgent failure + cheap component vs expensive callout). The next probe must record why it was chosen, what would falsify it, whether it answered the intended hypothesis, and why that result determines the following probe.
+

@@ -1,0 +1,512 @@
+{
+  "goldprobe_version": "2.1-research-native",
+  "probe_id": "B11_UK_PROPERTY_ESCAPE_OF_WATER_PREVENTION",
+  "date": "2026-09-07",
+  "score": null,
+  "score_policy": "NO_NAKED_SCORE",
+  "hypothesis_loop": {
+    "selection_reason": "B10 Norway cabins generated RISK_PRICER_SUBSIDIZES_PREVENTION and ABSENCE_AMPLIFIES_DAMAGE_SEVERITY. B11 tests those mechanisms in a different country and buyer structure: UK rental/commercial property portfolios, where insurers, water regulators/utilities and professional property owners can all capture avoided loss.",
+    "hypothesis": "Leak-prevention technology becomes materially easier to deploy when a third party that bears loss—insurer, utility or portfolio owner—funds or subsidizes it. Portfolio buyers should value automatic shutoff, centralized monitoring and response more than standalone sensors.",
+    "falsifiers": [
+      "UK insurers do not materially fund leak-prevention devices/services.",
+      "Water-sector institutions do not subsidize customer-side leak reduction.",
+      "Portfolio owners have no quantified reason to deploy prevention.",
+      "Existing vendors already own all insurer/property-manager workflows, leaving no independent commercial layer.",
+      "Claims-reduction evidence is too weak or vendor-only to justify prevention economics."
+    ]
+  },
+  "verdict": {
+    "consumer_leak_sensor_store": "HOLD_COMMODITY",
+    "generic_landlord_leak_dashboard": "HOLD_MATURE",
+    "insurer_funded_device_distribution": "CONFIRMED_EXISTING_BUSINESS_MODEL",
+    "portfolio_auto_shutoff_and_response": "CONFIRMED_EXISTING_CATEGORY",
+    "prevention_funding_eligibility_router": "INVESTIGATE_NARROW",
+    "post_claim_retrofit_orchestration": "INVESTIGATE",
+    "cross_vendor_insurance_evidence_layer": "UNRESOLVED",
+    "direct_to_landlord_sensor_marketing": "HOLD_HIGH_CAC_RELATIVE_TO_B2B2C"
+  },
+  "evidence_atoms": [
+    {
+      "id": "E-UK-ENGLAND-DWELLING-STOCK-2025",
+      "source_class": "A0",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/statistics/dwelling-stock-estimates-in-england-2025/dwelling-stock-estimates-england-31-march-2025",
+      "reference_period": "31 March 2025",
+      "metric": "england_dwelling_stock_by_tenure",
+      "values": {
+        "owner_occupied": 16567000,
+        "private_rented": 5030000,
+        "social_and_affordable_rented": 4201000,
+        "other_public": 28000
+      },
+      "context": "Accredited official statistics. Dwellings include vacant units; tenure differs from household estimates."
+    },
+    {
+      "id": "E-UK-EHS-HOUSEHOLDS-2024-25",
+      "source_class": "A0",
+      "publisher": "English Housing Survey / MHCLG",
+      "url": "https://www.gov.uk/government/statistics/chapters-for-english-housing-survey-2024-to-2025-headline-findings-on-demographics-and-household-resilience/chapter-1-profile-of-households-and-dwellings",
+      "reference_period": "2024-25",
+      "metric": "england_households_by_tenure",
+      "values": {
+        "all_households_m": 25.0,
+        "owner_occupied_m": 16.2,
+        "private_rented_m": 4.7,
+        "social_rented_m": 4.1,
+        "housing_association_m": 2.5,
+        "local_authority_m": 1.5
+      },
+      "context": "Household measure; excludes institutional accommodation and differs from dwelling-stock denominator."
+    },
+    {
+      "id": "E-UK-AVIVA-EOW-2025",
+      "source_class": "C0",
+      "publisher": "Aviva Risk Management Solutions",
+      "url": "https://www.aviva.co.uk/risksolutions/protecting-your-property/escape-of-water/",
+      "published_at": "2026-08",
+      "metric": "aviva_escape_of_water_claims",
+      "values": {
+        "average_claim_cost_2025_gbp": 11273,
+        "claims_reported_2023_2025": 26845
+      },
+      "exact_excerpt": "£11,273 was the average escape of water claims cost for Aviva in 2025",
+      "limitations": [
+        "Average cost is for 2025; claim count spans 2023-2025, so they must not be multiplied into a total loss estimate.",
+        "Aviva book is not the whole UK market."
+      ]
+    },
+    {
+      "id": "E-UK-ABI-WATER-2019",
+      "source_class": "B1",
+      "publisher": "Allianz citing Association of British Insurers",
+      "url": "https://www.allianz.co.uk/news-and-insight/insight-and-expertise/spotlight-on-escape-of-water.html",
+      "reference_period": "2019",
+      "metric": "uk_domestic_and_commercial_water_damage_claims_paid",
+      "value": 981000000,
+      "unit": "GBP",
+      "context": "Historical combined domestic/commercial water damage claim value cited by insurer from ABI.",
+      "limitations": [
+        "Older context only; not current 2026 spend."
+      ]
+    },
+    {
+      "id": "E-UK-HISCOX-LEAKBOT",
+      "source_class": "C0",
+      "publisher": "Hiscox UK",
+      "url": "https://www.hiscox.co.uk/home-insurance/leakbot-info",
+      "metric": "insurer_funded_leak_detection",
+      "values": {
+        "eligible_buildings_customers_free_device": true,
+        "device_stated_value_gbp": 149,
+        "engineer_visit_per_year_included": 1,
+        "standard_parts_and_labour_included": true
+      },
+      "exact_excerpt": "claim a FREE LeakBot water leak detector worth £149",
+      "context": "Hiscox bears the offer cost for eligible buildings-insurance customers."
+    },
+    {
+      "id": "E-UK-ADMIRAL-LEAKBOT-2025",
+      "source_class": "C0",
+      "publisher": "Ondo InsurTech regulatory announcement",
+      "url": "https://www.investegate.co.uk/announcement/rns/ondo-insurtech--ondo/contract/9085604",
+      "published_at": "2025-09-03",
+      "metric": "insurer_funded_device_deployment",
+      "values": {
+        "insurer": "Admiral",
+        "additional_devices_committed_2025": 10000,
+        "agreement_years": 2,
+        "partnership_since": 2022
+      },
+      "context": "Company announcement; deployment commitment rather than independently audited installed count."
+    },
+    {
+      "id": "E-UK-LEAKBOT-B2B2C-MODEL",
+      "source_class": "C0",
+      "publisher": "Ondo InsurTech / FCA National Storage Mechanism",
+      "url": "https://data.fca.org.uk/artefacts/NSM/RNS/2ce74020-676d-4713-bcc3-61fcc7ba8fab.html",
+      "published_at": "2026",
+      "metric": "insurer_pays_for_policyholder_leakbot",
+      "values": {
+        "insurance_carrier_partners": 26,
+        "device_typically_free_to_household": true,
+        "insurer_pays_monthly_per_customer": true,
+        "service_model_includes_repairs_where_applicable": true
+      },
+      "context": "Company disclosure; exact UK insurer unit economics not published in this announcement."
+    },
+    {
+      "id": "E-UK-LEAKBOT-CLAIMS-STUDY",
+      "source_class": "C1",
+      "publisher": "Consumer Intelligence study announced by Ondo InsurTech",
+      "url": "https://www.lse.co.uk/rns/ondo-publish-new-study-on-leakbot-a3ftq6073tah5uu.html",
+      "published_at": "2022-06-06",
+      "metric": "reported_uk_claims_mitigation",
+      "values": {
+        "water_damage_claim_cost_reduction_pct": 70,
+        "claim_frequency_reduction_pct": 39,
+        "remaining_claim_severity_reduction_pct": 50,
+        "renewal_likelihood_increase_pct": 37
+      },
+      "context": "Ondo states research was conducted independently by Consumer Intelligence across three countries.",
+      "limitations": [
+        "Results are disclosed through the vendor's RNS rather than an academic/actuarial publication with raw cohort data.",
+        "Treat as commissioned independent study, not regulator-verified causal estimate."
+      ]
+    },
+    {
+      "id": "E-UK-DIRECTLINE-POSTLOSS-RETROFIT",
+      "source_class": "C0",
+      "publisher": "Direct Line",
+      "url": "https://www.directline.com/assets/pdf/select-home-policy-document.pdf",
+      "metric": "post_loss_leak_detection_benefit",
+      "values": {
+        "maximum_detection_system_contribution_gbp": 500,
+        "covered_water_damage_loss_threshold_gbp": 7500,
+        "prior_detector_disqualifies": true,
+        "approved_system_required": true,
+        "policy_excess_on_this_benefit": 0
+      },
+      "exact_excerpt": "We will pay up to £500 for you to install a water leak detection system",
+      "context": "Benefit applies following a covered water-damage loss exceeding £7,500 at the same home."
+    },
+    {
+      "id": "E-UK-OFWAT-WEL2-2026",
+      "source_class": "A1",
+      "publisher": "Ofwat",
+      "url": "https://www.ofwat.gov.uk/water-efficiency-lab-2-launches-to-prevent-predict-pinpoint-and-fix-customer-side-leakage-a-1-5-billion-litre-a-day-challenge-england/",
+      "published_at": "2026-08-03",
+      "metric": "customer_side_leakage_scale_and_innovation_funding",
+      "values": {
+        "customer_side_leakage_billion_litres_day": [
+          1.0,
+          1.5
+        ],
+        "annual_billpayer_cost_up_to_gbp": 1600000000,
+        "WEL2_fund_up_to_gbp": 5000000,
+        "WIN_project_award_gbp": 495000,
+        "WIN_sensors": ">1,000",
+        "WIN_commercial_buildings": 30,
+        "commercial_water_lost_to_leaks_or_continuous_flow_pct": [
+          10,
+          30
+        ],
+        "aviva_testing_insurance_premium_link": true
+      },
+      "context": "Publicly funded innovation program. WIN Initiative led by Quensus; Aviva exploring a Water Management Plan standard and insurance benefit."
+    },
+    {
+      "id": "E-UK-OFWAT-FREE-DETECTION",
+      "source_class": "A1",
+      "publisher": "Ofwat",
+      "url": "https://www.ofwat.gov.uk/nonhouseholds/supply-and-standards/leakage/",
+      "metric": "water_company_customer_leak_support",
+      "values": {
+        "majority_offer_free_nonhousehold_leak_detection": true,
+        "some_offer_free_repair": true,
+        "some_offer_free_replacement_or_grant_for_supply_pipe": true
+      },
+      "context": "Offer varies by company, owner occupation, leak location and pipe condition."
+    },
+    {
+      "id": "E-UK-AVIVA-LEAKSAFE-PARTNER",
+      "source_class": "C0",
+      "publisher": "Aviva Risk Management Solutions",
+      "url": "https://www.aviva.co.uk/risksolutions/specialist-partners/leaksafe/",
+      "metric": "insurer_preferential_leak_prevention_channel",
+      "values": {
+        "preferential_rates_for_aviva_customers": true,
+        "site_survey": true,
+        "automatic_shutoff_available": true,
+        "portfolio_monitoring_tools": true,
+        "supply_and_installation": true
+      },
+      "context": "Commercial risk-management partner network."
+    },
+    {
+      "id": "E-UK-AVIVA-QUENSUS-PARTNER",
+      "source_class": "C0",
+      "publisher": "Aviva Risk Management Solutions",
+      "url": "https://www.aviva.co.uk/risksolutions/specialist-partners/quensus/",
+      "metric": "insurer_preferential_auto_shutoff_partner",
+      "values": {
+        "preferential_rates_for_aviva_customers": true,
+        "automatic_flow_monitoring_and_shutoff": true,
+        "remote_monitoring": true,
+        "portfolio_dashboard": true,
+        "site_survey_install_commission": true
+      },
+      "context": "Explicitly serves residential, commercial and industrial property."
+    },
+    {
+      "id": "E-UK-LEAKSAFE-70-FLAT-INSURANCE",
+      "source_class": "C0",
+      "publisher": "Leaksafe",
+      "url": "https://leaksafe.com/case-studies/reducing-insurance-excess-apartments-london/",
+      "metric": "portfolio_insurance_response_to_prevention",
+      "values": {
+        "flats": 70,
+        "installed_year": 2022,
+        "insurer_recommended_mitigation": true,
+        "insurance_excess_reduced_after_claims_fell": true
+      },
+      "context": "Vendor case study quoting residents association; exact excess reduction and claim counts not published."
+    },
+    {
+      "id": "E-UK-LEAKSAFE-STUDENT-350",
+      "source_class": "C0",
+      "publisher": "Leaksafe",
+      "url": "https://leaksafe.com/case-studies/student-accommodation-london/",
+      "metric": "multi_unit_detection_operational_case",
+      "values": {
+        "student_flats": 350,
+        "leaks_detected_during_10_week_installation": 9,
+        "automatic_shutoff_planned_phase2": true
+      },
+      "context": "Vendor case study; property manager says faster response reduced damage/relocation disruption."
+    },
+    {
+      "id": "E-UK-GROSVENOR-WINT",
+      "source_class": "C0",
+      "publisher": "Taronga Group / Grosvenor trial",
+      "url": "https://tarongagroup.com/case-studies/grosvenor-validates-rapid-leak-detection-with-wint/",
+      "metric": "portfolio_automatic_shutoff_controlled_test",
+      "values": {
+        "nonoccupied_apartment_detection_minutes": 1.6,
+        "automatic_valve_shutoff": true,
+        "example_litres_lost_before_shutoff": 19,
+        "planned_rollout_scale": "hundreds of properties"
+      },
+      "context": "Controlled simulated leak validation at 70 Grosvenor Street; not a live claims-reduction trial."
+    },
+    {
+      "id": "E-UK-GROSVENOR-INVESTMENT",
+      "source_class": "C0",
+      "publisher": "Grosvenor",
+      "url": "https://www.grosvenor.com/news-insights/grosvenor-accelerates-sustainability-and-operational-innovation-with-new-investments",
+      "published_at": "2025-12-03",
+      "metric": "property_owner_invests_in_water_management_vendor",
+      "value": true,
+      "context": "Grosvenor invested in WINT after internal trials, citing commercial and sustainability benefits across property use cases."
+    }
+  ],
+  "derived_metrics": [
+    {
+      "id": "D-UK-RENTED-DWELLING-STOCK-2025",
+      "formula": "5.030m private rented + 4.201m social/affordable rented dwellings",
+      "inputs": [
+        "E-UK-ENGLAND-DWELLING-STOCK-2025"
+      ],
+      "value": 9231000,
+      "unit": "rented dwellings in England",
+      "share_of_all_dwellings_pct": 35.7,
+      "warning": "Not all private rented dwellings are held by portfolio landlords; social stock is centrally/organizationally managed."
+    },
+    {
+      "id": "D-UK-POSTLOSS-PREVENTION-BUDGET-RATIO",
+      "formula": "£500 maximum prevention benefit / £7,500 qualifying prior loss threshold",
+      "inputs": [
+        "E-UK-DIRECTLINE-POSTLOSS-RETROFIT"
+      ],
+      "value": 6.7,
+      "unit": "percent",
+      "interpretation": "Direct Line is willing under this policy to fund prevention worth up to 6.7% of the minimum qualifying prior loss amount.",
+      "warning": "Not insurer ROI; actual claim may be much larger than £7,500 and system cost can vary."
+    },
+    {
+      "id": "D-UK-INSURER-SUBSIDY-EXAMPLES",
+      "formula": "observed insurer-funded or preferential prevention models",
+      "inputs": [
+        "E-UK-HISCOX-LEAKBOT",
+        "E-UK-ADMIRAL-LEAKBOT-2025",
+        "E-UK-DIRECTLINE-POSTLOSS-RETROFIT",
+        "E-UK-AVIVA-LEAKSAFE-PARTNER",
+        "E-UK-AVIVA-QUENSUS-PARTNER"
+      ],
+      "values": {
+        "free_device_plus_repair": "Hiscox",
+        "bulk_device_deployment": "Admiral",
+        "post_claim_capital_contribution": "Direct Line",
+        "preferential_commercial_partner_rates": [
+          "Aviva/Leaksafe",
+          "Aviva/Quensus"
+        ]
+      },
+      "interpretation": "Third-party risk payer support is not a single-product anomaly."
+    }
+  ],
+  "market_structure": {
+    "consumer_detection": {
+      "state": "MATURE",
+      "signals": [
+        "LeakBot insurer bundles",
+        "many retail sensor products",
+        "major insurers already educate consumers",
+        "free-device eligibility checks exist"
+      ]
+    },
+    "portfolio_monitoring_and_auto_shutoff": {
+      "state": "MATURE_SPECIALIST_B2B",
+      "signals": [
+        "Leaksafe automatic shutoff/notification",
+        "Quensus portfolio dashboards and AAFMS",
+        "WINT automatic shutoff and portfolio deployment",
+        "insurer-preferred vendor channels"
+      ]
+    },
+    "risk_financing_and_distribution": {
+      "state": "ACTIVE_AND_FRAGMENTED_BY_PAYER",
+      "signals": [
+        "free insurer-funded devices",
+        "monthly insurer-paid service model",
+        "post-claim prevention allowance",
+        "preferential insurer partner rates",
+        "water-company free detection/repair",
+        "Ofwat innovation funding"
+      ]
+    },
+    "cross_payer_eligibility_and_evidence": {
+      "state": "POSSIBLE_WHITESPACE_UNPROVEN",
+      "signals": [
+        "different insurers/utilities use different eligibility rules and benefits",
+        "vendor/provider ecosystems are payer-specific",
+        "portfolio owners may need evidence for insurer/broker renewal and water-management standards"
+      ]
+    }
+  },
+  "exact_analysis_questions": {
+    "how_much_more_for_convenience_certainty_speed": "The key payer is not the end user. Hiscox gives a £149 device plus annual engineer visit free; Admiral bulk-orders devices; Direct Line funds up to £500 after a qualifying loss; Aviva gives preferential commercial partner rates. This is direct evidence that insurers will spend to reduce future water loss.",
+    "which_problem_states_show_strongest_economics": "Properties with prior escape-of-water loss; unoccupied units; multi-unit buildings where one leak damages multiple flats; portfolios with repeated EOW claims; commercial buildings with continuous hidden leakage.",
+    "current_options": "LeakBot insurer bundles, insurer risk-management partner networks, Quensus/WINT/Leaksafe automatic shutoff, water-company leak support, property-manager maintenance teams, plumbers and insurer claims suppliers.",
+    "is_there_room_for_us": "Little room in generic sensing/dashboard hardware. Possible narrow layer: prevention-funding eligibility across insurer + water-company schemes, post-loss retrofit orchestration, and evidence/renewal workflows for SME portfolios lacking enterprise risk teams.",
+    "best_gtm": "B2B2C through brokers/insurers/property managers, not consumer Google Ads; post-claim trigger; insurer renewal/excess reduction workflow; utility leak-support eligibility; portfolio risk audit.",
+    "same_pattern_other_country": "Norway B10 showed insurance discounts/deductible savings for water-stop systems. UK B11 independently shows free insurer-funded devices, bulk insurer deployment, direct post-loss retrofit funding and public water-sector subsidy.",
+    "why_country_difference": "UK prevention is more institutionalized into insurer/vendor and regulator innovation channels than Norway's cabin-specific retail ecosystem. England's ~9.23m rented dwellings create large professional/organizational property pools.",
+    "what_does_it_reveal_about_country": "UK property-risk prevention is becoming a B2B2C infrastructure market: insurer, broker, regulator, utility and portfolio owner may all touch the customer before a retail sensor seller does.",
+    "macro_pattern": "When failure costs are externalized to a risk payer, distribution economics can invert: the technology is given free to the end user because avoided claims and retention justify payer-funded acquisition.",
+    "falsifier_result": "Third-party subsidy mechanism strongly supported. Direct-to-landlord sensor thesis weakened because insurer-preferred vendors and portfolio systems are already mature. The open question is whether cross-payer funding/evidence orchestration is valuable enough to support an independent intermediary."
+  },
+  "mechanism_candidates": [
+    {
+      "id": "MC-RISK_PAYER_BULK_DISTRIBUTION",
+      "status": "CANDIDATE",
+      "statement": "When the payer captures avoided loss, preventive technology can be distributed free to the end user at portfolio scale, replacing retail customer acquisition with B2B2C distribution.",
+      "evidence": [
+        "E-UK-HISCOX-LEAKBOT",
+        "E-UK-ADMIRAL-LEAKBOT-2025",
+        "E-UK-LEAKBOT-B2B2C-MODEL"
+      ],
+      "observed_context": "Admiral committed 10,000 additional devices; Hiscox gives eligible customers a £149 device plus repair service free; LeakBot says insurers typically pay monthly per customer.",
+      "next_replication_test": "Find a non-water market where insurer/utility/lender funds preventive equipment across a customer book."
+    },
+    {
+      "id": "MC-LOSS_EVENT_UNLOCKS_PREVENTION_BUDGET",
+      "status": "CANDIDATE",
+      "statement": "A sufficiently expensive prior loss can change insurer economics enough to unlock an explicit funded retrofit for future prevention.",
+      "evidence": [
+        "E-UK-DIRECTLINE-POSTLOSS-RETROFIT"
+      ],
+      "observed_statistic": "up to £500 leak-detection funding after a covered water-damage loss exceeding £7,500.",
+      "next_replication_test": "Test flood resilience, burglary/security or fire prevention where insurers fund mitigation after claims."
+    },
+    {
+      "id": "MC-MULTI_PAYER_PREVENTION_STACK",
+      "status": "CANDIDATE",
+      "statement": "The same physical risk can have multiple institutions willing to fund mitigation for different reasons: insurer claims, utility water loss, and property-owner operational disruption.",
+      "evidence": [
+        "E-UK-OFWAT-WEL2-2026",
+        "E-UK-OFWAT-FREE-DETECTION",
+        "E-UK-AVIVA-LEAKSAFE-PARTNER",
+        "E-UK-GROSVENOR-INVESTMENT"
+      ],
+      "next_replication_test": "Look for another asset where utility + insurer + owner incentives overlap."
+    }
+  ],
+  "cross_probe_updates": {
+    "MC-RISK_PRICER_SUBSIDIZES_PREVENTION": {
+      "status": "REPLICATED_STRONGLY",
+      "prior_cell": "Norway cabins/water/frost",
+      "new_cell": "UK home/commercial escape-of-water prevention",
+      "new_evidence": "UK insurers fund devices, repairs, preferential vendor access and post-loss retrofits; Ofwat funds customer-side leakage technology and Aviva is testing premium linkage.",
+      "refined_statement": "A third-party risk bearer can subsidize preventive technology when avoided claims/resource loss or retention value exceeds subsidy cost."
+    },
+    "MC-ABSENCE_AMPLIFIES_DAMAGE_SEVERITY": {
+      "status": "FURTHER_SUPPORTED",
+      "new_evidence": "Commercial insurer guidance says long-term unoccupancy can exacerbate undetected escape-of-water claims; multi-unit property cases show damage/relocation impacts when response is delayed."
+    },
+    "MC-DETECTION_TO_INTERVENTION_VALUE_SHIFT": {
+      "status": "REPLICATED_DIRECTIONALLY",
+      "new_evidence": "UK products increasingly bundle detection with plumber repair, automatic shutoff, portfolio dashboards and alarm/response workflows; sensor-only value is increasingly commoditized."
+    }
+  },
+  "schema_additions_recommended": {
+    "payer_graph": {
+      "description": "Every opportunity cell should list all parties that financially benefit from risk reduction.",
+      "fields": [
+        "payer_type",
+        "benefit_type",
+        "subsidy_form",
+        "eligibility_trigger",
+        "amount_or_discount",
+        "source_id"
+      ]
+    },
+    "distribution_owner": {
+      "description": "Who acquires/endows the end customer with the product?",
+      "values": [
+        "consumer",
+        "insurer",
+        "utility",
+        "landlord",
+        "property_manager",
+        "government",
+        "manufacturer",
+        "broker"
+      ]
+    },
+    "post_loss_trigger": {
+      "description": "Whether prior claim/event unlocks new budget, obligations or pricing.",
+      "fields": [
+        "trigger_threshold",
+        "benefit",
+        "expiry_or_conditions"
+      ]
+    }
+  },
+  "data_quality_findings": [
+    {
+      "issue": "LeakBot claims-reduction statistics come from an independent commissioned study disclosed by the vendor, not regulator raw data.",
+      "action": "Keep as C1 and do not treat 70% as universal causal effectiveness."
+    },
+    {
+      "issue": "Aviva 2025 average claim cost and 2023-25 claim count have different periods.",
+      "action": "Do not multiply to estimate total losses."
+    },
+    {
+      "issue": "Rented dwellings are not equivalent to portfolio-landlord stock.",
+      "action": "Use 9.231m as managed/rented market context only."
+    },
+    {
+      "issue": "Grosvenor 73%-fewer-claims marketing on case-study page is not clearly isolated to the controlled test.",
+      "action": "Use only the directly described 1.6-minute/19-litre controlled test and rollout plan."
+    }
+  ],
+  "search_demand": {
+    "monthly_search_volume": null,
+    "cpc": null,
+    "missing_reason": "No authenticated Keyword Planner/Ads dataset used."
+  },
+  "next_probe": {
+    "probe_id": "B12_UK_POST_FLOOD_RESILIENCE_RETROFIT",
+    "sector": "post-flood property resilience retrofit",
+    "country": "United Kingdom",
+    "selection_reason": "B11 generated LOSS_EVENT_UNLOCKS_PREVENTION_BUDGET. UK flood insurance has a formal Build Back Better mechanism that can fund property-resilience measures after an insured flood. This is a high-information test of whether a claim itself creates a temporary, third-party-funded retrofit market with standards, contractors and measurable budget.",
+    "hypothesis": "After a covered catastrophic loss, insurer-funded resilience budgets create a high-intent retrofit cell in which specification/contractor coordination can be more valuable than pre-event consumer marketing.",
+    "falsifiers": [
+      "Build Back Better uptake is negligible or insurer-controlled end-to-end.",
+      "Eligible measures are too standardized for intermediary value.",
+      "Insurer repair networks fully select contractors and products.",
+      "Post-claim customer choice is too constrained to support independent routing.",
+      "Available resilience funding is too small relative to retrofit complexity."
+    ]
+  }
+}
