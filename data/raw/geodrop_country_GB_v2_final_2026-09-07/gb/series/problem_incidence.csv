@@ -1,4 +1,0 @@
-date,country,ecosystem_id,problem_id,geography,incidence,denominator,unit,source_id,available_at
-2024-12-31,GB,GB_OLD_HOME_DIAGNOSTICS,GB_HOME_DAMP,England,1400000,dwellings,dwellings,ehs_quality_2024,2026-09-07
-2025-06-30,GB,GB_OLD_HOME_DIAGNOSTICS,GB_HOME_DAMP,England,7700000,households,household_self_reports,ehs_perceptions_2024_25,2026-09-07
-2026-06-30,GB,GB_HOME_ENERGY,GB_HEAT_REPLACEMENT,Great Britain,570000,Q2_installations,replacement_meters,smart_meter_june2026,2026-09-07

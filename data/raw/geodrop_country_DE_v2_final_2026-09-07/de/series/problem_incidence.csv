@@ -1,4 +1,0 @@
-date,country,ecosystem_id,problem_id,geography,incidence,denominator,unit,source_id,available_at
-2026-01-01,DE,DE_HEATING_REPLACEMENT,DE_HP_SPARES,Germany,5000000,heating_systems,systems_over_30y,de_dena_building_release_2026,2026-09-07
-2025-12-31,DE,DE_SMART_METER_ENERGY,DE_SMART_COMPAT,Germany,3094346,56464984,intelligent_metering_systems_installed,de_bnetza_smartmeter_2025,2026-09-07
-2025-12-31,DE,DE_DISTRIBUTED_ENERGY,DE_SOLAR_STORAGE_RETROFIT,Germany,430000,new_plug_in_solar_installs,installations,de_bnetza_solar_2025,2026-09-07

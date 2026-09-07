@@ -1,6 +1,0 @@
-period,country,metric,value,unit,source_id,available_at
-2026-07,DK,population,6031699,people,dk_dst_population_2026,2026-09-07
-2025,DK,online_spending,199.2,DKK_billion,dk_danskerhverv_ecom_2025,2026-09-07
-2025,DK,online_spending_growth,0.038,ratio,dk_danskerhverv_ecom_2025,2026-09-07
-2026-08,DK,consumer_confidence,-13.1,index,dk_dst_confidence_2026,2026-09-07
-2026-06,DK,goods_imports,80807.2,DKK_million,dk_dst_macro_2026,2026-09-07

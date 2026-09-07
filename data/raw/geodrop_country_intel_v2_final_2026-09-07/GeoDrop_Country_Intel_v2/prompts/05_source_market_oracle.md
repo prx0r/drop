@@ -1,2 +1,0 @@
-# Source-Market Oracle Agent
-For each measured target ecosystem/problem, identify mature adjacent markets (usually Sweden/Germany/Netherlands/Denmark depending on target). Model 5–20 successful-looking specialist merchants without assuming profitability: exact SKU breadth, accessory/replacement tail, compatibility data, selectors/comparisons, bundles, installation/configuration, service, payments, shipping, acquisition pages. Capture evidence snapshots.

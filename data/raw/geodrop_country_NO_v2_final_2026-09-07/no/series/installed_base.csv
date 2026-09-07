@@ -1,5 +1,0 @@
-date,country,ecosystem_id,metric,scope,value,unit,source_id,definition,available_at
-2025-12-31,NO,NO_EV_AFTERMARKET,electric_private_cars_stock,country,945185,vehicles,ssb_vehicle_stock_2025,registered electric private cars at end year,
-2026-05-20,NO,NO_EV_AFTERMARKET,tesla_model_y_cumulative_first_registrations,country,100224,vehicles,ofv_model_y_100k_20260520,cumulative first registrations,2026-05-20
-2026-01-01,NO,NO_HYTTE_HOME,cabins_and_leisure_buildings,country,452150,buildings,ssb_cabins_2026,SSB building-classification definition; excludes some dwellings used as leisure homes,
-2025-01-01,NO,NO_HYTTE_HOME,holiday_houses_area_statistic_total,country,483631,holiday_houses,ssb_holiday_house_areas_2025,separate SSB holiday-house-area statistic; not directly interchangeable,

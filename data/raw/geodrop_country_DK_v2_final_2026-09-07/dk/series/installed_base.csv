@@ -1,7 +1,0 @@
-date,country,ecosystem_id,metric,scope,value,unit,source_id,definition,available_at
-2026-01-01,DK,DK_SUMMERHOUSE_REMOTE,summerhouse_buildings,Denmark,236725,buildings,dk_dst_buildings_2026,official building classification,2026-09-07
-2025-01-01,DK,DK_HEAT_PUMP_LIFECYCLE,heat_pump_heated_dwellings,Denmark,209000,dwellings,dk_albank_heating_2025,BBR-based secondary analysis,2026-09-07
-2026-07-31,DK,DK_EV_AFTERMARKET,battery_electric_passenger_cars,Denmark,676200,vehicles,dk_dst_ev_2026,official stock,2026-09-07
-2025-06-30,DK,DK_DISTRIBUTED_ENERGY,grid_connected_solar_installations,Denmark,162425,installations,dk_ens_solar_q2_2025,official registered sites,2026-09-07
-2025-12-31,DK,DK_RURAL_WOOD_HEAT,wood_installation_dwellings_holiday_homes,Denmark,671000,dwellings_or_holiday_homes,dk_dst_wood_2025,survey-estimated installed base,2026-09-07
-2025-12-31,DK,DK_RURAL_WOOD_HEAT,pellet_stove_or_boiler_installations,Denmark,123100,dwellings_or_holiday_homes,dk_dst_wood_2025,survey-estimated installed base,2026-09-07

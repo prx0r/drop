@@ -1,5 +1,0 @@
-date,country,ecosystem_id,problem_id,metric,value,unit,source_id,available_at
-2026-09-07,DK,DK_SUMMERHOUSE_REMOTE,DK_SUMMER_FROST,local_specialist_product_exists,1,boolean,dk_gsmtechnik_t200,2026-09-07
-2026-09-07,DK,DK_HEAT_PUMP_LIFECYCLE,DK_HP_WIFI_COMPAT,compared_accessory_products,154,products,dk_teknikpris_hp_2026,2026-09-07
-2026-07-31,DK,DK_EV_AFTERMARKET,DK_EV_USED_REFRESH,used_trade_share_bev,0.266,ratio,dk_dst_ev_2026,2026-09-07
-2025-12-31,DK,DK_RURAL_WOOD_HEAT,DK_WOOD_SPARES,wood_installed_base,671000,installations,dk_dst_wood_2025,2026-09-07

@@ -1,3 +1,0 @@
-date,country,ecosystem_id,problem_id,region,metric,value,unit,source_id,notes,available_at
-2026-03-31,NO,NO_HYTTE_HOME,NO_HYTTE_WATER_FROST,,source_market_coverage,>0.85,ratio,vask_water_damage_2026,coverage of insurers in VASK; not physical damage incidence,
-2025-12-31,NO,NO_HYTTE_HOME,NO_HYTTE_POWER,NO,electricity_supply_reliability,0.99982,ratio,nve_outage_stats_2025,national average; detailed geographic series required,

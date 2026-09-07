@@ -10,70 +10,68 @@ We build the machine-readable compatibility layer that AI agents need to transac
 
 ---
 
-## Active Campaigns (25)
-
-Located in `campaigns/active/`:
-
-| Campaign | Country | Gap Score | Priority |
-|----------|---------|-----------|----------|
-| balcony-door-hardware | NO | 10/10 | HIGH |
-| vallox-ventilation | FI | 10/10 | HIGH |
-| heatpump-electronics | FI | 9/10 | HIGH |
-| hottub-control-panels | NO/SE/FI | 9/10 | HIGH |
-| marine-electronics-retrofit | NO | 8/10 | HIGH |
-| window-hardware-scandinavia | SE | 8/10 | HIGH |
-| pool-filters-scandinavia | SE | 8/10 | HIGH |
-| recliner-controls-nordic | NO/SE/FI | 8/10 | HIGH |
-| nilan-ventilation | DK | 8/10 | HIGH |
-| ouman-heating-control | FI | 8/10 | HIGH |
-| cinderella-toilet | NO | 8/10 | HIGH |
-| garage-door-hardware-norway | NO | 8/10 | HIGH |
-| fire-alarm | UK | 8/10 | HIGH |
-| hvac-controls | UK | 8/10 | HIGH |
-| helios-ventilation-germany | DE | 8/10 | HIGH |
-| ireland-heat-pump | IE | 7/10 | MEDIUM |
-| radon-mitigation | NO | 7/10 | MEDIUM |
-| pipe-inspection | FI | 7/10 | MEDIUM |
-| marine-pump | NO | 5/10 | LOW |
-| uk-ev-charger | UK | 5/10 | LOW |
-| automower-parts | SE | 6/10 | LOW |
-| harvia-sauna | FI | 6/10 | LOW |
-| wallas-cabin-heater | FI/NO | 6/10 | LOW |
-| flexit-ventilation | NO | 7/10 | MEDIUM |
-| cabin-water-filtration | NO | 9/10 | HIGH |
-
----
-
 ## Project Structure
 
 ```
 drop/
-├── AGENTS.md                 # Binding rules
-├── THESIS.md                 # Core thesis
-├── THESIS_REFINED.md         # Refined thesis
-├── HCC_V2.md                 # 20 campaigns with corrected scoring
-├── MARITIME_NORWAY.md        # Maritime opportunities
-├── MARITIME_CAMPAIGN_AKVA.md # AKVA B2B campaign
-├── README.md                 # This file
-├── campaigns/
-│   ├── active/               # 25 active campaigns
-│   └── stale/                # Archived campaigns
-├── data/
-│   └── dropcomp/             # Competitor intelligence
-├── intelligence/             # Research reports
-├── thesisTesting/            # Thesis experiments
-├── archive/                  # Stale files
-└── bigquery/                 # BigQuery schemas
+├── AGENTS.md              # Binding rules
+├── THESIS.md              # Core thesis
+├── README.md              # This file
+├── HANDOVER.md            # State for next agent
+├── campaigns/             # Active campaigns
+│   └── active/            # 25 campaigns
+├── docs/                  # Documentation
+│   ├── guides/            # Setup guides
+│   ├── maritime/          # Maritime opportunities
+│   ├── plans/             # Queued plans
+│   └── verification/      # Campaign verification
+├── data/                  # Data files
+│   └── dropcomp/          # Competitor intelligence
+├── bigquery/              # BigQuery schemas
+├── corpus/                # Case studies
+└── secrets/               # Credentials (not in git)
 ```
+
+---
+
+## Active Campaigns (25)
+
+Located in `campaigns/active/`:
+
+| Campaign | Country | Gap Score |
+|----------|---------|-----------|
+| balcony-door-hardware | NO | 10/10 |
+| vallox-ventilation | FI | 10/10 |
+| heatpump-electronics | FI | 9/10 |
+| hottub-control-panels | NO/SE/FI | 9/10 |
+| marine-electronics-retrofit | NO | 8/10 |
+| window-hardware-scandinavia | SE | 8/10 |
+| + 19 more | Various | 5-9/10 |
+
+---
+
+## The Stack (No Shopify)
+
+| Layer | What You Need | Cost |
+|-------|---------------|------|
+| Google Merchant Center | Product feed with conversational attributes | Free |
+| Feed Management | Feedify or direct CSV | Free-$50/mo |
+| Web Store | Next.js on Vercel | Free |
+| Payments | Stripe | 2.9% + $0.30 |
+| Domain | ~$15/year | ~$15/year |
+
+**Total: ~$15/year + Stripe fees**
 
 ---
 
 ## What's Next
 
-1. Build Norwegian balcony-door hardware store (75 SKUs)
-2. Set up Merchant Center feed
-3. Launch Google Ads test
-4. Measure what happens
+1. Build balcony-door subgraph in voiceagent
+2. Deploy to Cloudflare
+3. Add JSON-LD structured data
+4. Submit to Google Merchant Center
+5. Apply for ChatGPT merchant access
+6. Test with 50 compatibility questions
 
 ---
 
@@ -81,8 +79,8 @@ drop/
 
 | Repo | Purpose |
 |------|---------|
-| prx0r/drop | This repo — campaigns and intelligence |
+| prx0r/drop | This repo |
+| prx0r/voiceagent | Drop Resolver Runtime |
 | prx0r/cg | CG judge worldpack |
-| prx0r/cge | CGE proposer |
 | prx0r/dropcomp | Competitor intelligence |
 | prx0r/gitgoblin | Opportunity discovery |

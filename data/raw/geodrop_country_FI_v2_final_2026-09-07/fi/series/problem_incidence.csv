@@ -1,3 +1,0 @@
-date,country,ecosystem_id,problem_id,geography,incidence,denominator,unit,source_id,available_at
-2025-12-31,FI,FI_HEATPUMP_INSTALLED,FI_HP_REPLACEMENT,country,33.3,heat_pump_sales,percent_approx,sulpu_heatpumps_2026,2026-09-07
-2025-12-31,FI,FI_FREE_TIME_HOME,FI_COTTAGE_FROST,country,,485475_free_time_buildings,MISSING_REQUIRED,statfi_building_stock_2026,2026-09-07

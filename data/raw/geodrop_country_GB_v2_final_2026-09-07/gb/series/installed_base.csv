@@ -1,6 +1,0 @@
-date,country,ecosystem_id,metric,scope,value,unit,source_id,definition,available_at
-2026-06-30,GB,GB_HOME_ENERGY,smart_and_advanced_meter_stock,Great Britain,41557000,meters,smart_meter_june2026,smart mode + traditional-mode smart + advanced meters,2026-09-07
-2025-12-31,GB,GB_HOME_ENERGY,heat_pump_sales_2025,United Kingdom,110000,units,heatpump_sales_2025,government/HPA lower-bound sales headline,2026-09-07
-2026-03-31,GB,GB_SOLAR_BATTERY,cumulative_solar_installations,United Kingdom,2000000,installations,solar_aug2026,threshold passed in March 2026,2026-09-07
-2025-12-31,GB,GB_EV_AFTERMARKET,zero_emission_cars,United Kingdom,1737000,cars,dft_vehicle_2025,licensed road-using zero-emission cars,2026-09-07
-2025-03-31,GB,GB_OLD_HOME_DIAGNOSTICS,dwelling_stock,England,25800000,dwellings,dwelling_stock_england_2025,England dwelling stock only,2026-09-07

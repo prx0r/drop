@@ -1,4 +1,0 @@
-period,country,metric,value,unit,source_id,available_at
-2026-spring,NO,ecommerce_shopped_last_30d,0.86,ratio,postnord_no_consumer_2026_spring,
-2026-spring,NO,cross_border_shopped_last_12m,0.78,ratio,postnord_no_crossborder_2026_spring,
-2026-07,NO,non_store_retail_yoy,0.1,ratio,ssb_retail_july_2026,

@@ -1,8 +1,0 @@
-period,country,metric,value,observation_id
-2025,CH,online_goods_spend_CHF_billion,15.8,CH_ECOM_SPEND_2025
-2025,CH,population,9127100,CH_POP_2025
-2025,CH,online_growth_percent,6,CH_ECOM_SPEND_GROWTH_2025
-2025,CH,foreign_online_spend_CHF_billion,2.8,CH_ECOM_FOREIGN_2025
-2025,CH,building_program_committed_CHF_million,636.4,CH_BUILDING_PROGRAM_COMMITTED_TOTAL_2025
-2025,CH,battery_systems,93000,CH_BATTERY_SYSTEMS_2025
-2025,CH,new_passenger_cars,232602,CH_PASSENGER_NEW_2025

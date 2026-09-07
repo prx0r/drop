@@ -1,5 +1,0 @@
-date,country,ecosystem_id,metric,scope,value,unit,source_id,definition,available_at
-2025-12-31,FI,FI_FREE_TIME_HOME,free_time_residential_buildings,country,485475,buildings,statfi_building_stock_2026,Statistics Finland free-time residential buildings,2026-09-07
-2025-12-31,FI,FI_HEATPUMP_INSTALLED,cumulative_heat_pumps,country,1800000,units,sulpu_heatpumps_2026,SULPU cumulative sold/installed base headline,2026-09-07
-2025-12-31,FI,FI_INDOOR_BUILDING_DIAGNOSTICS,one_two_dwelling_houses,country,1161228,buildings,statfi_building_px_15f7,active building stock one-/two-dwelling houses,2026-09-07
-2026-06-30,FI,FI_EV_AFTERMARKET,make_model_stock_dataset_available,country,1,boolean,traficom_vehicle_stock_2026,exact make/model stock downloadable; counts not yet normalized into pack,2026-09-07

@@ -1,7 +1,0 @@
-date,country,ecosystem_id,metric,value,unit,observation_id
-2026-09-07,SE,SE_FRITIDSHUS_REMOTE,holiday_home_stock,633861,holiday_homes,SE_HOLIDAY_HOMES_2026
-2025-12-31,SE,SE_SOLAR_LIFECYCLE,grid_connected_solar_installations,314600,installations,SE_SOLAR_INSTALLATIONS_2025
-2025-12-31,SE,SE_SOLAR_LIFECYCLE,grid_connected_solar_capacity,5541,MW,SE_SOLAR_CAPACITY_2025
-2025,SE,SE_SMART_METER_ENERGY,electricity_metering_points,5700000,metering_points,SE_SMART_METER_POINTS_2025
-2025,SE,SE_RADON_INDOOR_AIR,homes_above_radon_reference,400000,homes_approx,SE_RADON_HIGH_HOMES_2026
-2025,SE,SE_EV_AFTERMARKET,new_BEV_registrations,98315,cars,SE_BEV_NEW_2025

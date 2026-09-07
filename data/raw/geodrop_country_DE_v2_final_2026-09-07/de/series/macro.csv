@@ -1,6 +1,0 @@
-period,country,metric,value,unit,source_id,available_at
-2026-Q1,DE,population,83363000,people,de_destatis_pop_2026q1,2026-09-07
-2025,DE,online_retail_sales_net,92.3,EUR_billion,de_hde_online_monitor_2026,2026-09-07
-2025,DE,online_share_retail,13.5,percent,de_hde_online_monitor_2026,2026-09-07
-2026-H1,DE,ecommerce_growth_yoy,4.3,percent,de_bevh_h1_2026,2026-09-07
-2026-08,DE,inflation_yoy,2.9,percent,de_destatis_inflation_aug_2026,2026-09-07

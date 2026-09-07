@@ -1,9 +1,0 @@
-services:
-  radar:
-    build: .
-    env_file: .env
-    ports:
-      - "8765:8765"
-    volumes:
-      - ./data:/data
-      - ./config:/app/config:ro

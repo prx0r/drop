@@ -1,6 +1,0 @@
-date,country,ecosystem_id,metric,scope,value,unit,source_id,definition,available_at
-2024-12-31,DE,DE_BUILDING_RETROFIT,dwelling_stock,Germany,43800000,dwellings,de_destatis_dwellings_2024,official housing stock,2026-09-07
-2026-01-01,DE,DE_HEATING_REPLACEMENT,heating_systems_over_30y,Germany,5000000,systems_lower_bound,de_dena_building_release_2026,source says more than five million,2026-09-07
-2025-12-31,DE,DE_DISTRIBUTED_ENERGY,solar_capacity,Germany,117,GW,de_bnetza_solar_2025,installed PV capacity,2026-09-07
-2025-12-31,DE,DE_SMART_METER_ENERGY,metering_locations,Germany,56464984,locations,de_bnetza_smartmeter_2025,all reported metering locations,2026-09-07
-2026-01-01,DE,DE_EV_AFTERMARKET,passenger_car_stock,Germany,49500000,cars,de_destatis_cars_2026,rounded KBA-based official headline,2026-09-07

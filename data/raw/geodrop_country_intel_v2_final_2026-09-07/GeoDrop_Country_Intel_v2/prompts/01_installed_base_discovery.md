@@ -1,2 +1,0 @@
-# Installed-Base Discovery Agent
-Enumerate 20–50 economically meaningful owned-system ecosystems in the target country using official registries/statistics and primary industry bodies. Prefer systems with large stock, rapid additions, ageing cohorts, recurring maintenance, replacement or regulation. For each: definition, stock, growth, cohorts, geography, replacement signals, source refs, uncertainties and falsifiers. Do not score a category from anecdotes.

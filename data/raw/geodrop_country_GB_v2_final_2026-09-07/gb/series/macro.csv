@@ -1,6 +1,0 @@
-period,country,metric,value,unit,source_id,available_at
-2025,GB,population,69487000,persons,ons_population_2025,2026-09-07
-2025,GB,households,29000000,households,ons_households_2025,2026-09-07
-2026-07,GB,online_share_retail_sales,28.3,percent,ons_retail_july_2026,2026-09-07
-2026-08,GB,consumer_confidence,-14,index,niq_confidence_aug2026,2026-09-07
-2026,GB,standard_vat_rate,20,percent,vat_rates_uk,2026-09-07

@@ -1,9 +1,0 @@
-{
-  "system": "GeoDrop Country Intelligence",
-  "version": "2.0.0",
-  "reference_country": "NO",
-  "as_of": "2026-09-07",
-  "schema_contract": "docs/CANONICAL_SPEC.md",
-  "backtest_contract": "docs/BACKTESTING.md",
-  "status": "FINAL_REFERENCE_BUILD"
-}
