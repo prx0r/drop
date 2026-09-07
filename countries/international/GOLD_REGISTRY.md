@@ -255,4 +255,101 @@ UPGRADE → REPLACE → REMOVE
 
 ---
 
-*These 30 principles are the foundation. Every new hypothesis should trace back to at least one of them.*
+## 31. The Installed Infrastructure Intelligence Thesis
+
+> **Owner-operated infrastructure + technical ambiguity + regulatory responsibility + fragmented specialists + expensive consequences of getting it error = an excellent diagnostic-commerce / lead-routing market.**
+
+Eight independent forces: large installed base, owner responsibility, ageing infrastructure, diagnostic ambiguity, model complexity, fragmented trades, regulatory complexity, costly failure.
+
+**Evidence:** Independently validated across EV charging, heat pumps, cabins, private wells, wastewater.
+
+---
+
+## 32. The Forcing-Function Score
+
+> **Some searches are optional. Some are forced. Forced demand is beautiful — customers don't comparison-shop for three weeks while sewage comes out of the lawn.**
+
+$$F = Regulatory + Safety + Failure + Financial + Seasonal$$
+
+High F scores: failed government inspection (5), no water from well (5), sewage backing up (5).
+
+---
+
+## 33. The Knowledge Gap Score
+
+> **High KG sectors are excellent middleman markets. Consumer may not know brand, tank location, pump type, blower function, desludging need, which part failed.**
+
+$$KG = Complexity_{system} - Knowledge_{consumer}$$
+
+---
+
+## 34. The Mature-Market Oracle Pattern
+
+> **Don't invent the target-country search universe. Mine Germany/UK/US for the mature aftermarket SKUs. Translate into installed-base hypotheses. Then test search demand.**
+
+**Evidence:** German wastewater specialist has 225 accessories, 49 blowers for one model. Swedish heat-pump specialist has 46 SKUs for one old model.
+
+---
+
+## 35. The Four Monetization Classes
+
+Every opportunity should be classified:
+
+- **A — Ecommerce:** filters, bulbs, parts, consumables
+- **B — Qualified service lead:** repair, installation, desludging
+- **C — High-ticket replacement lead:** new system, new well
+- **D — Recurring relationship:** annual service, reminders, subscriptions
+
+Best ecosystems support all four simultaneously.
+
+---
+
+## 36. The Government Grant Multiplier
+
+> **Grant eligibility turns expensive jobs into viable leads. Customer doesn't pay full price — government subsidizes. This changes unit economics dramatically.**
+
+**Evidence:** Ireland septic grants up to €12,000. Well grants up to €5,000. 460 grants worth €4.77M in 2025 alone.
+
+---
+
+## 37. The Public Dataset Advantage
+
+> **Official statistics (installed base, inspection failures, grant activity, well locations) provide the supply-side intelligence layer. No scraping needed — government data is better.**
+
+**Evidence:** Ireland CSO: 498,283 systems in CSV/JSON-stat/PX. EPA: inspection data. Geological Survey: well locations.
+
+---
+
+## 38. The Trigger × Object × Failure Atomic Cell
+
+```
+Country × Object × InstalledModel × LifecycleStage × Trigger × Problem × Geography
+```
+
+Example: `IE × private wastewater × Puraflo × maintenance × pump alarm × failed float switch × Mayo`
+
+---
+
+## 39. The Installed Infrastructure Score
+
+$$\frac{LargeInstalledBase \times Wealth \times Complexity \times Failure \times Urgency \times Fragmentation \times ForcingFunctions \times Searchability}{SERPQuality \times ExistingAggregatorStrength}$$
+
+Independently validated across: EV charging, heat pumps, cabins, private wells, wastewater.
+
+---
+
+## 40. The Next Probe Categories
+
+| Category | Why | Target Markets |
+|----------|-----|----------------|
+| Swimming pools / spas | Pumps, filters, chemistry, leaks | AU, NZ, CH, FR |
+| Automatic gates / garage doors | Motors, remotes, PCBs, incompatibility | CH, NO, IE, UK |
+| Private boreholes / irrigation | Urgent failure, grants | IE, NZ, AU, ES |
+| Residential lifts / stairlifts | Batteries, PCBs, high lead value | Wealthy property owners |
+| Motorised shutters / awnings | Motors fail, fragmented installers | Southern Europe |
+| Wood/pellet stoves | Fans, igniters, controllers | Nordics, Alpine |
+| Home ventilation / MVHR | Filters recurring, motors, sensors | Nordics |
+
+---
+
+*These 40 principles are the foundation. Every new hypothesis should trace back to at least one of them.*
