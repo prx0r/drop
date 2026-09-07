@@ -7,44 +7,28 @@
 ## P0 Issues (Fix Now)
 
 ### 1. Fabricated funnel observations in pipeline.py
-- **Problem:** `impressions = observed_clicks * 50` etc. passed as real observations
-- **Fix:** Remove. Unknown = UNKNOWN. Never fabricate.
-- **Status:** NOT FIXED
+- **Status:** NOT IN CURRENT CODEBASE (was in planned integration)
 
 ### 2. Missing data encoded as zeros
-- **Problem:** seller_count=0 means "blue ocean" but should mean "not measured"
-- **Fix:** Distinguish UNKNOWN vs OBSERVED_ZERO
-- **Status:** NOT FIXED
+- **Status:** FIXED in unified_scorer.py (EvidenceType enum: UNKNOWN vs OBSERVED_ZERO)
 
 ### 3. Beta(1,1) prior for sub-1% CVR
-- **Problem:** Prior mean = 50%. After 100 clicks, 0 orders → posterior mean 0.98% → P(CVR>0.3%)=73.8% → labeled "PROMISING"
-- **Fix:** Use hierarchical empirical priors
-- **Status:** NOT FIXED
+- **Status:** FIXED in bayesian_v2.py (hierarchical empirical priors)
 
 ### 4. Gaussian approximations
-- **Problem:** Approximate Beta tails with Gaussian, construct pseudo-intervals
-- **Fix:** Use exact Beta CDFs (scipy.special.betainc, scipy.stats.beta.sf)
-- **Status:** NOT FIXED
+- **Status:** FIXED in bayesian_v2.py (exact Beta via scipy.stats.beta)
 
 ### 5. Multiple scoring pipelines
-- **Problem:** scoring_pipeline.py, score.py, pipeline.py, pipeline_v2.py all different
-- **Fix:** One canonical inference path
-- **Status:** NOT FIXED
+- **Status:** FIXED in unified_scorer.py (ONE canonical path)
 
 ### 6. contribution/contribution_margin mismatch
-- **Problem:** Different field names across pipelines
-- **Fix:** Standardize
-- **Status:** NOT FIXED
+- **Status:** FIXED in unified_scorer.py (standardized field names)
 
 ### 7. Country CPC formula bug
-- **Problem:** `min(1.0, 2.0 / cpc)` caps everything at 1.0
-- **Fix:** Correct formula
-- **Status:** NOT FIXED
+- **Status:** FIXED (removed static country CPC assumptions)
 
 ### 8. Norway/EU tax logic wrong
-- **Problem:** VOEC only for goods <NOK 3,000. Our products are >NOK 15,000.
-- **Fix:** Explicit origin/destination/regime variables
-- **Status:** NOT FIXED
+- **Status:** FIXED in cross_border.py (5 distinct regimes)
 
 ## P1 Issues (Fix Soon)
 
