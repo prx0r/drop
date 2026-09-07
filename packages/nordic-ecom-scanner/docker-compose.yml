@@ -1,0 +1,13 @@
+services:
+  scanner:
+    build: .
+    environment:
+      ECSCAN_DB: /data/scanner.sqlite
+      SERPER_API_KEY: ${SERPER_API_KEY:-}
+      DATAFORSEO_LOGIN: ${DATAFORSEO_LOGIN:-}
+      DATAFORSEO_PASSWORD: ${DATAFORSEO_PASSWORD:-}
+    volumes:
+      - ./runtime:/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

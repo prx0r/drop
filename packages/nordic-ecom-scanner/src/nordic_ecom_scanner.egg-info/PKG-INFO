@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: nordic-ecom-scanner
+Version: 0.1.0
+Summary: Country × niche × SKU ecommerce arbitrage scanner for Google Shopping-led stores
+Requires-Python: >=3.11
+Requires-Dist: requests>=2.32
+Requires-Dist: fastapi>=0.116
+Requires-Dist: uvicorn>=0.35
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3; extra == "dev"

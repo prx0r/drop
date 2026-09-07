@@ -1,0 +1,20 @@
+source_id,market,topic,url,what_it_supports
+postnord_no_behavior,NO,ecommerce behavior,https://www.postnord.com/insights/norway/norway-spring-2026/norwegian-e-commerce-consumer-behavior-spring-2026/,86% shopped online in prior 30 days
+postnord_dk_behavior,DK,ecommerce behavior,https://www.postnord.com/insights/denmark/denmark-spring-2026/danish-e-commerce-consumer-behavior-spring-2026/,85% shopped online in prior 30 days
+postnord_no_crossborder,NO,cross-border,https://www.postnord.com/insights/norway/norway-spring-2026/cross-border-shopping-marketplaces-in-norway-spring-2026/,almost 8 in 10 cross-border; closer Nordic markets gaining trust
+postnord_dk_crossborder,DK,cross-border,https://www.postnord.com/insights/denmark/denmark-spring-2026/cross-border-shopping-marketplaces-in-denmark-spring-2026/,80% cross-border in prior year
+postnord_no_checkout,NO,payments checkout,https://www.postnord.com/insights/norway/norway-spring-2026/norwegian-payment-and-checkout-behavior-spring-2026/,Vipps most used/preferred; shipping cost major abandonment reason
+postnord_dk_checkout,DK,payments checkout,https://www.postnord.com/insights/denmark/denmark-spring-2026/danish-payment-and-checkout-behavior-spring-2026/,MobilePay preferred; shipping cost major abandonment reason
+postnord_no_returns,NO,returns,https://www.postnord.com/insights/norway/norway-spring-2026/e-commerce-returns-in-norway-spring-2026/,29% returned a product in prior 3 months
+postnord_dk_returns,DK,returns,https://www.postnord.com/insights/denmark/denmark-spring-2026/e-commerce-returns-in-denmark-spring-2026/,33% returned a product in prior 3 months
+skatteetaten_voec,NO,tax,https://www.skatteetaten.no/en/business-and-organisation/vat-and-duties/vat/foreign/e-commerce-voec/,VOEC overview and NOK 3000 per item eligibility boundary
+forbrukerradet_online,NO,consumer trust,https://www.forbrukerradet.no/forside/okonomi-og-betaling/netthandel-misfornoyd/,contact identity total amount safety and importer responsibility
+lovdata_angrerett,NO,returns law,https://lovdata.no/nav/lov/2014-06-20-27/kap6/%C2%A722,14-day withdrawal period
+skat_dk_oss,DK,tax,https://skat.dk/erhverv/moms/moms-ved-handel-med-udlandet/moms-ved-salg-til-private/salg-til-private-i-eu,OSS and EU threshold overview
+eu_oss,DK,tax,https://vat-one-stop-shop.ec.europa.eu/,EU ecommerce VAT / IOSS overview
+skat_dk_import,DK,import tax,https://skat.dk/erhverv/moms/moms-ved-handel-med-udlandet/moms-ved-salg-til-private/salg-til-private-i-eu/moms-one-stop-shop/saerordninger/om-importordningen,July 2026 import-scheme changes
+forbrug_dk_returns,DK,returns law,https://forbrug.dk/english-consumer-rights-in-denmark/fourteen-day-cooling-off-period,14-day online withdrawal baseline
+google_css,NO+DK,Google Shopping,https://support.google.com/merchants/answer/12653197?hl=en,CSS-supported Shopping markets include Norway Denmark UK etc
+kpmg_no_retail,NO,consumer priorities,https://kpmg.com/no/nb/innsikt/forretningsdrift/kpmg-retailpuls-2026.html,quality prioritized in furniture/interior
+kopy,GLOBAL,product import,https://www.kopy.app/,bulk import native translation AI product pages
+poky,GLOBAL,product import,https://poky.app/,multi-platform product import supplier-finding scraper builder

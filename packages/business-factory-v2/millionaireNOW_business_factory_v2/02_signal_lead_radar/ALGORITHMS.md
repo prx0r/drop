@@ -1,0 +1,1 @@
+Signals receive deterministic weighted keyword, location and recency scores. Source payloads are hashed and stored in provenance. The official Planning Data API adapter is isolated from scoring, so additional permitted sources can map into the same schema. Outreach status is recorded separately from source facts.

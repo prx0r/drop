@@ -1,0 +1,67 @@
+marketplaces:
+- code: etsy
+  name: Etsy
+  role: demand discovery + reviews + personalization-native checkout
+  fees_note: $0.20 listing plus 6.5% transaction fee; payment processing and other
+    fees vary by market. Verify current country-specific fees.
+  best_for:
+  - personalized keepsakes
+  - family gifts
+  - weddings
+  - seasonal ornaments
+  - digital+physical hybrids
+  constraint: AI use and production partners must be disclosed; comply with Creativity
+    Standards.
+- code: shopify
+  name: Shopify / owned site
+  role: best surface for one-click AI workflow, recipient graph, subscriptions and
+    bundles
+  fees_note: Plan/payment fees depend on setup.
+  best_for:
+  - complex personalization
+  - photo ingestion
+  - group contribution
+  - subscription/reminders
+  - high AOV bundles
+  constraint: you own acquisition and trust building.
+- code: amazon_custom
+  name: Amazon Custom / Handmade
+  role: high-intent marketplace validation
+  fees_note: Custom/Handmade fee structures vary; verify current referral and program
+    rules.
+  best_for:
+  - simple text/photo personalization
+  - proven gift SKUs
+  constraint: custom products generally require seller fulfillment; less flexible
+    storytelling funnel.
+- code: tiktok
+  name: TikTok Shop
+  role: creative discovery + impulse gifting
+  fees_note: market-specific.
+  best_for:
+  - visually surprising transformations
+  - under-$50 gifting
+  - UGC demos
+  constraint: strict fulfillment SLAs; Printify currently supports automated text
+    but not image personalization on TikTok.
+- code: pinterest
+  name: Pinterest
+  role: discovery traffic, especially visual/nostalgic/holiday themes
+  fees_note: ad/organic acquisition channel rather than primary checkout.
+  best_for:
+  - stationery
+  - memory products
+  - decor
+  - weddings
+  - holiday tables
+  - snail mail
+  constraint: creative quality matters more than catalog breadth.
+- code: noths
+  name: Not On The High Street
+  role: UK premium personalized gifting credibility
+  fees_note: commercial terms require current seller onboarding confirmation.
+  best_for:
+  - premium UK gifts
+  - milestones
+  - family heirlooms
+  constraint: curated seller admission.

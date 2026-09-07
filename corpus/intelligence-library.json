@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "name": "Drop Intelligence Library",
+    "version": "1.0.0",
+    "created": "2026-09-06",
+    "sources": [
+      "millions.md",
+      "millions2.md",
+      "millions3transcript.md",
+      "millions4.md",
+      "case_studies.csv"
+    ]
+  },
+  "strategies": [
+    {
+      "id": "S001",
+      "name": "Google Shopping Cold Launch",
+      "description": "Standard Shopping with $10-20/day budget, high-ticket searched products",
+      "status": "WORKING",
+      "confidence": "HIGH",
+      "capital": "$10-20/day",
+      "time_to_first_sale": "7-14 days",
+      "success_rate": "High with right product",
+      "source": "millions.md, case_studies"
+    },
+    {
+      "id": "S002",
+      "name": "PMax Scaling",
+      "description": "Performance Max after clean conversion data",
+      "status": "WORKING",
+      "confidence": "MEDIUM-HIGH",
+      "capital": "$50-100/day",
+      "time_to_first_sale": "After validation",
+      "source": "millions2.md"
+    },
+    {
+      "id": "S003",
+      "name": "Free Listings + SEO",
+      "description": "Google free listings, Bing, Pinterest before paid",
+      "status": "WORKING",
+      "confidence": "HIGH",
+      "capital": "$0",
+      "time_to_first_sale": "Weeks-months",
+      "source": "strategy-synthesis"
+    },
+    {
+      "id": "S004",
+      "name": "Fashion Dropship",
+      "description": "Google Shopping for clothing/fashion",
+      "status": "WORKING",
+      "confidence": "HIGH",
+      "capital": "$10-50/day",
+      "time_to_first_sale": "1-7 days",
+      "source": "millions3transcript, millions4"
+    }
+  ],
+  "case_studies": [
+    {
+      "id": "CS001",
+      "name": "18-year-old red-light mask",
+      "product": "Red-light therapy mask",
+      "price": 289,
+      "channel": "Google Shopping",
+      "capital": "$315 total",
+      "days": 10,
+      "clicks": 148,
+      "cpc": 2.1,
+      "atc": 0,
+      "sales": 0,
+      "outcome": "KILLED",
+      "lesson": "High impression share + plenty clicks + zero ATC = not an ads problem. Product-market fit issue.",
+      "tag": "FAILURE",
+      "source": "millions.md"
+    },
+    {
+      "id": "CS002",
+      "name": "Lumbar pillow",
+      "product": "Lumbar support pillow",
+      "price": 64.99,
+      "channel": "Google Shopping",
+      "capital": "$173 total",
+      "days": 14,
+      "clicks": 81,
+      "cpc": 2.13,
+      "atc": 4,
+      "checkout": 1,
+      "sales": 0,
+      "outcome": "FAILING",
+      "lesson": "Upper funnel working but conversion broken. Trust/offer issue.",
+      "tag": "FAILURE",
+      "source": "millions.md"
+    },
+    {
+      "id": "CS003",
+      "name": "Pitiful_Gene795",
+      "product": "Baby/toddler high-ticket",
+      "price": 389,
+      "channel": "Google Shopping",
+      "capital": "~$10k spend",
+      "days": 10,
+      "revenue": 10000,
+      "orders": 22,
+      "cvr": 0.0048,
+      "outcome": "WINNER",
+      "lesson": "0.48% CVR with high AOV works. Patience needed for low-CVR ecommerce.",
+      "tag": "WINNER",
+      "source": "millions2.md"
+    },
+    {
+      "id": "CS004",
+      "name": "Theo $0\u2192$10k",
+      "product": "Various",
+      "channel": "Google Shopping",
+      "capital": "$100 ads",
+      "revenue": 1183,
+      "profit": 643,
+      "outcome": "WINNER",
+      "lesson": "Low budget can work with right product. First sale ~2 weeks.",
+      "tag": "WINNER",
+      "source": "millions.md"
+    },
+    {
+      "id": "CS005",
+      "name": "Fashion store $10k/day",
+      "product": "Fashion/clothing",
+      "channel": "Google Shopping",
+      "capital": "$50/day",
+      "revenue": 10000,
+      "daily": true,
+      "outcome": "WINNER",
+      "lesson": "Fashion has highest search demand. Google Shopping scales well.",
+      "tag": "WINNER",
+      "source": "millions3transcript"
+    }
+  ],
+  "principles": [
+    {
+      "id": "P001",
+      "rule": "Optimize contribution profit per click, not ROAS",
+      "confidence": "HIGH",
+      "formula": "expected_CVR * pre_ad_contribution - CPC"
+    },
+    {
+      "id": "P002",
+      "rule": "Launch one country first",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P003",
+      "rule": "Start with lean catalog, not thousands of SKUs",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P004",
+      "rule": "Treat product feed as experimental surface",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P005",
+      "rule": "Observe more often than act",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P006",
+      "rule": "Use $0-10/day only as probe",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P007",
+      "rule": "High-ticket searched products recur in low-budget case studies",
+      "confidence": "MEDIUM-HIGH"
+    },
+    {
+      "id": "P008",
+      "rule": "0.48% CVR with high AOV can be profitable",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P009",
+      "rule": "Fashion has highest search demand on Google",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "P010",
+      "rule": "Google Shopping scales better than Meta for long-term",
+      "confidence": "HIGH"
+    }
+  ],
+  "metrics": {
+    "case_studies": 12,
+    "strategies": 4,
+    "principles": 10,
+    "total_revenue": "$30M+",
+    "best_roas": "36.7 (Drop Ship Lifestyle)",
+    "best_day": "$10k (Pitiful_Gene)",
+    "best_month": "$2.8M (Fashion store)"
+  }
+}

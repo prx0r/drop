@@ -1,0 +1,297 @@
+# Q4 Ecom Radar 2026
+
+A modular ecommerce opportunity scanner built for the 2026 Q4 thesis:
+
+> Find products with proven demand and weak execution, validate them with real search/supplier/competitor data, then build a specialist premium storefront around the winners.
+
+The engine is deliberately **market-aware**. UK, Norway and Denmark are first-class markets, with Sweden, Germany, Netherlands, Switzerland, Australia, Canada and New Zealand ready out of the box.
+
+## What it does
+
+For every `product × market` pair it can collect:
+
+- Google Ads Keyword Planner search volume, competition and CPC
+- Google Trends momentum (official alpha when available, or SerpApi fallback)
+- Google Shopping competitor count and price distribution through SerpApi
+- CJdropshipping supplier pricing and offer count
+- Meta Ad Library signal where your API permissions permit it
+- Human/third-party exports through a normalized CSV adapter
+- deterministic synthetic demo data for testing the whole pipeline without keys
+
+It then calculates:
+
+- search demand
+- demand momentum
+- competition gap
+- landed-cost economics
+- VAT/GST-adjusted net revenue
+- 2026 low-value-import duty estimate where configured
+- contribution before advertising
+- breakeven CAC
+- shipping fit
+- giftability
+- evergreen strength
+- upsell potential
+- value of an AI buying adviser
+- country fit
+- compliance, IP, returns, fragility and supplier-concentration penalties
+
+Outputs are persisted to SQLite and exported to JSON, CSV, Markdown and HTML.
+
+## Core design principle
+
+This is a **screening and validation engine, not a magic-product predictor**. It intentionally keeps creator claims, synthetic data and live market evidence separate. Never allocate ad spend based on the demo source.
+
+## Quick start
+
+```bash
+cd q4ecom-radar-2026
+python -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
+cp .env.example .env
+```
+
+Run the complete pipeline with deterministic demo data:
+
+```bash
+q4radar scan --markets GB,NO,DK,SE,DE,NL,CH --demo
+```
+
+Run tests:
+
+```bash
+pytest -q
+```
+
+Serve the API:
+
+```bash
+q4radar serve --host 0.0.0.0 --port 8765
+```
+
+Then:
+
+```bash
+curl http://localhost:8765/health
+curl 'http://localhost:8765/opportunities?market=NO&limit=20'
+```
+
+## Live mode
+
+Live mode only enables adapters whose credentials are configured.
+
+```bash
+q4radar show-sources
+q4radar scan --markets GB,NO,DK
+```
+
+### Google Ads Keyword Planner
+
+This is the strongest demand source in the engine because it gives market-specific keyword ideas and historical search metrics.
+
+Install the extra dependency:
+
+```bash
+pip install -e '.[google]'
+```
+
+Set:
+
+```env
+GOOGLE_ADS_CUSTOMER_ID=
+GOOGLE_ADS_DEVELOPER_TOKEN=
+GOOGLE_ADS_CLIENT_ID=
+GOOGLE_ADS_CLIENT_SECRET=
+GOOGLE_ADS_REFRESH_TOKEN=
+GOOGLE_ADS_LOGIN_CUSTOMER_ID=
+```
+
+The adapter uses `KeywordPlanIdeaService.GenerateKeywordIdeas` with each country's Google Ads geo target.
+
+Official docs: https://developers.google.com/google-ads/api/docs/keyword-planning/generate-keyword-ideas
+
+### Google Trends
+
+Google launched an official Trends API alpha with five years of consistently scaled regional data. Accepted testers receive endpoint/auth details. Rather than invent an undocumented endpoint, the included adapter is driven by `GOOGLE_TRENDS_API_URL` and accepts a normalized response.
+
+Official alpha: https://developers.google.com/search/apis/trends
+
+If you do not have alpha access, `SERPAPI_KEY` activates the practical Google Trends fallback.
+
+### Google Shopping competitor scan
+
+Set:
+
+```env
+SERPAPI_KEY=
+```
+
+The scanner queries Google Shopping by country and uses returned prices/result counts as competitive evidence.
+
+### CJdropshipping
+
+Set:
+
+```env
+CJ_ACCESS_TOKEN=
+```
+
+The adapter uses CJ API v2 `product/listV2`, which supports keyword search and filtering.
+
+Official docs: https://developers.cjdropshipping.com/en/api/api2/api/product.html
+
+### Meta Ad Library
+
+Set:
+
+```env
+META_ACCESS_TOKEN=
+META_GRAPH_VERSION=v25.0
+```
+
+Meta's available commercial-ad coverage and fields depend on API permissions, ad category and market. The adapter fails non-fatally and records the error as evidence. If your account cannot query the data you want, export observations and import them by CSV instead of scraping restricted surfaces.
+
+## CSV bridge
+
+`data/observation-template.csv` is the normalized bridge for TikTok Creative Center exports, manually collected Meta evidence, supplier spreadsheets, third-party research tools, or your own browser agent.
+
+```bash
+q4radar scan --markets GB,NO,DK --csv-file data/my-live-observations.csv
+```
+
+CSV values override/augment earlier source values for the matching `product_slug,market` pair.
+
+## Scoring
+
+Weights live in `config/scoring.yml` and can be changed without code edits.
+
+Current positive weighting:
+
+| Signal | Weight |
+|---|---:|
+| Search demand | 17% |
+| Search momentum | 10% |
+| Competition gap | 15% |
+| Gross margin | 16% |
+| Shipping fit | 8% |
+| Giftability | 7% |
+| Evergreen | 7% |
+| Upsellability | 6% |
+| AI adviser value | 5% |
+| Market fit | 9% |
+
+Risk penalties are applied after the weighted score.
+
+The `STRONG / TEST / WATCH / REJECT` thresholds are also configurable.
+
+## Economics
+
+The economics model is intentionally more conservative than most dropshipping calculators.
+
+1. Start with observed competitor retail price.
+2. Strip configured VAT/GST from consumer price to estimate revenue ex-tax.
+3. Add supplier cost + shipping + configured low-value import fee to landed cost.
+4. Calculate gross margin ex-tax.
+5. Reserve 3% of gross selling price for payment processing.
+6. Reserve a heuristic amount for returns based on the product's return-risk score.
+7. Remaining contribution is treated as the **maximum screening breakeven CAC** before overhead/customer support.
+
+For EU countries currently configured, the engine includes an approximate USD equivalent of the temporary €3 low-value import duty introduced on 1 July 2026. Update `config/markets.yml` if FX/customs treatment changes.
+
+## Markets
+
+Primary:
+
+- `GB` United Kingdom
+- `NO` Norway
+- `DK` Denmark
+
+Additional:
+
+- `SE` Sweden
+- `DE` Germany
+- `NL` Netherlands
+- `CH` Switzerland
+- `AU` Australia
+- `CA` Canada
+- `NZ` New Zealand
+
+Add another country by adding one block to `config/markets.yml`. No code change is required.
+
+## Seed product families
+
+The initial catalog intentionally favors products where specialist advice, bundling, Google Shopping and premium presentation can matter:
+
+- portable projectors / home cinema
+- espresso accessories
+- boot dryers and ski tuning
+- dog travel products
+- packing/compression systems
+- car detailing and organization
+- hobby/craft kits
+- home organization
+- analog-photo/digitization accessories
+- desk ergonomics
+- plant care
+
+Edit `config/products.yml` to add or remove hypotheses.
+
+## API
+
+### `GET /health`
+Service health.
+
+### `GET /opportunities?market=NO&limit=20`
+Latest ranked scores.
+
+### `GET /runs`
+Recent scan history.
+
+### `POST /scan`
+
+```json
+{
+  "markets": ["GB", "NO", "DK"],
+  "products": ["boot-dryer", "compression-packing-cubes"],
+  "demo": false
+}
+```
+
+## Docker
+
+```bash
+cp .env.example .env
+docker compose up --build
+```
+
+The API will be available on port `8765`.
+
+## Automation
+
+A safe production schedule is daily during September/October and several times per day around Black Friday only if your upstream API quotas support it. This engine does **not** automatically launch ads or purchase inventory; it ranks evidence and produces test candidates.
+
+Example cron:
+
+```cron
+15 6 * * * cd /opt/q4ecom-radar-2026 && .venv/bin/q4radar scan --markets GB,NO,DK,SE,DE,NL,CH >> data/cron.log 2>&1
+```
+
+## Recommended decision rule
+
+A `STRONG` score is not enough. Before spending meaningful money, require all of:
+
+1. Real Google demand evidence.
+2. Real supplier sample/order test.
+3. Landed economics still work after VAT/customs/returns.
+4. No obvious trademark/patent/design-right conflict.
+5. Product-safety requirements are understood.
+6. Delivery promise can be met in the target country.
+7. At least one meaningful positioning advantage over current Shopping results.
+8. A small paid test confirms CPA/CTR/CVR assumptions.
+
+Then—and only then—promote the product from validation dropship to a real branded supply chain.
+
+## Research
+
+See [`RESEARCH_Q4_2026.md`](RESEARCH_Q4_2026.md) for the source-backed strategy and country/compliance notes used to build the engine.

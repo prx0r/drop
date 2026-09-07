@@ -1,0 +1,26 @@
+services:
+  saas:
+    build: .
+    command: uvicorn 01_saas_savings_desk.app:app --host 0.0.0.0 --port 8201
+    env_file: .env
+    ports: ["8201:8201"]
+  signals:
+    build: .
+    command: uvicorn 02_signal_lead_radar.app:app --host 0.0.0.0 --port 8202
+    env_file: .env
+    ports: ["8202:8202"]
+  tenders:
+    build: .
+    command: uvicorn 03_tender_bid_desk.app:app --host 0.0.0.0 --port 8203
+    env_file: .env
+    ports: ["8203:8203"]
+  reactivate:
+    build: .
+    command: uvicorn 04_database_reactivator.app:app --host 0.0.0.0 --port 8204
+    env_file: .env
+    ports: ["8204:8204"]
+  rfq:
+    build: .
+    command: uvicorn 05_rfq_sourcing_desk.app:app --host 0.0.0.0 --port 8205
+    env_file: .env
+    ports: ["8205:8205"]

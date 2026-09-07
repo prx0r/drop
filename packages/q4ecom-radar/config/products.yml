@@ -1,0 +1,284 @@
+products:
+  - slug: portable-projector
+    name: Premium portable projector
+    cluster: home-cinema
+    keywords: [portable projector, mini projector, bedroom projector, movie projector]
+    giftability: 90
+    evergreen: 78
+    upsellability: 88
+    ai_advisor_value: 92
+    base_return_risk: 58
+    compliance_risk: 55
+    fragility_risk: 45
+    winter_affinity: 50
+    typical_retail_usd: [130, 320]
+    target_supplier_usd: [35, 100]
+    notes: "Strong demo/gift product; quality expectations, electrical compliance and returns must be controlled."
+  - slug: projector-screen-kit
+    name: Portable projector screen kit
+    cluster: home-cinema
+    keywords: [portable projector screen, projector screen stand, home cinema screen]
+    giftability: 78
+    evergreen: 78
+    upsellability: 82
+    ai_advisor_value: 65
+    base_return_risk: 35
+    compliance_risk: 12
+    fragility_risk: 28
+    winter_affinity: 45
+    typical_retail_usd: [65, 180]
+    target_supplier_usd: [18, 55]
+  - slug: espresso-accessory-bundle
+    name: Espresso precision accessory bundle
+    cluster: home-barista
+    keywords: [espresso accessories, espresso tamper set, barista tool kit, coffee distribution tool]
+    giftability: 92
+    evergreen: 94
+    upsellability: 96
+    ai_advisor_value: 96
+    base_return_risk: 22
+    compliance_risk: 12
+    fragility_risk: 18
+    winter_affinity: 25
+    typical_retail_usd: [85, 220]
+    target_supplier_usd: [20, 60]
+    notes: "Excellent compatibility-advisor use case; bundle around machine/basket size."
+  - slug: coffee-scale
+    name: Premium espresso scale
+    cluster: home-barista
+    keywords: [espresso scale, coffee scale timer, barista scale]
+    giftability: 86
+    evergreen: 92
+    upsellability: 82
+    ai_advisor_value: 74
+    base_return_risk: 30
+    compliance_risk: 35
+    fragility_risk: 22
+    winter_affinity: 20
+    typical_retail_usd: [55, 160]
+    target_supplier_usd: [15, 45]
+  - slug: boot-dryer
+    name: Premium boot and shoe dryer
+    cluster: winter-gear
+    keywords: [boot dryer, shoe dryer, ski boot dryer, glove dryer]
+    giftability: 82
+    evergreen: 68
+    upsellability: 74
+    ai_advisor_value: 70
+    base_return_risk: 28
+    compliance_risk: 42
+    fragility_risk: 20
+    winter_affinity: 100
+    typical_retail_usd: [75, 190]
+    target_supplier_usd: [20, 55]
+    notes: "High Norway/Sweden/Canada seasonal fit; electrical compliance required."
+  - slug: ski-tuning-kit
+    name: Ski and snowboard tuning kit
+    cluster: winter-gear
+    keywords: [ski tuning kit, snowboard waxing kit, ski edge tool]
+    giftability: 88
+    evergreen: 60
+    upsellability: 92
+    ai_advisor_value: 84
+    base_return_risk: 20
+    compliance_risk: 12
+    fragility_risk: 12
+    winter_affinity: 100
+    typical_retail_usd: [80, 230]
+    target_supplier_usd: [20, 65]
+  - slug: dog-car-hammock
+    name: Premium waterproof dog car hammock
+    cluster: dog-travel
+    keywords: [dog car hammock, dog car seat cover, waterproof dog car cover]
+    giftability: 82
+    evergreen: 95
+    upsellability: 92
+    ai_advisor_value: 88
+    base_return_risk: 25
+    compliance_risk: 10
+    fragility_risk: 10
+    winter_affinity: 30
+    typical_retail_usd: [70, 180]
+    target_supplier_usd: [16, 45]
+  - slug: dog-travel-system
+    name: Dog travel organization system
+    cluster: dog-travel
+    keywords: [dog travel bag, dog travel kit, pet travel organizer]
+    giftability: 90
+    evergreen: 95
+    upsellability: 96
+    ai_advisor_value: 90
+    base_return_risk: 20
+    compliance_risk: 8
+    fragility_risk: 8
+    winter_affinity: 20
+    typical_retail_usd: [65, 170]
+    target_supplier_usd: [15, 42]
+  - slug: paw-cleaning-system
+    name: Premium dog paw cleaning system
+    cluster: dog-care
+    keywords: [dog paw cleaner, paw cleaning cup, muddy paws cleaner]
+    giftability: 75
+    evergreen: 96
+    upsellability: 90
+    ai_advisor_value: 66
+    base_return_risk: 18
+    compliance_risk: 8
+    fragility_risk: 8
+    winter_affinity: 55
+    typical_retail_usd: [45, 110]
+    target_supplier_usd: [8, 28]
+  - slug: compression-packing-cubes
+    name: Premium compression packing cube set
+    cluster: travel-organization
+    keywords: [compression packing cubes, travel packing cubes, luggage organizer set]
+    giftability: 90
+    evergreen: 98
+    upsellability: 95
+    ai_advisor_value: 70
+    base_return_risk: 12
+    compliance_risk: 4
+    fragility_risk: 5
+    winter_affinity: 0
+    typical_retail_usd: [60, 150]
+    target_supplier_usd: [12, 35]
+  - slug: vacuum-travel-bags
+    name: Travel vacuum compression bag system
+    cluster: travel-organization
+    keywords: [travel vacuum bags, compression bags travel, vacuum packing bags suitcase]
+    giftability: 82
+    evergreen: 96
+    upsellability: 88
+    ai_advisor_value: 63
+    base_return_risk: 18
+    compliance_risk: 6
+    fragility_risk: 10
+    winter_affinity: 0
+    typical_retail_usd: [50, 135]
+    target_supplier_usd: [10, 32]
+  - slug: car-detailing-kit
+    name: Premium car detailing kit
+    cluster: auto-care
+    keywords: [car detailing kit, car cleaning kit, interior car detailing kit]
+    giftability: 88
+    evergreen: 97
+    upsellability: 96
+    ai_advisor_value: 80
+    base_return_risk: 18
+    compliance_risk: 10
+    fragility_risk: 8
+    winter_affinity: 15
+    typical_retail_usd: [75, 220]
+    target_supplier_usd: [18, 58]
+  - slug: car-organization-system
+    name: Premium car organization system
+    cluster: auto-organization
+    keywords: [car organizer, trunk organizer, car storage organizer]
+    giftability: 78
+    evergreen: 98
+    upsellability: 90
+    ai_advisor_value: 68
+    base_return_risk: 15
+    compliance_risk: 5
+    fragility_risk: 5
+    winter_affinity: 10
+    typical_retail_usd: [60, 150]
+    target_supplier_usd: [12, 35]
+  - slug: craft-tool-kit
+    name: Premium craft tool starter kit
+    cluster: hobby-craft
+    keywords: [craft tool kit, craft starter kit, precision craft tools]
+    giftability: 95
+    evergreen: 94
+    upsellability: 98
+    ai_advisor_value: 82
+    base_return_risk: 15
+    compliance_risk: 10
+    fragility_risk: 8
+    winter_affinity: 15
+    typical_retail_usd: [65, 180]
+    target_supplier_usd: [14, 45]
+  - slug: leathercraft-kit
+    name: Leathercraft beginner kit
+    cluster: hobby-craft
+    keywords: [leathercraft kit, leather working tools kit, leather craft starter kit]
+    giftability: 96
+    evergreen: 90
+    upsellability: 96
+    ai_advisor_value: 88
+    base_return_risk: 14
+    compliance_risk: 8
+    fragility_risk: 8
+    winter_affinity: 15
+    typical_retail_usd: [70, 190]
+    target_supplier_usd: [16, 48]
+  - slug: home-organization-kit
+    name: Modular home organization kit
+    cluster: home-organization
+    keywords: [home organizer set, drawer organizer, closet organization kit]
+    giftability: 72
+    evergreen: 100
+    upsellability: 98
+    ai_advisor_value: 78
+    base_return_risk: 14
+    compliance_risk: 4
+    fragility_risk: 6
+    winter_affinity: 5
+    typical_retail_usd: [55, 160]
+    target_supplier_usd: [12, 40]
+  - slug: cable-management-system
+    name: Premium desk cable management system
+    cluster: desk-organization
+    keywords: [cable management kit, desk cable organizer, cable management box]
+    giftability: 73
+    evergreen: 100
+    upsellability: 94
+    ai_advisor_value: 62
+    base_return_risk: 10
+    compliance_risk: 4
+    fragility_risk: 5
+    winter_affinity: 0
+    typical_retail_usd: [45, 120]
+    target_supplier_usd: [8, 28]
+  - slug: film-digitization-kit
+    name: Home film and photo digitization accessory kit
+    cluster: analog-photo
+    keywords: [film scanning accessories, photo digitizing kit, negative scanning holder]
+    giftability: 89
+    evergreen: 83
+    upsellability: 92
+    ai_advisor_value: 90
+    base_return_risk: 24
+    compliance_risk: 14
+    fragility_risk: 15
+    winter_affinity: 15
+    typical_retail_usd: [70, 200]
+    target_supplier_usd: [15, 55]
+  - slug: ergonomic-footrest
+    name: Premium ergonomic desk footrest
+    cluster: office-comfort
+    keywords: [ergonomic footrest, desk foot rest, office footrest]
+    giftability: 65
+    evergreen: 100
+    upsellability: 75
+    ai_advisor_value: 58
+    base_return_risk: 20
+    compliance_risk: 5
+    fragility_risk: 10
+    winter_affinity: 0
+    typical_retail_usd: [65, 160]
+    target_supplier_usd: [14, 42]
+  - slug: plant-care-kit
+    name: Premium indoor plant care kit
+    cluster: plant-care
+    keywords: [plant care kit, indoor plant tools, houseplant care set]
+    giftability: 88
+    evergreen: 95
+    upsellability: 96
+    ai_advisor_value: 76
+    base_return_risk: 14
+    compliance_risk: 5
+    fragility_risk: 12
+    winter_affinity: 0
+    typical_retail_usd: [55, 145]
+    target_supplier_usd: [12, 36]

@@ -1,0 +1,6 @@
+requests>=2.32
+fastapi>=0.116
+uvicorn>=0.35
+
+[dev]
+pytest>=8.3

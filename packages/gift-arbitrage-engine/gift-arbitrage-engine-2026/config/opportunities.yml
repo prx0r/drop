@@ -1,0 +1,1880 @@
+opportunities:
+- slug: family-annual-newspaper
+  name: AI Family Annual / Christmas Newspaper
+  archetype: memory_to_artifact
+  description: Upload photos + a few prompts; AI writes and lays out a funny/sentimental family newspaper or year-in-review, printed
+    and shipped.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: &id005
+  - 24
+  - 49
+  target_cogs_usd:
+  - 6
+  - 14
+  personalization_inputs:
+  - 8–30 photos
+  - names + relationships
+  - 3–8 year highlights
+  - tone/inside jokes
+  output_formats:
+  - printed newspaper
+  - PDF
+  - shareable web preview
+  evidence_keys:
+  - etsy_newspaper
+  - etsy_magazine
+  - etsy_10k
+  - moonpig_fy26
+  - prodigi_api
+  metrics:
+    demand_proof: 87
+    personalization_demand: 88
+    q4_multiplier: 98
+    ai_effort_removed: 98
+    giftability: 96
+    gross_margin: 84
+    fulfillment_fit: 80
+    shareability: 92
+    repeatability: 88
+    cross_marketplace: 82
+    recurring_graph: 88
+    saturation_gap: 84
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Recipient/family memory graph improves every year; annual repeat is native.
+  first_test: 'Launch 3 aesthetics: broadsheet, 90s magazine, elegant family annual. Offer 48-hour digital proof + local POD.'
+- slug: recipient-one-click-photobook
+  name: One-click Recipient Photo Book
+  archetype: memory_to_artifact
+  description: Instead of manually selecting photos, buyer chooses the recipient/person and the system dedupes, ranks, clusters and
+    drafts a finished photo book.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 39
+  - 89
+  target_cogs_usd:
+  - 14
+  - 32
+  personalization_inputs:
+  - 20–200 photos
+  - recipient/person selection
+  - occasion
+  - optional captions
+  output_formats:
+  - hardcover book
+  - softcover book
+  - digital preview
+  evidence_keys:
+  - chatbooks_smart
+  - lulu_personalized
+  - gelato_books
+  - etsy_10k
+  - moonpig_graph
+  metrics:
+    demand_proof: 90
+    personalization_demand: 88
+    q4_multiplier: 85
+    ai_effort_removed: 100
+    giftability: 98
+    gross_margin: 75
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 92
+    cross_marketplace: 82
+    recurring_graph: 95
+    saturation_gap: 88
+    ip_risk: 10
+    privacy_risk: 42
+    support_burden: 30
+    quality_risk: 28
+  risks:
+  - photo privacy/consent; face clustering should be opt-in
+  - print crop/color quality
+  moat: Saved recipient graph + face cluster + prior books turns next birthday/Christmas into one click.
+  first_test: 'MVP uses batch upload rather than Google Photos OAuth: upload 50 photos, pick cover, approve AI selection.'
+- slug: group-love-book
+  name: Group-contribution “Why We Love You” Book
+  archetype: memory_to_artifact
+  description: One buyer shares a link; friends/family submit a photo/message/memory; AI edits and lays out one premium book.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 49
+  - 119
+  target_cogs_usd:
+  - 16
+  - 38
+  personalization_inputs:
+  - recipient name
+  - contributor link
+  - messages/photos
+  - occasion
+  output_formats:
+  - hardcover book
+  - digital edition
+  evidence_keys:
+  - lulu_personalized
+  - gelato_books
+  - etsy_storybooks
+  - etsy_10k
+  metrics:
+    demand_proof: 82
+    personalization_demand: 88
+    q4_multiplier: 85
+    ai_effort_removed: 96
+    giftability: 100
+    gross_margin: 78
+    fulfillment_fit: 80
+    shareability: 95
+    repeatability: 73
+    cross_marketplace: 82
+    recurring_graph: 79
+    saturation_gap: 91
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 38
+    quality_risk: 20
+  risks: []
+  moat: 'Group-contribution network creates distribution: every contributor becomes a prospective customer.'
+  first_test: Retirement + 60th birthday + Christmas-for-grandparents landing pages.
+- slug: family-game-night
+  name: AI Family Game Night Deck
+  archetype: people_to_game
+  description: Generate family trivia, “who said it?”, memories, photo rounds and inside-joke cards from a short group form.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: &id003
+  - 29
+  - 59
+  target_cogs_usd:
+  - 7
+  - 17
+  personalization_inputs:
+  - names
+  - 10–30 facts/memories
+  - optional photos
+  - difficulty/tone
+  output_formats:
+  - boxed card deck
+  - printable PDF
+  - mobile companion
+  evidence_keys:
+  - etsy_boardgame
+  - etsy_playing_cards
+  - etsy_family_gifts
+  - prodigi_api
+  metrics:
+    demand_proof: 87
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 95
+    giftability: 98
+    gross_margin: 84
+    fulfillment_fit: 80
+    shareability: 96
+    repeatability: 75
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 88
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - need filters for hurtful/private questions
+  moat: Unlike a photo deck, the content itself is personalized; annual expansion packs are possible.
+  first_test: Sell “Christmas Dinner Edition” first; 54 cards, one upload form, instant preview of 5 cards.
+- slug: personalized-cracker-kit
+  name: 'Personalized Christmas Crackers: AI Inserts'
+  archetype: occasion_bundle
+  description: Named crackers with unique jokes, fortunes, mini trivia, family facts and QR messages for each guest; sell as inserts
+    first, then full crackers where fulfillment is reliable.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 18
+  - 45
+  target_cogs_usd:
+  - 3
+  - 14
+  personalization_inputs:
+  - guest names
+  - relationship/family facts
+  - tone
+  - optional photos/voice links
+  output_formats:
+  - printable inserts
+  - filled crackers
+  - table-place cards
+  evidence_keys:
+  - etsy_crackers
+  - etsy_winter
+  - pinterest_holiday
+  - etsy_10k
+  metrics:
+    demand_proof: 76
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 96
+    giftability: 94
+    gross_margin: 90
+    fulfillment_fit: 75
+    shareability: 96
+    repeatability: 70
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 94
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 35
+    quality_risk: 20
+  risks:
+  - physical cracker rules/shipping vary; inserts are easiest MVP
+  moat: Variable-data content makes each seat unique; can expand to full Christmas-table bundle.
+  first_test: Start digital + locally printed insert pack; upsell physical shells only after supplier validation.
+- slug: christmas-table-pack
+  name: AI Personalized Christmas Table Pack
+  archetype: occasion_bundle
+  description: One guest list becomes coordinated place cards, menu cards, cracker inserts, family trivia, conversation cards and mini
+    “awards”.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 29
+  - 79
+  target_cogs_usd:
+  - 5
+  - 24
+  personalization_inputs:
+  - guest list
+  - family facts
+  - theme/colors
+  - menu optional
+  output_formats:
+  - print-at-home PDF
+  - printed stationery box
+  evidence_keys:
+  - etsy_winter
+  - etsy_crackers
+  - pinterest_holiday
+  - printify_personalization
+  metrics:
+    demand_proof: 79
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 99
+    giftability: 91
+    gross_margin: 88
+    fulfillment_fit: 80
+    shareability: 95
+    repeatability: 70
+    cross_marketplace: 90
+    recurring_graph: 50
+    saturation_gap: 96
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - table facts/jokes need buyer approval
+  moat: One input set creates 5+ coordinated SKUs; very high perceived creative labor.
+  first_test: Digital-first £/$15–25 equivalent to validate; physical premium box second.
+- slug: year-ahead-astrology-book
+  name: 2027 Year-Ahead Astrology Hardcover
+  archetype: profile_to_report
+  description: Premium annual astrology book built from deterministic birth-chart/transit calculations, with monthly themes/journaling
+    prompts; positioned as entertainment/self-reflection, not factual prediction.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 59
+  - 129
+  target_cogs_usd:
+  - 14
+  - 34
+  personalization_inputs:
+  - birth date
+  - exact birth time if known
+  - birth place
+  - recipient name/style
+  output_formats:
+  - hardcover book
+  - PDF
+  - monthly email add-on
+  evidence_keys:
+  - etsy_astrology_book
+  - etsy_yearly_astrology
+  - etsy_numerology_2026
+  - lulu_personalized
+  metrics:
+    demand_proof: 86
+    personalization_demand: 88
+    q4_multiplier: 97
+    ai_effort_removed: 96
+    giftability: 91
+    gross_margin: 82
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 92
+    saturation_gap: 88
+    ip_risk: 10
+    privacy_risk: 35
+    support_burden: 30
+    quality_risk: 30
+  risks:
+  - must calculate chart data deterministically; do not let LLM invent placements
+  - label as interpretive/entertainment; avoid medical/financial certainty
+  - birth data is sensitive
+  moat: Annual recurring purchase + premium physical artifact; current Etsy market is crowded at low-price PDFs but much thinner at
+    high-quality hardcovers.
+  first_test: 2027 hardcover + $19 digital preview funnel; birthday variant makes it evergreen.
+- slug: numerology-year-book
+  name: 2027 Personal Year Numerology Book
+  archetype: profile_to_report
+  description: Personal year/month numerology calculations presented as a premium journal/report with prompts.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: &id001
+  - 29
+  - 69
+  target_cogs_usd:
+  - 7
+  - 20
+  personalization_inputs:
+  - name
+  - birth date
+  - tone/style
+  output_formats:
+  - hardcover journal
+  - PDF
+  evidence_keys:
+  - etsy_numerology_2026
+  - etsy_yearly_astrology
+  - lulu_personalized
+  metrics:
+    demand_proof: 76
+    personalization_demand: 88
+    q4_multiplier: 96
+    ai_effort_removed: 94
+    giftability: 84
+    gross_margin: 85
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 82
+    ip_risk: 10
+    privacy_risk: 22
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - entertainment/interpretive framing; avoid deterministic life/health/finance claims
+  moat: Annual SKU refresh with deterministic calculation + premium design.
+  first_test: Low-CAC digital validation then upsell the printed journal.
+- slug: handwritten-recipe-heirloom
+  name: Handwritten Recipe Heirloom Bundle
+  archetype: data_to_keepsake
+  description: Upload Grandma’s handwritten recipe once; clean/restore it and turn it into towel, print, recipe card, mini book and
+    Christmas card.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 24
+  - 89
+  target_cogs_usd:
+  - 6
+  - 28
+  personalization_inputs:
+  - photo/scan of handwriting
+  - recipe title/name
+  - optional family story/photo
+  output_formats:
+  - tea towel
+  - framed print
+  - recipe cards
+  - mini recipe book
+  evidence_keys:
+  - etsy_recipe
+  - etsy_winter
+  - etsy_10k
+  - printify_personalization
+  metrics:
+    demand_proof: 96
+    personalization_demand: 88
+    q4_multiplier: 95
+    ai_effort_removed: 88
+    giftability: 100
+    gross_margin: 80
+    fulfillment_fit: 80
+    shareability: 90
+    repeatability: 70
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 72
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 32
+  risks:
+  - OCR/transcription must be manually checked; preserve original handwriting
+  moat: One upload fans out to a bundle and future family recipe archive.
+  first_test: Towel + archival recipe card bundle first; offer transcription proof before print.
+- slug: voice-qr-keepsake
+  name: Voice / QR Memory Keepsake
+  archetype: data_to_keepsake
+  description: Upload a voice note; create tasteful soundwave/QR art that plays the authorized message, optionally as card, ornament
+    or acrylic block.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: &id002
+  - 19
+  - 59
+  target_cogs_usd: &id006
+  - 5
+  - 18
+  personalization_inputs:
+  - voice recording
+  - name/date
+  - optional photo/message
+  output_formats:
+  - card
+  - ornament
+  - acrylic block
+  - print
+  evidence_keys:
+  - etsy_soundwave
+  - pinterest_penpals
+  - etsy_10k
+  metrics:
+    demand_proof: 88
+    personalization_demand: 88
+    q4_multiplier: 90
+    ai_effort_removed: 83
+    giftability: 98
+    gross_margin: 78
+    fulfillment_fit: 80
+    shareability: 94
+    repeatability: 72
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 76
+    ip_risk: 10
+    privacy_risk: 42
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - secure voice storage and deletion controls
+  - QR destination must remain stable
+  - do not use copyrighted songs without rights
+  moat: Hosted memory page + recipient graph creates durable recurring relationship.
+  first_test: “Scan to hear Mum/Grandad/the kids” keepsake; charge hosting once or lifetime included.
+- slug: custom-crossword-memories
+  name: Personalized Memory Crossword Gift
+  archetype: people_to_game
+  description: Buyer answers 10–30 prompts; AI turns names, places, memories and inside jokes into a solvable crossword with bespoke
+    clues.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 12
+  - 49
+  target_cogs_usd:
+  - 1
+  - 14
+  personalization_inputs:
+  - answers/facts
+  - recipient
+  - occasion
+  - difficulty
+  output_formats:
+  - digital PDF
+  - framed print
+  - placemat/game card
+  evidence_keys:
+  - etsy_crossword
+  - etsy_10k
+  metrics:
+    demand_proof: 79
+    personalization_demand: 88
+    q4_multiplier: 88
+    ai_effort_removed: 98
+    giftability: 91
+    gross_margin: 95
+    fulfillment_fit: 95
+    shareability: 88
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 89
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - must test crossword validity and uniqueness
+  moat: Fully automatic puzzle generation is materially easier than Canva-template incumbents.
+  first_test: 'Instant preview: show 5 generated clues before checkout.'
+- slug: photo-coloring-book
+  name: Photo-to-Christmas Coloring Book
+  archetype: memory_to_artifact
+  description: Upload family/pet photos; AI converts them into consistent printable coloring pages and assembles a personalized book.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 18
+  - 39
+  target_cogs_usd:
+  - 5
+  - 12
+  personalization_inputs:
+  - 8–30 photos
+  - names
+  - theme/style
+  output_formats:
+  - printed coloring book
+  - PDF
+  evidence_keys:
+  - etsy_coloring
+  - lulu_personalized
+  - gelato_books
+  metrics:
+    demand_proof: 76
+    personalization_demand: 88
+    q4_multiplier: 93
+    ai_effort_removed: 95
+    giftability: 90
+    gross_margin: 86
+    fulfillment_fit: 80
+    shareability: 92
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 89
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 30
+  risks:
+  - image-generation consistency and recognizability
+  moat: Instant transformation + local print; recurring kids/family editions.
+  first_test: Christmas family edition and pet edition.
+- slug: pet-yearbook
+  name: Pet Yearbook / “If My Pet Could Talk” Book
+  archetype: memory_to_artifact
+  description: Photos + anecdotes become a funny pet yearbook, story or mock interview.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: *id001
+  target_cogs_usd:
+  - 10
+  - 24
+  personalization_inputs:
+  - 10–40 pet photos
+  - pet name/breed/personality
+  - favorite stories
+  output_formats:
+  - hardcover book
+  - magazine
+  - PDF
+  evidence_keys:
+  - etsy_storybooks
+  - etsy_magazine
+  - lulu_personalized
+  metrics:
+    demand_proof: 87
+    personalization_demand: 88
+    q4_multiplier: 91
+    ai_effort_removed: 94
+    giftability: 98
+    gross_margin: 78
+    fulfillment_fit: 80
+    shareability: 98
+    repeatability: 82
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 83
+    ip_risk: 10
+    privacy_risk: 10
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Emotionally strong and easy UGC; repeat annually or per pet.
+  first_test: “Dog’s 2026 Annual Review” and “If My Dog Wrote Mum a Christmas Book”.
+- slug: couples-comic
+  name: Couple Story / Comic from Photos
+  archetype: memory_to_artifact
+  description: Convert a relationship timeline and photos into a short illustrated comic/storybook.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 39
+  - 99
+  target_cogs_usd:
+  - 12
+  - 32
+  personalization_inputs:
+  - photos
+  - relationship milestones
+  - inside jokes
+  - art style
+  output_formats:
+  - hardcover comic
+  - PDF
+  evidence_keys:
+  - etsy_storybooks
+  - lulu_personalized
+  metrics:
+    demand_proof: 78
+    personalization_demand: 88
+    q4_multiplier: 87
+    ai_effort_removed: 98
+    giftability: 98
+    gross_margin: 78
+    fulfillment_fit: 80
+    shareability: 96
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 84
+    ip_risk: 18
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 42
+  risks:
+  - avoid requesting copyrighted artist/franchise styles; consistency is critical
+  moat: High perceived human labor; anniversary/Valentine/Christmas all work.
+  first_test: 8-page premium mini-comic before 30-page products.
+- slug: annual-advent-refill
+  name: Personalized Reusable Advent Calendar Refill
+  archetype: occasion_bundle
+  description: Rather than selling a bulky calendar, sell 24 personalized activity/memory/joke/QR cards that refill an existing calendar
+    every year.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 15
+  - 39
+  target_cogs_usd:
+  - 2
+  - 8
+  personalization_inputs:
+  - family names/ages
+  - traditions/interests
+  - location optional
+  output_formats:
+  - 24 printed cards
+  - digital PDF
+  evidence_keys:
+  - etsy_advent
+  - etsy_winter
+  - pinterest_holiday
+  metrics:
+    demand_proof: 85
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 94
+    giftability: 90
+    gross_margin: 92
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 88
+    saturation_gap: 94
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - must ship early; digital fallback after physical cutoff
+  moat: Annual repeat is built in and avoids shipping bulky wooden calendars.
+  first_test: “24 family moments” + “24 kids activities” + “24 couple dates”.
+- slug: snail-mail-letter-capsule
+  name: Personalized Letter Capsule / Future Mail Gift
+  archetype: memory_to_artifact
+  description: 'Turn a few prompts into a beautiful authored letter set: “open when…”, future-self letters, couple letters, family time-capsule
+    letters.'
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: *id002
+  target_cogs_usd:
+  - 4
+  - 16
+  personalization_inputs:
+  - recipient
+  - memories/prompts
+  - tone
+  - delivery/open dates
+  output_formats:
+  - printed letter set
+  - keepsake box
+  - scheduled mail
+  evidence_keys:
+  - pinterest_penpals
+  - etsy_10k
+  - moonpig_graph
+  metrics:
+    demand_proof: 78
+    personalization_demand: 88
+    q4_multiplier: 91
+    ai_effort_removed: 93
+    giftability: 98
+    gross_margin: 88
+    fulfillment_fit: 80
+    shareability: 88
+    repeatability: 82
+    cross_marketplace: 82
+    recurring_graph: 85
+    saturation_gap: 93
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - AI should draft from user facts, not impersonate a real person deceptively
+  moat: Pinterest 2026 snail-mail trend + scheduled future delivery creates a reminder graph.
+  first_test: “12 letters for 2027” gift box and “Open when…” couple edition.
+- slug: custom-playing-card-stories
+  name: 52 Memories Playing Card Deck
+  archetype: memory_to_artifact
+  description: Each card becomes a photo, memory, fact, dare or prompt instead of merely repeating one photo on the deck.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: *id003
+  target_cogs_usd:
+  - 8
+  - 18
+  personalization_inputs:
+  - 20–52 photos/facts
+  - names
+  - theme
+  output_formats:
+  - 54-card deck
+  - gift box
+  evidence_keys:
+  - etsy_playing_cards
+  - prodigi_api
+  - etsy_10k
+  metrics:
+    demand_proof: 89
+    personalization_demand: 88
+    q4_multiplier: 92
+    ai_effort_removed: 91
+    giftability: 96
+    gross_margin: 81
+    fulfillment_fit: 80
+    shareability: 91
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 85
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Transforms a commodity custom deck into a narrative artifact.
+  first_test: 52 reasons/memories version first; display 6-card live preview.
+- slug: family-mystery-game
+  name: Custom Family Mystery / Scavenger Hunt
+  archetype: people_to_game
+  description: Generate a family-safe mystery, clue hunt or Christmas-morning scavenger game using names, rooms and inside jokes.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 15
+  - 49
+  target_cogs_usd:
+  - 1
+  - 12
+  personalization_inputs:
+  - players/names/ages
+  - home layout or locations
+  - inside jokes
+  - difficulty
+  output_formats:
+  - printable kit
+  - boxed cards
+  evidence_keys:
+  - etsy_boardgame
+  - etsy_crossword
+  - etsy_family_gifts
+  metrics:
+    demand_proof: 73
+    personalization_demand: 88
+    q4_multiplier: 98
+    ai_effort_removed: 99
+    giftability: 92
+    gross_margin: 95
+    fulfillment_fit: 80
+    shareability: 98
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 97
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 33
+    quality_risk: 20
+  risks:
+  - age/safety appropriate clues; avoid instructions involving unsafe locations
+  moat: AI makes bespoke game-writing near-zero marginal cost.
+  first_test: Christmas morning “find the big present” hunt at $9–19 digital.
+- slug: grandparent-legacy-book
+  name: Grandparent Legacy Interview Book
+  archetype: memory_to_artifact
+  description: Guided voice/text interview with a grandparent becomes a polished family history book with photos and timelines.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 79
+  - 199
+  target_cogs_usd:
+  - 18
+  - 48
+  personalization_inputs:
+  - interview audio/text
+  - family photos
+  - names/timeline
+  output_formats:
+  - hardcover book
+  - audio-linked QR pages
+  - digital archive
+  evidence_keys:
+  - lulu_personalized
+  - etsy_10k
+  - etsy_family_gifts
+  metrics:
+    demand_proof: 79
+    personalization_demand: 88
+    q4_multiplier: 89
+    ai_effort_removed: 100
+    giftability: 100
+    gross_margin: 76
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 78
+    saturation_gap: 97
+    ip_risk: 10
+    privacy_risk: 45
+    support_burden: 42
+    quality_risk: 20
+  risks:
+  - sensitive family histories require review and privacy controls
+  - transcription accuracy
+  moat: High-ticket because outcome is an irreplaceable family archive, not “a book”.
+  first_test: Sell interview gift voucher first; fulfillment can occur after Christmas.
+- slug: family-recipe-book
+  name: AI Family Recipe Restoration Book
+  archetype: data_to_keepsake
+  description: Upload photographed handwritten recipes; transcribe, normalize, preserve original scans and create a coherent family
+    cookbook.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: &id004
+  - 59
+  - 149
+  target_cogs_usd:
+  - 16
+  - 45
+  personalization_inputs:
+  - recipe photos/scans
+  - family photos
+  - recipe names/stories
+  output_formats:
+  - hardcover cookbook
+  - PDF
+  evidence_keys:
+  - etsy_recipe
+  - lulu_personalized
+  - etsy_winter
+  metrics:
+    demand_proof: 91
+    personalization_demand: 88
+    q4_multiplier: 92
+    ai_effort_removed: 99
+    giftability: 100
+    gross_margin: 78
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 88
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 42
+    quality_risk: 40
+  risks:
+  - ingredient quantities/instructions must never be silently “corrected”; user validates transcription
+  moat: High perceived archival labor; easy expansion from proven recipe-towel demand.
+  first_test: 10-recipe starter book; upsell full 30–60 recipe archive.
+- slug: new-home-memory-ornament
+  name: First Christmas in Our Home+ Ornament
+  archetype: data_to_keepsake
+  description: House photo becomes tasteful illustration plus address/coordinates/date and optional QR to a mini move-in story.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 19
+  - 39
+  target_cogs_usd: &id007
+  - 5
+  - 13
+  personalization_inputs:
+  - house photo
+  - names/date
+  - optional address/story
+  output_formats:
+  - ornament
+  - print
+  - card
+  evidence_keys:
+  - etsy_house_ornament
+  - etsy_starmap
+  - etsy_10k
+  metrics:
+    demand_proof: 95
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 82
+    giftability: 97
+    gross_margin: 82
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 52
+    ip_risk: 10
+    privacy_risk: 28
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - saturated base category; address privacy
+  moat: Needs narrative/QR/occasion graph layer to escape commodity watercolor ornament.
+  first_test: Do not launch as plain photo→watercolor; bundle first-home timeline/QR memory.
+- slug: birth-year-newspaper-puzzle
+  name: Birth-Year Newspaper + Personalized Puzzle
+  archetype: people_to_game
+  description: Turn recipient birth-year context plus user-supplied memories into a newspaper-style puzzle/crossword gift.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 19
+  - 49
+  target_cogs_usd:
+  - 4
+  - 15
+  personalization_inputs:
+  - birth year
+  - recipient facts
+  - photos optional
+  output_formats:
+  - newspaper print
+  - puzzle sheet
+  - framed print
+  evidence_keys:
+  - etsy_newspaper
+  - etsy_crossword
+  metrics:
+    demand_proof: 83
+    personalization_demand: 88
+    q4_multiplier: 88
+    ai_effort_removed: 92
+    giftability: 94
+    gross_margin: 87
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 82
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 35
+  risks:
+  - historical facts need sourced/verified data; no invented headlines
+  moat: Combines two proven formats and makes clues personal.
+  first_test: Milestone 40/50/60/70 birthdays, then Christmas grandparents.
+- slug: office-secret-santa-magazine
+  name: AI Office / Team Awards Magazine
+  archetype: memory_to_artifact
+  description: Team submits nominations, photos and jokes; AI creates a tasteful “yearbook/awards” magazine for Christmas parties or
+    remote teams.
+  primary_marketplaces:
+  - Shopify
+  - Direct B2B
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 79
+  - 399
+  target_cogs_usd:
+  - 20
+  - 90
+  personalization_inputs:
+  - team roster
+  - photos
+  - approved jokes/highlights
+  - brand
+  output_formats:
+  - magazines
+  - PDF
+  - individual awards cards
+  evidence_keys:
+  - etsy_magazine
+  - prodigi_api
+  metrics:
+    demand_proof: 70
+    personalization_demand: 88
+    q4_multiplier: 98
+    ai_effort_removed: 100
+    giftability: 89
+    gross_margin: 85
+    fulfillment_fit: 80
+    shareability: 99
+    repeatability: 60
+    cross_marketplace: 65
+    recurring_graph: 50
+    saturation_gap: 98
+    ip_risk: 10
+    privacy_risk: 35
+    support_burden: 42
+    quality_risk: 20
+  risks:
+  - employer approval; avoid discriminatory/sexual/harassing jokes
+  moat: B2B price anchor makes $100–$400 trivial relative to team event budget.
+  first_test: Outbound to 20–100 person agencies/startups; sell fixed “team pack” pricing.
+- slug: realtor-closing-book
+  name: AI New-Home Closing Memory Book
+  archetype: memory_to_artifact
+  description: Agent uploads listing photos + buyer names; create a premium “Our First Home” closing book/mini-magazine with blank pages
+    for memories.
+  primary_marketplaces:
+  - Shopify
+  - Direct B2B
+  q4_window: Evergreen; Q4 closing/gifting uplift
+  target_price_usd: *id004
+  target_cogs_usd:
+  - 14
+  - 38
+  personalization_inputs:
+  - property photos
+  - buyer names
+  - move-in date
+  - agent branding
+  output_formats:
+  - hardcover book
+  - card
+  evidence_keys:
+  - etsy_house_ornament
+  - lulu_personalized
+  metrics:
+    demand_proof: 72
+    personalization_demand: 88
+    q4_multiplier: 55
+    ai_effort_removed: 96
+    giftability: 94
+    gross_margin: 80
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 55
+    recurring_graph: 80
+    saturation_gap: 99
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - property/recipient privacy; agent must have rights to listing photos
+  moat: B2B recurring orders; $50–$100 gift is small vs real-estate commission.
+  first_test: White-label sample for 50 estate agents/realtors.
+- slug: wedding-guest-newspaper
+  name: One-click Wedding Guest Newspaper
+  archetype: occasion_bundle
+  description: Couple completes a structured form; AI creates a wedding newspaper with timeline, guest games, crossword, local tips
+    and story.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Evergreen wedding season; giftable Q4 proposals/engagements
+  target_price_usd:
+  - 49
+  - 199
+  target_cogs_usd:
+  - 10
+  - 55
+  personalization_inputs:
+  - couple story
+  - event details
+  - photos
+  - guest facts optional
+  output_formats:
+  - printed newspapers
+  - PDF
+  evidence_keys:
+  - etsy_newspaper
+  - etsy_crossword
+  - prodigi_api
+  metrics:
+    demand_proof: 88
+    personalization_demand: 88
+    q4_multiplier: 55
+    ai_effort_removed: 99
+    giftability: 85
+    gross_margin: 82
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 40
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 84
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 45
+    quality_risk: 20
+  risks: []
+  moat: Turns dozens of manual Canva hours into a 10-minute form.
+  first_test: Fixed 4-page and 8-page packages; proof generated immediately.
+- slug: personalized-santa-letter
+  name: Premium Santa Letter + Family Lore
+  archetype: profile_to_report
+  description: A beautifully printed Santa letter grounded only in parent-provided facts, plus optional “North Pole file” and nice-list
+    certificate.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 12
+  - 39
+  target_cogs_usd:
+  - 2
+  - 10
+  personalization_inputs:
+  - child first name
+  - parent-provided achievements/interests
+  - mailing name/address
+  output_formats:
+  - letter
+  - certificate
+  - envelope
+  evidence_keys:
+  - pinterest_penpals
+  - etsy_10k
+  metrics:
+    demand_proof: 73
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 91
+    giftability: 92
+    gross_margin: 91
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 64
+    ip_risk: 10
+    privacy_risk: 55
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - 'children’s data: collect minimum necessary; never infer behavior/sensitive traits'
+  - clearly parent-authored entertainment workflow
+  moat: Could be a CAC product feeding family occasion graph, not a standalone moat.
+  first_test: Local mail fulfillment + digital emergency version.
+- slug: family-ornament-story
+  name: QR Story Ornament
+  archetype: data_to_keepsake
+  description: A personalized ornament that scans to a private micro-page containing that year’s photo, 100-word story and optional
+    voice note.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: *id005
+  target_cogs_usd:
+  - 6
+  - 15
+  personalization_inputs:
+  - photo
+  - names/year
+  - short memory
+  - optional voice
+  output_formats:
+  - ornament
+  - private memory page
+  evidence_keys:
+  - etsy_house_ornament
+  - etsy_soundwave
+  - etsy_family_gifts
+  metrics:
+    demand_proof: 93
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 84
+    giftability: 98
+    gross_margin: 82
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 100
+    saturation_gap: 80
+    ip_risk: 10
+    privacy_risk: 35
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - stable/private QR hosting required
+  moat: Annual physical token + compounding private family archive.
+  first_test: First Christmas / baby / pet / family editions.
+- slug: year-in-12-cards
+  name: 12 Months of Us Card Set
+  archetype: memory_to_artifact
+  description: AI selects one memory per month and creates 12 mini cards/postcards that can be opened monthly in 2027.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 24
+  - 59
+  target_cogs_usd: *id006
+  personalization_inputs:
+  - 12–60 photos
+  - recipient
+  - captions optional
+  output_formats:
+  - postcard set
+  - keepsake box
+  evidence_keys:
+  - pinterest_penpals
+  - prodigi_api
+  - etsy_10k
+  metrics:
+    demand_proof: 74
+    personalization_demand: 88
+    q4_multiplier: 94
+    ai_effort_removed: 96
+    giftability: 99
+    gross_margin: 86
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 94
+    cross_marketplace: 82
+    recurring_graph: 90
+    saturation_gap: 97
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Extends gift experience across next year and builds repeat behavior.
+  first_test: Couples + grandparents versions; 12-card physical set.
+- slug: personalized-gift-reveal
+  name: AI Gift Reveal / Scavenger Pack
+  archetype: people_to_game
+  description: Turn an otherwise boring voucher/large present into a personalized series of clues, mini-puzzles and reveal card.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 7
+  - 19
+  target_cogs_usd:
+  - 0.3
+  - 3
+  personalization_inputs:
+  - recipient
+  - gift
+  - locations/facts
+  - difficulty
+  output_formats:
+  - digital PDF
+  - printed cards
+  evidence_keys:
+  - etsy_crossword
+  - pinterest_holiday
+  metrics:
+    demand_proof: 65
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 99
+    giftability: 93
+    gross_margin: 98
+    fulfillment_fit: 100
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 99
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Near-zero COGS digital Q4 impulse; excellent cross-sell for other gifts.
+  first_test: SEO/ads around “how to reveal surprise Christmas gift” and marketplace listings.
+- slug: personalized-2027-journal
+  name: 2027 Personalized Reflection Journal
+  archetype: profile_to_report
+  description: A person-specific annual journal using goals/interests, optional astrology/numerology structure, milestones and custom
+    prompts.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: *id001
+  target_cogs_usd:
+  - 8
+  - 20
+  personalization_inputs:
+  - name
+  - goals/interests
+  - optional birth data
+  - preferred tone
+  output_formats:
+  - hardcover journal
+  - PDF
+  evidence_keys:
+  - etsy_yearly_astrology
+  - etsy_numerology_2026
+  - lulu_personalized
+  metrics:
+    demand_proof: 76
+    personalization_demand: 88
+    q4_multiplier: 98
+    ai_effort_removed: 93
+    giftability: 89
+    gross_margin: 83
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 87
+    ip_risk: 10
+    privacy_risk: 30
+    support_burden: 30
+    quality_risk: 20
+  risks:
+  - avoid mental-health/medical claims; goal advice should remain general
+  moat: Annual renewal with saved preferences.
+  first_test: Sell between Black Friday and Jan 10; personalized sample pages pre-purchase.
+- slug: family-photo-calendar-ai
+  name: AI-curated Family Calendar
+  archetype: memory_to_artifact
+  description: Upload a large photo batch; AI chooses best person/month combinations, birthdays and captions automatically.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: *id005
+  target_cogs_usd:
+  - 7
+  - 16
+  personalization_inputs:
+  - 30–150 photos
+  - family birthdays
+  - names
+  output_formats:
+  - wall calendar
+  - desk calendar
+  evidence_keys:
+  - chatbooks_smart
+  - etsy_10k
+  - prodigi_api
+  metrics:
+    demand_proof: 84
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 98
+    giftability: 94
+    gross_margin: 79
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 100
+    saturation_gap: 73
+    ip_risk: 10
+    privacy_risk: 35
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Recurring annual product + occasion dates become reminder graph.
+  first_test: “Done in 3 minutes” landing page is the wedge, not calendar aesthetics.
+- slug: memory-card-moonpig
+  name: AI Memory Card / Mini-Book Card
+  archetype: memory_to_artifact
+  description: Instead of one photo and a typed greeting, upload a batch and receive a finished 4–12 page card/mini-book with AI-selected
+    memories and captions.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 8
+  - 19
+  target_cogs_usd:
+  - 2
+  - 6
+  personalization_inputs:
+  - 6–30 photos
+  - recipient
+  - occasion
+  - tone
+  output_formats:
+  - folded card
+  - 8-page mini-card
+  - digital preview
+  evidence_keys:
+  - moonpig_fy26
+  - moonpig_graph
+  - chatbooks_smart
+  - prodigi_api
+  metrics:
+    demand_proof: 100
+    personalization_demand: 88
+    q4_multiplier: 93
+    ai_effort_removed: 99
+    giftability: 96
+    gross_margin: 73
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 100
+    saturation_gap: 95
+    ip_risk: 10
+    privacy_risk: 35
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: 'This is the Moonpig wedge: cards acquire recipient/occasion data; later gifts monetize it.'
+  first_test: Do not undercut £3.99. Charge £7.99–£12.99 for dramatically better one-click memory artifact.
+- slug: memory-card-plus-gift
+  name: Memory Card + Personalized Gift Attach
+  archetype: occasion_bundle
+  description: 'A finished AI memory card triggers a context-matched attach: recipe towel, ornament, photo deck, book or voice keepsake.'
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 29
+  - 89
+  target_cogs_usd:
+  - 8
+  - 28
+  personalization_inputs:
+  - card inputs
+  - recipient profile
+  - gift category preference
+  output_formats:
+  - card + gift bundle
+  evidence_keys:
+  - moonpig_fy26
+  - moonpig_graph
+  - etsy_family_gifts
+  - printify_personalization
+  metrics:
+    demand_proof: 94
+    personalization_demand: 88
+    q4_multiplier: 95
+    ai_effort_removed: 94
+    giftability: 99
+    gross_margin: 77
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 82
+    recurring_graph: 100
+    saturation_gap: 90
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Card is cheap customer acquisition; personalized gift attachment drives AOV, mirroring Moonpig’s proven economics but with richer
+    creation.
+  first_test: 'Start with 3 attach products only: ornament, photo deck, mini-book.'
+- slug: pet-christmas-newspaper
+  name: Pet Christmas Newspaper
+  archetype: memory_to_artifact
+  description: 'A mock newspaper entirely about the pet: “Dog of the Year”, interviews, stats, scandals, favorite walks.'
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 24
+  - 45
+  target_cogs_usd: *id007
+  personalization_inputs:
+  - pet photos
+  - pet facts
+  - owner/family names
+  output_formats:
+  - printed newspaper
+  - PDF
+  evidence_keys:
+  - etsy_magazine
+  - etsy_newspaper
+  - etsy_storybooks
+  metrics:
+    demand_proof: 80
+    personalization_demand: 88
+    q4_multiplier: 98
+    ai_effort_removed: 97
+    giftability: 97
+    gross_margin: 87
+    fulfillment_fit: 80
+    shareability: 100
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 98
+    ip_risk: 10
+    privacy_risk: 8
+    support_burden: 30
+    quality_risk: 20
+  risks: []
+  moat: Easy social creative and lower privacy friction than human products.
+  first_test: 'TikTok/Meta UGC: upload 8 photos → reveal hilarious front page.'
+- slug: custom-memory-boardgame
+  name: Premium Custom Family Board Game
+  archetype: people_to_game
+  description: Generate a board-game-like family journey using milestones, locations, photos and trivia; avoid copying protected game
+    brands/layouts.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 69
+  - 179
+  target_cogs_usd:
+  - 22
+  - 60
+  personalization_inputs:
+  - family timeline
+  - photos
+  - facts
+  - locations
+  output_formats:
+  - custom board
+  - cards
+  - box
+  evidence_keys:
+  - etsy_boardgame
+  - etsy_10k
+  metrics:
+    demand_proof: 88
+    personalization_demand: 88
+    q4_multiplier: 96
+    ai_effort_removed: 99
+    giftability: 100
+    gross_margin: 66
+    fulfillment_fit: 55
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 87
+    ip_risk: 28
+    privacy_risk: 20
+    support_burden: 50
+    quality_risk: 42
+  risks:
+  - do not imitate Monopoly/Guess Who/UNO trademarks/trade dress
+  - complex physical fulfillment
+  moat: High AOV + high perceived design labor.
+  first_test: Validate digital/printable board first; physical only after supplier sample.
+- slug: star-map-nextgen
+  name: Next-gen Date+Place Memory Map
+  archetype: data_to_keepsake
+  description: Use the proven date/place keepsake formula but combine sky/moon/weather/map + a user-provided memory instead of selling
+    another commodity star map.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 24
+  - 69
+  target_cogs_usd:
+  - 5
+  - 20
+  personalization_inputs:
+  - date
+  - place
+  - names
+  - memory
+  output_formats:
+  - print
+  - framed print
+  - book page
+  evidence_keys:
+  - etsy_starmap
+  - etsy_10k
+  metrics:
+    demand_proof: 98
+    personalization_demand: 88
+    q4_multiplier: 82
+    ai_effort_removed: 72
+    giftability: 95
+    gross_margin: 83
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 35
+    ip_risk: 10
+    privacy_risk: 20
+    support_burden: 30
+    quality_risk: 25
+  risks:
+  - base star-map market is heavily saturated; astronomical/weather facts must be sourced
+  moat: Only worth testing as a composite narrative artifact, never as plain star map.
+  first_test: '“The night we met” data story: map + sky + weather + 100-word memory.'
+- slug: personalized-client-gift-report
+  name: B2B Client “Year Together” Book
+  archetype: memory_to_artifact
+  description: Agency/account manager uploads project highlights/screenshots/results; AI creates a client yearbook/thank-you artifact.
+  primary_marketplaces:
+  - Shopify
+  - Direct B2B
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 99
+  - 499
+  target_cogs_usd:
+  - 20
+  - 80
+  personalization_inputs:
+  - client name/logo
+  - approved project highlights
+  - photos/screenshots
+  - team messages
+  output_formats:
+  - hardcover book
+  - premium magazine
+  evidence_keys:
+  - lulu_personalized
+  - prodigi_api
+  metrics:
+    demand_proof: 68
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 100
+    giftability: 94
+    gross_margin: 87
+    fulfillment_fit: 80
+    shareability: 78
+    repeatability: 100
+    cross_marketplace: 40
+    recurring_graph: 100
+    saturation_gap: 100
+    ip_risk: 10
+    privacy_risk: 35
+    support_burden: 42
+    quality_risk: 20
+  risks:
+  - confidential client data; require authorization and private processing
+  moat: $100–$500 is tiny relative to account value; repeat annually across every client.
+  first_test: Target agencies/accountants/recruiters/consultancies with 20+ client relationships.
+- slug: retirement-career-book
+  name: Career / Retirement Tribute Book
+  archetype: memory_to_artifact
+  description: Colleagues submit memories, photos, milestones and messages; AI structures a career timeline and tribute book.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd: &id008
+  - 79
+  - 249
+  target_cogs_usd: &id009
+  - 18
+  - 55
+  personalization_inputs:
+  - recipient career timeline
+  - group contributions
+  - photos
+  output_formats:
+  - hardcover book
+  - PDF
+  evidence_keys:
+  - lulu_personalized
+  - etsy_10k
+  metrics:
+    demand_proof: 76
+    personalization_demand: 88
+    q4_multiplier: 75
+    ai_effort_removed: 100
+    giftability: 100
+    gross_margin: 82
+    fulfillment_fit: 80
+    shareability: 96
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 96
+    ip_risk: 10
+    privacy_risk: 30
+    support_burden: 36
+    quality_risk: 20
+  risks: []
+  moat: Group contribution loop + high emotional stakes; cost tiny versus retirement event.
+  first_test: HR/office managers + direct consumer landing page.
+- slug: personalized-corporate-crackers
+  name: Corporate Personalized Crackers / Table Awards
+  archetype: occasion_bundle
+  description: Company party crackers with employee-specific safe jokes, awards, trivia and QR recap pages.
+  primary_marketplaces:
+  - Shopify
+  - Direct B2B
+  q4_window: Sep 15–Dec 24; digital variants extend to Dec 24
+  target_price_usd:
+  - 149
+  - 999
+  target_cogs_usd:
+  - 35
+  - 300
+  personalization_inputs:
+  - employee list
+  - approved facts
+  - brand/theme
+  output_formats:
+  - cracker inserts
+  - place cards
+  - awards cards
+  - PDF
+  evidence_keys:
+  - etsy_crackers
+  - prodigi_api
+  metrics:
+    demand_proof: 62
+    personalization_demand: 88
+    q4_multiplier: 100
+    ai_effort_removed: 100
+    giftability: 90
+    gross_margin: 75
+    fulfillment_fit: 80
+    shareability: 98
+    repeatability: 60
+    cross_marketplace: 35
+    recurring_graph: 50
+    saturation_gap: 100
+    ip_risk: 10
+    privacy_risk: 38
+    support_burden: 45
+    quality_risk: 20
+  risks:
+  - workplace content moderation essential
+  - physical cracker logistics/compliance
+  moat: B2B budget anchor; personalized variable data scales better with AI than manual design.
+  first_test: Digital/print insert service first; outsource shells locally.
+- slug: personalized-memorial-book
+  name: Memorial Memory Book from Group Contributions
+  archetype: memory_to_artifact
+  description: Private contribution link collects memories/photos; AI organizes a respectful memorial book and optional QR audio archive.
+  primary_marketplaces:
+  - Etsy
+  - Shopify
+  q4_window: Evergreen; not primarily Q4
+  target_price_usd: *id008
+  target_cogs_usd: *id009
+  personalization_inputs:
+  - approved memories/photos
+  - names/dates
+  - optional voice
+  output_formats:
+  - hardcover book
+  - private archive
+  evidence_keys:
+  - lulu_personalized
+  - etsy_10k
+  metrics:
+    demand_proof: 72
+    personalization_demand: 88
+    q4_multiplier: 45
+    ai_effort_removed: 100
+    giftability: 96
+    gross_margin: 82
+    fulfillment_fit: 80
+    shareability: 65
+    repeatability: 60
+    cross_marketplace: 82
+    recurring_graph: 50
+    saturation_gap: 96
+    ip_risk: 10
+    privacy_risk: 55
+    support_burden: 50
+    quality_risk: 20
+  risks:
+  - high sensitivity; require human review and restrained language
+  - do not fabricate voice/text from deceased person
+  moat: High-value evergreen adjacent niche; not a Q4 lead but strong engine reuse.
+  first_test: Keep separate brand/landing page from whimsical Christmas products.

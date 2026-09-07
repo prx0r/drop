@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "description": "Candidate schema with state machine and enhanced scoring",
+  "states": [
+    "DISCOVERED",
+    "DEMAND_VERIFIED",
+    "MERCHANT_GAP_VERIFIED",
+    "SUPPLY_PATH_VERIFIED",
+    "MARGIN_VERIFIED",
+    "SEARCH_ECONOMICS_VERIFIED",
+    "LAUNCHABLE",
+    "FREE_TRAFFIC_TEST",
+    "PAID_TEST",
+    "PROFITABLE",
+    "KILLED"
+  ],
+  "required_fields_per_state": {
+    "DISCOVERED": ["cand_id", "name", "country"],
+    "DEMAND_VERIFIED": ["search_volume", "popularity_rank", "trend_direction"],
+    "MERCHANT_GAP_VERIFIED": ["seller_count", "good_seller_count", "merchant_quality_scores"],
+    "SUPPLY_PATH_VERIFIED": ["supplier_name", "supplier_contact", "warehouse_location", "dropship_available"],
+    "MARGIN_VERIFIED": ["selling_price", "supplier_cost", "shipping_cost", "contribution_margin", "headroom", "break_even_cvr"],
+    "SEARCH_ECONOMICS_VERIFIED": ["cpc_actual", "cpc_source", "search_volume_actual"],
+    "LAUNCHABLE": ["all_gates_pass", "blueprint_generated"],
+    "FREE_TRAFFIC_TEST": ["store_url", "products_listed", "impressions", "clicks"],
+    "PAID_TEST": ["campaign_id", "daily_budget", "ctr", "cpc", "cvr", "roas"],
+    "PROFITABLE": ["daily_orders", "daily_revenue", "daily_profit", "contribution_per_click"]
+  },
+  "scoring": {
+    "dimensions": [
+      {"name": "demand", "weight": 20, "description": "Proven product demand (popularity, search volume)"},
+      {"name": "merchant_gap", "weight": 15, "description": "Demand / good-seller ratio"},
+      {"name": "economics", "weight": 20, "description": "Contribution margin, headroom, break-even CVR"},
+      {"name": "supply", "weight": 15, "description": "Supplier quality, delivery, returns"},
+      {"name": "merchant_weakness", "weight": 10, "description": "Local merchant quality (images, content, shipping)"},
+      {"name": "ad_headroom", "weight": 10, "description": "CPC relative to contribution"},
+      {"name": "localization", "weight": 5, "description": "Language/currency/payment gap"},
+      {"name": "accessory_upside", "weight": 5, "description": "Bundle/accessory/cross-sell potential"}
+    ],
+    "b2b_penalties": [
+      {"factor": "requires_demo", "penalty": -15},
+      {"factor": "requires_site_visit", "penalty": -15},
+      {"factor": "requires_training", "penalty": -10},
+      {"factor": "repair_network_needed", "penalty": -10},
+      {"factor": "long_purchase_cycle", "penalty": -10},
+      {"factor": "business_customer_only", "penalty": -20},
+      {"factor": "rental_alternative_exists", "penalty": -10}
+    ],
+    "target_aov_range": {"min": 150, "max": 2000, "currency": "GBP"},
+    "headroom_bands": {
+      "structurally_losing": {"min": 0, "max": 1.0},
+      "fragile": {"min": 1.0, "max": 1.3},
+      "interesting": {"min": 1.3, "max": 2.0},
+      "investigate": {"min": 2.0, "max": 999}
+    }
+  },
+  "seller_quality_dimensions": [
+    "image_quality",
+    "product_info",
+    "decision_support",
+    "shipping_clarity",
+    "stock_availability",
+    "localization",
+    "reviews",
+    "trust",
+    "accessories",
+    "mobile_speed"
+  ],
+  "good_seller_threshold": 8,
+  "gap_scores": {
+    "content_gap": "buyers have unanswered questions",
+    "merchant_gap": "few good sellers, weak retail execution",
+    "proceed_threshold": "merchant_gap >= 70"
+  }
+}

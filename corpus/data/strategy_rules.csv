@@ -1,0 +1,16 @@
+rule_id,category,rule,confidence,source_ids,notes
+R001,Product discovery,Prefer products with existing search demand when using Google-first acquisition,High,"S001,S003,S006,S009,S016",Search-intent products let small traffic volumes matter.
+R002,Economics,"Optimize expected contribution profit per click, not revenue ROAS",High,"S011,S019,S020,S036",Formula: expected CVR * pre-ad contribution/order - CPC.
+R003,AOV,"For very low ad budgets, high-ticket/high gross-profit dollars per conversion are structurally easier",Medium-High,"S006,S009",Not universal; high AOV also raises trust/CVR requirements.
+R004,Market scope,Launch one country/market first rather than splitting tiny budgets,Medium-High,S001,Concentrates learning and makes data interpretable.
+R005,Catalog,"Start with a lean, researched catalog rather than thousands of supplier SKUs",High,"S001,S042",Avoids diluted spend and simplifies feed/data quality.
+R006,Feed,"Treat Merchant Center feed as an acquisition surface: titles, GTIN, brand, category, images, price, shipping",High,"S017,S018,S042,S044",Run controlled item-level tests where possible.
+R007,Fresh account,"At tiny budgets, Standard Shopping/manual or constrained structures can be useful for collecting interpretable query/SKU data",Medium,"S009,S029,S030,S031",Evidence is mixed and platform behavior changes; test rather than dogmatize.
+R008,PMax,Use PMax after sufficient clean conversion data and with brand/structure guardrails,Medium-High,"S001,S019,S029",Avoid brand cannibalization and false ROAS confidence.
+R009,Learning window,Observe daily but avoid unnecessary early intervention,High,"S001,S022,S030",Define decision checkpoints before launch.
+R010,Scaling,Scale proven profitable campaigns gradually rather than jumping budgets,High,"S001,S004","~20% increments recur in operator playbooks, but treat as heuristic not law."
+R011,Attribution,Reconcile ad-platform revenue to store-side orders/revenue,High,"S019,S020","Branded search, retargeting and PMax can inflate platform ROAS."
+R012,Accounting,"Track COGS, shipping, payment fees, returns/refunds and contribution profit daily",High,"S011,S019,S020,S036",Revenue and platform ROAS are insufficient.
+R013,Zero-cost discovery,Use Google free listings + Bing free listings + Pinterest catalogs + SEO before paying for broad acquisition,High,"S046,S047,S048,S027,S028",Free signals can prioritize which SKU/market deserves paid testing.
+R014,Novel products,"If demand must be created, discovery channels can precede Google capture",Medium,"S026,S031",Existing-search-demand and demand-creation products need different playbooks.
+R015,Experimentation,"Log every intervention with before/after state, hypothesis and evaluation date",High,"S017,S018,S045",Enables replay/causal analysis and prevents hindsight narratives.

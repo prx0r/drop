@@ -1,0 +1,11 @@
+services:
+  geocommerce:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      GEOCOMMERCE_DB: /data/geocommerce.db
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-change-me}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:8080}
+    env_file: [.env]
+    volumes: ["./runtime:/data"]
+    restart: unless-stopped

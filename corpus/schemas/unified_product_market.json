@@ -1,0 +1,110 @@
+{
+  "version": "1.0.0",
+  "description": "Unified product × market × time schema for GeoDrop",
+  "grain": "product × country × week",
+  "tables": {
+    "demand": {
+      "description": "Demand signals for each product × country",
+      "fields": [
+        {"name": "product_id", "type": "STRING", "description": "Unique product identifier"},
+        {"name": "country_code", "type": "STRING", "description": "ISO country code"},
+        {"name": "week", "type": "DATE", "description": "Week ending date"},
+        {"name": "keyword_volume", "type": "INTEGER", "description": "Monthly search volume"},
+        {"name": "keyword_growth_3m", "type": "FLOAT", "description": "3-month growth rate"},
+        {"name": "keyword_growth_12m", "type": "FLOAT", "description": "12-month growth rate"},
+        {"name": "google_best_seller_rank", "type": "INTEGER", "description": "Merchant Center best seller rank"},
+        {"name": "pinterest_growth", "type": "FLOAT", "description": "Pinterest trend growth"},
+        {"name": "import_value_12m", "type": "FLOAT", "description": "12-month import value (USD)"},
+        {"name": "import_growth_yoy", "type": "FLOAT", "description": "Year-over-year import growth"}
+      ]
+    },
+    "competition": {
+      "description": "Competition signals for each product × country",
+      "fields": [
+        {"name": "product_id", "type": "STRING"},
+        {"name": "country_code", "type": "STRING"},
+        {"name": "week", "type": "DATE"},
+        {"name": "shopping_seller_count", "type": "INTEGER", "description": "Google Shopping sellers"},
+        {"name": "price_comparison_seller_count", "type": "INTEGER", "description": "Prisjakt/Hinta sellers"},
+        {"name": "good_seller_count", "type": "INTEGER", "description": "Sellers scoring ≥70/100"},
+        {"name": "poor_seller_count", "type": "INTEGER", "description": "Sellers scoring <40/100"},
+        {"name": "median_merchant_quality", "type": "FLOAT", "description": "Median merchant quality score"},
+        {"name": "shopify_specialist_count", "type": "INTEGER", "description": "Shopify stores in category"},
+        {"name": "paid_advertiser_count", "type": "INTEGER", "description": "Active Meta/Google advertisers"}
+      ]
+    },
+    "economics": {
+      "description": "Economic signals for each product × country",
+      "fields": [
+        {"name": "product_id", "type": "STRING"},
+        {"name": "country_code", "type": "STRING"},
+        {"name": "week", "type": "DATE"},
+        {"name": "retail_median", "type": "FLOAT", "description": "Median retail price (local currency)"},
+        {"name": "retail_p10", "type": "FLOAT", "description": "10th percentile retail price"},
+        {"name": "supplier_cost", "type": "FLOAT", "description": "Supplier cost (EUR)"},
+        {"name": "shipping_cost", "type": "FLOAT", "description": "Shipping to country (EUR)"},
+        {"name": "vat_rate", "type": "FLOAT", "description": "VAT rate"},
+        {"name": "duty_rate", "type": "FLOAT", "description": "Import duty rate"},
+        {"name": "payment_fee_rate", "type": "FLOAT", "description": "Payment processing fee rate"},
+        {"name": "expected_returns_rate", "type": "FLOAT", "description": "Expected return rate"},
+        {"name": "gross_contribution", "type": "FLOAT", "description": "Gross contribution per order (EUR)"},
+        {"name": "break_even_cpc", "type": "FLOAT", "description": "Break-even CPC (EUR)"},
+        {"name": "break_even_roas", "type": "FLOAT", "description": "Break-even ROAS"}
+      ]
+    },
+    "supply": {
+      "description": "Supply signals for each product × country",
+      "fields": [
+        {"name": "product_id", "type": "STRING"},
+        {"name": "country_code", "type": "STRING"},
+        {"name": "week", "type": "DATE"},
+        {"name": "warehouse_country", "type": "STRING", "description": "Warehouse location"},
+        {"name": "stock_level", "type": "STRING", "description": "in_stock / limited / out_of_stock"},
+        {"name": "delivery_days", "type": "INTEGER", "description": "Expected delivery days"},
+        {"name": "dropship_allowed", "type": "BOOLEAN", "description": "Dropship supported"},
+        {"name": "dealer_authorized", "type": "BOOLEAN", "description": "Authorized dealer"},
+        {"name": "blind_shipping", "type": "BOOLEAN", "description": "Blind shipping available"},
+        {"name": "returns_policy", "type": "STRING", "description": "Return policy description"},
+        {"name": "warranty_months", "type": "INTEGER", "description": "Warranty in months"},
+        {"name": "api_or_feed", "type": "BOOLEAN", "description": "API/feed integration available"},
+        {"name": "moq", "type": "INTEGER", "description": "Minimum order quantity"}
+      ]
+    },
+    "localization": {
+      "description": "Localization signals for each product × country",
+      "fields": [
+        {"name": "product_id", "type": "STRING"},
+        {"name": "country_code", "type": "STRING"},
+        {"name": "week", "type": "DATE"},
+        {"name": "native_content_quality", "type": "FLOAT", "description": "Quality of native-language content (0-100)"},
+        {"name": "local_payment_available", "type": "BOOLEAN", "description": "Local payment methods available"},
+        {"name": "local_shipping_available", "type": "BOOLEAN", "description": "Local shipping options available"},
+        {"name": "local_reviews_available", "type": "BOOLEAN", "description": "Local review platform presence"},
+        {"name": "comparison_content_gap", "type": "FLOAT", "description": "Gap in comparison content (0-100)"},
+        {"name": "expert_advice_gap", "type": "FLOAT", "description": "Gap in expert advice content (0-100)"}
+      ]
+    },
+    "outcome": {
+      "description": "Actual outcome data for launched stores",
+      "fields": [
+        {"name": "product_id", "type": "STRING"},
+        {"name": "country_code", "type": "STRING"},
+        {"name": "week", "type": "DATE"},
+        {"name": "launched", "type": "BOOLEAN", "description": "Store launched?"},
+        {"name": "traffic_daily", "type": "INTEGER", "description": "Daily traffic"},
+        {"name": "ctr", "type": "FLOAT", "description": "Click-through rate"},
+        {"name": "conversion_rate", "type": "FLOAT", "description": "Conversion rate"},
+        {"name": "cac", "type": "FLOAT", "description": "Customer acquisition cost (EUR)"},
+        {"name": "revenue", "type": "FLOAT", "description": "Revenue (EUR)"},
+        {"name": "margin_pct", "type": "FLOAT", "description": "Margin percentage"},
+        {"name": "return_rate", "type": "FLOAT", "description": "Return rate"},
+        {"name": "profit", "type": "FLOAT", "description": "Profit (EUR)"}
+      ]
+    }
+  },
+  "indexes": [
+    {"name": "product_country_week", "fields": ["product_id", "country_code", "week"]},
+    {"name": "country_week", "fields": ["country_code", "week"]},
+    {"name": "product_week", "fields": ["product_id", "week"]}
+  ]
+}

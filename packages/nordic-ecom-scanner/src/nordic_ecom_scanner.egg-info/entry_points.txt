@@ -1,0 +1,2 @@
+[console_scripts]
+ecomscan = nordic_arbitrage.cli:main

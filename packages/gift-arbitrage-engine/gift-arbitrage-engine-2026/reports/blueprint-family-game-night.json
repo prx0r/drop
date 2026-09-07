@@ -1,0 +1,42 @@
+{
+  "opportunity_slug": "family-game-night",
+  "product_title": "AI Family Game Night Deck \u2014 production blueprint",
+  "required_inputs": [
+    "names",
+    "10\u201330 facts/memories"
+  ],
+  "optional_inputs": [
+    "optional photos",
+    "difficulty/tone"
+  ],
+  "generation_steps": [
+    "collect names, facts, photos and inside jokes",
+    "generate clue/question candidates",
+    "remove sensitive or embarrassing content",
+    "balance difficulty and duplicates",
+    "render cards/board/puzzle",
+    "preview and approve",
+    "export production assets"
+  ],
+  "human_review_checks": [
+    "spelling of all names, dates and addresses",
+    "copyright/IP ownership of uploaded media",
+    "no invented biographical facts",
+    "no unsafe medical/financial/legal claims",
+    "no private/sensitive information exposed without consent",
+    "print bleed, crop, resolution and QR scanability"
+  ],
+  "fulfillment_assets": [
+    "customer preview PDF/JPG",
+    "print-ready PDF(s)",
+    "order manifest JSON",
+    "thumbnail/mockup assets"
+  ],
+  "privacy_notes": [
+    "collect the minimum data needed",
+    "do not use customer uploads to train models without explicit permission",
+    "use expiring/private object-storage URLs for production assets",
+    "provide deletion/export controls",
+    "treat child data, exact birth data, addresses and voice recordings as higher-sensitivity inputs"
+  ]
+}

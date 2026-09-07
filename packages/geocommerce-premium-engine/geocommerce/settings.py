@@ -1,0 +1,35 @@
+from __future__ import annotations
+import os
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Settings:
+    db_path: str = os.getenv("GEOCOMMERCE_DB", "/tmp/geocommerce.db")
+    admin_token: str = os.getenv("ADMIN_TOKEN", "dev-admin")
+    public_base_url: str = os.getenv("PUBLIC_BASE_URL", "http://localhost:8080")
+    google_ads_api_version: str = os.getenv("GOOGLE_ADS_API_VERSION", "v25")
+    google_ads_customer_id: str = os.getenv("GOOGLE_ADS_CUSTOMER_ID", "")
+    google_ads_manager_customer_id: str = os.getenv("GOOGLE_ADS_MANAGER_CUSTOMER_ID", "")
+    google_ads_developer_token: str = os.getenv("GOOGLE_ADS_DEVELOPER_TOKEN", "")
+    google_ads_access_token: str = os.getenv("GOOGLE_ADS_ACCESS_TOKEN", "")
+    merchant_account_id: str = os.getenv("MERCHANT_ACCOUNT_ID", "")
+    merchant_access_token: str = os.getenv("MERCHANT_ACCESS_TOKEN", "")
+    dataforseo_login: str = os.getenv("DATAFORSEO_LOGIN", "")
+    dataforseo_password: str = os.getenv("DATAFORSEO_PASSWORD", "")
+    serpapi_key: str = os.getenv("SERPAPI_KEY", "")
+    cj_access_token: str = os.getenv("CJ_ACCESS_TOKEN", "")
+    autods_api_key: str = os.getenv("AUTODS_API_KEY", "")
+    shopify_store: str = os.getenv("SHOPIFY_STORE", "")
+    shopify_admin_token: str = os.getenv("SHOPIFY_ADMIN_TOKEN", "")
+    runway_api_key: str = os.getenv("RUNWAY_API_KEY", "")
+    photoroom_api_key: str = os.getenv("PHOTOROOM_API_KEY", "")
+    gemini_api_key: str = os.getenv("GEMINI_API_KEY", "")
+    twilio_account_sid: str = os.getenv("TWILIO_ACCOUNT_SID", "")
+    twilio_auth_token: str = os.getenv("TWILIO_AUTH_TOKEN", "")
+    twilio_from_number: str = os.getenv("TWILIO_FROM_NUMBER", "")
+    support_callback_number: str = os.getenv("SUPPORT_CALLBACK_NUMBER", "")
+    llm_base_url: str = os.getenv("LLM_BASE_URL", "")
+    llm_api_key: str = os.getenv("LLM_API_KEY", "")
+    llm_model: str = os.getenv("LLM_MODEL", "")
+
+settings = Settings()

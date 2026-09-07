@@ -1,0 +1,2 @@
+[console_scripts]
+q4radar = q4radar.cli:app

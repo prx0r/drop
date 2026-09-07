@@ -1,0 +1,106 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-09-06",
+  "description": "Registry of all structured data files in the drop project",
+  "canonical_locations": {
+    "data": "/root/drop/data",
+    "output": "/root/drop/output",
+    "corpus": "/root/drop/corpus"
+  },
+  "files": {
+    "sources": {
+      "path": "data/sources.json",
+      "format": "json",
+      "description": "52 research sources with evidence grades",
+      "schema": "corpus/sources/sources.json",
+      "record_count": 52,
+      "fields": ["source_id", "title", "type", "operator", "verification_status", "evidence_grade", "url", "notes"]
+    },
+    "case_studies": {
+      "path": "data/case_studies.json",
+      "format": "json",
+      "description": "12 normalized case studies with quantitative data",
+      "schema": "corpus/case-studies/case_studies.json",
+      "record_count": 12,
+      "fields": ["case_id", "name", "revenue", "spend", "roas", "aov", "days", "first_sale_day", "source", "notes"]
+    },
+    "strategy_rules": {
+      "path": "data/strategy_rules.json",
+      "format": "json",
+      "description": "15 strategy rules with confidence levels",
+      "schema": "corpus/data/strategy_rules.json",
+      "record_count": 15,
+      "fields": ["rule_id", "category", "rule", "confidence", "source_ids", "rationale"]
+    },
+    "operator_events": {
+      "path": "data/operator_events.json",
+      "format": "json",
+      "description": "21 operator intervention events with outcomes",
+      "record_count": 21,
+      "fields": ["event_id", "timestamp", "action_type", "entity_type", "entity_id", "before", "after", "hypothesis", "observed_outcome", "source"]
+    },
+    "real_candidates": {
+      "path": "data/real_candidates.json",
+      "format": "json",
+      "description": "10 product candidates with full economics",
+      "record_count": 10,
+      "fields": ["cand_id", "name", "category", "selling_price", "supplier_cost", "shipping_cost", "duties", "contribution_margin", "cpc_estimate", "cvr_scenarios", "search_volume", "seller_count", "headroom"]
+    },
+    "top_candidates": {
+      "path": "output/TOP_CANDIDATES.json",
+      "format": "json",
+      "description": "Top 5 scored candidates with full detail",
+      "record_count": 5,
+      "fields": ["cand_id", "name", "score", "gates", "economics", "evoi", "classification"]
+    },
+    "strategy_rules_csv": {
+      "path": "data/strategy_rules.csv",
+      "format": "csv",
+      "description": "Strategy rules in CSV format",
+      "source": "data/strategy_rules.json"
+    },
+    "case_studies_csv": {
+      "path": "data/case_studies.csv",
+      "format": "csv",
+      "description": "Case studies in CSV format",
+      "source": "data/case_studies.json"
+    },
+    "sources_csv": {
+      "path": "data/sources.csv",
+      "format": "csv",
+      "description": "Sources in CSV format",
+      "source": "data/sources.json"
+    },
+    "intelligence_library": {
+      "path": "corpus/intelligence-library.json",
+      "format": "json",
+      "description": "Working strategies, failure patterns, product categories, market profiles",
+      "record_count": 18,
+      "fields": ["strategies", "failure_patterns", "product_categories", "market_profiles"]
+    },
+    "research_db": {
+      "path": "data/research.db",
+      "format": "sqlite",
+      "description": "SQLite database with all tables for querying",
+      "tables": ["sources", "case_studies", "strategy_rules", "operator_events"]
+    }
+  },
+  "schemas": {
+    "product_day": "corpus/schemas/product_day.json",
+    "store_day": "corpus/schemas/store_day.json",
+    "keyword_month": "corpus/schemas/keyword_month.json",
+    "market_product_week": "corpus/schemas/market_product_week.json",
+    "action_log": "corpus/schemas/action_log.json",
+    "experiment": "corpus/schemas/experiment.json"
+  },
+  "ingestion_pipeline": {
+    "script": "services/research/pipeline_v2.py",
+    "steps": ["merchant", "keywords", "score", "report"],
+    "outputs": {
+      "merchant": "data/merchant_popular_products.json",
+      "keywords": "data/keyword_data.json",
+      "score": "data/scored_candidates.json",
+      "report": "output/TOP_CANDIDATES_LIVE.json"
+    }
+  }
+}

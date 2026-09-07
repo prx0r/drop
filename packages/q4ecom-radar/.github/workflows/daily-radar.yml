@@ -1,0 +1,30 @@
+name: daily-radar
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 6 * * *'
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -e '.[google]'
+      - name: Run scan
+        env:
+          GOOGLE_ADS_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}
+          GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
+          GOOGLE_ADS_CLIENT_ID: ${{ secrets.GOOGLE_ADS_CLIENT_ID }}
+          GOOGLE_ADS_CLIENT_SECRET: ${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
+          GOOGLE_ADS_REFRESH_TOKEN: ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
+          GOOGLE_ADS_LOGIN_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          CJ_ACCESS_TOKEN: ${{ secrets.CJ_ACCESS_TOKEN }}
+        run: q4radar scan --markets GB,NO,DK,SE,DE,NL,CH
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q4-radar-reports
+          path: reports/

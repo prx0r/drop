@@ -1,0 +1,6 @@
+[
+  {"product_slug":"barista-dual-boiler-espresso","supplier":"demo-eu-distributor","unit_cost":610,"currency":"EUR","shipping_cost":55,"shipping_days":5,"stock":24,"ship_from_country":"DE","source_url":"https://supplier.example/espresso","observed_at":"2026-09-04T00:00:00Z","reliability":0.88},
+  {"product_slug":"barista-dual-boiler-espresso","supplier":"demo-eu-distributor","unit_cost":7100,"currency":"NOK","shipping_cost":720,"shipping_days":8,"stock":24,"ship_from_country":"DE","source_url":"https://supplier.example/espresso","observed_at":"2026-09-04T00:00:00Z","reliability":0.88},
+  {"product_slug":"premium-pet-ramp-oak","supplier":"demo-eu-distributor","unit_cost":94,"currency":"EUR","shipping_cost":21,"shipping_days":4,"stock":83,"ship_from_country":"PL","source_url":"https://supplier.example/pet-ramp","observed_at":"2026-09-04T00:00:00Z","reliability":0.86},
+  {"product_slug":"ergonomic-standing-desk-frame","supplier":"demo-eu-distributor","unit_cost":245,"currency":"EUR","shipping_cost":38,"shipping_days":4,"stock":51,"ship_from_country":"DE","source_url":"https://supplier.example/desk","observed_at":"2026-09-04T00:00:00Z","reliability":0.90}
+]

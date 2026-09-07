@@ -1,0 +1,21 @@
+{
+  "grain": "date x store",
+  "fields": [
+    "date",
+    "orders",
+    "revenue",
+    "cogs",
+    "ad_spend",
+    "supplier_shipping",
+    "payment_fees",
+    "refunds",
+    "chargebacks",
+    "software",
+    "support",
+    "gross_profit",
+    "contribution_profit",
+    "cash_profit",
+    "processor_balance",
+    "supplier_payables"
+  ]
+}

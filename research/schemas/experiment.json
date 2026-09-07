@@ -1,0 +1,17 @@
+{
+  "grain": "one controlled/natural experiment",
+  "fields": [
+    "experiment_id",
+    "start_date",
+    "end_date",
+    "treatment",
+    "control",
+    "primary_metric",
+    "guardrail_metrics",
+    "pre_period",
+    "post_period",
+    "effect_size",
+    "confidence",
+    "decision"
+  ]
+}

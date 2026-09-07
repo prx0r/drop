@@ -1,0 +1,16 @@
+verticals:
+  builders:
+    keyword_scale: 6
+    keywords: {extension: 2, loft: 2, conversion: 1.5, new build: 2.5, renovation: 1.5, dormer: 1.5}
+    negative_keywords: {tree: 2, signage: 2}
+    locations: []
+  solar_installers:
+    keyword_scale: 5
+    keywords: {solar: 3, photovoltaic: 3, battery: 2, roof: 1}
+    negative_keywords: {listed building: 1}
+    locations: []
+  architects:
+    keyword_scale: 6
+    keywords: {extension: 2, new build: 3, conversion: 2, residential: 1}
+    negative_keywords: {}
+    locations: []

@@ -1,0 +1,1 @@
+Eligibility is explicit and conservative. Opted-out contacts are always blocked. Individual/sole-trader/partnership electronic marketing needs explicit consent or a valid soft-opt-in assertion; corporate subscriber handling is separate. Every message includes identity and opt-out language. Draft -> human approval -> export -> outcome, with no autonomous sending.

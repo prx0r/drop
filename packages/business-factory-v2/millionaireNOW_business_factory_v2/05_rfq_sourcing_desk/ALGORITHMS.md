@@ -1,0 +1,1 @@
+Hard gates: minimum quantity, required certifications and delivery region. Fit uses capability token overlap. Quote total = unit×quantity + shipping + fees. Rank = 45% supplier fit + 40% budget fit + 15% lead-time score. Commission never affects rank.

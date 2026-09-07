@@ -1,0 +1,1713 @@
+[
+  {
+    "slug": "memory-card-moonpig",
+    "name": "AI Memory Card / Mini-Book Card",
+    "total": 91.78,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 100.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 93.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 96.0,
+      "gross_margin": 73.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 100.0,
+      "saturation_gap": 95.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.88,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 13.5,
+    "cogs_mid": 4.0,
+    "gross_margin_pct": 70.4,
+    "evidence_count": 4,
+    "reasons": [
+      "demand proof 100/100",
+      "repeatability 100/100",
+      "recurring graph 100/100",
+      "ai effort removed 99/100",
+      "giftability 96/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 70% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "memory-card-plus-gift",
+    "name": "Memory Card + Personalized Gift Attach",
+    "total": 90.99,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 94.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 95.0,
+      "ai_effort_removed": 94.0,
+      "giftability": 99.0,
+      "gross_margin": 77.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 100.0,
+      "saturation_gap": 90.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 59.0,
+    "cogs_mid": 18.0,
+    "gross_margin_pct": 69.5,
+    "evidence_count": 4,
+    "reasons": [
+      "repeatability 100/100",
+      "recurring graph 100/100",
+      "giftability 99/100",
+      "q4 multiplier 95/100",
+      "demand proof 94/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 69% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "family-annual-newspaper",
+    "name": "AI Family Annual / Christmas Newspaper",
+    "total": 90.76,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 87.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 98.0,
+      "ai_effort_removed": 98.0,
+      "giftability": 96.0,
+      "gross_margin": 84.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 92.0,
+      "repeatability": 88.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 88.0,
+      "saturation_gap": 84.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 36.5,
+    "cogs_mid": 10.0,
+    "gross_margin_pct": 72.6,
+    "evidence_count": 5,
+    "reasons": [
+      "q4 multiplier 98/100",
+      "ai effort removed 98/100",
+      "giftability 96/100",
+      "shareability 92/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 73% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "recipient-one-click-photobook",
+    "name": "One-click Recipient Photo Book",
+    "total": 89.21,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 90.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 85.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 98.0,
+      "gross_margin": 75.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 92.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 95.0,
+      "saturation_gap": 88.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 1.05,
+      "support_burden": 0.75,
+      "quality_risk": 0.7
+    },
+    "price_mid": 64.0,
+    "cogs_mid": 23.0,
+    "gross_margin_pct": 64.1,
+    "evidence_count": 5,
+    "reasons": [
+      "ai effort removed 100/100",
+      "giftability 98/100",
+      "recurring graph 95/100",
+      "repeatability 92/100",
+      "demand proof 90/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 64% before fees/ads"
+    ],
+    "risks": [
+      "photo privacy/consent; face clustering should be opt-in",
+      "print crop/color quality"
+    ]
+  },
+  {
+    "slug": "annual-advent-refill",
+    "name": "Personalized Reusable Advent Calendar Refill",
+    "total": 89.04,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 85.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 94.0,
+      "giftability": 90.0,
+      "gross_margin": 92.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 88.0,
+      "saturation_gap": 94.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 27.0,
+    "cogs_mid": 5.0,
+    "gross_margin_pct": 81.5,
+    "evidence_count": 3,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "repeatability 100/100",
+      "ai effort removed 94/100",
+      "saturation gap 94/100",
+      "gross margin 92/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 81% before fees/ads"
+    ],
+    "risks": [
+      "must ship early; digital fallback after physical cutoff"
+    ]
+  },
+  {
+    "slug": "family-photo-calendar-ai",
+    "name": "AI-curated Family Calendar",
+    "total": 88.39,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 84.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 98.0,
+      "giftability": 94.0,
+      "gross_margin": 79.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 100.0,
+      "saturation_gap": 73.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.88,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 36.5,
+    "cogs_mid": 11.5,
+    "gross_margin_pct": 68.5,
+    "evidence_count": 3,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "repeatability 100/100",
+      "recurring graph 100/100",
+      "ai effort removed 98/100",
+      "giftability 94/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 68% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "family-ornament-story",
+    "name": "QR Story Ornament",
+    "total": 88.33,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 93.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 84.0,
+      "giftability": 98.0,
+      "gross_margin": 82.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 100.0,
+      "saturation_gap": 80.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.88,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 36.5,
+    "cogs_mid": 10.5,
+    "gross_margin_pct": 71.2,
+    "evidence_count": 3,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "repeatability 100/100",
+      "recurring graph 100/100",
+      "giftability 98/100",
+      "demand proof 93/100",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 71% before fees/ads"
+    ],
+    "risks": [
+      "stable/private QR hosting required"
+    ]
+  },
+  {
+    "slug": "year-ahead-astrology-book",
+    "name": "2027 Year-Ahead Astrology Hardcover",
+    "total": 88.21,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 86.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 97.0,
+      "ai_effort_removed": 96.0,
+      "giftability": 91.0,
+      "gross_margin": 82.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 92.0,
+      "saturation_gap": 88.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.88,
+      "support_burden": 0.75,
+      "quality_risk": 0.75
+    },
+    "price_mid": 94.0,
+    "cogs_mid": 24.0,
+    "gross_margin_pct": 74.5,
+    "evidence_count": 4,
+    "reasons": [
+      "repeatability 100/100",
+      "q4 multiplier 97/100",
+      "ai effort removed 96/100",
+      "recurring graph 92/100",
+      "giftability 91/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 74% before fees/ads"
+    ],
+    "risks": [
+      "must calculate chart data deterministically; do not let LLM invent placements",
+      "label as interpretive/entertainment; avoid medical/financial certainty",
+      "birth data is sensitive"
+    ]
+  },
+  {
+    "slug": "family-game-night",
+    "name": "AI Family Game Night Deck",
+    "total": 87.84,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 87.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 95.0,
+      "giftability": 98.0,
+      "gross_margin": 84.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 96.0,
+      "repeatability": 75.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 88.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 44.0,
+    "cogs_mid": 12.0,
+    "gross_margin_pct": 72.7,
+    "evidence_count": 4,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "giftability 98/100",
+      "shareability 96/100",
+      "ai effort removed 95/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 73% before fees/ads"
+    ],
+    "risks": [
+      "need filters for hurtful/private questions"
+    ]
+  },
+  {
+    "slug": "year-in-12-cards",
+    "name": "12 Months of Us Card Set",
+    "total": 87.83,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 74.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 94.0,
+      "ai_effort_removed": 96.0,
+      "giftability": 99.0,
+      "gross_margin": 86.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 94.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 90.0,
+      "saturation_gap": 97.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 41.5,
+    "cogs_mid": 11.5,
+    "gross_margin_pct": 72.3,
+    "evidence_count": 3,
+    "reasons": [
+      "giftability 99/100",
+      "saturation gap 97/100",
+      "ai effort removed 96/100",
+      "q4 multiplier 94/100",
+      "repeatability 94/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 72% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "christmas-table-pack",
+    "name": "AI Personalized Christmas Table Pack",
+    "total": 87.39,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 79.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 91.0,
+      "gross_margin": 88.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 95.0,
+      "repeatability": 70.0,
+      "cross_marketplace": 90.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 96.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 54.0,
+    "cogs_mid": 14.5,
+    "gross_margin_pct": 73.1,
+    "evidence_count": 4,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "ai effort removed 99/100",
+      "saturation gap 96/100",
+      "shareability 95/100",
+      "giftability 91/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 73% before fees/ads"
+    ],
+    "risks": [
+      "table facts/jokes need buyer approval"
+    ]
+  },
+  {
+    "slug": "snail-mail-letter-capsule",
+    "name": "Personalized Letter Capsule / Future Mail Gift",
+    "total": 87.31,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 78.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 91.0,
+      "ai_effort_removed": 93.0,
+      "giftability": 98.0,
+      "gross_margin": 88.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 88.0,
+      "repeatability": 82.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 85.0,
+      "saturation_gap": 93.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 39.0,
+    "cogs_mid": 10.0,
+    "gross_margin_pct": 74.4,
+    "evidence_count": 3,
+    "reasons": [
+      "giftability 98/100",
+      "ai effort removed 93/100",
+      "saturation gap 93/100",
+      "q4 multiplier 91/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 74% before fees/ads"
+    ],
+    "risks": [
+      "AI should draft from user facts, not impersonate a real person deceptively"
+    ]
+  },
+  {
+    "slug": "group-love-book",
+    "name": "Group-contribution \u201cWhy We Love You\u201d Book",
+    "total": 87.1,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 82.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 85.0,
+      "ai_effort_removed": 96.0,
+      "giftability": 100.0,
+      "gross_margin": 78.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 95.0,
+      "repeatability": 73.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 79.0,
+      "saturation_gap": 91.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.95,
+      "quality_risk": 0.5
+    },
+    "price_mid": 84.0,
+    "cogs_mid": 27.0,
+    "gross_margin_pct": 67.9,
+    "evidence_count": 4,
+    "reasons": [
+      "giftability 100/100",
+      "ai effort removed 96/100",
+      "shareability 95/100",
+      "saturation gap 91/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 68% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "pet-christmas-newspaper",
+    "name": "Pet Christmas Newspaper",
+    "total": 86.64,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 80.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 98.0,
+      "ai_effort_removed": 97.0,
+      "giftability": 97.0,
+      "gross_margin": 87.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 100.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 98.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.2,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 34.5,
+    "cogs_mid": 9.0,
+    "gross_margin_pct": 73.9,
+    "evidence_count": 3,
+    "reasons": [
+      "shareability 100/100",
+      "q4 multiplier 98/100",
+      "saturation gap 98/100",
+      "ai effort removed 97/100",
+      "giftability 97/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 74% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "pet-yearbook",
+    "name": "Pet Yearbook / \u201cIf My Pet Could Talk\u201d Book",
+    "total": 86.38,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 87.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 91.0,
+      "ai_effort_removed": 94.0,
+      "giftability": 98.0,
+      "gross_margin": 78.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 98.0,
+      "repeatability": 82.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 83.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.25,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 49.0,
+    "cogs_mid": 17.0,
+    "gross_margin_pct": 65.3,
+    "evidence_count": 3,
+    "reasons": [
+      "giftability 98/100",
+      "shareability 98/100",
+      "ai effort removed 94/100",
+      "q4 multiplier 91/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 65% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "handwritten-recipe-heirloom",
+    "name": "Handwritten Recipe Heirloom Bundle",
+    "total": 86.26,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 96.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 95.0,
+      "ai_effort_removed": 88.0,
+      "giftability": 100.0,
+      "gross_margin": 80.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 90.0,
+      "repeatability": 70.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 72.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.8
+    },
+    "price_mid": 56.5,
+    "cogs_mid": 17.0,
+    "gross_margin_pct": 69.9,
+    "evidence_count": 4,
+    "reasons": [
+      "giftability 100/100",
+      "demand proof 96/100",
+      "q4 multiplier 95/100",
+      "shareability 90/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 70% before fees/ads"
+    ],
+    "risks": [
+      "OCR/transcription must be manually checked; preserve original handwriting"
+    ]
+  },
+  {
+    "slug": "personalized-cracker-kit",
+    "name": "Personalized Christmas Crackers: AI Inserts",
+    "total": 86.09,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 76.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 96.0,
+      "giftability": 94.0,
+      "gross_margin": 90.0,
+      "fulfillment_fit": 75.0,
+      "shareability": 96.0,
+      "repeatability": 70.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 94.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.88,
+      "quality_risk": 0.5
+    },
+    "price_mid": 31.5,
+    "cogs_mid": 8.5,
+    "gross_margin_pct": 73.0,
+    "evidence_count": 4,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "ai effort removed 96/100",
+      "shareability 96/100",
+      "giftability 94/100",
+      "saturation gap 94/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 73% before fees/ads"
+    ],
+    "risks": [
+      "physical cracker rules/shipping vary; inserts are easiest MVP"
+    ]
+  },
+  {
+    "slug": "family-mystery-game",
+    "name": "Custom Family Mystery / Scavenger Hunt",
+    "total": 85.31,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 73.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 98.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 92.0,
+      "gross_margin": 95.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 98.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 97.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.83,
+      "quality_risk": 0.5
+    },
+    "price_mid": 32.0,
+    "cogs_mid": 6.5,
+    "gross_margin_pct": 79.7,
+    "evidence_count": 3,
+    "reasons": [
+      "ai effort removed 99/100",
+      "q4 multiplier 98/100",
+      "shareability 98/100",
+      "saturation gap 97/100",
+      "gross margin 95/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 80% before fees/ads"
+    ],
+    "risks": [
+      "age/safety appropriate clues; avoid instructions involving unsafe locations"
+    ]
+  },
+  {
+    "slug": "personalized-client-gift-report",
+    "name": "B2B Client \u201cYear Together\u201d Book",
+    "total": 85.18,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 68.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 94.0,
+      "gross_margin": 87.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 40.0,
+      "recurring_graph": 100.0,
+      "saturation_gap": 100.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.88,
+      "support_burden": 1.05,
+      "quality_risk": 0.5
+    },
+    "price_mid": 299.0,
+    "cogs_mid": 50.0,
+    "gross_margin_pct": 83.3,
+    "evidence_count": 2,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "ai effort removed 100/100",
+      "repeatability 100/100",
+      "recurring graph 100/100",
+      "saturation gap 100/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 83% before fees/ads"
+    ],
+    "risks": [
+      "confidential client data; require authorization and private processing"
+    ]
+  },
+  {
+    "slug": "family-recipe-book",
+    "name": "AI Family Recipe Restoration Book",
+    "total": 85.06,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 91.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 92.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 100.0,
+      "gross_margin": 78.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 88.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 1.05,
+      "quality_risk": 1.0
+    },
+    "price_mid": 104.0,
+    "cogs_mid": 30.5,
+    "gross_margin_pct": 70.7,
+    "evidence_count": 3,
+    "reasons": [
+      "giftability 100/100",
+      "ai effort removed 99/100",
+      "q4 multiplier 92/100",
+      "demand proof 91/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 71% before fees/ads"
+    ],
+    "risks": [
+      "ingredient quantities/instructions must never be silently \u201ccorrected\u201d; user validates transcription"
+    ]
+  },
+  {
+    "slug": "custom-playing-card-stories",
+    "name": "52 Memories Playing Card Deck",
+    "total": 84.85,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 89.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 92.0,
+      "ai_effort_removed": 91.0,
+      "giftability": 96.0,
+      "gross_margin": 81.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 91.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 85.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 44.0,
+    "cogs_mid": 13.0,
+    "gross_margin_pct": 70.5,
+    "evidence_count": 3,
+    "reasons": [
+      "giftability 96/100",
+      "q4 multiplier 92/100",
+      "ai effort removed 91/100",
+      "shareability 91/100",
+      "demand proof 89/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 70% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "custom-crossword-memories",
+    "name": "Personalized Memory Crossword Gift",
+    "total": 84.79,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 79.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 88.0,
+      "ai_effort_removed": 98.0,
+      "giftability": 91.0,
+      "gross_margin": 95.0,
+      "fulfillment_fit": 95.0,
+      "shareability": 88.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 89.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 30.5,
+    "cogs_mid": 7.5,
+    "gross_margin_pct": 75.4,
+    "evidence_count": 2,
+    "reasons": [
+      "ai effort removed 98/100",
+      "gross margin 95/100",
+      "fulfillment fit 95/100",
+      "giftability 91/100",
+      "saturation gap 89/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 75% before fees/ads"
+    ],
+    "risks": [
+      "must test crossword validity and uniqueness"
+    ]
+  },
+  {
+    "slug": "grandparent-legacy-book",
+    "name": "Grandparent Legacy Interview Book",
+    "total": 84.7,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 79.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 89.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 100.0,
+      "gross_margin": 76.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 78.0,
+      "saturation_gap": 97.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 1.12,
+      "support_burden": 1.05,
+      "quality_risk": 0.5
+    },
+    "price_mid": 139.0,
+    "cogs_mid": 33.0,
+    "gross_margin_pct": 76.3,
+    "evidence_count": 3,
+    "reasons": [
+      "ai effort removed 100/100",
+      "giftability 100/100",
+      "saturation gap 97/100",
+      "q4 multiplier 89/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 76% before fees/ads"
+    ],
+    "risks": [
+      "sensitive family histories require review and privacy controls",
+      "transcription accuracy"
+    ]
+  },
+  {
+    "slug": "personalized-gift-reveal",
+    "name": "AI Gift Reveal / Scavenger Pack",
+    "total": 84.61,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 65.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 93.0,
+      "gross_margin": 98.0,
+      "fulfillment_fit": 100.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 99.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 13.0,
+    "cogs_mid": 1.65,
+    "gross_margin_pct": 87.3,
+    "evidence_count": 2,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "fulfillment fit 100/100",
+      "ai effort removed 99/100",
+      "saturation gap 99/100",
+      "gross margin 98/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 87% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "personalized-2027-journal",
+    "name": "2027 Personalized Reflection Journal",
+    "total": 84.0,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 76.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 98.0,
+      "ai_effort_removed": 93.0,
+      "giftability": 89.0,
+      "gross_margin": 83.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 87.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.75,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 49.0,
+    "cogs_mid": 14.0,
+    "gross_margin_pct": 71.4,
+    "evidence_count": 3,
+    "reasons": [
+      "repeatability 100/100",
+      "q4 multiplier 98/100",
+      "ai effort removed 93/100",
+      "giftability 89/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 71% before fees/ads"
+    ],
+    "risks": [
+      "avoid mental-health/medical claims; goal advice should remain general"
+    ]
+  },
+  {
+    "slug": "numerology-year-book",
+    "name": "2027 Personal Year Numerology Book",
+    "total": 83.47,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 76.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 96.0,
+      "ai_effort_removed": 94.0,
+      "giftability": 84.0,
+      "gross_margin": 85.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 82.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.55,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 49.0,
+    "cogs_mid": 13.5,
+    "gross_margin_pct": 72.4,
+    "evidence_count": 3,
+    "reasons": [
+      "repeatability 100/100",
+      "q4 multiplier 96/100",
+      "ai effort removed 94/100",
+      "personalization demand 88/100",
+      "gross margin 85/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 72% before fees/ads"
+    ],
+    "risks": [
+      "entertainment/interpretive framing; avoid deterministic life/health/finance claims"
+    ]
+  },
+  {
+    "slug": "photo-coloring-book",
+    "name": "Photo-to-Christmas Coloring Book",
+    "total": 83.22,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 76.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 93.0,
+      "ai_effort_removed": 95.0,
+      "giftability": 90.0,
+      "gross_margin": 86.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 92.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 89.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.75
+    },
+    "price_mid": 28.5,
+    "cogs_mid": 8.5,
+    "gross_margin_pct": 70.2,
+    "evidence_count": 3,
+    "reasons": [
+      "ai effort removed 95/100",
+      "q4 multiplier 93/100",
+      "shareability 92/100",
+      "giftability 90/100",
+      "saturation gap 89/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 70% before fees/ads"
+    ],
+    "risks": [
+      "image-generation consistency and recognizability"
+    ]
+  },
+  {
+    "slug": "voice-qr-keepsake",
+    "name": "Voice / QR Memory Keepsake",
+    "total": 83.13,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 88.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 90.0,
+      "ai_effort_removed": 83.0,
+      "giftability": 98.0,
+      "gross_margin": 78.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 94.0,
+      "repeatability": 72.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 76.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 1.05,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 39.0,
+    "cogs_mid": 11.5,
+    "gross_margin_pct": 70.5,
+    "evidence_count": 3,
+    "reasons": [
+      "giftability 98/100",
+      "shareability 94/100",
+      "q4 multiplier 90/100",
+      "demand proof 88/100",
+      "personalization demand 88/100",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 71% before fees/ads"
+    ],
+    "risks": [
+      "secure voice storage and deletion controls",
+      "QR destination must remain stable",
+      "do not use copyrighted songs without rights"
+    ]
+  },
+  {
+    "slug": "retirement-career-book",
+    "name": "Career / Retirement Tribute Book",
+    "total": 82.96,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 76.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 75.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 100.0,
+      "gross_margin": 82.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 96.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 96.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.75,
+      "support_burden": 0.9,
+      "quality_risk": 0.5
+    },
+    "price_mid": 164.0,
+    "cogs_mid": 36.5,
+    "gross_margin_pct": 77.7,
+    "evidence_count": 2,
+    "reasons": [
+      "ai effort removed 100/100",
+      "giftability 100/100",
+      "shareability 96/100",
+      "saturation gap 96/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "illustrative gross margin 78% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "new-home-memory-ornament",
+    "name": "First Christmas in Our Home+ Ornament",
+    "total": 82.7,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 95.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 82.0,
+      "giftability": 97.0,
+      "gross_margin": 82.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 52.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.7,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 29.0,
+    "cogs_mid": 9.0,
+    "gross_margin_pct": 69.0,
+    "evidence_count": 3,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "giftability 97/100",
+      "demand proof 95/100",
+      "personalization demand 88/100",
+      "ai effort removed 82/100",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 69% before fees/ads"
+    ],
+    "risks": [
+      "saturated base category; address privacy"
+    ]
+  },
+  {
+    "slug": "couples-comic",
+    "name": "Couple Story / Comic from Photos",
+    "total": 82.49,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 78.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 87.0,
+      "ai_effort_removed": 98.0,
+      "giftability": 98.0,
+      "gross_margin": 78.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 96.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 84.0
+    },
+    "penalties": {
+      "ip_risk": 0.63,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 1.05
+    },
+    "price_mid": 69.0,
+    "cogs_mid": 22.0,
+    "gross_margin_pct": 68.1,
+    "evidence_count": 2,
+    "reasons": [
+      "ai effort removed 98/100",
+      "giftability 98/100",
+      "shareability 96/100",
+      "personalization demand 88/100",
+      "q4 multiplier 87/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 68% before fees/ads"
+    ],
+    "risks": [
+      "avoid requesting copyrighted artist/franchise styles; consistency is critical"
+    ]
+  },
+  {
+    "slug": "office-secret-santa-magazine",
+    "name": "AI Office / Team Awards Magazine",
+    "total": 82.33,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 70.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 98.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 89.0,
+      "gross_margin": 85.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 99.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 65.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 98.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.88,
+      "support_burden": 1.05,
+      "quality_risk": 0.5
+    },
+    "price_mid": 239.0,
+    "cogs_mid": 55.0,
+    "gross_margin_pct": 77.0,
+    "evidence_count": 2,
+    "reasons": [
+      "ai effort removed 100/100",
+      "shareability 99/100",
+      "q4 multiplier 98/100",
+      "saturation gap 98/100",
+      "giftability 89/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 77% before fees/ads"
+    ],
+    "risks": [
+      "employer approval; avoid discriminatory/sexual/harassing jokes"
+    ]
+  },
+  {
+    "slug": "birth-year-newspaper-puzzle",
+    "name": "Birth-Year Newspaper + Personalized Puzzle",
+    "total": 81.77,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 83.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 88.0,
+      "ai_effort_removed": 92.0,
+      "giftability": 94.0,
+      "gross_margin": 87.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 82.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.88
+    },
+    "price_mid": 34.0,
+    "cogs_mid": 9.5,
+    "gross_margin_pct": 72.1,
+    "evidence_count": 2,
+    "reasons": [
+      "giftability 94/100",
+      "ai effort removed 92/100",
+      "personalization demand 88/100",
+      "q4 multiplier 88/100",
+      "gross margin 87/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 72% before fees/ads"
+    ],
+    "risks": [
+      "historical facts need sourced/verified data; no invented headlines"
+    ]
+  },
+  {
+    "slug": "custom-memory-boardgame",
+    "name": "Premium Custom Family Board Game",
+    "total": 80.88,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 88.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 96.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 100.0,
+      "gross_margin": 66.0,
+      "fulfillment_fit": 55.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 87.0
+    },
+    "penalties": {
+      "ip_risk": 0.98,
+      "privacy_risk": 0.5,
+      "support_burden": 1.25,
+      "quality_risk": 1.05
+    },
+    "price_mid": 124.0,
+    "cogs_mid": 41.0,
+    "gross_margin_pct": 66.9,
+    "evidence_count": 2,
+    "reasons": [
+      "giftability 100/100",
+      "ai effort removed 99/100",
+      "q4 multiplier 96/100",
+      "demand proof 88/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 67% before fees/ads"
+    ],
+    "risks": [
+      "do not imitate Monopoly/Guess Who/UNO trademarks/trade dress",
+      "complex physical fulfillment"
+    ]
+  },
+  {
+    "slug": "realtor-closing-book",
+    "name": "AI New-Home Closing Memory Book",
+    "total": 80.45,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 72.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 55.0,
+      "ai_effort_removed": 96.0,
+      "giftability": 94.0,
+      "gross_margin": 80.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 100.0,
+      "cross_marketplace": 55.0,
+      "recurring_graph": 80.0,
+      "saturation_gap": 99.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 104.0,
+    "cogs_mid": 26.0,
+    "gross_margin_pct": 75.0,
+    "evidence_count": 2,
+    "reasons": [
+      "repeatability 100/100",
+      "saturation gap 99/100",
+      "ai effort removed 96/100",
+      "giftability 94/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "can seed reminders, recipient profiles or annual repeats",
+      "illustrative gross margin 75% before fees/ads"
+    ],
+    "risks": [
+      "property/recipient privacy; agent must have rights to listing photos"
+    ]
+  },
+  {
+    "slug": "personalized-santa-letter",
+    "name": "Premium Santa Letter + Family Lore",
+    "total": 80.31,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 73.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 91.0,
+      "giftability": 92.0,
+      "gross_margin": 91.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 64.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 1.38,
+      "support_burden": 0.75,
+      "quality_risk": 0.5
+    },
+    "price_mid": 25.5,
+    "cogs_mid": 6.0,
+    "gross_margin_pct": 76.5,
+    "evidence_count": 2,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "giftability 92/100",
+      "ai effort removed 91/100",
+      "gross margin 91/100",
+      "personalization demand 88/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 76% before fees/ads"
+    ],
+    "risks": [
+      "children\u2019s data: collect minimum necessary; never infer behavior/sensitive traits",
+      "clearly parent-authored entertainment workflow"
+    ]
+  },
+  {
+    "slug": "personalized-corporate-crackers",
+    "name": "Corporate Personalized Crackers / Table Awards",
+    "total": 79.13,
+    "verdict": "BUILD",
+    "components": {
+      "demand_proof": 62.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 100.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 90.0,
+      "gross_margin": 75.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 98.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 35.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 100.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.95,
+      "support_burden": 1.12,
+      "quality_risk": 0.5
+    },
+    "price_mid": 574.0,
+    "cogs_mid": 167.5,
+    "gross_margin_pct": 70.8,
+    "evidence_count": 2,
+    "reasons": [
+      "q4 multiplier 100/100",
+      "ai effort removed 100/100",
+      "saturation gap 100/100",
+      "shareability 98/100",
+      "giftability 90/100",
+      "AI removes substantial customer/design labour",
+      "strong holiday/occasion multiplier",
+      "illustrative gross margin 71% before fees/ads"
+    ],
+    "risks": [
+      "workplace content moderation essential",
+      "physical cracker logistics/compliance"
+    ]
+  },
+  {
+    "slug": "wedding-guest-newspaper",
+    "name": "One-click Wedding Guest Newspaper",
+    "total": 78.59,
+    "verdict": "TEST",
+    "components": {
+      "demand_proof": 88.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 55.0,
+      "ai_effort_removed": 99.0,
+      "giftability": 85.0,
+      "gross_margin": 82.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 40.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 84.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 1.12,
+      "quality_risk": 0.5
+    },
+    "price_mid": 124.0,
+    "cogs_mid": 32.5,
+    "gross_margin_pct": 73.8,
+    "evidence_count": 3,
+    "reasons": [
+      "ai effort removed 99/100",
+      "demand proof 88/100",
+      "personalization demand 88/100",
+      "giftability 85/100",
+      "saturation gap 84/100",
+      "AI removes substantial customer/design labour",
+      "illustrative gross margin 74% before fees/ads"
+    ],
+    "risks": []
+  },
+  {
+    "slug": "star-map-nextgen",
+    "name": "Next-gen Date+Place Memory Map",
+    "total": 78.56,
+    "verdict": "TEST",
+    "components": {
+      "demand_proof": 98.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 82.0,
+      "ai_effort_removed": 72.0,
+      "giftability": 95.0,
+      "gross_margin": 83.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 78.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 35.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 0.5,
+      "support_burden": 0.75,
+      "quality_risk": 0.62
+    },
+    "price_mid": 46.5,
+    "cogs_mid": 12.5,
+    "gross_margin_pct": 73.1,
+    "evidence_count": 2,
+    "reasons": [
+      "demand proof 98/100",
+      "giftability 95/100",
+      "personalization demand 88/100",
+      "gross margin 83/100",
+      "q4 multiplier 82/100",
+      "illustrative gross margin 73% before fees/ads"
+    ],
+    "risks": [
+      "base star-map market is heavily saturated; astronomical/weather facts must be sourced"
+    ]
+  },
+  {
+    "slug": "personalized-memorial-book",
+    "name": "Memorial Memory Book from Group Contributions",
+    "total": 76.09,
+    "verdict": "TEST",
+    "components": {
+      "demand_proof": 72.0,
+      "personalization_demand": 88.0,
+      "q4_multiplier": 45.0,
+      "ai_effort_removed": 100.0,
+      "giftability": 96.0,
+      "gross_margin": 82.0,
+      "fulfillment_fit": 80.0,
+      "shareability": 65.0,
+      "repeatability": 60.0,
+      "cross_marketplace": 82.0,
+      "recurring_graph": 50.0,
+      "saturation_gap": 96.0
+    },
+    "penalties": {
+      "ip_risk": 0.35,
+      "privacy_risk": 1.38,
+      "support_burden": 1.25,
+      "quality_risk": 0.5
+    },
+    "price_mid": 164.0,
+    "cogs_mid": 36.5,
+    "gross_margin_pct": 77.7,
+    "evidence_count": 2,
+    "reasons": [
+      "ai effort removed 100/100",
+      "giftability 96/100",
+      "saturation gap 96/100",
+      "personalization demand 88/100",
+      "gross margin 82/100",
+      "AI removes substantial customer/design labour",
+      "illustrative gross margin 78% before fees/ads"
+    ],
+    "risks": [
+      "high sensitivity; require human review and restrained language",
+      "do not fabricate voice/text from deceased person"
+    ]
+  }
+]

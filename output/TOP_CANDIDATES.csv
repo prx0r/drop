@@ -1,0 +1,6 @@
+candidate_id,product_family,sku,country,selling_price,pre_ad_contribution,headroom_base,raw_score,adjusted_score,hard_gate_status,recommended_action,recommended_next_test,estimated_test_cost,state
+CAND-003,Premium baby stroller,PBS-450-US,US,450.0,254.25,1.06,57.8,37.5,QUARANTINE,RESEARCH_MORE,RUN_FREE_TRAFFIC_TEST,0.00,DISCOVERED
+CAND-008,Cordless handheld vacuum cleaner,CHV-LIT-US,US,129.99,73.52,0.93,45.0,29.2,QUARANTINE,RESEARCH_MORE,RUN_FREE_TRAFFIC_TEST,0.00,DISCOVERED
+CAND-010,Standing desk converter,SDC-ADJ-US,US,189.0,98.87,0.72,41.0,26.7,QUARANTINE,RESEARCH_MORE,RUN_FREE_TRAFFIC_TEST,0.00,DISCOVERED
+CAND-007,Ergonomic office chair,EOC-ERG-US,US,349.0,166.23,0.55,37.2,24.2,QUARANTINE,RESEARCH_MORE,RUN_FREE_TRAFFIC_TEST,0.00,DISCOVERED
+CAND-004,Home wellness massage chair,HWM-3000-US,US,2500.0,1352.30,0.90,32.8,21.3,QUARANTINE,RESEARCH_MORE,CHECK_SUPPLIER,0.00,DISCOVERED

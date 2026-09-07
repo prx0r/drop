@@ -1,0 +1,41 @@
+{
+  "opportunity_slug": "year-ahead-astrology-book",
+  "product_title": "2027 Year-Ahead Astrology Hardcover \u2014 production blueprint",
+  "required_inputs": [
+    "birth date",
+    "exact birth time if known"
+  ],
+  "optional_inputs": [
+    "birth place",
+    "recipient name/style"
+  ],
+  "generation_steps": [
+    "collect minimum structured profile inputs",
+    "compute deterministic source data before using an LLM",
+    "generate interpretation from the computed structure",
+    "label entertainment/interpretive material clearly",
+    "render premium digital and/or book layout",
+    "run consistency and unsupported-claim checks"
+  ],
+  "human_review_checks": [
+    "spelling of all names, dates and addresses",
+    "copyright/IP ownership of uploaded media",
+    "no invented biographical facts",
+    "no unsafe medical/financial/legal claims",
+    "no private/sensitive information exposed without consent",
+    "print bleed, crop, resolution and QR scanability"
+  ],
+  "fulfillment_assets": [
+    "customer preview PDF/JPG",
+    "print-ready PDF(s)",
+    "order manifest JSON",
+    "thumbnail/mockup assets"
+  ],
+  "privacy_notes": [
+    "collect the minimum data needed",
+    "do not use customer uploads to train models without explicit permission",
+    "use expiring/private object-storage URLs for production assets",
+    "provide deletion/export controls",
+    "treat child data, exact birth data, addresses and voice recordings as higher-sensitivity inputs"
+  ]
+}

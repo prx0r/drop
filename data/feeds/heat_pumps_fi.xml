@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>Heat Pumps Finland</title>
+<link>https://moltwork.com/lampopumppu</link>
+<description>Product feed for Heat Pumps Finland</description>
+<item>
+  <g:id>TADO-SMART-THERMOSTAT-X</g:id>
+  <g:title>tado Smart Thermostat X</g:title>
+  <g:description>Älytermostaatti lämpöpumpuille. WiFi. Energiatehokkuus.</g:description>
+  <g:link>https://moltwork.com/lampopumppu</g:link>
+  <g:image_link>https://moltwork.com/images/tado-x.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>249.00 EUR</g:price>
+  <g:brand>tado</g:brand>
+  <g:gtin>4260596730013</g:gtin>
+  <g:mpn>Smart-Thermostat-X</g:mpn>
+  <g:product_type>Lämpöpumput > Äly</g:product_type>
+</item><item>
+  <g:id>TADO-RADIATOR-VALVE</g:id>
+  <g:title>tado Smart Radiator Thermostat</g:title>
+  <g:description>Älylämpötilan säädin radiatoreihin.</g:description>
+  <g:link>https://moltwork.com/lampopumppu</g:link>
+  <g:image_link>https://moltwork.com/images/tado-radiator.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>79.00 EUR</g:price>
+  <g:brand>tado</g:brand>
+  <g:gtin>4260596730020</g:gtin>
+  <g:mpn>Radiator-V3</g:mpn>
+  <g:product_type>Lämpöpumput > Äly</g:product_type>
+</item><item>
+  <g:id>PANASONIC-CZ-RTC5B</g:id>
+  <g:title>Panasonic CZ-RTC5B kaukosäädin</g:title>
+  <g:description>WiFi kaukosäädin Panasonic lämpöpumpuille.</g:description>
+  <g:link>https://moltwork.com/lampopumppu</g:link>
+  <g:image_link>https://moltwork.com/images/panasonic-rtc5b.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>149.00 EUR</g:price>
+  <g:brand>Panasonic</g:brand>
+  <g:gtin>4549980356789</g:gtin>
+  <g:mpn>CZ-RTC5B</g:mpn>
+  <g:product_type>Lämpöpumput > Kaukosäätimet</g:product_type>
+</item><item>
+  <g:id>MITSUBISHI-MELCLOUD</g:id>
+  <g:title>Mitsubishi MelCloud WiFi-moduuli</g:title>
+  <g:description>WiFi-moduuli Mitsubishi lämpöpumpuille. Etäohjaus.</g:description>
+  <g:link>https://moltwork.com/lampopumppu</g:link>
+  <g:image_link>https://moltwork.com/images/mitsubishi-melcloud.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>199.00 EUR</g:price>
+  <g:brand>Mitsubishi Electric</g:brand>
+  <g:gtin>4549718523456</g:gtin>
+  <g:mpn>MELCLOUD</g:mpn>
+  <g:product_type>Lämpöpumput > WiFi</g:product_type>
+</item><item>
+  <g:id>AIRTHINGS-WAVE-PLUS</g:id>
+  <g:title>Airthings Wave Plus</g:title>
+  <g:description>6 mittaria: radon</g:description>
+  <g:link>229.00 EUR</g:link>
+  <g:image_link>Airthings</g:image_link>
+  <g:availability> CO2</g:availability>
+  <g:condition> VOC</g:condition>
+  <g:price>lämpö NOK</g:price>
+  <g:brand> kosteus</g:brand>
+  <g:gtin> paine. Bluetooth.</g:gtin>
+  <g:mpn>in_stock</g:mpn>
+  <g:product_type>new</g:product_type>
+</item><item>
+  <g:id>AIRTHINGS-VIEW-PLUS</g:id>
+  <g:title>Airthings View Plus</g:title>
+  <g:description>7 mittaria + WiFi + näyttö. Parhaat ominaisuudet.</g:description>
+  <g:link>https://moltwork.com/ilmanlaatu</g:link>
+  <g:image_link>https://moltwork.com/images/airthings-view-plus.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>393.00 EUR</g:price>
+  <g:brand>Airthings</g:brand>
+  <g:gtin>7048001550025</g:gtin>
+  <g:mpn>View-Plus</g:mpn>
+  <g:product_type>Ilmanlaatu > Radon</g:product_type>
+</item><item>
+  <g:id>AIRTHINGS-CORENTIUM</g:id>
+  <g:title>Airthings Corentium Home</g:title>
+  <g:description>Itsenäinen radonkamera. Ei WiFi:ä.</g:description>
+  <g:link>https://moltwork.com/ilmanlaatu</g:link>
+  <g:image_link>https://moltwork.com/images/airthings-corentium.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>149.00 EUR</g:price>
+  <g:brand>Airthings</g:brand>
+  <g:gtin>7048001550032</g:gtin>
+  <g:mpn>Corentium-Home</g:mpn>
+  <g:product_type>Ilmanlaatu > Radon</g:product_type>
+</item><item>
+  <g:id>IQAIR-AIRVISUAL</g:id>
+  <g:title>IQAir AirVisual Pro</g:title>
+  <g:description>PM2.5</g:description>
+  <g:link>7640172980015</g:link>
+  <g:image_link>AirVisual-Pro</g:image_link>
+  <g:availability> CO2</g:availability>
+  <g:condition> lämpötila</g:condition>
+  <g:price>kosteus. NOK</g:price>
+  <g:brand>in_stock</g:brand>
+  <g:gtin>new</g:gtin>
+  <g:mpn>269.00 EUR</g:mpn>
+  <g:product_type>IQAir</g:product_type>
+</item><item>
+  <g:id>MITSUBISHI-FILTER</g:id>
+  <g:title>Mitsubishi suodatin MAC-3000FT-E</g:title>
+  <g:description>HEPA-suodatin Mitsubishi lämpöpumpuille.</g:description>
+  <g:link>https://moltwork.com/lampopumppu</g:link>
+  <g:image_link>https://moltwork.com/images/mitsubishi-filter.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>45.00 EUR</g:price>
+  <g:brand>Mitsubishi Electric</g:brand>
+  <g:gtin>4549718523457</g:gtin>
+  <g:mpn>MAC-3000FT-E</g:mpn>
+  <g:product_type>Lämpöpumput > Suodattimet</g:product_type>
+</item><item>
+  <g:id>PANASONIC-FILTER</g:id>
+  <g:title>Panasonic suodatin cz-s70</g:title>
+  <g:description>HEPA-suodatin Panasonic lämpöpumpuille.</g:description>
+  <g:link>https://moltwork.com/lampopumppu</g:link>
+  <g:image_link>https://moltwork.com/images/panasonic-filter.jpg</g:image_link>
+  <g:availability>in_stock</g:availability>
+  <g:condition>new</g:condition>
+  <g:price>39.00 EUR</g:price>
+  <g:brand>Panasonic</g:brand>
+  <g:gtin>4549980356790</g:gtin>
+  <g:mpn>cz-s70</g:mpn>
+  <g:product_type>Lämpöpumput > Suodattimet</g:product_type>
+</item>
+</channel>
+</rss>

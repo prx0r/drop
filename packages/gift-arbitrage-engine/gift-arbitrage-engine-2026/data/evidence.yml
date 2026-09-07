@@ -1,0 +1,301 @@
+evidence:
+  etsy_10k:
+    source: Etsy 2025 Form 10-K
+    source_type: official
+    metric: marketplace personalization + gifting demand
+    value: 2025 Etsy marketplace GMS $10.46B; custom/made-to-order ~30% of GMS; 31% of surveyed visits sought custom/personalized
+      items and 29% were gift shopping; 86.5M active buyers.
+    url: https://investors.etsy.com/sec-filings/all-sec-filings/content/0001370637-26-000019/etsy-20251231.htm
+    confidence: 0.98
+    observed_at: '2026-09-04'
+  etsy_q2_2026:
+    source: Etsy Q2 2026 Form 10-Q
+    source_type: official
+    metric: current Etsy momentum
+    value: Etsy marketplace GMS grew 7.5% YoY in Q2 2026; GMS per active buyer grew 2.8% to $124; active buyers 87.0M.
+    url: https://investors.etsy.com/sec-filings/all-sec-filings/content/0001370637-26-000080/etsy-20260630.htm
+    confidence: 0.98
+    observed_at: '2026-09-04'
+  etsy_winter:
+    source: 'Etsy Seller Trend Report: Fall/Winter 2025'
+    source_type: official
+    metric: holiday personalization themes
+    value: Etsy highlighted sentimental personalized gifting, family tradition, hosting, playful nostalgia; examples included
+      engraved cutting boards, embroidered recipe towels, monogrammed bread baskets, personalized cheese boards/coasters/cocktail
+      napkins.
+    url: https://www.etsy.com/ca/seller-handbook/article/1417223353768
+    confidence: 0.92
+    observed_at: '2026-09-04'
+  moonpig_fy26:
+    source: Moonpig FY26 Results
+    source_type: official
+    metric: online card/gifting economics
+    value: FY26 revenue £373.0M, adjusted EBITDA £104.6M, 36.0M Moonpig/Greetz orders, AOV £9.32; cards revenue £203.5M; attached
+      gifting £123.8M; gift attach 17.9%; standard UK card £3.99.
+    url: https://www.moonpig.group/media/moonpig-group-plc-fy26-results-announcement.html
+    confidence: 0.99
+    observed_at: '2026-09-04'
+  moonpig_graph:
+    source: Moonpig At a Glance FY26
+    source_type: official
+    metric: occasion graph moat
+    value: 12.3M active customers; 113M saved occasion reminders; 31M card creativity feature usages; 2.92 orders per active
+      customer.
+    url: https://www.moonpig.group/about-us/at-a-glance/
+    confidence: 0.99
+    observed_at: '2026-09-04'
+  personalized_market_fbi:
+    source: Fortune Business Insights personalized gifts market
+    source_type: estimate
+    metric: category size estimate
+    value: Estimated global personalized gifts market $33.42B in 2025 and $35.95B in 2026, projected $64.51B by 2034.
+    url: https://www.fortunebusinessinsights.com/personalized-gifts-market-107954
+    confidence: 0.62
+    observed_at: '2026-09-04'
+  personalized_market_gvr:
+    source: Grand View Research personalized gifts market
+    source_type: estimate
+    metric: category size estimate
+    value: Estimated market $32.7B in 2025 and $34.9B in 2026; North America estimated 48% of 2025 revenue.
+    url: https://www.grandviewresearch.com/industry-analysis/personalized-gifts-market-report
+    confidence: 0.62
+    observed_at: '2026-09-04'
+  pinterest_penpals:
+    source: Pinterest Predicts 2026 — Pen Pals
+    source_type: trend
+    metric: snail-mail trend
+    value: 'Global English Pinterest searches: cute stamps +105%, penpal letters +35%, handwritten letters +45%, penpal ideas
+      +90%, snail mail gifts +110% YoY comparison window.'
+    url: https://business.pinterest.com/en-gb/pdf/pinterest-predicts/2026-trend-report/
+    confidence: 0.9
+    observed_at: '2026-09-04'
+  pinterest_holiday:
+    source: Pinterest Holiday 2026
+    source_type: official
+    metric: holiday planning/discovery
+    value: Pinterest positions visual discovery as a major holiday decision surface; useful for visually distinctive personalized
+      gifting and early planning.
+    url: https://business.pinterest.com/holiday-marketing-2026/
+    confidence: 0.83
+    observed_at: '2026-09-04'
+  chatbooks_smart:
+    source: Chatbooks Smart Select
+    source_type: provider
+    metric: automated photo selection precedent
+    value: 'Smart Select automatically picks the best photos from a camera roll in seconds for eligible books; current limitation
+      noted: it cannot yet choose a specific person.'
+    url: https://help.chatbooks.com/en/articles/16531937-what-is-smart-select
+    confidence: 0.9
+    observed_at: '2026-09-04'
+  lulu_personalized:
+    source: Lulu personalized books
+    source_type: provider
+    metric: book-of-one fulfillment
+    value: 'Lulu explicitly supports AI-driven individualized books: customers answer questions/upload photos, merchant generates
+      cover/interior PDFs, API prints and ships unique books.'
+    url: https://www.lulu.com/personalized-books
+    confidence: 0.96
+    observed_at: '2026-09-04'
+  prodigi_api:
+    source: Prodigi Print API v4
+    source_type: provider
+    metric: automated POD fulfillment
+    value: REST API supports quotes, orders, global print fulfillment, cards and multipage assets; quote endpoint supports
+      pageCount for books/magazines.
+    url: https://www.prodigi.com/print-api/docs/reference/
+    confidence: 0.96
+    observed_at: '2026-09-04'
+  gelato_books:
+    source: Gelato photo books
+    source_type: provider
+    metric: local POD book fulfillment
+    value: Photo/story/children book POD with local production in 32 countries and built-in personalization automation.
+    url: https://www.gelato.com/products/photo-books
+    confidence: 0.94
+    observed_at: '2026-09-04'
+  printify_personalization:
+    source: Printify automated personalization for Etsy
+    source_type: provider
+    metric: marketplace personalization automation
+    value: Etsy buyers can provide text/options/images; inputs can automatically map to design layers and live previews, reducing
+      manual order handling.
+    url: https://help.printify.com/hc/en-us/articles/40720228428433-How-do-I-set-up-automated-personalization-for-Etsy
+    confidence: 0.95
+    observed_at: '2026-09-04'
+  etsy_policy:
+    source: Etsy Creativity Standards
+    source_type: official
+    metric: AI/POD eligibility
+    value: Seller-prompted AI creations are allowed if AI use is disclosed; original seller designs may be produced by disclosed
+      production partners; buyer-personalized items can use production partners.
+    url: https://www.etsy.com/legal/creativity/
+    confidence: 0.98
+    observed_at: '2026-09-04'
+  etsy_astrology_book:
+    source: Etsy personalized astrology book search snapshot
+    source_type: marketplace
+    metric: physical astrology book demand proxy
+    value: 1,000+ results; examples included a personalized astrology birth-chart book around $83.50 with 1.3k reviews, a
+      child hardback around $78.94 with 737 reviews, and 100+ page hardcover products up to $149.
+    url: https://www.etsy.com/market/personalized_astrology_book
+    confidence: 0.72
+    observed_at: '2026-09-04'
+  etsy_yearly_astrology:
+    source: Etsy yearly astrology search snapshot
+    source_type: marketplace
+    metric: annual forecast demand proxy
+    value: 401+ results; examples included year-ahead astrology PDFs with 1.1k, 5.2k and 3.8k review counts across listings;
+      prices commonly ~$4-$37 digital.
+    url: https://www.etsy.com/market/yearly_astrology
+    confidence: 0.68
+    observed_at: '2026-09-04'
+  etsy_storybooks:
+    source: Etsy personalized children storybook search snapshot
+    source_type: marketplace
+    metric: personalized storybook demand proxy
+    value: 5,000+ results; examples surfaced with 22.7k and 27.9k review counts around $32-$40; premium fully personalized
+      photo storybooks also appeared above $100.
+    url: https://www.etsy.com/market/personalized_childrens_story_book
+    confidence: 0.73
+    observed_at: '2026-09-04'
+  etsy_recipe:
+    source: Etsy handwritten recipe tea towel search snapshot
+    source_type: marketplace
+    metric: heirloom recipe demand proxy
+    value: Hundreds of listings; one handwritten recipe towel listing surfaced with ~72.6k reviews; many personalized towel
+      offers around $13-$25.
+    url: https://www.etsy.com/market/handwriting_recipe_tea_towel
+    confidence: 0.75
+    observed_at: '2026-09-04'
+  etsy_magazine:
+    source: Etsy personalized magazine search snapshot
+    source_type: marketplace
+    metric: magazine/newspaper personalization demand proxy
+    value: 5,000+ personalized magazine results; physical printed birthday magazine examples around $25-$31 while many low-price
+      Canva templates create a done-for-you automation wedge.
+    url: https://www.etsy.com/market/personalized_magazine
+    confidence: 0.7
+    observed_at: '2026-09-04'
+  etsy_newspaper:
+    source: Etsy custom newspaper search snapshot
+    source_type: marketplace
+    metric: custom newspaper demand proxy
+    value: 2,000+ results; printed/shipped custom newspaper examples around $15-$22 surfaced with ~2.7k to 4.8k reviews.
+    url: https://www.etsy.com/market/custom_newspaper
+    confidence: 0.72
+    observed_at: '2026-09-04'
+  etsy_crackers:
+    source: Etsy personalized Christmas crackers search snapshot
+    source_type: marketplace
+    metric: Christmas cracker demand proxy
+    value: 572+ results; examples included personalized single/fillable crackers and sets with listings showing ~1.1k-3.2k
+      reviews.
+    url: https://www.etsy.com/market/personalized_christmas_crackers
+    confidence: 0.7
+    observed_at: '2026-09-04'
+  etsy_advent:
+    source: Etsy personalized advent calendar search snapshot
+    source_type: marketplace
+    metric: advent demand proxy
+    value: 4,000-5,000+ result pages; reusable personalized calendar examples included products around $30-$100 and high-review
+      established listings.
+    url: https://www.etsy.com/market/personalized_advent_calendar
+    confidence: 0.73
+    observed_at: '2026-09-04'
+  etsy_crossword:
+    source: Etsy custom personalized crossword search snapshot
+    source_type: marketplace
+    metric: personalized game/puzzle demand proxy
+    value: 2,000+ results dominated by wedding/digital templates, but personalized birthday/family puzzles and physical variants
+      are present; suggests proven format plus room for one-click done-for-you gifting.
+    url: https://www.etsy.com/market/custom_personalized_crossword_puzzle
+    confidence: 0.68
+    observed_at: '2026-09-04'
+  etsy_playing_cards:
+    source: Etsy custom printed playing cards search snapshot
+    source_type: marketplace
+    metric: custom card deck demand proxy
+    value: 5,000+ results; photo deck examples surfaced with 5.7k and 50k+ review counts and typical consumer price points
+      around $18-$40 for full decks.
+    url: https://www.etsy.com/market/custom_printed_playing_cards
+    confidence: 0.71
+    observed_at: '2026-09-04'
+  etsy_soundwave:
+    source: Etsy soundwave/voice gift search snapshot
+    source_type: marketplace
+    metric: audio keepsake demand proxy
+    value: Thousands of soundwave gift results; QR/soundwave plaques surfaced with five-figure review counts and ~$19-$30
+      price points.
+    url: https://www.etsy.com/market/soundwave_gift
+    confidence: 0.7
+    observed_at: '2026-09-04'
+  etsy_coloring:
+    source: Etsy custom coloring book from photos search snapshot
+    source_type: marketplace
+    metric: photo transformation gift proxy
+    value: Hundreds of results; custom coloring books from photos commonly around $15-$20, including Christmas-specific photo
+      coloring products.
+    url: https://www.etsy.com/market/custom_coloring_book_from_photos
+    confidence: 0.68
+    observed_at: '2026-09-04'
+  etsy_house_ornament:
+    source: Etsy custom house ornament search snapshot
+    source_type: marketplace
+    metric: new-home ornament demand proxy
+    value: 5,000+ results; photo/watercolor house ornaments surfaced with large review counts (including 20k+ and 60k+ listing
+      review signals) around $12-$30.
+    url: https://www.etsy.com/market/custom_house_ornament
+    confidence: 0.72
+    observed_at: '2026-09-04'
+  etsy_starmap:
+    source: Etsy customized star map search snapshot
+    source_type: marketplace
+    metric: date/place visual keepsake demand proxy
+    value: 5,000+ results and very large review counts on established star-map listings; strong proof of formula but high
+      saturation.
+    url: https://www.etsy.com/market/customized_star_maps
+    confidence: 0.73
+    observed_at: '2026-09-04'
+  etsy_boardgame:
+    source: Etsy personalized family board game search snapshot
+    source_type: marketplace
+    metric: personalized family game demand proxy
+    value: 5,000+ results; Customopoly-style products around $55-$146 and several listings with hundreds to 1k+ reviews.
+    url: https://www.etsy.com/market/custom_family_board_game
+    confidence: 0.71
+    observed_at: '2026-09-04'
+  etsy_family_gifts:
+    source: Etsy personalized family Christmas gifts search snapshot
+    source_type: marketplace
+    metric: family holiday gift demand proxy
+    value: 5,000+ results; examples include personalized blankets, cutting boards, ornaments and other family keepsakes with
+      large review counts.
+    url: https://www.etsy.com/market/personalized_family_christmas_gifts
+    confidence: 0.72
+    observed_at: '2026-09-04'
+  etsy_numerology_2026:
+    source: Etsy personalized 2026 numerology report search snapshot
+    source_type: marketplace
+    metric: year-specific esoteric report demand proxy
+    value: Personalized 2026 numerology reports surfaced at ~$35-$124 including detailed PDFs; related bestselling sections
+      show broad numerology/astrology demand.
+    url: https://www.etsy.com/market/personalised_numerology_report_for_2026
+    confidence: 0.66
+    observed_at: '2026-09-04'
+  google_gift_friction:
+    source: Google holiday shopping AI announcement
+    source_type: official
+    metric: gift shopping friction
+    value: Google frames holiday gift shopping as high-friction discovery and has been adding conversational/AI shopping features
+      to reduce endless scrolling.
+    url: https://blog.google/products/shopping/ai-shopping-holiday-2025/
+    confidence: 0.77
+    observed_at: '2026-09-04'
+  etsy_fees:
+    source: Etsy fees and taxes help
+    source_type: official
+    metric: marketplace fees
+    value: $0.20 per listing and 6.5% transaction fee; payment processing is additional and varies by seller bank country.
+    url: https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy
+    confidence: 0.98
+    observed_at: '2026-09-04'

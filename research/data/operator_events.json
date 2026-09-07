@@ -1,0 +1,233 @@
+[
+  {
+    "event_id": "E001",
+    "source_id": "S001",
+    "operator": "ZenoX",
+    "timepoint": "0-7",
+    "action_type": "FOUNDATION",
+    "action": "Build clean Shopify policies/contact/SSL; submit lean feed; server-side + enhanced tracking; clear GMC issues",
+    "observed_outcome": "No paid spend yet",
+    "hypothesis_or_lesson": "Prepare reliable inputs before bidding",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E002",
+    "source_id": "S001",
+    "operator": "ZenoX",
+    "timepoint": "8",
+    "action_type": "LAUNCH",
+    "action": "Launch feed-only PMax + branded/category Search backstops at ~$80/day",
+    "observed_outcome": "26 conversions and $1,510 revenue by day 14",
+    "hypothesis_or_lesson": "Collect initial conversion data",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E003",
+    "source_id": "S001",
+    "operator": "ZenoX",
+    "timepoint": "15",
+    "action_type": "RESTRUCTURE",
+    "action": "Segment by margin/product potential; separate stronger products",
+    "observed_outcome": "Reported +19% ROAS over following week",
+    "hypothesis_or_lesson": "Concentrate budget using economics",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E004",
+    "source_id": "S001",
+    "operator": "ZenoX",
+    "timepoint": "30",
+    "action_type": "SCALE",
+    "action": "Begin controlled ramp; later ~20% weekly increments",
+    "observed_outcome": "$380/day at day30 -> $2,400/day day60",
+    "hypothesis_or_lesson": "Avoid ROAS collapse from abrupt budget jumps",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E005",
+    "source_id": "S001",
+    "operator": "ZenoX",
+    "timepoint": "30",
+    "action_type": "BIDDING",
+    "action": "Pass margin rather than pure revenue as value; recalibrate targets",
+    "observed_outcome": "Net profitable from day 28 per case",
+    "hypothesis_or_lesson": "Optimize profit rather than topline ROAS",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E006",
+    "source_id": "S003",
+    "operator": "Ilas",
+    "timepoint": "ongoing",
+    "action_type": "CRO_CATALOG",
+    "action": "Keep adding products and improving conversion/trust while Google structure stabilizes",
+    "observed_outcome": "€52k/2.5 months; 2.9 ROAS",
+    "hypothesis_or_lesson": "Operator works on product/store not constant bid changes",
+    "evidence_grade": "B+"
+  },
+  {
+    "event_id": "E007",
+    "source_id": "S009",
+    "operator": "Drop Ship Lifestyle",
+    "timepoint": "1-22",
+    "action_type": "TINY_BUDGET_TEST",
+    "action": "Single traffic source; ~$10/day Shopping",
+    "observed_outcome": "First sale day 11; $3,456.97 sales on $94.25 spend",
+    "hypothesis_or_lesson": "High gross-profit dollars make tiny budgets informative",
+    "evidence_grade": "B"
+  },
+  {
+    "event_id": "E008",
+    "source_id": "S011",
+    "operator": "Johnny FD",
+    "timepoint": "month",
+    "action_type": "BUDGET_INCREASE",
+    "action": "Tripled ad budget on high-priced products",
+    "observed_outcome": "Revenue record; profit roughly unchanged",
+    "hypothesis_or_lesson": "Higher spend can buy revenue without buying profit",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E009",
+    "source_id": "S017",
+    "operator": "DataFeedWatch",
+    "timepoint": "day0",
+    "action_type": "TITLE_TEST",
+    "action": "Change brand position in product title while holding test structure",
+    "observed_outcome": "+25% ROAS/-10% CPC after 30 days",
+    "hypothesis_or_lesson": "Feed titles are measurable acquisition levers",
+    "evidence_grade": "A-"
+  },
+  {
+    "event_id": "E010",
+    "source_id": "S018",
+    "operator": "SKU Analyzer",
+    "timepoint": "days1-30",
+    "action_type": "BASELINE",
+    "action": "Record per-SKU metrics before title change",
+    "observed_outcome": "Baseline series",
+    "hypothesis_or_lesson": "Prevent account-level confounding",
+    "evidence_grade": "B+"
+  },
+  {
+    "event_id": "E011",
+    "source_id": "S018",
+    "operator": "SKU Analyzer",
+    "timepoint": "day31",
+    "action_type": "TITLE_CHANGE",
+    "action": "Push new titles; log exact submission date",
+    "observed_outcome": "Test series days31-60",
+    "hypothesis_or_lesson": "Make intervention timestamp explicit",
+    "evidence_grade": "B+"
+  },
+  {
+    "event_id": "E012",
+    "source_id": "S018",
+    "operator": "SKU Analyzer",
+    "timepoint": "day61+",
+    "action_type": "WAIT_LAG",
+    "action": "Allow extra 7-14 days before final conversion judgment",
+    "observed_outcome": "Reduces conversion-lag bias",
+    "hypothesis_or_lesson": "Avoid false negative on treatment",
+    "evidence_grade": "B+"
+  },
+  {
+    "event_id": "E013",
+    "source_id": "S019",
+    "operator": "ScaleMarketer",
+    "timepoint": "week1",
+    "action_type": "ATTRIBUTION_AUDIT",
+    "action": "Reconcile platform revenue against Shopify; isolate branded search",
+    "observed_outcome": "Reported 4.2x vs real 0.99x",
+    "hypothesis_or_lesson": "Do not optimize on inflated platform ROAS",
+    "evidence_grade": "B+"
+  },
+  {
+    "event_id": "E014",
+    "source_id": "S019",
+    "operator": "ScaleMarketer",
+    "timepoint": "weeks1-2",
+    "action_type": "STRUCTURE",
+    "action": "Brand exclusions; isolate non-brand; SKU-level Shopping/margin tiers",
+    "observed_outcome": "Real ROAS later 1.6x; CAC down",
+    "hypothesis_or_lesson": "Measure incremental acquisition",
+    "evidence_grade": "B+"
+  },
+  {
+    "event_id": "E015",
+    "source_id": "S022",
+    "operator": "Pitiful_Gene",
+    "timepoint": "days1-4",
+    "action_type": "HOLD",
+    "action": "Avoid panic-killing weak early campaign",
+    "observed_outcome": "Store reportedly flips around days5-6",
+    "hypothesis_or_lesson": "Early sparse data can be noisy",
+    "evidence_grade": "B"
+  },
+  {
+    "event_id": "E016",
+    "source_id": "S022",
+    "operator": "Pitiful_Gene",
+    "timepoint": "week2",
+    "action_type": "MINOR_CRO",
+    "action": "Slight page optimization; otherwise leave Google structure largely intact",
+    "observed_outcome": "$14k in Apr1-7 continuation",
+    "hypothesis_or_lesson": "Patience after basic validation",
+    "evidence_grade": "B"
+  },
+  {
+    "event_id": "E017",
+    "source_id": "S023",
+    "operator": "Pitiful_Gene",
+    "timepoint": "post-win",
+    "action_type": "OPS",
+    "action": "Shift attention to gateway, fulfillment and support stability",
+    "observed_outcome": "Scaling risk moves from ads to operations",
+    "hypothesis_or_lesson": "Winning campaign does not equal stable business",
+    "evidence_grade": "B-"
+  },
+  {
+    "event_id": "E018",
+    "source_id": "S026",
+    "operator": "7-month Reddit operator",
+    "timepoint": "early",
+    "action_type": "META_DISCOVERY",
+    "action": "Use Meta for products requiring demand creation; kill losers fast",
+    "observed_outcome": "Later reported first $3k day",
+    "hypothesis_or_lesson": "Novel/impulse products differ from searched products",
+    "evidence_grade": "B-"
+  },
+  {
+    "event_id": "E019",
+    "source_id": "S026",
+    "operator": "7-month Reddit operator",
+    "timepoint": "post-validation",
+    "action_type": "GOOGLE_CAPTURE",
+    "action": "Move validated demand into Google Shopping/Search",
+    "observed_outcome": "Google captures downstream intent",
+    "hypothesis_or_lesson": "Use Google after demand exists for novelty products",
+    "evidence_grade": "B-"
+  },
+  {
+    "event_id": "E020",
+    "source_id": "S029",
+    "operator": "r/PPC practitioners",
+    "timepoint": "fresh account",
+    "action_type": "MANUAL_TO_AUTOMATION",
+    "action": "Some practitioners recommend manual CPC 2-3 weeks -> automation after ~15-20 conversions",
+    "observed_outcome": "Anecdotal practitioner sequence",
+    "hypothesis_or_lesson": "Do not overgeneralize; use as hypothesis",
+    "evidence_grade": "C+"
+  },
+  {
+    "event_id": "E021",
+    "source_id": "S030",
+    "operator": "r/PPC under-spend",
+    "timepoint": "day2",
+    "action_type": "DO_NOT_THRASH",
+    "action": "Campaign changed manual CPC -> higher CPC -> Max Clicks quickly",
+    "observed_outcome": "Only $8 spend/469 impressions/9 clicks",
+    "hypothesis_or_lesson": "Changing too much too early destroys interpretability",
+    "evidence_grade": "C"
+  }
+]

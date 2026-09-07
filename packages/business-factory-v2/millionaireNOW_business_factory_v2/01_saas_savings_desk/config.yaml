@@ -1,0 +1,7 @@
+vertical: saas-and-ai-spend
+monetization:
+  mode: performance_fee
+  suggested_success_fee_pct: 20
+rules:
+  benchmark_max_age_days: 180
+  renewal_priority_days: [45, 90]

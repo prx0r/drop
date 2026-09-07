@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sample-provider-a",
+    "name": "Sample Provider A",
+    "category": "Demo category",
+    "region": "Demo region",
+    "summary": "Fictional sample record. Replace with a real verified provider.",
+    "attributes": {
+      "service_type": "Example only",
+      "response_time": "Unknown"
+    },
+    "source_url": "https://example.com/",
+    "last_verified": "2026-09-04",
+    "is_sponsored": false,
+    "sample_only": true
+  },
+  {
+    "id": "sample-provider-b",
+    "name": "Sample Provider B",
+    "category": "Demo category",
+    "region": "Another demo region",
+    "summary": "Second fictional record to demonstrate filters and detail pages.",
+    "attributes": {
+      "service_type": "Example only",
+      "response_time": "Unknown"
+    },
+    "source_url": "https://example.org/",
+    "last_verified": "2026-09-04",
+    "is_sponsored": true,
+    "sample_only": true
+  }
+]

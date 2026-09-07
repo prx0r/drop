@@ -1,0 +1,6 @@
+candidate_id,product_family,sku,selling_price,pre_ad_contribution,headroom_base,rejection_reasons
+CAND-001,Red-light therapy mask,RLM-289-US,289.0,200.97,0.48,Gate 2: Optimistic headroom 0.96 < 1.0. Even best-case scenario loses money on paid traffic.
+CAND-005,Cotton basic t-shirt 3-pack,CBT-3PK-US,29.99,14.42,0.25,Gate 2: Optimistic headroom 0.51 < 1.0. Even best-case scenario loses money on paid traffic. | Gate 4: 200 sellers for this GTIN. SKU is saturated.
+CAND-009,Heated eyelash curler,HEC-USB-US,24.99,15.82,0.66,Gate 4: 25 sellers for this GTIN. SKU is saturated.
+CAND-006,Summer floral maxi dress,SFD-FLORAL-US,54.99,30.45,0.81,Gate 4: 45 sellers for this GTIN. SKU is saturated.
+CAND-002,Lumbar support pillow,LSP-65-US,64.99,24.66,0.12,Gate 2: Optimistic headroom 0.23 < 1.0. Even best-case scenario loses money on paid traffic.

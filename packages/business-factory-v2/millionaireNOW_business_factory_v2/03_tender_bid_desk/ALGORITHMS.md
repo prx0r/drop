@@ -1,0 +1,1 @@
+Hard gates: configured value, geography, CPV, must-have and exclusion terms. Soft score: capability overlap + deadline runway + structured-value completeness. Output is BID/REVIEW/NO_BID triage, with explicit evidence and verification checklist. No LLM is required for factual ranking.

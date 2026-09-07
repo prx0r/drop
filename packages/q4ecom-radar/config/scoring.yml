@@ -1,0 +1,28 @@
+weights:
+  search_demand: 0.17
+  search_momentum: 0.10
+  competition_gap: 0.15
+  gross_margin: 0.16
+  shipping_fit: 0.08
+  giftability: 0.07
+  evergreen: 0.07
+  upsellability: 0.06
+  ai_advisor_value: 0.05
+  market_fit: 0.09
+risk_penalties:
+  compliance: 0.12
+  ip: 0.10
+  returns: 0.08
+  fragility: 0.05
+  supplier_concentration: 0.04
+thresholds:
+  strong: 72
+  test: 60
+  watch: 48
+  reject_below: 48
+rules:
+  min_target_markup: 2.5
+  preferred_target_markup: 3.0
+  max_preferred_weight_kg: 3.0
+  max_preferred_shipping_days: 10
+  max_preferred_return_risk: 55

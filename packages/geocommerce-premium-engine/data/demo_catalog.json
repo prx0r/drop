@@ -1,0 +1,35 @@
+[
+  {
+    "slug":"barista-dual-boiler-espresso",
+    "name":"Dual Boiler Home Espresso Machine",
+    "category":"premium coffee equipment",
+    "supplier_cost":610,
+    "supplier_currency":"EUR",
+    "supplier_id":"demo-eu-distributor",
+    "supplier_url":"https://supplier.example/espresso",
+    "images":["https://images.example/espresso-front.jpg","https://images.example/espresso-side.jpg"],
+    "facts":{"materials":["stainless steel"],"features":{"dual_boiler":true,"pid":true,"58mm_portafilter":true},"certifications":["CE"],"warranty_months":24,"country_of_origin":"IT","hs_code":"851671","gtin":"0000000000000","brand_authorized":true,"electrical":true,"electrical_certified":true,"regulated":false,"fragile":true,"installation_required":false,"sizing_complexity":0.05,"return_risk":0.12,"advisor_fit":0.92,"visual_demo_fit":0.95,"supplier_quality":0.88}
+  },
+  {
+    "slug":"premium-pet-ramp-oak",
+    "name":"Premium Oak Pet Ramp",
+    "category":"premium pet mobility",
+    "supplier_cost":94,
+    "supplier_currency":"EUR",
+    "supplier_id":"demo-eu-distributor",
+    "supplier_url":"https://supplier.example/pet-ramp",
+    "images":["https://images.example/ramp.jpg"],
+    "facts":{"materials":["oak","non-slip textile"],"features":{"foldable":true,"max_load_kg":70},"certifications":[],"warranty_months":24,"country_of_origin":"PL","hs_code":"442199","gtin":"0000000000001","brand_authorized":true,"electrical":false,"regulated":false,"fragile":false,"installation_required":false,"sizing_complexity":0.12,"return_risk":0.08,"advisor_fit":0.76,"visual_demo_fit":0.88,"supplier_quality":0.86}
+  },
+  {
+    "slug":"ergonomic-standing-desk-frame",
+    "name":"Premium Electric Standing Desk Frame",
+    "category":"home office systems",
+    "supplier_cost":245,
+    "supplier_currency":"EUR",
+    "supplier_id":"demo-eu-distributor",
+    "supplier_url":"https://supplier.example/desk",
+    "images":["https://images.example/desk.jpg"],
+    "facts":{"materials":["powder-coated steel"],"features":{"dual_motor":true,"memory_presets":4,"max_load_kg":140},"certifications":["CE","RoHS"],"warranty_months":60,"country_of_origin":"CN","hs_code":"940399","gtin":"0000000000002","brand_authorized":true,"electrical":true,"electrical_certified":true,"regulated":false,"fragile":false,"installation_required":true,"sizing_complexity":0.18,"return_risk":0.12,"advisor_fit":0.84,"visual_demo_fit":0.82,"supplier_quality":0.90}
+  }
+]

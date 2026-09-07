@@ -1,0 +1,22 @@
+name,pattern,revenue_30d_usd,mrr_usd,active_subscriptions,lifetime_revenue_usd,evidence_grade,processor,last_verified,source,notes
+1Lookup,api_aggregator,406098,235654,669,4822974,A,Stripe,2026-09-04,https://trustmrr.com/startup/1lookup,phone/email/IP/data validation; one API and credit balance
+LLM Gateway,api_gateway,255223,78384,1356,977168,A,Stripe,2026-09-04,https://trustmrr.com/startup/llm-gateway,"unified LLM routing, keys, metering"
+Web3Forms,form_backend,44106,38527,2790,264438,A,Paddle,2026-09-03,https://trustmrr.com/startup/web3forms,HTML form backend without server code
+TrustMRR,data_asset,39776,19036,14,317592,A,Stripe,2026-09-04,https://trustmrr.com/startup/trustmrr,verified revenue database / marketplace
+Groups Watcher,event_monitor,33504,24123,135,117517,B,Stripe expired recently,2026-09-02,https://trustmrr.com/startup/groups-watcher,high-intent Facebook group alerts/leads
+Local SEO Bot,outcome_automation,10538,11133,83,86081,A,Stripe,2026-09-04,https://trustmrr.com/startup/local-seo-bot,Google Maps/local ranking automation
+Synta,workflow_adapter,9646,10202,211,129394,A,Stripe,2026-09-04,https://trustmrr.com/startup/synta,expert MCP/web layer for n8n
+MonitUp,vertical_monitoring,9237,1376,24,21972,A,Stripe,2026-08-29,https://trustmrr.com/startup/monitup,employee productivity/time monitoring
+FriendFilter + GroupFilter,browser_extension,7897,8708,351,1793025,A,Stripe,2026-09-04,https://trustmrr.com/startup/friendfilter-groupfilter,Facebook workflow Chrome extensions
+Crawlbyte,data_extraction,7256,1246,4,78184,A,Stripe,2026-09-03,https://trustmrr.com/startup/crawlbyte,public web structured extraction; usage billing
+OpenAlternative,directory_data_asset,6659,5937,23,112449,A,Stripe,2026-09-04,https://trustmrr.com/startup/openalternative,open-source alternatives directory + ads
+JobBoardSearch,directory_data_asset,2215,0,0,96466,A,Stripe,2026-08-31,https://trustmrr.com/startup/jobboardsearch,"meta-directory, paid visibility/distribution"
+Static Forms,form_backend,964,847,102,7606,A,Stripe,2026-09-03,https://trustmrr.com/startup/qualascend-fz-lle,form backend for static sites
+BuildLedger,vertical_workflow,955,2050,13,2551,A,Stripe,2026-09-03,https://trustmrr.com/startup/buildledger,construction admin/project/invoice/client portal
+BankConv,document_normalizer,788,846,24,9772,A,Stripe,2026-09-04,https://trustmrr.com/startup/bankconv,bank statement PDF -> CSV/Excel/OFX/QFX/Sheets; founder says 95% margins
+UptimeObserver,generic_monitor,132,144,20,1414,A,Stripe,2026-09-04,https://trustmrr.com/startup/uptimeobserver,generic uptime/SSL/DNS/API monitoring
+API Plugin,weak_analogue,0,0,0,288,A,Stripe,2026-09-02,https://trustmrr.com/startup/api-plugin,generic API connection abstraction; low revenue
+API-Monitoring,weak_analogue,0,0,0,7,A,Stripe,2026-09-03,https://trustmrr.com/startup/api-monitoring,generic third-party API change monitor; tiny revenue
+PDFParser,weak_analogue,0,0,0,203,A,Stripe,2026-09-03,https://trustmrr.com/startup/pdfparser,generic PDF/image field extraction; low revenue
+Parse My Statement,weak_analogue,0,0,0,1,A,DodoPayment,2026-08-19,https://trustmrr.com/startup/parse-my-statement,bank statement parser; tiny revenue at snapshot
+DeployHermesAgent,weak_analogue,0,0,0,29,A,Stripe,2026-09-04,https://trustmrr.com/startup/deployhermesagent,generic hosted agent setup; tiny revenue

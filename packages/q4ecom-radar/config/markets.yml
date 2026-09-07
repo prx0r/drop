@@ -1,0 +1,145 @@
+markets:
+  GB:
+    name: United Kingdom
+    currency: GBP
+    locale: en-GB
+    language: en
+    google_ads_geo_id: 2826
+    google_ads_language_id: 1000
+    vat_rate: 0.20
+    affluent_score: 78
+    ecommerce_maturity: 92
+    localization_advantage: 35
+    q4_winter_intensity: 55
+    shipping_difficulty: 20
+    notes: "Large, competitive, excellent validation market. VAT/import handling required."
+  "NO":
+    name: Norway
+    currency: NOK
+    locale: nb-NO
+    language: "no"
+    google_ads_geo_id: 2578
+    google_ads_language_id: 1012
+    vat_rate: 0.25
+    affluent_score: 94
+    ecommerce_maturity: 88
+    localization_advantage: 82
+    q4_winter_intensity: 96
+    shipping_difficulty: 42
+    notes: "High purchasing power; native-language trust can matter. VOEC applies to eligible low-value imports."
+  DK:
+    name: Denmark
+    currency: DKK
+    locale: da-DK
+    language: da
+    google_ads_geo_id: 2208
+    google_ads_language_id: 1009
+    vat_rate: 0.25
+    affluent_score: 91
+    ecommerce_maturity: 91
+    localization_advantage: 74
+    q4_winter_intensity: 80
+    shipping_difficulty: 28
+    low_value_import_fee_usd_estimate: 3.50
+    notes: "Affluent and digitally mature; EU VAT/GPSR obligations apply."
+  SE:
+    name: Sweden
+    currency: SEK
+    locale: sv-SE
+    language: sv
+    google_ads_geo_id: 2752
+    google_ads_language_id: 1015
+    vat_rate: 0.25
+    affluent_score: 89
+    ecommerce_maturity: 92
+    localization_advantage: 72
+    q4_winter_intensity: 92
+    shipping_difficulty: 30
+    low_value_import_fee_usd_estimate: 3.50
+    notes: "Strong ecommerce adoption and winter-product fit. EU VAT/GPSR obligations apply."
+  DE:
+    name: Germany
+    currency: EUR
+    locale: de-DE
+    language: de
+    google_ads_geo_id: 2276
+    google_ads_language_id: 1001
+    vat_rate: 0.19
+    affluent_score: 84
+    ecommerce_maturity: 91
+    localization_advantage: 67
+    q4_winter_intensity: 62
+    shipping_difficulty: 22
+    low_value_import_fee_usd_estimate: 3.50
+    notes: "Large search market with strong comparison-shopping behavior; intense competition."
+  NL:
+    name: Netherlands
+    currency: EUR
+    locale: nl-NL
+    language: nl
+    google_ads_geo_id: 2528
+    google_ads_language_id: 1010
+    vat_rate: 0.21
+    affluent_score: 87
+    ecommerce_maturity: 94
+    localization_advantage: 58
+    q4_winter_intensity: 55
+    shipping_difficulty: 18
+    low_value_import_fee_usd_estimate: 3.50
+    notes: "High ecommerce penetration; compact logistics."
+  CH:
+    name: Switzerland
+    currency: CHF
+    locale: de-CH
+    language: de
+    google_ads_geo_id: 2756
+    google_ads_language_id: 1001
+    vat_rate: 0.081
+    affluent_score: 98
+    ecommerce_maturity: 88
+    localization_advantage: 65
+    q4_winter_intensity: 86
+    shipping_difficulty: 38
+    notes: "Very high purchasing power but customs/localization complexity."
+  AU:
+    name: Australia
+    currency: AUD
+    locale: en-AU
+    language: en
+    google_ads_geo_id: 2036
+    google_ads_language_id: 1000
+    vat_rate: 0.10
+    affluent_score: 86
+    ecommerce_maturity: 89
+    localization_advantage: 20
+    q4_winter_intensity: 0
+    shipping_difficulty: 40
+    notes: "Q4 is summer; holiday gifting strong but winter products invert seasonality."
+  CA:
+    name: Canada
+    currency: CAD
+    locale: en-CA
+    language: en
+    google_ads_geo_id: 2124
+    google_ads_language_id: 1000
+    vat_rate: 0.05
+    affluent_score: 86
+    ecommerce_maturity: 90
+    localization_advantage: 30
+    q4_winter_intensity: 91
+    shipping_difficulty: 35
+    notes: "Large geography; winter fit and holiday demand strong. Taxes vary by province."
+  NZ:
+    name: New Zealand
+    currency: NZD
+    locale: en-NZ
+    language: en
+    google_ads_geo_id: 2554
+    google_ads_language_id: 1000
+    vat_rate: 0.15
+    affluent_score: 82
+    ecommerce_maturity: 85
+    localization_advantage: 28
+    q4_winter_intensity: 0
+    shipping_difficulty: 45
+    notes: "Small affluent English-language market; Q4 is summer."

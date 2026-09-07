@@ -1,0 +1,28 @@
+{
+  "grain": "date x store x country x sku",
+  "fields": [
+    "date",
+    "store",
+    "country",
+    "sku",
+    "gtin",
+    "title",
+    "price",
+    "benchmark_price",
+    "supplier_cost",
+    "supplier_shipping",
+    "impressions",
+    "clicks",
+    "ad_cost",
+    "orders",
+    "units",
+    "revenue",
+    "cogs",
+    "gross_profit",
+    "payment_fees",
+    "refunds",
+    "chargebacks",
+    "shipping_cost",
+    "contribution_profit"
+  ]
+}

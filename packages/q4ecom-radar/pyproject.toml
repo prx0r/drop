@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "q4ecom-radar"
+version = "0.1.0"
+description = "Market-aware ecommerce opportunity scanner for Q4 product validation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7,<3",
+  "typer>=0.12,<1",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1",
+  "PyYAML>=6,<7",
+  "jinja2>=3.1,<4",
+]
+
+[project.optional-dependencies]
+google = ["google-ads>=25,<30"]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+q4radar = "q4radar.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
