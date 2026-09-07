@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "bigquery": {
+      "command": "python3",
+      "args": ["-m", "mcp_server_bigquery"],
+      "env": {
+        "BIGQUERY_PROJECT": "project-ff2366d2-8fda-4fcb-9ba",
+        "BIGQUERY_LOCATION": "EU"
+      }
+    }
+  }
+}
