@@ -173,6 +173,7 @@ Official statistics for installed base, inspection failures, grant activity, wel
 |----|--------|---------|-----------|---------|--------|
 | GP-001 | Heat pumps / EV / Cabins | FI/NO | FI heat pump parts | 9.7/10 | countries/intel/2026-09-07_installed_base_maintenance_graph_arbitrage.md |
 | GP-002 | Private water / wastewater | IE | IE well iron Galway | 9.2/10 | countries/intel/2026-09-08_installed_infrastructure_intelligence_ireland_water_wastewater.md |
+| GP-003 | Gates / garage doors / access | NO/CH/IE/UK | NO EV charger fault | 9.1/10 | countries/intel/2026-09-08_installed_infrastructure_intelligence_gates_garage_doors.md |
 
 ---
 

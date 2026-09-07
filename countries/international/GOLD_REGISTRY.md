@@ -312,7 +312,23 @@ Best ecosystems support all four simultaneously.
 
 ---
 
-## 37. The Public Dataset Advantage
+## 37. The 35-40% Repair/Break-Even Rule
+
+> **Repair wins when cost is <35-40% of replacement installed. This is lower than the commonly assumed 50% because fixed call-out costs eat into headroom.**
+
+**Evidence:** UK gate specialist guidance. Zappi PCB repair £169 vs £600+ replacement = 28% — well below break-even, so repair wins.
+
+---
+
+## 38. The Regulatory Complexity as Moat
+
+> **Safety standards (EN 13241, Machinery Directive) create compliance barriers that favor established brands and trained installers. This increases the value of intermediaries who translate regulatory requirements.**
+
+**Evidence:** UK HSE actively investigates gate incidents. 10-year conformity document retention required. Installer bears legal responsibility for CE conformity.
+
+---
+
+## 39. The Public Dataset Advantage
 
 > **Official statistics (installed base, inspection failures, grant activity, well locations) provide the supply-side intelligence layer. No scraping needed — government data is better.**
 
