@@ -1,0 +1,17 @@
+{
+  "country_code": "NO",
+  "major_merchants": [
+    {"name": "Komplett", "type": "generalist", "quality_score": 85},
+    {"name": "Elkjop", "type": "generalist", "quality_score": 80},
+    {"name": "Power", "type": "generalist", "quality_score": 75},
+    {"name": "XXL", "type": "specialist_sport", "quality_score": 70},
+    {"name": "Flak", "type": "specialist_weather", "quality_score": 90}
+  ],
+  "price_comparison_sites": ["prisjakt.no", "prisguiden.no"],
+  "marketplace_presence": {
+    "finn_no": "dominant",
+    "komplett_no": "strong",
+    "amazon_de": "growing"
+  },
+  "created_at": "2026-09-08T00:00:00Z"
+}

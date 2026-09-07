@@ -35,34 +35,22 @@
     }
   ],
   "supplier_contacts": [
-    {
-      "name": "Flak AS",
-      "email": "Flak@flak.no",
-      "status": "acknowledged"
-    },
-    {
-      "name": "Hovdan-Poly",
-      "email": "Post@hovdan.no",
-      "status": "sent"
-    },
-    {
-      "name": "Helsport",
-      "email": "helsport@helsport.no",
-      "status": "sent"
-    },
-    {
-      "name": "XC Sports",
-      "email": "post@xcsports.com",
-      "status": "sent"
-    }
+    {"name": "Flak AS", "email": "Flak@flak.no", "status": "acknowledged"},
+    {"name": "Hovdan-Poly", "email": "Post@hovdan.no", "status": "sent"},
+    {"name": "Helsport", "email": "helsport@helsport.no", "status": "sent"},
+    {"name": "XC Sports", "email": "post@xcsports.com", "status": "sent"}
   ],
   "pages_live": [
-    "/davis",
-    "/davis/vantage-vue-vs-pro2",
-    "/davis/hytte",
-    "/davis/vinter-drift",
-    "/davis/home-assistant",
-    "/sovepose",
-    "/varmepumpe"
-  ]
+    "/davis", "/davis/vantage-vue-vs-pro2", "/davis/hytte",
+    "/davis/vinter-drift", "/davis/home-assistant", "/sovepose", "/varmepumpe"
+  ],
+  "schema_version": "v2",
+  "profile_file": "profile.json",
+  "commerce_policy_file": "commerce_policy.json",
+  "consumer_file": "consumer.json",
+  "logistics_file": "logistics.json",
+  "cross_border_file": "cross_border.json",
+  "installed_bases_file": "installed_bases.json",
+  "competition_file": "competition.json",
+  "supply_graph_file": "supply_graph.json"
 }

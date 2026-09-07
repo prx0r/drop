@@ -1,0 +1,56 @@
+{
+  "country_code": "NO",
+  "installed_bases": [
+    {
+      "system_type": "ev_vehicle",
+      "installed_base": 945182,
+      "annual_sales": 150000,
+      "new_ev_share_2026": 0.987,
+      "avg_age_years": 3,
+      "replacement_cycle_years": 12,
+      "warranty_years": 5,
+      "failure_modes": ["battery_degradation", "charging_fault", "software_issue"],
+      "accessories": ["chargers", "cables", "adapters", "home_battery", "solar_integration"],
+      "compatibility_requirements": ["charging_standard", "electrical", "parking"],
+      "service_network": "extensive",
+      "annual_replacement_value": 150000000,
+      "annual_accessory_value": 50000000,
+      "annual_service_value": 40000000,
+      "source": "SSB",
+      "confidence": 0.95
+    },
+    {
+      "system_type": "cabin",
+      "installed_base": 484000,
+      "annual_sales": 5000,
+      "avg_age_years": 35,
+      "replacement_cycle_years": 50,
+      "failure_modes": ["freeze", "water_leak", "heating_failure", "power_loss", "connectivity_loss"],
+      "accessories": ["frost_monitors", "leak_detectors", "remote_heaters", "power_monitors", "connectivity", "security"],
+      "compatibility_requirements": ["electrical", "heating", "water", "connectivity"],
+      "service_network": "limited",
+      "annual_replacement_value": 25000000,
+      "annual_accessory_value": 15000000,
+      "annual_service_value": 20000000,
+      "source": "SSB",
+      "confidence": 0.9
+    },
+    {
+      "system_type": "weather_station",
+      "installed_base": 50000,
+      "annual_sales": 2000,
+      "avg_age_years": 8,
+      "replacement_cycle_years": 15,
+      "failure_modes": ["console_failure", "sensor_failure", "connectivity_loss"],
+      "accessories": ["consoles", "sensors", "cables", "mounts", "weatherlink"],
+      "compatibility_requirements": ["protocol", "power", "connectivity"],
+      "service_network": "limited",
+      "annual_replacement_value": 5000000,
+      "annual_accessory_value": 3000000,
+      "annual_service_value": 1000000,
+      "source": "Estimated",
+      "confidence": 0.7
+    }
+  ],
+  "created_at": "2026-09-08T00:00:00Z"
+}
