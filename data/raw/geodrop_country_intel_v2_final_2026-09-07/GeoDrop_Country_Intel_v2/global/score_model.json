@@ -1,0 +1,8 @@
+{
+  "deprecated": true,
+  "reason": "v2 separates discovery from launch scoring",
+  "use": [
+    "global/discovery_score_model.json",
+    "global/launch_score_model.json"
+  ]
+}

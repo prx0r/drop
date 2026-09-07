@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GeoDrop Product Market",
+  "type": "object",
+  "required": [
+    "product_market_id",
+    "country",
+    "name",
+    "state",
+    "score",
+    "confidence",
+    "hard_gates",
+    "evidence_refs",
+    "unknowns"
+  ],
+  "properties": {
+    "product_market_id": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "components": {
+      "type": "object"
+    },
+    "hard_gates": {
+      "type": "object"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

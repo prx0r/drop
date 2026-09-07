@@ -1,0 +1,17 @@
+{
+  "connector_id": "TRADE_COMEXT_COMTRADE",
+  "status": "READY_PUBLIC",
+  "source_id": "eurostat_comext",
+  "purpose": [
+    "commodity import growth/origin"
+  ],
+  "rules": [
+    "validate CN/HS mapping before pull",
+    "store code version/year",
+    "avoid interpreting broad codes as exact products"
+  ],
+  "outputs": [
+    "trade_code_map.jsonl",
+    "series/imports.csv"
+  ]
+}

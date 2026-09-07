@@ -1,0 +1,37 @@
+[
+  {
+    "language": "nb",
+    "ecosystem_id": "NO_HYTTE_HOME",
+    "queries": [
+      "vannlekkasje hytte sensor",
+      "frostvakt hytte fjernstyring",
+      "strømovervåking hytte",
+      "internett hytte router",
+      "temperaturmåler hytte wifi",
+      "værstasjon hytte"
+    ]
+  },
+  {
+    "language": "nb",
+    "ecosystem_id": "NO_EV_AFTERMARKET",
+    "queries": [
+      "tesla model y tilbehør",
+      "ladekabel oppbevaring"
+    ]
+  },
+  {
+    "language": "nb",
+    "ecosystem_id": "NO_INDOOR_AIR",
+    "queries": [
+      "radonmåler"
+    ]
+  },
+  {
+    "language": "nb",
+    "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+    "queries": [
+      "davis 6242eu",
+      "davis vantage vue norge"
+    ]
+  }
+]

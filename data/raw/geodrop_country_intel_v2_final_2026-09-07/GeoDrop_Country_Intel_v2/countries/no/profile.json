@@ -1,0 +1,49 @@
+{
+  "country": "NO",
+  "country_name": "Norway",
+  "pack_as_of": "2026-09-07",
+  "languages": [
+    "nb",
+    "nn"
+  ],
+  "primary_language": "nb",
+  "currency": "NOK",
+  "timezone": "Europe/Oslo",
+  "population_observation": "NO_POP_2026Q2",
+  "standard_vat_observation": "NO_VAT_STANDARD_2026",
+  "ecommerce_tax_scheme": {
+    "name": "VOEC",
+    "low_value_threshold_observation": "NO_VOEC_THRESHOLD_2026",
+    "note": "Scheme details vary by product/transaction; validate current applicability per SKU."
+  },
+  "local_payment_methods": [
+    "Vipps",
+    "cards"
+  ],
+  "preferred_delivery_patterns": [
+    "service point commonly used",
+    "home delivery preferred",
+    "parcel lockers rising"
+  ],
+  "price_comparison_sources": [
+    "Prisjakt.no"
+  ],
+  "official_data_api": "SSB PxWebApi v2",
+  "source_market_candidates": [
+    "SE",
+    "NL",
+    "DE",
+    "DK"
+  ],
+  "research_principle": "Prefer Nordic/EU stock + native decision support over generic long-haul dropshipping.",
+  "pack_version": "2.0.0",
+  "intelligence_model": "installed_base_problem_source_target_outcome_graph",
+  "geographic_levels": [
+    "country",
+    "region",
+    "municipality",
+    "postal_prefix_when_source_supports"
+  ],
+  "evidence_policy": "docs/CANONICAL_SPEC.md",
+  "backtesting_policy": "docs/BACKTESTING.md"
+}

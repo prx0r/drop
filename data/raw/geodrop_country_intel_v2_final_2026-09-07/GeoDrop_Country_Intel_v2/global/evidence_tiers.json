@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tiers": {
+    "A": {
+      "name": "official_exact",
+      "description": "Official administrative/statistical measurement with explicit definition."
+    },
+    "B": {
+      "name": "industry_primary",
+      "description": "Primary industry/trade-body data with method/coverage."
+    },
+    "C": {
+      "name": "triangulated_proxy",
+      "description": "Derived/estimated proxy from defensible inputs; assumptions explicit."
+    },
+    "D": {
+      "name": "market_evidence",
+      "description": "SERP, merchant, review, forum, marketplace or observed commercial evidence."
+    },
+    "E": {
+      "name": "private_unknown",
+      "description": "Private/authenticated/unknown until obtained; cannot be guessed."
+    }
+  },
+  "statuses": [
+    "OBSERVED",
+    "DERIVED",
+    "MISSING_OPTIONAL",
+    "MISSING_REQUIRED",
+    "STALE",
+    "DISPUTED"
+  ]
+}

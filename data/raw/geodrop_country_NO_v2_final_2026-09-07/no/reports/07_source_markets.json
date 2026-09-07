@@ -1,0 +1,38 @@
+{
+  "report_id": "07_source_markets",
+  "country": "NO",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "summary": "Sweden/Netherlands/Germany are used as proof/benchmark markets, not blindly as target markets. The transplant question is whether a proven specialist service/catalogue model is materially weaker in Norway.",
+  "evidence_refs": [],
+  "required_missing": [
+    "Systematic source-market merchant graph by monitored segment"
+  ],
+  "data": {
+    "markets": [
+      {
+        "country": "SE",
+        "role": "nearest mature Nordic template; strong trust/logistics adjacency"
+      },
+      {
+        "country": "NL",
+        "role": "technical exact-model specialist archetype source"
+      },
+      {
+        "country": "DE",
+        "role": "price/SKU depth benchmark"
+      },
+      {
+        "country": "DK",
+        "role": "nearby cross-border benchmark"
+      }
+    ],
+    "transplant_test": [
+      "same exact SKU exists in source market",
+      "source merchant has demonstrably better decision/support model",
+      "Norway demand is measurable",
+      "Norway GOOD_SELLER_GAP exists",
+      "authorized supply/economics survive local delivered pricing"
+    ]
+  }
+}

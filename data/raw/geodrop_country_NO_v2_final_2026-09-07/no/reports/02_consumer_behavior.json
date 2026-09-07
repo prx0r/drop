@@ -1,0 +1,20 @@
+{
+  "report_id": "02_consumer_behavior",
+  "country": "NO",
+  "as_of": "2026-09-07",
+  "observation_refs": [
+    "NO_PAYMENT_TOP_2026S",
+    "NO_CHECKOUT_SMOOTH_IMPORTANCE_2026S",
+    "NO_CHECKOUT_CANCEL_3M_2026S",
+    "NO_HOME_DELIVERY_PAID_2026S",
+    "NO_LOCKER_TREND_2026S"
+  ],
+  "hard_design_implications": [
+    "Vipps/local checkout feasibility is a launch gate.",
+    "Delivered shipping price and delivery method must be explicit before checkout.",
+    "Long-haul unpredictable delivery is structurally disadvantaged."
+  ],
+  "unknowns": [
+    "category-specific return rates and payment preferences require product/merchant data"
+  ]
+}

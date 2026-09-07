@@ -1,0 +1,16 @@
+{
+  "connector_id": "NO_BRREG_MERCHANT",
+  "status": "READY_PUBLIC",
+  "source_id": "brreg_open_data",
+  "purpose": [
+    "legal merchant/service census",
+    "organization enrichment"
+  ],
+  "rules": [
+    "link domain->organization with confidence",
+    "record industry codes but do not infer ecommerce activity from code alone"
+  ],
+  "outputs": [
+    "merchants.jsonl"
+  ]
+}

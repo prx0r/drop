@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "reports": [
+    {
+      "id": "01_market_overview",
+      "purpose": "country macro/ecommerce context"
+    },
+    {
+      "id": "02_consumer_behavior",
+      "purpose": "checkout/payment/delivery/trust"
+    },
+    {
+      "id": "03_structural_demand",
+      "purpose": "installed-base ecosystem discovery"
+    },
+    {
+      "id": "04_acquisition_query_forest",
+      "purpose": "native intent/search/trends"
+    },
+    {
+      "id": "05_competition_merchant_census",
+      "purpose": "target merchant/service coverage"
+    },
+    {
+      "id": "06_supply_logistics_compliance",
+      "purpose": "supplier/economics/operations"
+    },
+    {
+      "id": "07_source_market_oracle",
+      "purpose": "mature market archetypes"
+    },
+    {
+      "id": "08_opportunity_summary",
+      "purpose": "current evidence-ranked research state"
+    },
+    {
+      "id": "09_geographic_opportunity",
+      "purpose": "subnational asset/risk/merchant gaps"
+    },
+    {
+      "id": "10_experiment_backtest_learning",
+      "purpose": "hypotheses/probes/strategy performance"
+    }
+  ]
+}

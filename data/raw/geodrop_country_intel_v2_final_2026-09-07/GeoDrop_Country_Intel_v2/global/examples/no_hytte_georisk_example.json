@@ -1,0 +1,16 @@
+{
+  "example_id": "NO_HYTTE_GEORISK_EXAMPLE",
+  "country": "NO",
+  "ecosystem_id": "NO_HYTTE_HOME",
+  "formula_concept": "asset density × measured problem/risk exposure × native query demand ÷ good merchant/service density",
+  "layers": [
+    "SSB leisure-property stock",
+    "MET Frost climate",
+    "VASK water damage",
+    "NVE outages",
+    "Nkom connectivity",
+    "native query data",
+    "local merchants/services"
+  ],
+  "warning": "Do not calculate a composite until geographic denominators and comparable scales are defined."
+}

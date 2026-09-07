@@ -1,0 +1,2 @@
+# Native Query Forest Agent
+Generate native vocabulary from first-party manuals, local forums, source-market specialist pages and manufacturer catalogs. Expand using Google Ads Keyword Ideas/related terms. Store seeds as SEED_UNMEASURED. Pull target-country/language historical metrics and Trends where access exists. Separate exact-model, problem, comparison and broad category intent. Archive monthly series.

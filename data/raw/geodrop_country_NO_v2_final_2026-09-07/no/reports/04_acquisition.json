@@ -1,0 +1,57 @@
+{
+  "report_id": "04_acquisition",
+  "country": "NO",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL_AUTH_REQUIRED",
+  "summary": "The acquisition layer is fully specified but authenticated Google Ads metrics are intentionally not fabricated. Keyword Planner must supply exact Norwegian volume/CPC before paid launch. Google Trends and Merchant Center/BigQuery are canonical longitudinal feeds.",
+  "evidence_refs": [
+    "NO_GADS_DAVIS_CPC_202609",
+    "NO_GADS_DAVIS_SEARCHVOL_202609"
+  ],
+  "required_missing": [
+    "Keyword Planner pull by monitored segment",
+    "Google Trends series ingestion",
+    "Merchant Center Best Sellers/Price Competitiveness when account eligibility exists"
+  ],
+  "data": {
+    "google_ads": {
+      "refresh": "monthly",
+      "required_metrics": [
+        "avg_monthly_searches",
+        "monthly_search_volumes",
+        "competition",
+        "competition_index",
+        "average_cpc_micros",
+        "low_top_of_page_bid_micros",
+        "high_top_of_page_bid_micros"
+      ],
+      "targeting": {
+        "geo": "NO",
+        "language": "Norwegian"
+      },
+      "rule": "No CPC proxy from blogs/SEO tools when paid economics are being gated."
+    },
+    "google_trends": {
+      "window": "rolling 5y",
+      "cadence": "weekly monitored/monthly archive",
+      "notes": "API is alpha; consistently scaled values enable longitudinal joins."
+    },
+    "merchant_center": {
+      "reports": [
+        "Best Sellers",
+        "Performance",
+        "Price Competitiveness",
+        "Price Insights"
+      ],
+      "note": "Use Merchant API for commerce integrations; Content API sunset 2026-08-18."
+    },
+    "free_traffic": {
+      "sources": [
+        "Google Merchant free listings",
+        "Search Console",
+        "native exact-model/job-first SEO"
+      ],
+      "principle": "Use impressions/qualified clicks to validate demand before paid media where possible."
+    }
+  }
+}

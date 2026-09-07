@@ -1,0 +1,19 @@
+{
+  "report_id": "04_acquisition_query_forest",
+  "country": "NO",
+  "as_of": "2026-09-07",
+  "query_count": 11,
+  "measured_query_count": 0,
+  "status": "AUTHENTICATED_METRICS_REQUIRED",
+  "connectors": [
+    "NO_GOOGLE_ADS_KEYWORD",
+    "NO_GOOGLE_TRENDS",
+    "GMC_BIGQUERY"
+  ],
+  "rules": [
+    "seed query != demand",
+    "separate exact-model vs problem vs broad category intent",
+    "archive monthly metrics to support seasonality/backtests",
+    "generate vocabulary from first-party/manual/source-market pages before LLM expansion"
+  ]
+}

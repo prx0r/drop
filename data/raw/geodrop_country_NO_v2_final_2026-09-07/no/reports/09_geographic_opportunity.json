@@ -1,0 +1,20 @@
+{
+  "report_id": "09_geographic_opportunity",
+  "country": "NO",
+  "as_of": "2026-09-07",
+  "target_model": "asset_density × problem/risk exposure × native demand ÷ good local merchant/service density",
+  "candidate_layers": [
+    "municipality leisure-property density",
+    "Frost climate exposure",
+    "VASK water-damage cause incidence",
+    "NVE outage exposure",
+    "Nkom holiday-home/connectivity coverage",
+    "EV stock/model geography if OFV acquired"
+  ],
+  "status": "CONNECTORS_DEFINED_NOT_FULLY_INGESTED",
+  "rules": [
+    "never infer municipal value from national average",
+    "retain denominator/coverage",
+    "geographic score is discovery input, not targeting proof"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "connector_id": "NO_SSB_PXWEB",
+  "status": "READY_PUBLIC",
+  "source_id": "ssb_api_v2",
+  "purpose": [
+    "installed base",
+    "housing",
+    "retail",
+    "vehicles",
+    "municipality statistics"
+  ],
+  "endpoint": "https://data.ssb.no/api/v0/en/table/",
+  "v2_docs": "https://www.ssb.no/en/api/pxwebapi",
+  "rules": [
+    "cache table metadata",
+    "save raw query+response hash",
+    "respect source rate/cell limits",
+    "record publication/availability date"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/installed_base.csv",
+    "series/macro.csv"
+  ]
+}

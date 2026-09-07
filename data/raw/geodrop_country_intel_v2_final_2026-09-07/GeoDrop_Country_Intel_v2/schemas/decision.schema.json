@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "country",
+    "object_type",
+    "object_id",
+    "as_of",
+    "decision",
+    "prospective"
+  ],
+  "properties": {
+    "prospective": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

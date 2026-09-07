@@ -1,0 +1,16 @@
+{
+  "connector_id": "NO_NVE_OUTAGES",
+  "status": "READY_PUBLIC",
+  "source_id": "nve_outage_stats_2025",
+  "purpose": [
+    "outage exposure by geography/grid/end-user"
+  ],
+  "rules": [
+    "keep planned/unplanned and duration definitions separate",
+    "do not use national average for municipal claims"
+  ],
+  "outputs": [
+    "series/problem_incidence.csv",
+    "reports/09_geographic_opportunity.json"
+  ]
+}

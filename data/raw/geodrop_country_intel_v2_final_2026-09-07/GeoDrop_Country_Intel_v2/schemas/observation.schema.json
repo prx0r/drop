@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observation",
+  "type": "object",
+  "required": [
+    "observation_id",
+    "metric",
+    "scope",
+    "status",
+    "confidence",
+    "evidence_tier",
+    "source_id",
+    "retrieved_at"
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OBSERVED",
+        "DERIVED",
+        "MISSING_OPTIONAL",
+        "MISSING_REQUIRED",
+        "STALE",
+        "DISPUTED"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "available_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "point_in_time_safe": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experiment",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "hypothesis_id",
+    "country",
+    "strategy_id",
+    "strategy_version",
+    "created_at",
+    "as_of",
+    "backtest_class",
+    "candidate_universe_ref",
+    "evidence_refs",
+    "treatment",
+    "primary_success_metric"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string"
+    },
+    "backtest_class": {
+      "enum": [
+        "TRUE_HISTORICAL",
+        "RECONSTRUCTED_HISTORICAL",
+        "PROSPECTIVE_SHADOW"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

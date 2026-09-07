@@ -1,0 +1,36 @@
+{
+  "score_id": "PRODUCT_MARKET_LAUNCH_V2",
+  "version": "2.0.0",
+  "max_score": 100,
+  "components": {
+    "demand": 20,
+    "merchant_gap": 20,
+    "economics": 25,
+    "supply": 15,
+    "localization_edge": 10,
+    "structural_demand": 10
+  },
+  "hard_gates": [
+    "exact_sku_identity",
+    "resale_allowed",
+    "supplier_path_verified",
+    "landed_cost_verified",
+    "positive_pre_ad_contribution",
+    "delivery_feasible",
+    "returns_warranty_known",
+    "local_checkout_feasible"
+  ],
+  "paid_specific_gates": [
+    "keyword_planner_measured",
+    "cpc_measured"
+  ],
+  "preferred_narrow_launch_gates": [
+    "three_viable_anchor_skus",
+    "base_case_headroom_gte_1_5"
+  ],
+  "rules": [
+    "Unknown hard gate blocks launch",
+    "Score cannot override gate",
+    "Use actual discounted target-market retail, not RRP, for economics"
+  ]
+}

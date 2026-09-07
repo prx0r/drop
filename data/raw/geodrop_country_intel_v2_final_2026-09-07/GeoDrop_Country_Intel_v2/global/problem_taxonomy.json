@@ -1,0 +1,30 @@
+{
+  "trigger_types": [
+    "FAILURE",
+    "MAINTENANCE",
+    "REPLACEMENT",
+    "UPGRADE",
+    "COMPATIBILITY",
+    "INSTALLATION",
+    "COMPLIANCE",
+    "SEASONAL",
+    "CONSUMABLE"
+  ],
+  "urgency": [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+  ],
+  "fulfilment_modes": [
+    "PRODUCT_ONLY",
+    "PRODUCT_PLUS_GUIDANCE",
+    "INSTALLER_REQUIRED",
+    "SERVICE_ONLY"
+  ],
+  "safety": [
+    "LOW",
+    "REVIEW_REQUIRED",
+    "REGULATED_OR_HIGH_RISK"
+  ]
+}
