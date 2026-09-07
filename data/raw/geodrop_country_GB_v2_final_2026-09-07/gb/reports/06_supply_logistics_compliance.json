@@ -1,0 +1,29 @@
+{
+  "report_id": "06_supply_logistics_compliance",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "observation_refs": [
+    "GB_VAT_STANDARD_2026",
+    "GB_LOW_VALUE_DIRECT_LIMIT",
+    "GB_DISTANCE_CANCEL_DAYS",
+    "GB_DISTANCE_DELIVERY_DAYS",
+    "GB_HIK_DEALER_NET",
+    "GB_TADO_RESELLER_NET",
+    "GB_SOLAR_SUPPLIER_NET"
+  ],
+  "active_blockers": [
+    "authorized reseller/dealer terms",
+    "true landed cost including UK VAT/import path",
+    "returns/warranty/RMA allocation",
+    "UKCA/CE/product-specific safety obligations",
+    "GB vs Northern Ireland regulatory path",
+    "installation boundary for electrical/energy products"
+  ],
+  "rules": [
+    "20% standard VAT is default but validate SKU-specific rate",
+    "<=£135 overseas direct-sale VAT rule is consignment-based",
+    "14-day distance cancellation and delivery/return disclosures belong in economics/UX",
+    "CE/UKCA route depends on product sector and GB vs NI market",
+    "no electrical/energy SKU launches from generic supplier without documented compliance"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "connector_id": "GB_GOOGLE_TRENDS",
+  "status": "API_ALPHA_OR_UI",
+  "source_id": "google_trends_api_2026",
+  "purpose": [
+    "relative trend/seasonality",
+    "regional interest"
+  ],
+  "geo": "GB",
+  "rules": [
+    "store extraction method",
+    "do not compare separately normalized UI batches naively",
+    "archive time series"
+  ],
+  "outputs": [
+    "queries.jsonl",
+    "series/search.csv"
+  ]
+}

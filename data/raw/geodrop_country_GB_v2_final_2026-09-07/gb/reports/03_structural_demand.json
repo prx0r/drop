@@ -1,0 +1,19 @@
+{
+  "report_id": "03_structural_demand",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "ecosystem_ids": [
+    "GB_HOME_ENERGY",
+    "GB_SOLAR_BATTERY",
+    "GB_EV_AFTERMARKET",
+    "GB_OLD_HOME_DIAGNOSTICS"
+  ],
+  "priority_order": [
+    "GB_OLD_HOME_DIAGNOSTICS",
+    "GB_HOME_ENERGY",
+    "GB_EV_AFTERMARKET",
+    "GB_SOLAR_BATTERY"
+  ],
+  "definition_warning": "Preserve geography: ONS retail is Great Britain; EHS/dwelling stock evidence is England; smart meters are Great Britain; DfT vehicle statistics are UK. Do not flatten these into a single UK denominator without an explicit derivation.",
+  "discovery_rule": "Installed-base magnitude generates hypotheses only. UK is mature; promotion requires native query demand, exact merchant/service lag and supplier economics."
+}

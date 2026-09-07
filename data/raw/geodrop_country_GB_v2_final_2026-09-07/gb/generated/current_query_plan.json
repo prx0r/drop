@@ -1,0 +1,27 @@
+{
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "status": "AUTH_REQUIRED",
+  "query_ids": [
+    "GB_Q_HP_CONTROLLER",
+    "GB_Q_HP_OPTIMIZER",
+    "GB_Q_HP_REPLACEMENT",
+    "GB_Q_TOU_HEATPUMP",
+    "GB_Q_PLUGIN_SOLAR",
+    "GB_Q_BALCONY_SOLAR",
+    "GB_Q_SOLAR_BATTERY",
+    "GB_Q_SOLAR_MONITOR",
+    "GB_Q_MODEL_Y_ACCESSORIES",
+    "GB_Q_EV_LOAD_BALANCE",
+    "GB_Q_EV_CHARGING_CABLE",
+    "GB_Q_DAMP_METER",
+    "GB_Q_THERMAL_HEATLOSS",
+    "GB_Q_THERMAL_CAMERA",
+    "GB_Q_HOME_ENERGY_DIAG"
+  ],
+  "required_connectors": [
+    "GB_GOOGLE_ADS_KEYWORD",
+    "GB_GOOGLE_TRENDS"
+  ],
+  "rule": "No seed query is promoted to measured demand without authenticated UK metrics."
+}

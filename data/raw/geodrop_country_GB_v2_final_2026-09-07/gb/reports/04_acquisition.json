@@ -1,0 +1,18 @@
+{
+  "report_id": "04_acquisition",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "status": "MISSING_REQUIRED_AUTH",
+  "summary": "English query forest seeded; Keyword Planner/Trends metrics not authenticated in this build. English removes translation friction but competition can be substantially higher than Nordic targets.",
+  "evidence_refs": [
+    "GB_GADS_SEARCHVOL_ACTIVE",
+    "GB_GADS_CPC_ACTIVE"
+  ],
+  "required_missing": [
+    "UK Keyword Planner volume/CPC/competition for every seed and exact SKU"
+  ],
+  "data": {
+    "query_count": 15,
+    "measured": 0
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "report_id": "08_opportunity_summary",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "ecosystems": [
+    {
+      "id": "GB_HOME_ENERGY",
+      "state": "PRIORITY_RESEARCH",
+      "discovery_score": {
+        "measured_points": 62,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.85,
+        "normalized_measured_score": 72.9,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "id": "GB_SOLAR_BATTERY",
+      "state": "PRIORITY_RESEARCH",
+      "discovery_score": {
+        "measured_points": 61,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.85,
+        "normalized_measured_score": 71.8,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "id": "GB_EV_AFTERMARKET",
+      "state": "PRIORITY_RESEARCH",
+      "discovery_score": {
+        "measured_points": 50,
+        "max_measured_points": 75,
+        "evidence_coverage": 0.75,
+        "normalized_measured_score": 66.7,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "id": "GB_OLD_HOME_DIAGNOSTICS",
+      "state": "PRIORITY_RESEARCH",
+      "discovery_score": {
+        "measured_points": 68,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.85,
+        "normalized_measured_score": 80.0,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    }
+  ],
+  "product_markets": [
+    {
+      "id": "GB_HIKMICRO_POCKET2",
+      "state": "HOLD_VALIDATE",
+      "score": 67,
+      "confidence": 0.82
+    },
+    {
+      "id": "GB_HEATPUMP_SMART_CONTROLS",
+      "state": "HOLD_RESEARCH",
+      "score": 58,
+      "confidence": 0.9
+    },
+    {
+      "id": "GB_PLUGIN_SOLAR_KITS",
+      "state": "KILLED_GENERIC_COMMODITY",
+      "score": 48,
+      "confidence": 0.94
+    },
+    {
+      "id": "GB_MODEL_Y_ACCESSORIES",
+      "state": "KILLED_GENERIC_SPECIALIST_GAP",
+      "score": 43,
+      "confidence": 0.92
+    },
+    {
+      "id": "GB_HOME_DIAGNOSTIC_KITS",
+      "state": "RESEARCH",
+      "score": 69,
+      "confidence": 0.75
+    }
+  ],
+  "verdict": "UK has exceptional data density and huge installed bases, but it is a mature/high-competition ecommerce market. Best research frontier is problem-led old-home diagnostics and newly growing exact-model cohorts. Generic plug-in solar, Model Y accessories and heat-pump controls are explicitly downgraded by incumbent evidence. No paid launch is ready until authenticated search and dealer economics are captured."
+}

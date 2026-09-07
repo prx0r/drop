@@ -1,0 +1,23 @@
+{
+  "connector_id": "GB_GOOGLE_ADS_KEYWORD",
+  "status": "AUTH_REQUIRED",
+  "source_id": "google_ads_keyword_2026",
+  "purpose": [
+    "UK query volume",
+    "CPC",
+    "competition",
+    "monthly history"
+  ],
+  "geo": "United Kingdom",
+  "language": "English",
+  "rules": [
+    "exact geo/language/network",
+    "do not substitute global metrics",
+    "MISSING_REQUIRED until authenticated",
+    "freeze pre-launch snapshot"
+  ],
+  "outputs": [
+    "queries.jsonl",
+    "series/search.csv"
+  ]
+}

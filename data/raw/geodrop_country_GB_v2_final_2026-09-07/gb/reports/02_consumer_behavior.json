@@ -1,0 +1,27 @@
+{
+  "report_id": "02_consumer_behavior",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "observation_refs": [
+    "GB_RETAIL_SERVICE_REACH_202505",
+    "GB_MARKETPLACE_BUYERS_2025",
+    "GB_CROSSBORDER_2026_DHL",
+    "GB_SMARTPHONE_SHOP_2025",
+    "GB_DELIVERY_ABANDON_2025",
+    "GB_RETURNS_ABANDON_2025",
+    "GB_WALLET_ECOM_VALUE_2025",
+    "GB_PREOWNED_ONLINE_2025"
+  ],
+  "hard_design_implications": [
+    "Mobile-first is mandatory",
+    "Delivery/returns choice and provider trust are conversion infrastructure",
+    "Support cards plus major digital wallets; BNPL is economically meaningful but not universal",
+    "Marketplace and pre-owned competition must be included in substitute analysis",
+    "Cross-border openness exists but UK buyers have strong domestic expectations"
+  ],
+  "unknowns": [
+    "category-specific conversion elasticity",
+    "delivery-speed lift by AOV/problem urgency",
+    "payment-method causal lift"
+  ]
+}

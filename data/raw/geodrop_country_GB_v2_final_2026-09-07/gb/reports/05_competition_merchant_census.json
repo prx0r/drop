@@ -1,0 +1,20 @@
+{
+  "report_id": "05_competition_merchant_census",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "merchant_records": 5,
+  "gap_records": 4,
+  "connectors": [
+    "GB_PRICESPY",
+    "GB_COMPANIES_HOUSE",
+    "GB_MERCHANT_CENTER_BIGQUERY"
+  ],
+  "rules": [
+    "GOOD_SELLER_COUNT not raw offers",
+    "include manufacturer DTC, B2B distributors and installers",
+    "content gap distinct from merchant gap",
+    "count marketplaces as substitute pressure but not underlying unique merchants",
+    "store exact seller snapshots by SKU/query"
+  ],
+  "current_warning": "UK competition is structurally stronger than Norway/Finland. Product-market cells are killed when high-quality native specialists already solve the exact job."
+}

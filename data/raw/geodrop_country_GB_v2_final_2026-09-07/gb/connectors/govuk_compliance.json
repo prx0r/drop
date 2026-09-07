@@ -1,0 +1,20 @@
+{
+  "connector_id": "GB_GOVUK_COMPLIANCE",
+  "status": "READY_PUBLIC",
+  "source_id": "product_marking_2026",
+  "purpose": [
+    "VAT/import rules",
+    "distance selling",
+    "product safety",
+    "GB/NI marking/compliance"
+  ],
+  "rules": [
+    "validate per SKU/sector",
+    "separate Great Britain and Northern Ireland",
+    "record version/update date"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "reports/06_supply_logistics_compliance.json"
+  ]
+}

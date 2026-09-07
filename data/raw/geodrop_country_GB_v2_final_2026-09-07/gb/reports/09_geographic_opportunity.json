@@ -1,0 +1,22 @@
+{
+  "report_id": "09_geographic_opportunity",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "target_model": "asset/cohort density × problem/risk exposure × native demand ÷ good local merchant/service density",
+  "candidate_layers": [
+    "EHS local-authority damp model",
+    "ONS/administrative housing stock",
+    "DfT make/model/vehicle geography",
+    "EV charger local-authority/constituency density",
+    "Ofcom broadband coverage",
+    "Met Office weather exposure",
+    "Companies House merchant geography"
+  ],
+  "status": "PUBLIC_CONNECTORS_DEFINED_PARTIAL_INGEST",
+  "rules": [
+    "never infer nation/local authority from UK average",
+    "preserve England/GB/UK scope",
+    "geographic score is discovery input, not ad-targeting causal proof",
+    "use weather/risk only where it has a plausible job-to-product mechanism"
+  ]
+}

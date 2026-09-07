@@ -1,0 +1,22 @@
+{
+  "report_id": "05_competition",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL_HIGH_COMPETITION",
+  "summary": "Five high-quality UK specialists/manufacturer channels frozen. Generic heat-pump control, plug-in solar and Tesla Model Y specialist theses are weakened/killed; professional diagnostics retains only a provisional assortment delta.",
+  "evidence_refs": [
+    "GB_HOMELY_CHANNEL",
+    "GB_TADO_HPO_PRICE",
+    "GB_HIK_SHOPS_20260907",
+    "GB_TESLA_SPECIALIST_SIGNAL",
+    "GB_PLUGIN_SOLAR_MAJOR_RETAIL_ENTRY_2026"
+  ],
+  "required_missing": [
+    "Companies House/domain enrichment",
+    "PriceSpy/Shopping exact seller snapshots across candidate SKUs",
+    "installer/distributor census for technical categories"
+  ],
+  "data": {
+    "merchant_records": 5
+  }
+}

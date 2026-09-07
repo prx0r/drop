@@ -1,0 +1,21 @@
+{
+  "connector_id": "GB_MERCHANT_CENTER_BIGQUERY",
+  "status": "MERCHANT_ACCOUNT_REQUIRED",
+  "source_id": "merchant_pricing_2026",
+  "purpose": [
+    "Best Sellers",
+    "performance",
+    "price competitiveness",
+    "price insights"
+  ],
+  "rules": [
+    "use country/category granularity",
+    "archive daily/current benchmark snapshots",
+    "do not infer competitor profitability"
+  ],
+  "outputs": [
+    "series/price_snapshots.csv",
+    "series/seller_snapshots.csv",
+    "observations.jsonl"
+  ]
+}

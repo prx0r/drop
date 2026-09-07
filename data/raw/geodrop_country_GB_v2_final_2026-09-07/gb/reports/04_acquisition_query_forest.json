@@ -1,0 +1,20 @@
+{
+  "report_id": "04_acquisition_query_forest",
+  "country": "GB",
+  "as_of": "2026-09-07",
+  "query_count": 15,
+  "measured_query_count": 0,
+  "status": "AUTHENTICATED_METRICS_REQUIRED",
+  "connectors": [
+    "GB_GOOGLE_ADS_KEYWORD",
+    "GB_GOOGLE_TRENDS",
+    "GB_MERCHANT_CENTER_BIGQUERY"
+  ],
+  "rules": [
+    "seed query != demand",
+    "separate problem/exact-model/broad commercial intent",
+    "archive monthly metrics and geo targeting",
+    "English query portability from source markets does not imply UK economics",
+    "freeze pre-launch metrics for backtests"
+  ]
+}
