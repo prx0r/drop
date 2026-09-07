@@ -78,8 +78,9 @@ class BigQueryStorage:
                 data[key] = value.isoformat()
             elif isinstance(value, dict):
                 data[key] = json.dumps(value)
-            elif isinstance(value, list) and value and isinstance(value[0], dict):
-                data[key] = json.dumps(value)
+            elif isinstance(value, list):
+                # Keep lists as-is for ArrayQueryParameter handling
+                pass
             # Convert enums to strings
             elif hasattr(value, 'value'):
                 data[key] = value.value

@@ -65,19 +65,19 @@ class HypothesisLedgerPipeline:
     """
 
     # How does each observation field map to hypothesis evidence?
+    # NOTE: This is a default mapping. The actual direction depends on the hypothesis claim.
+    # For example, "good_sellers" AGAINST "underserved market" but FOR "market has demand".
     EVIDENCE_MAPPING = {
-        # Observations that SUPPORT hypotheses
+        # Observations that SUPPORT most hypotheses
         "demand_level": EvidenceDirection.FOR,
         "search_volume": EvidenceDirection.FOR,
         "demand_growth": EvidenceDirection.FOR,
         "merchant_gap_score": EvidenceDirection.FOR,
-        "good_sellers": EvidenceDirection.AGAINST,  # More good sellers = less gap
-        "total_sellers": EvidenceDirection.AGAINST,  # More sellers = less gap
         "supplier_name": EvidenceDirection.FOR,  # Found a supplier
         "dealer_price": EvidenceDirection.FOR,  # Got economics
         "contribution_margin": EvidenceDirection.FOR,  # Positive margin
         "price_observed": EvidenceDirection.FOR,  # Price data
-        # Observations that WEAKEN hypotheses
+        # Observations that WEAKEN most hypotheses
         "KILLED": EvidenceDirection.AGAINST,
         "falsified": EvidenceDirection.AGAINST,
         "no_demand": EvidenceDirection.AGAINST,
@@ -178,21 +178,13 @@ class HypothesisLedgerPipeline:
 
     def _is_relevant(self, observation: Observation, hypothesis: Hypothesis) -> bool:
         """Is this observation relevant to this hypothesis?"""
-        # Check by candidate_id
+        # Check by candidate_id (if both have it)
         if hypothesis.candidate_id and observation.candidate_id:
             if hypothesis.candidate_id != observation.candidate_id:
                 return False
 
-        # Check by product_family
-        if hypothesis.product_family:
-            if hypothesis.product_family.lower() not in str(observation.value).lower():
-                if hypothesis.product_family.lower() not in observation.tags:
-                    return False
-
-        # Check by country
-        if hypothesis.country_code:
-            if hypothesis.country_code.lower() not in observation.entity_id.lower():
-                return False
+        # Don't filter by country_code in entity_id - too strict
+        # Instead, rely on candidate_id for relevance
 
         return True
 
