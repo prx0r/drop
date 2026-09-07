@@ -1,0 +1,2374 @@
+{
+  "country_data": {
+    "observations": [
+      {
+        "observation_id": "NORDIC_V1_BLUEPRINT",
+        "metric": "system_architecture",
+        "scope": "Nordic cluster experiment design",
+        "value": "defined",
+        "evidence_type": "system_design",
+        "status": "OBSERVED",
+        "confidence": 0.9,
+        "notes": "NORDIC-v1: NO+FI+SE+DK with GB control. Same hypotheses, same schema, same evidence standards. Freeze evidence, run BuildDecision, deploy exactly one localized campaign.",
+        "source_id": "USER_GUIDE",
+        "period": "2026-09-08"
+      }
+    ],
+    "trade_code_map": [
+      {
+        "map_id": "TRADE_NO_HEAT_PUMP_EXAMPLE",
+        "ecosystem_id": null,
+        "country": "NO",
+        "concept": "heat pumps / HVAC example",
+        "hs_cn_codes": [],
+        "status": "NOT_MAPPED",
+        "mapping_confidence": 0.0,
+        "notes": "Never guess HS/CN. Validate exact code scope before interpreting imports."
+      },
+      {
+        "map_id": "TRADE_NO_WEATHER_INSTRUMENTS",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "country": "NO",
+        "concept": "weather/meteorological instruments",
+        "hs_cn_codes": [],
+        "status": "NOT_MAPPED",
+        "mapping_confidence": 0.0,
+        "notes": "Map only after checking CN descriptions and whether codes include unrelated instruments."
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "NO_WEATHER_REMOTE_PROPERTY",
+        "country": "NO",
+        "name": "Professional weather + remote property monitoring",
+        "state": "ACTIVE_VALIDATION",
+        "thesis": "Cabins, farms, coastal/remote properties create country-specific monitoring/maintenance demand; specialist decision support may be weaker than availability.",
+        "evidence_refs": [
+          "NO_CABINS_2026",
+          "NO_HOMEOWNERSHIP_2024"
+        ],
+        "falsifiers": [
+          "exact Norwegian query demand too small",
+          "local good-specialist density already high",
+          "dealer economics do not support contribution"
+        ],
+        "seed_queries": [
+          "profesjonell v\u00e6rstasjon",
+          "v\u00e6rstasjon hytte",
+          "v\u00e6rstasjon fjernhytte",
+          "v\u00e6rstasjon landbruk",
+          "davis vantage vue norge",
+          "davis 6242eu"
+        ]
+      },
+      {
+        "segment_id": "NO_HYTTE_SYSTEMS",
+        "country": "NO",
+        "name": "Hytte remote systems",
+        "state": "RESEARCH",
+        "thesis": "Large leisure-building installed base creates repeat monitoring, freeze, water, moisture, power, connectivity and security problems.",
+        "evidence_refs": [
+          "NO_CABINS_2026"
+        ],
+        "falsifiers": [
+          "local merchants already bundle/solve decisions well",
+          "problem queries lack purchase intent",
+          "shipping/support economics poor"
+        ],
+        "seed_queries": [
+          "frostvakt hytte fjernstyring",
+          "temperaturm\u00e5ler hytte wifi",
+          "vannlekkasje hytte sensor",
+          "str\u00f8moverv\u00e5king hytte"
+        ]
+      },
+      {
+        "segment_id": "NO_INDOOR_AIR",
+        "country": "NO",
+        "name": "Indoor air / radon / moisture",
+        "state": "RESEARCH",
+        "thesis": "Cold-climate housing and high home ownership create monitoring and remediation demand; quantify exact SKU/search and regulatory use cases.",
+        "evidence_refs": [
+          "NO_HOMEOWNERSHIP_2024",
+          "NO_DETACHED_HOUSE_2024",
+          "NO_RADON_MEASURED_HOME_2023",
+          "NO_RADON_MEASURED_LANDLORD_2023",
+          "NO_RADON_DEATHS_ESTIMATE_2026"
+        ],
+        "falsifiers": [
+          "brand/retailer saturation",
+          "low recurring/accessory economics",
+          "consumer demand concentrated in commodity monitors"
+        ],
+        "seed_queries": [
+          "radonm\u00e5ler",
+          "radonm\u00e5ler kjeller",
+          "luftkvalitetsm\u00e5ler",
+          "fuktm\u00e5ler bolig",
+          "muggsensor"
+        ]
+      },
+      {
+        "segment_id": "NO_EV_AFTERMARKET",
+        "country": "NO",
+        "name": "EV aftermarket exact-model ecosystems",
+        "state": "RESEARCH",
+        "thesis": "Treat EVs as installed-base ecosystems and hunt model-specific accessories/maintenance/charging problems rather than generic EV gadgets.",
+        "evidence_refs": [
+          "NO_EV_NEW_SHARE_202608",
+          "NO_EV_NEW_SHARE_YTD_202608",
+          "NO_EV_STOCK_MILLION_2026H1"
+        ],
+        "falsifiers": [
+          "OEM/Amazon marketplace dominance",
+          "safety/compliance burden",
+          "low compatibility confidence"
+        ],
+        "seed_queries": [
+          "ladekabel oppbevaring",
+          "elbil vinter tilbeh\u00f8r",
+          "lastbalansering elbil",
+          "hjemmelader tilbeh\u00f8r"
+        ]
+      },
+      {
+        "segment_id": "NO_HOME_CAPITAL_GOODS",
+        "country": "NO",
+        "name": "Home technical/capital goods",
+        "state": "RESEARCH",
+        "thesis": "High home ownership plus improving capital-goods outlook can create exact-model specialist opportunities.",
+        "evidence_refs": [
+          "NO_HOMEOWNERSHIP_2024",
+          "NO_HOUSEHOLD_GOODS_YOY_202607"
+        ],
+        "falsifiers": [
+          "broad retailer saturation",
+          "bulky freight destroys economics",
+          "installation/service requirements exceed model"
+        ],
+        "seed_queries": [
+          "m\u00e5leinstrument hus",
+          "termisk kamera bolig",
+          "fuktm\u00e5ler profesjonell",
+          "inspeksjonskamera r\u00f8r"
+        ]
+      },
+      {
+        "segment_id": "NO_TECH_OUTDOOR",
+        "country": "NO",
+        "name": "Technical outdoor/recreation",
+        "state": "RESEARCH",
+        "thesis": "Specialty leisure retail is currently positive and Norway has strong environment-specific technical use cases; focus exact equipment and accessory ecosystems.",
+        "evidence_refs": [
+          "NO_LEISURE_RETAIL_YOY_202607"
+        ],
+        "falsifiers": [
+          "seasonal demand too narrow",
+          "incumbent specialist quality high",
+          "return/sizing burden too high"
+        ],
+        "seed_queries": [
+          "teknisk turutstyr",
+          "m\u00e5leutstyr friluft",
+          "v\u00e6rm\u00e5ler b\u00e5t",
+          "sensor hytte"
+        ]
+      }
+    ],
+    "problems": [
+      {
+        "problem_id": "NO_HYTTE_WATER_FROST",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "country": "NO",
+        "name": "Water leak / frozen-pipe risk",
+        "trigger_types": [
+          "FAILURE",
+          "SEASONAL",
+          "MAINTENANCE"
+        ],
+        "components": [
+          "water system",
+          "pipes",
+          "leak detection"
+        ],
+        "urgency": "HIGH",
+        "incidence_refs": [
+          "NO_VASK_MARKET_COVERAGE_2026"
+        ],
+        "seasonality": "winter/freeze risk expected; quantify with Frost/VASK extracts",
+        "geography": "municipality-level target after risk ingestion",
+        "solution_categories": [
+          "leak detection",
+          "temperature/frost monitoring",
+          "remote shutoff where safe/compatible"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_HYTTE_LEAK",
+          "Q_NO_HYTTE_FROST"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "REVIEW_REQUIRED",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "category-specific VASK incidence by geography/time",
+          "measured native search",
+          "merchant/service coverage"
+        ]
+      },
+      {
+        "problem_id": "NO_HYTTE_POWER",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "country": "NO",
+        "name": "Remote power interruption / visibility",
+        "trigger_types": [
+          "FAILURE",
+          "SEASONAL"
+        ],
+        "components": [
+          "power",
+          "remote monitoring"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "NO_GRID_RELIABILITY_2025"
+        ],
+        "seasonality": null,
+        "geography": "NVE county/grid-company/end-user series",
+        "solution_categories": [
+          "power monitoring",
+          "alerts",
+          "backup-power adjacent products subject to electrical safety"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_HYTTE_POWER"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "REVIEW_REQUIRED",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "geographic outage exposure",
+          "native search",
+          "safe ecommerce product mapping"
+        ]
+      },
+      {
+        "problem_id": "NO_HYTTE_CONNECTIVITY",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "country": "NO",
+        "name": "Remote-property connectivity",
+        "trigger_types": [
+          "INSTALLATION",
+          "UPGRADE",
+          "COMPATIBILITY"
+        ],
+        "components": [
+          "broadband",
+          "mobile connectivity",
+          "remote sensors"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "NO_NKOM_HOLIDAY_HOME_COVERAGE_AVAILABLE_2025"
+        ],
+        "seasonality": null,
+        "geography": "municipality/address-level Nkom data",
+        "solution_categories": [
+          "connectivity hardware",
+          "antenna/router ecosystem",
+          "remote monitoring compatibility"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_HYTTE_INTERNET"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "LOW",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "actual low-coverage holiday-home concentrations",
+          "query demand",
+          "merchant gap"
+        ]
+      },
+      {
+        "problem_id": "NO_HYTTE_CLIMATE_MONITORING",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "country": "NO",
+        "name": "Remote temperature/weather/moisture visibility",
+        "trigger_types": [
+          "SEASONAL",
+          "MAINTENANCE",
+          "UPGRADE"
+        ],
+        "components": [
+          "weather",
+          "temperature",
+          "humidity"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "NO_CABINS_2026"
+        ],
+        "seasonality": "climate dependent",
+        "geography": "Frost + cabin density",
+        "solution_categories": [
+          "weather station",
+          "temperature/humidity sensors",
+          "remote monitoring"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_HYTTE_TEMP",
+          "Q_NO_HYTTE_WEATHER"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "LOW",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "measured search",
+          "source-target assortment delta"
+        ]
+      },
+      {
+        "problem_id": "NO_EV_COMPATIBILITY",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "country": "NO",
+        "name": "Model-specific accessory compatibility",
+        "trigger_types": [
+          "COMPATIBILITY",
+          "UPGRADE"
+        ],
+        "components": [
+          "vehicle model",
+          "accessory fit"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "NO_MODEL_Y_FIRST_REG_20260520"
+        ],
+        "seasonality": null,
+        "geography": "national; later model/geography",
+        "solution_categories": [
+          "exact-fit non-safety accessories",
+          "storage/transport/protection categories after validation"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_MODEL_Y_TILBEHOR"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "REVIEW_REQUIRED",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "native query volume",
+          "merchant gap",
+          "exact source-market catalogue"
+        ]
+      },
+      {
+        "problem_id": "NO_EV_CHARGING_CONTEXT",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "country": "NO",
+        "name": "Charging context / cable organization / infrastructure fit",
+        "trigger_types": [
+          "COMPATIBILITY",
+          "INSTALLATION",
+          "UPGRADE"
+        ],
+        "components": [
+          "charging",
+          "cable",
+          "home/cabin context"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "NO_EV_STOCK_EXACT_2025"
+        ],
+        "seasonality": "winter/local context possible; measure",
+        "geography": "NOBIL + housing/cabin geography",
+        "solution_categories": [
+          "non-electrical organization/protection",
+          "verified compliant charging accessories only"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_EV_LADEKABEL_OPPBEVARING"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "REGULATED_OR_HIGH_RISK",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "safe product universe",
+          "native query demand",
+          "local merchant quality"
+        ]
+      },
+      {
+        "problem_id": "NO_EV_CARRY_STORAGE",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "country": "NO",
+        "name": "Vehicle-specific carrying/storage",
+        "trigger_types": [
+          "UPGRADE",
+          "COMPATIBILITY"
+        ],
+        "components": [
+          "roof",
+          "cargo",
+          "storage"
+        ],
+        "urgency": "LOW",
+        "incidence_refs": [
+          "NO_EV_STOCK_EXACT_2025"
+        ],
+        "seasonality": null,
+        "geography": null,
+        "solution_categories": [
+          "exact-fit storage/carrying systems after fit verification"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "REVIEW_REQUIRED",
+        "evidence_status": "HYPOTHESIS",
+        "unknowns": [
+          "query forest",
+          "competition",
+          "economics"
+        ]
+      },
+      {
+        "problem_id": "NO_EV_USED_AFTERMARKET",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "country": "NO",
+        "name": "Second-hand vehicle aftermarket",
+        "trigger_types": [
+          "REPLACEMENT",
+          "MAINTENANCE",
+          "UPGRADE"
+        ],
+        "components": [
+          "used vehicle cohort",
+          "missing/replacement accessories"
+        ],
+        "urgency": "LOW",
+        "incidence_refs": [],
+        "seasonality": null,
+        "geography": null,
+        "solution_categories": [
+          "replacement accessories",
+          "consumables where appropriate"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "REVIEW_REQUIRED",
+        "evidence_status": "HYPOTHESIS",
+        "unknowns": [
+          "ownership transfer series",
+          "age cohorts",
+          "query demand"
+        ]
+      },
+      {
+        "problem_id": "NO_INDOOR_RADON_MEASURE",
+        "ecosystem_id": "NO_INDOOR_AIR",
+        "country": "NO",
+        "name": "Radon measurement / interpretation",
+        "trigger_types": [
+          "COMPLIANCE",
+          "MAINTENANCE"
+        ],
+        "components": [
+          "radon",
+          "indoor air"
+        ],
+        "urgency": "HIGH",
+        "incidence_refs": [
+          "NO_RADON_MEASURED_HOME_2023",
+          "NO_RADON_DEATHS_ESTIMATE_2026"
+        ],
+        "seasonality": null,
+        "geography": "risk varies; add official mapping when machine data available",
+        "solution_categories": [
+          "radon measurement",
+          "continuous monitoring",
+          "decision guidance"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_RADONMALER"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "LOW",
+        "evidence_status": "PARTIAL",
+        "unknowns": [
+          "query metrics",
+          "merchant gap",
+          "remediation channel boundary"
+        ]
+      },
+      {
+        "problem_id": "NO_INDOOR_MOISTURE_AIR",
+        "ecosystem_id": "NO_INDOOR_AIR",
+        "country": "NO",
+        "name": "Moisture / indoor-air monitoring",
+        "trigger_types": [
+          "MAINTENANCE",
+          "FAILURE"
+        ],
+        "components": [
+          "humidity",
+          "moisture",
+          "air quality"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [],
+        "seasonality": "climate/housing dependent",
+        "geography": null,
+        "solution_categories": [
+          "measurement",
+          "monitoring",
+          "diagnostic tools"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "LOW",
+        "evidence_status": "HYPOTHESIS",
+        "unknowns": [
+          "problem incidence",
+          "query demand",
+          "merchant gap"
+        ]
+      },
+      {
+        "problem_id": "NO_WEATHER_CONFIGURATION_COMPATIBILITY",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "country": "NO",
+        "name": "Weather-station model/configuration/compatibility decision",
+        "trigger_types": [
+          "COMPATIBILITY",
+          "INSTALLATION",
+          "REPLACEMENT",
+          "UPGRADE"
+        ],
+        "components": [
+          "station",
+          "sensor",
+          "WeatherLink",
+          "mounting",
+          "winter accessories"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "NO_DAVIS_RAW_SCORE_20260907"
+        ],
+        "seasonality": null,
+        "geography": "cabin/farm/coastal contexts",
+        "solution_categories": [
+          "Davis exact models",
+          "sensors",
+          "replacement parts",
+          "verified accessories"
+        ],
+        "native_query_seed_ids": [
+          "Q_NO_DAVIS_6242",
+          "Q_NO_DAVIS_HYTTE"
+        ],
+        "fulfilment_mode": "PRODUCT_PLUS_GUIDANCE",
+        "safety": "LOW",
+        "evidence_status": "ACTIVE_VALIDATION",
+        "unknowns": [
+          "Keyword Planner metrics",
+          "dealer economics",
+          "reseller/service terms"
+        ]
+      }
+    ],
+    "business_hypotheses": [
+      {
+        "business_hypothesis_id": "BIZ_NO_DAVIS_SPECIALIST_V1",
+        "country": "NO",
+        "created_at": "2026-09-07",
+        "status": "HOLD_VALIDATE",
+        "hypothesis_id": "H_NO_DAVIS_TRANSPLANT_V1",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "product_market_id": "NO_DAVIS_WEATHER",
+        "customer_jobs": [
+          "choose correct Davis station for cabin/farm/coastal/remote use",
+          "verify sensor/accessory compatibility",
+          "configure WeatherLink/smart-home integration",
+          "source replacement/maintenance parts"
+        ],
+        "catalog_architecture": [
+          "5 anchor station models",
+          "verified accessory/replacement tail",
+          "compatibility-verified bundles"
+        ],
+        "source_archetype_ids": [
+          "NL_DAVIS_SPECIALIST"
+        ],
+        "proposed_moat": [
+          "native Norwegian decision support",
+          "configuration/compatibility",
+          "hytte/farm/winter guidance",
+          "local fulfilment/support clarity"
+        ],
+        "acquisition_wedges": [
+          "exact-model organic/free listings",
+          "comparison/problem content",
+          "paid exact-model only after CPC/economics gates"
+        ],
+        "fulfilment_requirement": "Norwegian/Nordic authorized dealer path with transparent ETA",
+        "economics_required": [
+          "verified net cost",
+          "returns/warranty reserve",
+          ">=3 anchor SKUs positive contribution",
+          "paid headroom gate if advertising"
+        ],
+        "falsifiers": [
+          "dealer economics fail",
+          "resale/service terms prohibit model",
+          "exact native demand inadequate",
+          "local specialist quality already equivalent"
+        ],
+        "launchable": false
+      }
+    ],
+    "queries": [
+      {
+        "query_id": "Q_NO_HYTTE_LEAK",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "problem_id": "NO_HYTTE_WATER_FROST",
+        "native_phrase": "vannlekkasje hytte sensor",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_HYTTE_FROST",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "problem_id": "NO_HYTTE_WATER_FROST",
+        "native_phrase": "frostvakt hytte fjernstyring",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_HYTTE_POWER",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "problem_id": "NO_HYTTE_POWER",
+        "native_phrase": "str\u00f8moverv\u00e5king hytte",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_HYTTE_INTERNET",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "problem_id": "NO_HYTTE_CONNECTIVITY",
+        "native_phrase": "internett hytte router",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_HYTTE_TEMP",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "problem_id": "NO_HYTTE_CLIMATE_MONITORING",
+        "native_phrase": "temperaturm\u00e5ler hytte wifi",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_HYTTE_WEATHER",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "problem_id": "NO_HYTTE_CLIMATE_MONITORING",
+        "native_phrase": "v\u00e6rstasjon hytte",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_MODEL_Y_TILBEHOR",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "problem_id": "NO_EV_COMPATIBILITY",
+        "native_phrase": "tesla model y tilbeh\u00f8r",
+        "normalized_intent": "TRANSACTIONAL",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_EV_LADEKABEL_OPPBEVARING",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "problem_id": "NO_EV_CHARGING_CONTEXT",
+        "native_phrase": "ladekabel oppbevaring",
+        "normalized_intent": "TRANSACTIONAL_RESEARCH",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_RADONMALER",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_INDOOR_AIR",
+        "problem_id": "NO_INDOOR_RADON_MEASURE",
+        "native_phrase": "radonm\u00e5ler",
+        "normalized_intent": "TRANSACTIONAL",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_DAVIS_6242",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "problem_id": "NO_WEATHER_CONFIGURATION_COMPATIBILITY",
+        "native_phrase": "davis 6242eu",
+        "normalized_intent": "EXACT_MODEL",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      },
+      {
+        "query_id": "Q_NO_DAVIS_HYTTE",
+        "country": "NO",
+        "language": "nb",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "problem_id": "NO_WEATHER_CONFIGURATION_COMPATIBILITY",
+        "native_phrase": "davis vantage vue norge",
+        "normalized_intent": "EXACT_MODEL",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "GeoDrop problem decomposition / prior research; must be expanded with source-market pages + Keyword Ideas",
+        "metrics": {
+          "monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "bid_low": null,
+          "bid_high": null,
+          "trend_3m": null,
+          "trend_12m": null
+        },
+        "metric_source_refs": [],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only. Never use as demand evidence until measured."
+      }
+    ],
+    "ecosystems": [
+      {
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "country": "NO",
+        "name": "Hytte / leisure-property remote home systems",
+        "state": "PRIORITY_RESEARCH",
+        "definition": "Norwegian leisure properties and remote/home systems; preserve multiple official stock definitions rather than collapsing them.",
+        "installed_base_refs": [
+          "NO_CABINS_2026",
+          "NO_HOLIDAY_HOUSES_ALT_2025"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [
+          "NO_CABINS_GROWTH_10Y_2026"
+        ],
+        "replacement_refs": [],
+        "geography_refs": [
+          "NO_NKOM_HOLIDAY_HOME_COVERAGE_AVAILABLE_2025"
+        ],
+        "problem_refs": [
+          "NO_HYTTE_WATER_FROST",
+          "NO_HYTTE_POWER",
+          "NO_HYTTE_CONNECTIVITY",
+          "NO_HYTTE_CLIMATE_MONITORING"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "DK",
+          "DE",
+          "NL"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 19,
+          "growth_replacement_pressure": 9,
+          "problem_incidence_urgency": 11,
+          "native_search_demand": null,
+          "target_merchant_service_lag": null,
+          "source_market_proof": null,
+          "localization_geographic_edge": 9
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "NO_CABINS_2026",
+            "NO_HOLIDAY_HOUSES_ALT_2025"
+          ],
+          "growth_replacement_pressure": [
+            "NO_CABINS_GROWTH_10Y_2026"
+          ],
+          "problem_incidence_urgency": [
+            "NO_VASK_MARKET_COVERAGE_2026",
+            "NO_GRID_RELIABILITY_2025"
+          ],
+          "localization_geographic_edge": [
+            "NO_NKOM_HOLIDAY_HOME_COVERAGE_AVAILABLE_2025"
+          ]
+        },
+        "falsifiers": [
+          "native problem queries show little commercial intent",
+          "good local merchants already solve selection/install/monitoring comprehensively",
+          "safety/service burdens make ecommerce unsuitable"
+        ],
+        "next_action": "Ingest municipality cabin stock + Frost exposure + VASK queried incidence + NVE outage + Nkom coverage; then measure query forest and target/source merchant gaps.",
+        "discovery_score": {
+          "measured_points": 48,
+          "max_measured_points": 60,
+          "evidence_coverage": 0.6,
+          "normalized_measured_score": 80.0,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      },
+      {
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "country": "NO",
+        "name": "Exact-model EV aftermarket",
+        "state": "PRIORITY_RESEARCH",
+        "definition": "Active and rapidly changing Norwegian EV installed base, decomposed by make/model/age/geography and second-hand transfers where obtainable.",
+        "installed_base_refs": [
+          "NO_EV_STOCK_EXACT_2025",
+          "NO_MODEL_Y_FIRST_REG_20260520"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [
+          "NO_EV_STOCK_GROWTH_YOY_2025",
+          "NO_EV_STOCK_GROWTH_5Y_2025"
+        ],
+        "replacement_refs": [],
+        "geography_refs": [],
+        "problem_refs": [
+          "NO_EV_COMPATIBILITY",
+          "NO_EV_CHARGING_CONTEXT",
+          "NO_EV_CARRY_STORAGE",
+          "NO_EV_USED_AFTERMARKET"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "DE",
+          "NL"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 19,
+          "growth_replacement_pressure": 14,
+          "problem_incidence_urgency": null,
+          "native_search_demand": null,
+          "target_merchant_service_lag": null,
+          "source_market_proof": null,
+          "localization_geographic_edge": 7
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "NO_EV_STOCK_EXACT_2025",
+            "NO_MODEL_Y_FIRST_REG_20260520"
+          ],
+          "growth_replacement_pressure": [
+            "NO_EV_STOCK_GROWTH_YOY_2025",
+            "NO_EV_STOCK_GROWTH_5Y_2025"
+          ]
+        },
+        "falsifiers": [
+          "OEM/marketplace commoditization eliminates specialist margin",
+          "compatibility/safety risk too high",
+          "merchant ecosystem has already caught model growth"
+        ],
+        "next_action": "Acquire model/cohort/geography/transfer series, discover source-market exact-model assortments, measure native model+problem queries and merchant-growth lag.",
+        "discovery_score": {
+          "measured_points": 40,
+          "max_measured_points": 45,
+          "evidence_coverage": 0.45,
+          "normalized_measured_score": 88.9,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      },
+      {
+        "ecosystem_id": "NO_INDOOR_AIR",
+        "country": "NO",
+        "name": "Indoor air / radon / moisture monitoring",
+        "state": "RESEARCH",
+        "definition": "Housing installed base exposed to radon/moisture/air-quality measurement and remediation decisions.",
+        "installed_base_refs": [
+          "NO_HOMEOWNERSHIP_2024",
+          "NO_DETACHED_HOUSE_2024"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [],
+        "replacement_refs": [],
+        "geography_refs": [],
+        "problem_refs": [
+          "NO_INDOOR_RADON_MEASURE",
+          "NO_INDOOR_MOISTURE_AIR"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "DE",
+          "NL"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 14,
+          "growth_replacement_pressure": null,
+          "problem_incidence_urgency": 13,
+          "native_search_demand": null,
+          "target_merchant_service_lag": null,
+          "source_market_proof": null,
+          "localization_geographic_edge": 9
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "NO_HOMEOWNERSHIP_2024",
+            "NO_DETACHED_HOUSE_2024"
+          ],
+          "problem_incidence_urgency": [
+            "NO_RADON_DEATHS_ESTIMATE_2026",
+            "NO_RADON_MEASURED_HOME_2023"
+          ]
+        },
+        "falsifiers": [
+          "monitor category is fully commoditized",
+          "remediation rather than product selection captures value",
+          "local specialists already dominate decision support"
+        ],
+        "next_action": "Add regional risk/measurement data, native query measurements and exact monitor/remediation merchant graph.",
+        "discovery_score": {
+          "measured_points": 36,
+          "max_measured_points": 45,
+          "evidence_coverage": 0.45,
+          "normalized_measured_score": 80.0,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      },
+      {
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "country": "NO",
+        "name": "Professional weather / remote property instrumentation",
+        "state": "ACTIVE_VALIDATION",
+        "definition": "Professional/prosumer weather stations, sensors, connectivity, replacement parts and configuration for cabins/farms/coastal/remote properties.",
+        "installed_base_refs": [
+          "NO_CABINS_2026"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [],
+        "replacement_refs": [],
+        "geography_refs": [],
+        "problem_refs": [
+          "NO_WEATHER_CONFIGURATION_COMPATIBILITY"
+        ],
+        "source_market_candidates": [
+          "NL",
+          "SE",
+          "DE"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 12,
+          "growth_replacement_pressure": null,
+          "problem_incidence_urgency": 9,
+          "native_search_demand": null,
+          "target_merchant_service_lag": 11,
+          "source_market_proof": 8,
+          "localization_geographic_edge": 9
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "NO_CABINS_2026"
+          ],
+          "target_merchant_service_lag": [
+            "NO_DAVIS_RAW_SCORE_20260907"
+          ],
+          "source_market_proof": [
+            "NO_DAVIS_RAW_SCORE_20260907"
+          ]
+        },
+        "falsifiers": [
+          "Davis exact-model demand too small",
+          "dealer economics fail",
+          "local incumbents already provide equivalent decision/support depth"
+        ],
+        "next_action": "Resolve exact Keyword Planner, dealer net costs/resale rules and source-target feature census.",
+        "discovery_score": {
+          "measured_points": 49,
+          "max_measured_points": 70,
+          "evidence_coverage": 0.7,
+          "normalized_measured_score": 70.0,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      }
+    ],
+    "decisions": [
+      {
+        "decision_id": "DEC_NO_HYTTE_HOME_20260907",
+        "country": "NO",
+        "object_type": "ECOSYSTEM",
+        "object_id": "NO_HYTTE_HOME",
+        "as_of": "2026-09-07",
+        "decision": "PRIORITY_RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_HYTTE_HOME_20260907",
+        "reason": "Ingest municipality cabin stock + Frost exposure + VASK queried incidence + NVE outage + Nkom coverage; then measure query forest and target/source merchant gaps.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_EV_AFTERMARKET_20260907",
+        "country": "NO",
+        "object_type": "ECOSYSTEM",
+        "object_id": "NO_EV_AFTERMARKET",
+        "as_of": "2026-09-07",
+        "decision": "PRIORITY_RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_EV_AFTERMARKET_20260907",
+        "reason": "Acquire model/cohort/geography/transfer series, discover source-market exact-model assortments, measure native model+problem queries and merchant-growth lag.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_INDOOR_AIR_20260907",
+        "country": "NO",
+        "object_type": "ECOSYSTEM",
+        "object_id": "NO_INDOOR_AIR",
+        "as_of": "2026-09-07",
+        "decision": "RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_INDOOR_AIR_20260907",
+        "reason": "Add regional risk/measurement data, native query measurements and exact monitor/remediation merchant graph.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_PRO_WEATHER_REMOTE_20260907",
+        "country": "NO",
+        "object_type": "ECOSYSTEM",
+        "object_id": "NO_PRO_WEATHER_REMOTE",
+        "as_of": "2026-09-07",
+        "decision": "ACTIVE_VALIDATION",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_PRO_WEATHER_REMOTE_20260907",
+        "reason": "Resolve exact Keyword Planner, dealer net costs/resale rules and source-target feature census.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_DAVIS_WEATHER_20260907",
+        "country": "NO",
+        "object_type": "PRODUCT_MARKET",
+        "object_id": "NO_DAVIS_WEATHER",
+        "as_of": "2026-09-07",
+        "decision": "HOLD_VALIDATE",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_DAVIS_WEATHER_20260907",
+        "reason": "Obtain trade terms and run Keyword Planner; do not buy domain or spend on ads.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_HYTTE_REMOTE_SYSTEMS_20260907",
+        "country": "NO",
+        "object_type": "PRODUCT_MARKET",
+        "object_id": "NO_HYTTE_REMOTE_SYSTEMS",
+        "as_of": "2026-09-07",
+        "decision": "DISCOVERED",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_HYTTE_REMOTE_SYSTEMS_20260907",
+        "reason": "Decompose installed-base problems into exact SKUs and validate source-market products.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_INDOOR_AIR_RADON_20260907",
+        "country": "NO",
+        "object_type": "PRODUCT_MARKET",
+        "object_id": "NO_INDOOR_AIR_RADON",
+        "as_of": "2026-09-07",
+        "decision": "DISCOVERED",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_INDOOR_AIR_RADON_20260907",
+        "reason": "Build exact-model seller + query matrix.",
+        "prospective": false
+      },
+      {
+        "decision_id": "DEC_NO_EV_MODEL_AFTERMARKET_20260907",
+        "country": "NO",
+        "object_type": "PRODUCT_MARKET",
+        "object_id": "NO_EV_MODEL_AFTERMARKET",
+        "as_of": "2026-09-07",
+        "decision": "DISCOVERED",
+        "strategy_id": null,
+        "score_snapshot_ref": "SCORE_NO_EV_MODEL_AFTERMARKET_20260907",
+        "reason": "Add OFV model registrations/install-base adapter, then cross with accessories/source markets.",
+        "prospective": false
+      }
+    ],
+    "product_markets": [
+      {
+        "product_market_id": "NO_DAVIS_WEATHER",
+        "country": "NO",
+        "name": "Davis Instruments professional/prosumer weather station specialist",
+        "state": "HOLD_VALIDATE",
+        "score": 85,
+        "confidence": 0.81,
+        "confidence_adjusted_score": 68.9,
+        "components": {
+          "demand": 18,
+          "merchant_gap": 16,
+          "economics": 19,
+          "supply": 13,
+          "localization_edge": 9,
+          "structural_demand": 10
+        },
+        "hard_gates": {
+          "native_query_set_defined": true,
+          "content_gap_evidence": true,
+          "resale_allowed": null,
+          "supplier_path_verified": true,
+          "landed_cost_verified": false,
+          "positive_pre_ad_contribution": false,
+          "delivery_feasible": true,
+          "returns_warranty_known": false,
+          "local_checkout_feasible": true,
+          "exact_sku_identity": true,
+          "keyword_planner_measured": false,
+          "cpc_measured": false,
+          "three_viable_anchor_skus": false,
+          "base_case_headroom_gte_1_2": false
+        },
+        "evidence_refs": [
+          "NO_DAVIS_RAW_SCORE_20260907",
+          "NO_DAVIS_ADJ_SCORE_20260907",
+          "NO_DAVIS_6242_RETAIL_LOW_20260907",
+          "NO_DAVIS_6242_RRP_20260907",
+          "NO_GADS_DAVIS_CPC_202609",
+          "NO_GADS_DAVIS_SEARCHVOL_202609",
+          "NO_DAVIS_DEALER_COST_20260907"
+        ],
+        "exact_skus": [
+          "6242EU",
+          "6252EU",
+          "6253EU",
+          "6262EU",
+          "6263EU"
+        ],
+        "source_market_archetype": "NL specialist exact-model meteorology retail with configuration/compatibility/support",
+        "thesis": "Not an availability gap. Potential moat is meteorology-first decision support, compatibility, cabin/farm/winter guidance, accessories and support.",
+        "unknowns": [
+          "Flak/Hovdan dealer net prices",
+          "online-only reseller/direct-ship rules",
+          "warranty/RMA allocation",
+          "exact Norwegian Keyword Planner volume/CPC",
+          "verified contribution for >=3 anchor SKUs"
+        ],
+        "next_action": "Obtain trade terms and run Keyword Planner; do not buy domain or spend on ads.",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "hypothesis_id": "H_NO_DAVIS_TRANSPLANT_V1",
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      },
+      {
+        "product_market_id": "NO_HYTTE_REMOTE_SYSTEMS",
+        "country": "NO",
+        "name": "Remote hytte monitoring systems",
+        "state": "DISCOVERED",
+        "score": 72,
+        "confidence": 0.62,
+        "components": {
+          "demand": 14,
+          "merchant_gap": 12,
+          "economics": 16,
+          "supply": 11,
+          "localization_edge": 9,
+          "structural_demand": 10
+        },
+        "hard_gates": {},
+        "evidence_refs": [
+          "NO_CABINS_2026"
+        ],
+        "thesis": "Large country-specific installed base creates freeze/water/climate/power/security decision problems.",
+        "unknowns": [
+          "exact product/SKU map",
+          "Keyword Planner demand",
+          "GOOD_SELLER_GAP",
+          "supplier economics"
+        ],
+        "next_action": "Decompose installed-base problems into exact SKUs and validate source-market products.",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "hypothesis_id": null,
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      },
+      {
+        "product_market_id": "NO_INDOOR_AIR_RADON",
+        "country": "NO",
+        "name": "Indoor air / radon / moisture specialist",
+        "state": "DISCOVERED",
+        "score": 70,
+        "confidence": 0.58,
+        "components": {
+          "demand": 13,
+          "merchant_gap": 11,
+          "economics": 16,
+          "supply": 11,
+          "localization_edge": 9,
+          "structural_demand": 10
+        },
+        "hard_gates": {},
+        "evidence_refs": [
+          "NO_HOMEOWNERSHIP_2024",
+          "NO_DETACHED_HOUSE_2024",
+          "NO_RADON_MEASURED_HOME_2023",
+          "NO_RADON_DEATHS_ESTIMATE_2026"
+        ],
+        "thesis": "Persistent housing/climate problem space; strongest form is decision/monitoring ecosystem, not one commodity monitor.",
+        "unknowns": [
+          "exact monitor/remediation SKU economics",
+          "current merchant graph",
+          "native search/CPC"
+        ],
+        "next_action": "Build exact-model seller + query matrix.",
+        "ecosystem_id": "NO_INDOOR_AIR",
+        "hypothesis_id": "H_NO_RADON_MEASUREMENT_GAP_V1",
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      },
+      {
+        "product_market_id": "NO_EV_MODEL_AFTERMARKET",
+        "country": "NO",
+        "name": "EV exact-model aftermarket ecosystems",
+        "state": "DISCOVERED",
+        "score": 68,
+        "confidence": 0.5,
+        "components": {
+          "demand": 14,
+          "merchant_gap": 10,
+          "economics": 16,
+          "supply": 10,
+          "localization_edge": 8,
+          "structural_demand": 10
+        },
+        "hard_gates": {},
+        "evidence_refs": [
+          "NO_EV_NEW_SHARE_202608",
+          "NO_EV_STOCK_MILLION_2026H1"
+        ],
+        "thesis": "Use rapidly changing model installed base to find aftermarket merchant lag; avoid generic accessories.",
+        "unknowns": [
+          "exact model-level installed-base and accessory mapping",
+          "exact product mapping",
+          "merchant gap",
+          "safety/compliance"
+        ],
+        "next_action": "Add OFV model registrations/install-base adapter, then cross with accessories/source markets.",
+        "ecosystem_id": "NO_EV_AFTERMARKET",
+        "hypothesis_id": null,
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      }
+    ],
+    "source_archetypes": [
+      {
+        "archetype_id": "NL_DAVIS_SPECIALIST",
+        "source_country": "NL",
+        "target_country": "NO",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "domain": "weerstationkopen.nl",
+        "merchant_type": "EXACT_MODEL_SPECIALIST",
+        "evidence_type": "internal_research",
+        "evidence_refs": [
+          "NO_DAVIS_RAW_SCORE_20260907"
+        ],
+        "catalog_metrics": {
+          "anchor_sku_count": null,
+          "accessory_replacement_count": null,
+          "compatibility_assets": null
+        },
+        "capabilities": [
+          "in-stock exact Davis products observed",
+          "optional preconfiguration observed",
+          "Home Assistant/Homey guidance observed"
+        ],
+        "profitability_proven": false,
+        "transferable_elements": [
+          "configuration",
+          "compatibility",
+          "decision guidance",
+          "accessory/parts tail"
+        ],
+        "unknowns": [
+          "audited traffic/sales/profit",
+          "normalized current catalogue counts"
+        ]
+      },
+      {
+        "archetype_id": "SE_NORDIC_ECOM_SOURCE",
+        "source_country": "SE",
+        "target_country": "NO",
+        "ecosystem_id": null,
+        "domain": null,
+        "merchant_type": "COUNTRY_SOURCE_MARKET",
+        "evidence_type": "industry_report",
+        "evidence_refs": [
+          "SE_ECOM_INTL_SHARE_2026Q1"
+        ],
+        "catalog_metrics": {},
+        "capabilities": [
+          "strong Nordic internationalization",
+          "Norway/Denmark/Finland established neighboring targets"
+        ],
+        "profitability_proven": false,
+        "transferable_elements": [
+          "local checkout adaptation",
+          "Nordic fulfilment patterns",
+          "specialist assortment discovery"
+        ],
+        "unknowns": [
+          "product-specific archetype census required"
+        ]
+      }
+    ],
+    "merchants": [
+      {
+        "merchant_id": "NO_FLAK",
+        "country": "NO",
+        "domain": "flak.no",
+        "legal_name": "Flak AS",
+        "merchant_type": "DISTRIBUTOR_DEALER_NETWORK",
+        "ecosystems": [
+          "NO_PRO_WEATHER_REMOTE"
+        ],
+        "brands": [
+          "Davis Instruments"
+        ],
+        "evidence_refs": [
+          "NO_DAVIS_6242_RRP_20260907"
+        ],
+        "merchant_quality_score": null,
+        "good_seller": null,
+        "capabilities": [
+          "local wholesale/dealer path",
+          "public Davis catalogue"
+        ],
+        "unknowns": [
+          "net dealer price",
+          "online-only eligibility",
+          "direct/blind shipping",
+          "warranty/RMA",
+          "feed/API rights"
+        ]
+      },
+      {
+        "merchant_id": "NO_HOVDAN",
+        "country": "NO",
+        "domain": "hovdan.no",
+        "legal_name": "Hovdan-Poly AS",
+        "merchant_type": "B2B_DISTRIBUTOR_RETAIL",
+        "ecosystems": [
+          "NO_PRO_WEATHER_REMOTE"
+        ],
+        "brands": [
+          "Davis Instruments"
+        ],
+        "evidence_refs": [
+          "NO_DAVIS_RAW_SCORE_20260907"
+        ],
+        "merchant_quality_score": null,
+        "good_seller": null,
+        "capabilities": [
+          "B2B structure",
+          "local Davis stock/replacements observed in prior validation"
+        ],
+        "unknowns": [
+          "net pricing",
+          "ecommerce terms"
+        ]
+      },
+      {
+        "merchant_id": "NO_MARINESHOP",
+        "country": "NO",
+        "domain": "marineshop.no",
+        "legal_name": null,
+        "merchant_type": "GENERAL_SPECIALTY_RETAIL",
+        "ecosystems": [
+          "NO_PRO_WEATHER_REMOTE"
+        ],
+        "brands": [
+          "Davis Instruments"
+        ],
+        "evidence_refs": [
+          "NO_DAVIS_6242_RETAIL_LOW_20260907"
+        ],
+        "merchant_quality_score": null,
+        "good_seller": null,
+        "capabilities": [
+          "current local retail/fulfilment evidence"
+        ],
+        "unknowns": [
+          "full decision-support quality score"
+        ]
+      }
+    ],
+    "raw_snapshot_manifest": [
+      {
+        "snapshot_id": "SNAPSHOT_MANIFEST_BOOTSTRAP_20260907",
+        "country": "NO",
+        "dataset": "bootstrap_public_research",
+        "observed_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "storage_uri": null,
+        "sha256": null,
+        "immutable": true,
+        "point_in_time_safe": false,
+        "notes": "Bootstrap normalized from cited public pages. Future automated runs must save raw bytes/extracts and SHA-256 before normalization."
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "postnord_no_consumer_2026_spring",
+        "title": "Norwegian e-commerce consumer behavior - spring 2026",
+        "url": "https://www.postnord.com/insights/norway/norway-spring-2026/norwegian-e-commerce-consumer-behavior-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "86% shopped online last 30 days; category/cohort patterns.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_no_crossborder_2026_spring",
+        "title": "Cross-border shopping marketplaces in Norway - spring 2026",
+        "url": "https://www.postnord.com/insights/norway/norway-spring-2026/cross-border-shopping-marketplaces-in-norway-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "78% cross-border; Sweden replaced China as top origin; Denmark entered top three.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_no_checkout_2026_spring",
+        "title": "Norwegian payment and checkout behavior - spring 2026",
+        "url": "https://www.postnord.com/insights/norway/norway-spring-2026/norwegian-payment-and-checkout-behavior-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Vipps most used/preferred; 57% smooth checkout; ~6/10 canceled checkout; shipping cost leading reason.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_no_delivery_2026_spring",
+        "title": "E-commerce delivery trends in Norway - spring 2026",
+        "url": "https://www.postnord.com/insights/norway/norway-spring-2026/e-commerce-delivery-trends-in-norway-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Service point most used, home preferred, lockers rising; 51% paid extra for home delivery.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ssb_population_2026q2",
+        "title": "Population",
+        "url": "https://www.ssb.no/en/befolkning/folketall/statistikk/befolkning",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "published_at": "2026-08-19",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Population at end Q2 2026: 5,636,904.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-08-19",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ssb_housing_2024",
+        "title": "Housing conditions, register-based",
+        "url": "https://www.ssb.no/en/bygg-bolig-og-eiendom/bolig-og-boforhold/statistikk/boforhold-registerbasert",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "published_at": "2025-02-14",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "2024 household ownership 76.5%; detached house 47.2%. Revised tenure figures due 2026-09-14.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2025-02-14",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ssb_cabins_2026",
+        "title": "Fakta om hytter og fritidsboliger",
+        "url": "https://www.ssb.no/bygg-bolig-og-eiendom/faktaside/hytter-og-ferieboliger",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "452,150 cabins and other leisure buildings in 2026.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ssb_ict_households_2025",
+        "title": "ICT usage in households",
+        "url": "https://www.ssb.no/en/teknologi-og-innovasjon/informasjons-og-kommunikasjonsteknologi-ikt/statistikk/bruk-av-ikt-i-husholdningene",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "published_at": "2025-09-24",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "2025 internet use among ages 16-79 = 100%; next update 2026-09-25.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2025-09-24",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ssb_retail_july_2026",
+        "title": "Varehandelsindeksen / Detaljhandelen ned i juli",
+        "url": "https://www.ssb.no/varehandel-og-tjenesteyting/varehandel/statistikk/varehandelsindeksen",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "published_at": "2026-08-28",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "July 2026 YoY retail -2.0%; non-store retail +10.0%; ICT shops -10.9%; other household goods +2.0%; books/music/leisure +5.1%.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-08-28",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ssb_api_v2",
+        "title": "API for the Statbank Norway",
+        "url": "https://www.ssb.no/en/api/pxwebapi",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "published_at": "2026-02-26",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "PxWebApi v2: GET/POST access to ~7,500 tables; open/no registration.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-02-26",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "skatteetaten_vat_2026",
+        "title": "Value added tax",
+        "url": "https://www.skatteetaten.no/en/rates/value-added-tax/",
+        "publisher": "Norwegian Tax Administration",
+        "evidence_type": "primary_official",
+        "published_at": null,
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Standard VAT 25%.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "skatteetaten_voec_2026",
+        "title": "VAT On E-Commerce - VOEC",
+        "url": "https://www.skatteetaten.no/en/business-and-organisation/vat-and-duties/vat/foreign/e-commerce-voec/",
+        "publisher": "Norwegian Tax Administration",
+        "evidence_type": "primary_official",
+        "published_at": null,
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "VOEC applies to qualifying low-value goods below NOK 3,000 per item; VAT collected at checkout by registered store.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "forbrukerradet_cancel_2026",
+        "title": "Right to cancel",
+        "url": "https://www.forbrukerradet.no/regret-a-purchase/",
+        "publisher": "Norwegian Consumer Council",
+        "evidence_type": "primary_official",
+        "published_at": null,
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Online/distance purchases have cooling-off rights; goods generally returned within 14 days after notice; return cost rules must be disclosed.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "virke_retail_forecast_2026",
+        "title": "Prognoser for norsk detaljhandel 2026",
+        "url": "https://www.virke.no/analyse/norsk-detaljhandel/prognoser-detaljhandelen/",
+        "publisher": "Virke",
+        "evidence_type": "industry_report",
+        "published_at": "2026-04",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Purchasing power expected to improve; capital-goods and sports categories expected stronger from low bases.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "prisjakt_partner_api_2026",
+        "title": "Prisjakt Partner Search API",
+        "url": "https://developer.prisjakt.nu/docs/sections/for-partners/integrations/partner-search/",
+        "publisher": "Prisjakt",
+        "evidence_type": "platform_first_party",
+        "published_at": null,
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "NO/FI/DK supported; products/offers, popularity ordering, price trend, purchasable in-stock offers; production rate limit 10,000/hour.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "google_ads_keyword_metrics_v25",
+        "title": "KeywordPlanHistoricalMetrics v25",
+        "url": "https://developers.google.com/google-ads/api/reference/rpc/v25/KeywordPlanHistoricalMetrics",
+        "publisher": "Google",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026-07-22",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Avg monthly searches, monthly volumes, competition/index, avg CPC and top-of-page bid ranges; geo/language targetable.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-07-22",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "google_trends_api_alpha",
+        "title": "Google Trends API Alpha",
+        "url": "https://developers.google.com/search/apis/trends",
+        "publisher": "Google",
+        "evidence_type": "platform_first_party",
+        "published_at": null,
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Rolling 5-year data, regular intervals, regions/subregions, consistently scaled; alpha access.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "gmc_bigquery_transfer_2026",
+        "title": "Load Google Merchant Center data into BigQuery",
+        "url": "https://docs.cloud.google.com/bigquery/docs/merchant-center-transfer",
+        "publisher": "Google Cloud",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026-08-26",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Products, Performance, Best Sellers (2y), Price Competitiveness, Price Insights; market-insights eligibility applies.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-08-26",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "google_content_api_sunset_2026",
+        "title": "Content API for Shopping deprecation and sunset",
+        "url": "https://developers.google.com/shopping-content/guides/deprecation-and-sunset",
+        "publisher": "Google",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026-09-01",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Sunset 2026-08-18; progressive failures from 2026-09-01; use Merchant API.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-01",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "huang_chang_2019_cbec",
+        "title": "Cross-border e-commerce: consumers\u2019 intention to shop on foreign websites",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1066224319000601",
+        "publisher": "Internet Research",
+        "evidence_type": "peer_reviewed",
+        "published_at": "2019",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Trust/reputation, price competitiveness, uniqueness, communication cost and waiting cost affect cross-border value/intention.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "wang_2021_return_policy",
+        "title": "The impact of cross border E-tailer's return policy on consumer's purchase intention",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0969698920313758",
+        "publisher": "Journal of Retailing and Consumer Services",
+        "evidence_type": "peer_reviewed",
+        "published_at": "2021",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Lenient returns can increase perceived quality/lower perceived risk; shipment origin moderates effects.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "apjml_2026_trust",
+        "title": "Building bridges of trust: payment, certification, logistics and herd mentality in cross-border e-commerce",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1355585525001509",
+        "publisher": "Asia Pacific Journal of Marketing and Logistics",
+        "evidence_type": "peer_reviewed",
+        "published_at": "2026-03-31",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": "Trusted third-party payment, certification and logistics strengthen initial trust; credible reviews also matter.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-03-31",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "internal_davis_blueprint_20260907",
+        "title": "GeoDrop internal Norway Davis launch blueprint 2026-09-07 05:00",
+        "url": null,
+        "publisher": "GeoDrop internal research",
+        "evidence_type": "internal_research",
+        "published_at": "2026-09-07",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Davis raw 85, confidence .81, adjusted 68.9; HOLD_VALIDATE; hard blockers dealer net prices/resale terms/Keyword Planner.",
+        "evidence_tier": "D",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ofv_ev_aug_2026",
+        "title": "Personbilsalget g\u00e5r tilbake \u2013 seks av de ti st\u00f8rste merkene vokser",
+        "url": "https://ofv.no/aktuelt/2026/personbilsalget-g%C3%A5r-tilbake-seks-av-de-ti-st%C3%B8rste-merkene-vokser",
+        "publisher": "Opplysningsr\u00e5det for veitrafikken (OFV)",
+        "evidence_type": "industry_report",
+        "published_at": "2026-09-01",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "August 2026 new passenger-car EV share 98.7%; YTD 97.8%; Xpeng+BYD 11.4% August share vs 4.9% prior year.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-01",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ofv_ev_stock_2026h1",
+        "title": "Elbilen er ikke lenger et storbyfenomen \u2013 omstillingen er inne i en ny fase",
+        "url": "https://www.ofv.no/aktuelt/2026/elbilen-er-ikke-lenger-et-storbyfenomen-omstillingen-er-inne-i-en-ny-fase-2",
+        "publisher": "Opplysningsr\u00e5det for veitrafikken (OFV)",
+        "evidence_type": "industry_report",
+        "published_at": "2026-07-01",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "Norway passed one million electric passenger cars in the vehicle stock in H1 2026.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-07-01",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "dsa_radon_mapping_2026",
+        "title": "Nasjonal kartlegging av radon i boliger",
+        "url": "https://www.dsa.no/nyheter/nasjonal-radonkartlegging-av-radon-i-boliger",
+        "publisher": "Norwegian Radiation and Nuclear Safety Authority (DSA)",
+        "evidence_type": "primary_official",
+        "published_at": "2026-01-23",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "National mapping underway; Norway especially exposed due to geology/cold climate; ~300 lung-cancer deaths annually attributed to residential radon.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-01-23",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "dsa_radon_measurement_2025",
+        "title": "N\u00e5 b\u00f8r du m\u00e5le radon",
+        "url": "https://www.dsa.no/nyheter/-na-bor-du-male-radon",
+        "publisher": "Norwegian Radiation and Nuclear Safety Authority (DSA)",
+        "evidence_type": "primary_official",
+        "published_at": "2025",
+        "accessed_at": "2026-09-07",
+        "country": "NO",
+        "notes": "DSA reports 23% of population measured radon in own home; 35% among landlords; requirements apply to rental housing, schools, kindergartens.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ssb_holiday_house_areas_2025",
+        "title": "Holiday house areas, 2025",
+        "url": "https://www.ssb.no/en/natur-og-miljo/areal/statistikk/fritidsbyggomrader",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": "2025",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "notes": "Reports 483,631 holiday houses in 2025 (251,566 dense + 232,065 scattered). SSB warns statistics are not directly comparable with some related cabin/building statistics.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "vask_water_damage_2026",
+        "title": "VASK water damage statistics",
+        "url": "https://vask.finansnorge.no/OmVask.aspx",
+        "publisher": "Finance Norway / VASK",
+        "evidence_type": "industry_report",
+        "evidence_tier": "B",
+        "published_at": "2026",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "coverage_notes": "Insurers representing >85% of Norwegian market; current site says data through 31 Mar 2026. Query/table definitions must be captured per extract.",
+        "notes": "Useful problem-incidence source: wear/age, frost, blocked drain/backflow, corrosion and external influence.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "nve_outage_stats_2025",
+        "title": "Interruption statistics",
+        "url": "https://www.nve.no/reguleringsmyndigheten/publikasjoner-og-data/statistikk/avbrotsstatistikk/",
+        "publisher": "NVE/RME",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": "2026",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "coverage_notes": "Annual statistics 1995\u20132025 by county/grid company/end-user group.",
+        "notes": "2025 supply reliability reported 99.982%; use detailed tables for geographic outage exposure.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "nkom_coverage_2025",
+        "title": "Broadband coverage survey 2025",
+        "url": "https://nkom.no/statistikk/nokkeltall-og-interaktive-dashbord/dekningsunders%C3%B8kelsen",
+        "publisher": "Norwegian Communications Authority (Nkom)",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": "2026",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "coverage_notes": "Municipality/dense/scattered/technology views; holiday-home coverage collected; raw address-level CSV downloads are available.",
+        "notes": "Use to quantify remote-property connectivity constraints and opportunity geography.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "met_frost_api",
+        "title": "Frost API",
+        "url": "https://frost.met.no/howto.html",
+        "publisher": "MET Norway",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "coverage_notes": "Historical weather/climate observations with station/location/geographic filtering.",
+        "notes": "Build municipality exposure series for frost, precipitation, temperature, snow/wind where observations support.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "brreg_open_data",
+        "title": "Data about organisations \u2014 datasets and API",
+        "url": "https://www.brreg.no/en/use-of-data-from-the-bronnoysund-register-centre/datasets-and-api/data-about-organisations/",
+        "publisher": "Br\u00f8nn\u00f8ysund Register Centre",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "coverage_notes": "Real-time organisation search plus downloadable JSON/CSV datasets.",
+        "notes": "Merchant/legal-entity census and enrichment.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "voec_register_live",
+        "title": "Online shops and marketplaces registered in VOEC",
+        "url": "https://www.skatteetaten.no/en/person/duties/purchases-from-abroad/nettbutikker-og-e-markedsplasser-som-er-registrert-i-voec-registeret/",
+        "publisher": "Norwegian Tax Administration",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "coverage_notes": "Live register; marketplace/platform registrations can mask underlying individual sellers.",
+        "notes": "4,006 entries shown at 2026-09-07 snapshot; useful foreign-merchant census proxy.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ssb_vehicle_stock_2025",
+        "title": "Registered vehicles, 2025",
+        "url": "https://www.ssb.no/en/transport-og-reiseliv/landtransport/statistikk/bilparken",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": "2026",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "notes": "945,185 electric private cars at end-2025; +19.8% YoY and +178% from 2020 to 2025.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ssb_vehicle_make_age_table",
+        "title": "Vehicles by make and age (Statbank table 07847)",
+        "url": "https://www.ssb.no/en/statbank1/table/07847",
+        "publisher": "Statistics Norway (SSB)",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "notes": "Use for make/age cohorts; combine with model-level OFV data when licensed/available.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ofv_model_y_100k_20260520",
+        "title": "Tesla Model Y passes 100,000 first registrations in Norway",
+        "url": "https://ofv.no/aktuelt/2026/tesla-model-y-har-passert-100-000-nyregistreringer-i-norge",
+        "publisher": "OFV",
+        "evidence_type": "industry_report",
+        "evidence_tier": "B",
+        "published_at": "2026-05-20",
+        "available_at": "2026-05-20",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "notes": "100,224 first registrations by 20 May 2026.",
+        "availability_basis": "published_or_known_date"
+      },
+      {
+        "source_id": "ofv_statistics_products",
+        "title": "OFV statistics / vehicle fleet data products",
+        "url": "https://ofv.no/produkt-kategori/ofv-statistikk",
+        "publisher": "OFV",
+        "evidence_type": "industry_report",
+        "evidence_tier": "B",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "notes": "Detailed vehicle data can segment make/model/variant/geography/registration/fuel/drivetrain/transfers; access may be commercial.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "nobil_charging",
+        "title": "NOBIL national charging database",
+        "url": "https://nobil.no/",
+        "publisher": "NOBIL / Enova ecosystem",
+        "evidence_type": "industry_report",
+        "evidence_tier": "B",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "NO",
+        "point_in_time_safe": true,
+        "notes": "Charging point/location/connector/power data; use for EV infrastructure geography.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_se_ebarometer_q1_2026",
+        "title": "E-barometer Q1 2026",
+        "url": "https://www.postnord.com/insights/reports/e-barometer-q1-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "evidence_tier": "B",
+        "published_at": "2026",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "SE",
+        "point_in_time_safe": true,
+        "notes": "All eight tracked ecommerce sectors grew; ~60% of Swedish ecommerce companies sell internationally; Norway/Denmark/Finland are key neighboring markets; local checkout/payment adaptation identified as leading internationalization success factor.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "eurostat_comext",
+        "title": "Comext international trade database/API",
+        "url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started/comext-database",
+        "publisher": "Eurostat",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "EU",
+        "point_in_time_safe": true,
+        "notes": "Detailed EU trade in goods by reporter/partner/commodity/time; use CN/HS mapping with caution.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "un_comtrade",
+        "title": "UN Comtrade",
+        "url": "https://unstats.un.org/unsd/trade/data/tables.asp",
+        "publisher": "United Nations Statistics Division",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "GLOBAL",
+        "point_in_time_safe": true,
+        "notes": "Global bilateral commodity trade; monthly/annual where available.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "eprel_registry",
+        "title": "European Product Registry for Energy Labelling (EPREL)",
+        "url": "https://energy-efficient-products.ec.europa.eu/eprel_en",
+        "publisher": "European Commission",
+        "evidence_type": "primary_official",
+        "evidence_tier": "A",
+        "published_at": null,
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "EU",
+        "point_in_time_safe": true,
+        "notes": "Product registry for regulated energy-labelled categories; useful model/GTIN/product universe and compatibility discovery where relevant.",
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "sulpu_heat_pumps_h1_2026",
+        "title": "Heat pump deliveries grew strongly in Finland H1 2026",
+        "url": "https://www.sulpu.fi/5132-2/",
+        "publisher": "Finnish Heat Pump Association SULPU",
+        "evidence_type": "industry_report",
+        "evidence_tier": "B",
+        "published_at": "2026",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "country": "FI",
+        "point_in_time_safe": true,
+        "notes": "74,000 heat pumps H1 2026, +63% YoY; installed base approaching 2m; illustrative GeoDrop source-market/installed-base case.",
+        "availability_basis": "first_seen_by_geodrop"
+      }
+    ],
+    "source_target_gaps": [
+      {
+        "gap_id": "GAP_NO_DAVIS_NL",
+        "country": "NO",
+        "ecosystem_id": "NO_PRO_WEATHER_REMOTE",
+        "source_country": "NL",
+        "source_archetype_ids": [
+          "NL_DAVIS_SPECIALIST"
+        ],
+        "target_merchant_ids": [
+          "NO_FLAK",
+          "NO_HOVDAN",
+          "NO_MARINESHOP"
+        ],
+        "status": "PARTIAL_UNMEASURED",
+        "metrics": {
+          "source_relevant_skus": null,
+          "target_relevant_skus": null,
+          "source_good_merchants": null,
+          "target_good_merchants": null,
+          "source_decision_assets": null,
+          "target_decision_assets": null,
+          "assortment_gap_ratio": null,
+          "merchant_gap_ratio": null,
+          "content_service_gap": null,
+          "problem_demand_density": null
+        },
+        "evidence_refs": [
+          "NO_DAVIS_RAW_SCORE_20260907"
+        ],
+        "conclusion": "Qualitative source-market service pattern exists; quantitative source-target delta still required before calling this a merchant gap."
+      },
+      {
+        "gap_id": "GAP_NO_HYTTE_SE",
+        "country": "NO",
+        "ecosystem_id": "NO_HYTTE_HOME",
+        "source_country": "SE",
+        "source_archetype_ids": [
+          "SE_NORDIC_ECOM_SOURCE"
+        ],
+        "target_merchant_ids": [],
+        "status": "UNMEASURED",
+        "metrics": {},
+        "evidence_refs": [
+          "NO_CABINS_2026",
+          "SE_ECOM_INTL_SHARE_2026Q1"
+        ],
+        "conclusion": "Do not infer gap. Census Swedish source merchants and Norwegian target merchants for each measured problem branch."
+      }
+    ]
+  },
+  "installed_base": [
+    {
+      "error": "400 Unrecognized name: installed_base at [4:13]; reason: invalidQuery, location: query, message: Unrecognized name: installed_base at [4:13]\n\nLocation: EU\nJob ID: a0605964-361a-47ca-bd64-bcdafe00de73\n"
+    }
+  ],
+  "ecosystems": [],
+  "merchants": [],
+  "products": [
+    {
+      "error": "400 Unrecognized name: country_code at [3:15]; reason: invalidQuery, location: query, message: Unrecognized name: country_code at [3:15]\n\nLocation: EU\nJob ID: 5c2f4d1d-2e91-4641-8304-a4085ee390dc\n"
+    }
+  ],
+  "graph_nodes": [
+    {
+      "node_type": "country",
+      "node_id": "COUNTRY_NO",
+      "properties_json": "{\"code\": \"NO\", \"name\": \"Norway\", \"currency\": \"NOK\", \"language\": \"no\", \"ecommerce_penetration\": 0.86, \"cross_border_rate\": 0.78}"
+    },
+    {
+      "node_type": "ecosystem",
+      "node_id": "ECO_NO_EV",
+      "properties_json": "{\"system\": \"ev_charger\", \"country\": \"NO\", \"installed_base\": 945182, \"growth_rate\": 0.198, \"replacement_share\": 0.05}"
+    },
+    {
+      "node_type": "ecosystem",
+      "node_id": "ECO_NO_HYTTE",
+      "properties_json": "{\"system\": \"cabin\", \"country\": \"NO\", \"installed_base\": 484000, \"growth_rate\": 0.02, \"replacement_share\": 0.01}"
+    },
+    {
+      "node_type": "ecosystem",
+      "node_id": "ECO_NO_WS",
+      "properties_json": "{\"system\": \"weather_station\", \"country\": \"NO\", \"installed_base\": 50000, \"growth_rate\": 0.05, \"replacement_share\": 0.1}"
+    }
+  ]
+}

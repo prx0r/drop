@@ -1,0 +1,43 @@
+{
+  "country_data": {
+    "observations": [
+      {
+        "observation_id": "B13_US_HAIL_ROOFING",
+        "metric": "market_maturity",
+        "scope": "US hail/storm roofing",
+        "value": "mature",
+        "evidence_type": "probe_result",
+        "status": "OBSERVED",
+        "confidence": 0.85,
+        "notes": "Negative control: massive event-funded demand but mature market. State Farm paid >$5.6B hail claims 2025. 25,519 roofing establishments. 80.3% have <10 employees. Market is fragmented but not supply-starved.",
+        "source_id": "B13_GOLDPROBE",
+        "period": "2025-2026"
+      },
+      {
+        "observation_id": "B14_US_WARRANTY_HVAC",
+        "metric": "market_maturity",
+        "scope": "US home-warranty HVAC repair",
+        "value": "mature",
+        "evidence_type": "probe_result",
+        "status": "OBSERVED",
+        "confidence": 0.85,
+        "notes": "Negative control: transaction rights suppress marketplace. Frontdoor/AHS: 2.1M warranties, 3.8M requests, 17K contractors but 24.7% preferred do 84% of work. Closed network.",
+        "source_id": "B14_GOLDPROBE",
+        "period": "2025-2026"
+      }
+    ]
+  },
+  "installed_base": [
+    {
+      "error": "400 Unrecognized name: installed_base at [4:13]; reason: invalidQuery, location: query, message: Unrecognized name: installed_base at [4:13]\n\nLocation: EU\nJob ID: 09c28e87-4d3e-4a19-9a2a-88a4787d33d2\n"
+    }
+  ],
+  "ecosystems": [],
+  "merchants": [],
+  "products": [
+    {
+      "error": "400 Unrecognized name: country_code at [3:15]; reason: invalidQuery, location: query, message: Unrecognized name: country_code at [3:15]\n\nLocation: EU\nJob ID: 14e609aa-b934-4f0e-ae85-060a51e0ad16\n"
+    }
+  ],
+  "graph_nodes": []
+}

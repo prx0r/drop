@@ -1,0 +1,2426 @@
+{
+  "country_data": {
+    "trade_code_map": [
+      {
+        "map_id": "FI_TRADE_HP",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "country": "FI",
+        "concept": "heat pumps",
+        "hs_cn_codes": [
+          "841861",
+          "841869"
+        ],
+        "status": "DRAFT_VALIDATE_CN_SCOPE",
+        "mapping_confidence": 0.65,
+        "notes": "Use Customs/Comext metadata and product descriptions; codes can include products outside target ecommerce subcategories."
+      },
+      {
+        "map_id": "FI_TRADE_THERMAL",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "country": "FI",
+        "concept": "thermal imaging / inspection instruments",
+        "hs_cn_codes": [
+          "902750",
+          "852589"
+        ],
+        "status": "DRAFT_AMBIGUOUS",
+        "mapping_confidence": 0.35,
+        "notes": "Broad/ambiguous mapping only; must validate exact CN codes before using trade flow as signal."
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "FI_SEG_COTTAGE_REMOTE",
+        "country": "FI",
+        "name": "Remote cottage monitoring",
+        "state": "RESEARCH",
+        "thesis": "Large geographically concentrated free-time-home stock may support remote frost/water/power/connectivity jobs.",
+        "evidence_refs": [
+          "FI_COTTAGES_2025",
+          "FI_COTTAGES_KUOPIO_2025"
+        ],
+        "falsifiers": [
+          "no native intent",
+          "merchant/service density high"
+        ],
+        "seed_queries": [
+          "FI_Q_COTTAGE_TEMP",
+          "FI_Q_COTTAGE_LEAK",
+          "FI_Q_COTTAGE_FROST"
+        ]
+      },
+      {
+        "segment_id": "FI_SEG_HP_REPLACEMENT",
+        "country": "FI",
+        "name": "Heat-pump replacement aftermarket",
+        "state": "RESEARCH",
+        "thesis": "Replacement share and installed base create exact-model parts/control demand.",
+        "evidence_refs": [
+          "FI_HEATPUMP_BASE_2025",
+          "FI_HP_REPLACEMENT_SHARE_2025"
+        ],
+        "falsifiers": [
+          "installer/OEM lock",
+          "no query demand"
+        ],
+        "seed_queries": [
+          "FI_Q_HP_WIFI",
+          "FI_Q_HP_REMOTE",
+          "FI_Q_HP_FILTER"
+        ]
+      },
+      {
+        "segment_id": "FI_SEG_EV_EXACT",
+        "country": "FI",
+        "name": "Exact-model EV aftermarket",
+        "state": "RESEARCH",
+        "thesis": "Traficom model/geography data can define exact cohorts before merchant/query tests.",
+        "evidence_refs": [
+          "FI_VEHICLE_MODEL_DATA_AVAILABLE",
+          "FI_VEHICLE_MUNI_DATA_AVAILABLE"
+        ],
+        "falsifiers": [
+          "marketplace saturation",
+          "no exact-model intent"
+        ],
+        "seed_queries": [
+          "FI_Q_EV_ACCESSORY",
+          "FI_Q_MODEL_Y"
+        ]
+      },
+      {
+        "segment_id": "FI_SEG_THERMAL",
+        "country": "FI",
+        "name": "Building thermal diagnostics",
+        "state": "HOLD_VALIDATE",
+        "thesis": "Large detached-home stock plus few visible Pocket2 offers supports validation of a decision-support wedge, not an availability-gap claim.",
+        "evidence_refs": [
+          "FI_ONE_TWO_DWELLINGS_2025",
+          "FI_HIK_POCKET2_SHOPS_20260907"
+        ],
+        "falsifiers": [
+          "dealer economics fail",
+          "merchant census strong"
+        ],
+        "seed_queries": [
+          "FI_Q_THERMAL_CAMERA",
+          "FI_Q_THERMAL_BUILDING"
+        ]
+      },
+      {
+        "segment_id": "FI_SEG_PIPE",
+        "country": "FI",
+        "name": "Professional pipe inspection",
+        "state": "HOLD_VALIDATE",
+        "thesis": "Sparse comparison offers warrant hidden-channel and dealer validation for RIDGID.",
+        "evidence_refs": [
+          "FI_RIDGID_COMPACT2_SHOPS",
+          "FI_RIDGID_70808_ID"
+        ],
+        "falsifiers": [
+          "hidden B2B dense",
+          "dealer terms fail"
+        ],
+        "seed_queries": [
+          "FI_Q_RIDGID_SEESNAKE"
+        ]
+      },
+      {
+        "segment_id": "FI_SEG_WIREFREE_MOWER",
+        "country": "FI",
+        "name": "Wire-free robot mowers",
+        "state": "KILLED",
+        "thesis": "Target merchant gap is not present at generic specialist level.",
+        "evidence_refs": [
+          "FI_MOWER_PIHABOTTI_COUNT",
+          "FI_MOWER_LUBA5000_STOCK"
+        ],
+        "falsifiers": [
+          "already falsified by strong local specialist"
+        ],
+        "seed_queries": []
+      }
+    ],
+    "problems": [
+      {
+        "problem_id": "FI_COTTAGE_FROST",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "country": "FI",
+        "name": "Remote cottage frost / low temperature",
+        "trigger_types": [
+          "winter",
+          "absence",
+          "power_loss"
+        ],
+        "components": [
+          "temperature",
+          "heating",
+          "pipes"
+        ],
+        "urgency": "HIGH",
+        "incidence_refs": [],
+        "seasonality": "winter",
+        "geography": "cold/remote municipalities",
+        "solution_categories": [
+          "temperature monitoring",
+          "remote thermostat",
+          "frost alarm"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_COTTAGE_TEMP",
+          "FI_Q_COTTAGE_FROST"
+        ],
+        "fulfilment_mode": "parcel",
+        "safety": "LOW_TO_MEDIUM",
+        "evidence_status": "STRUCTURAL_ONLY",
+        "unknowns": [
+          "measured incidence and query volume"
+        ]
+      },
+      {
+        "problem_id": "FI_COTTAGE_WATER",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "country": "FI",
+        "name": "Water leak / unattended plumbing",
+        "trigger_types": [
+          "absence",
+          "freeze_thaw"
+        ],
+        "components": [
+          "pipes",
+          "valves",
+          "sensors"
+        ],
+        "urgency": "HIGH",
+        "incidence_refs": [],
+        "seasonality": "all_year_winter_skew",
+        "geography": "cottage regions",
+        "solution_categories": [
+          "leak sensors",
+          "shutoff",
+          "remote monitoring"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_COTTAGE_LEAK"
+        ],
+        "fulfilment_mode": "parcel_or_installer",
+        "safety": "MEDIUM",
+        "evidence_status": "STRUCTURAL_ONLY",
+        "unknowns": [
+          "loss incidence by cottage geography"
+        ]
+      },
+      {
+        "problem_id": "FI_COTTAGE_CONNECTIVITY",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "country": "FI",
+        "name": "Remote monitoring connectivity",
+        "trigger_types": [
+          "remote_location"
+        ],
+        "components": [
+          "router",
+          "cellular",
+          "antennas"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [],
+        "seasonality": "all_year",
+        "geography": "rural",
+        "solution_categories": [
+          "4G/5G router",
+          "external antenna"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "parcel",
+        "safety": "LOW",
+        "evidence_status": "UNMEASURED",
+        "unknowns": [
+          "coverage/problem frequency by municipality"
+        ]
+      },
+      {
+        "problem_id": "FI_COTTAGE_POWER",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "country": "FI",
+        "name": "Power interruption / remote restart",
+        "trigger_types": [
+          "outage",
+          "winter"
+        ],
+        "components": [
+          "mains",
+          "backup",
+          "smart relays"
+        ],
+        "urgency": "HIGH",
+        "incidence_refs": [],
+        "seasonality": "storm/winter",
+        "geography": "rural",
+        "solution_categories": [
+          "UPS",
+          "remote relay",
+          "power monitor"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "parcel_or_electrician",
+        "safety": "MEDIUM",
+        "evidence_status": "UNMEASURED",
+        "unknowns": [
+          "outage exposure and legal installation boundary"
+        ]
+      },
+      {
+        "problem_id": "FI_HP_REMOTE_CONTROL",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "country": "FI",
+        "name": "Heat pump remote control / Wi-Fi retrofit",
+        "trigger_types": [
+          "installed_base",
+          "remote_use"
+        ],
+        "components": [
+          "controller",
+          "Wi-Fi adapter",
+          "app"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "FI_HEATPUMP_BASE_2025"
+        ],
+        "seasonality": "winter/summer",
+        "geography": "national",
+        "solution_categories": [
+          "OEM Wi-Fi module",
+          "IR controller",
+          "smart thermostat"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_HP_WIFI",
+          "FI_Q_HP_REMOTE"
+        ],
+        "fulfilment_mode": "parcel_or_installer",
+        "safety": "MEDIUM",
+        "evidence_status": "STRUCTURAL_ONLY",
+        "unknowns": [
+          "model compatibility tree and query demand"
+        ]
+      },
+      {
+        "problem_id": "FI_HP_REPLACEMENT",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "country": "FI",
+        "name": "Replacement-wave parts and decision support",
+        "trigger_types": [
+          "age",
+          "replacement"
+        ],
+        "components": [
+          "pump",
+          "controls",
+          "accessories"
+        ],
+        "urgency": "MEDIUM_HIGH",
+        "incidence_refs": [
+          "FI_HP_REPLACEMENT_SHARE_2025"
+        ],
+        "seasonality": "heating_season",
+        "geography": "national",
+        "solution_categories": [
+          "replacement parts",
+          "compatible controls",
+          "maintenance"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "mixed",
+        "safety": "MEDIUM_HIGH",
+        "evidence_status": "OBSERVED_REPLACEMENT_SHARE",
+        "unknowns": [
+          "cohort age by model and aftermarket openness"
+        ]
+      },
+      {
+        "problem_id": "FI_HP_MAINTENANCE",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "country": "FI",
+        "name": "Filters / cleaning / condensate maintenance",
+        "trigger_types": [
+          "maintenance",
+          "seasonal"
+        ],
+        "components": [
+          "filters",
+          "drain",
+          "cleaning"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [
+          "FI_HEATPUMP_BASE_2025"
+        ],
+        "seasonality": "seasonal",
+        "geography": "national",
+        "solution_categories": [
+          "filters",
+          "cleaners",
+          "drain accessories"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_HP_FILTER"
+        ],
+        "fulfilment_mode": "parcel",
+        "safety": "LOW",
+        "evidence_status": "STRUCTURAL_ONLY",
+        "unknowns": [
+          "exact model demand and supplier availability"
+        ]
+      },
+      {
+        "problem_id": "FI_EV_EXACT_ACCESSORY",
+        "ecosystem_id": "FI_EV_AFTERMARKET",
+        "country": "FI",
+        "name": "Exact-model EV accessories and replacement items",
+        "trigger_types": [
+          "ownership",
+          "model_specific"
+        ],
+        "components": [
+          "interior",
+          "charging",
+          "weather protection"
+        ],
+        "urgency": "LOW_MEDIUM",
+        "incidence_refs": [
+          "FI_VEHICLE_MODEL_DATA_AVAILABLE"
+        ],
+        "seasonality": "all_year",
+        "geography": "model/municipality",
+        "solution_categories": [
+          "exact-model accessories"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_EV_ACCESSORY",
+          "FI_Q_MODEL_Y"
+        ],
+        "fulfilment_mode": "parcel",
+        "safety": "LOW",
+        "evidence_status": "DATA_SURFACE_READY",
+        "unknowns": [
+          "exact model stocks and demand"
+        ]
+      },
+      {
+        "problem_id": "FI_EV_WINTER_CHARGING",
+        "ecosystem_id": "FI_EV_AFTERMARKET",
+        "country": "FI",
+        "name": "Winter charging/cable management",
+        "trigger_types": [
+          "cold",
+          "charging"
+        ],
+        "components": [
+          "cable",
+          "storage",
+          "snow/ice"
+        ],
+        "urgency": "MEDIUM",
+        "incidence_refs": [],
+        "seasonality": "winter",
+        "geography": "cold regions",
+        "solution_categories": [
+          "cable storage",
+          "protective accessories"
+        ],
+        "native_query_seed_ids": [],
+        "fulfilment_mode": "parcel",
+        "safety": "MEDIUM",
+        "evidence_status": "UNMEASURED",
+        "unknowns": [
+          "native demand and compatibility"
+        ]
+      },
+      {
+        "problem_id": "FI_BUILDING_THERMAL",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "country": "FI",
+        "name": "Building heat-loss/moisture thermal diagnosis",
+        "trigger_types": [
+          "heating_cost",
+          "renovation",
+          "moisture"
+        ],
+        "components": [
+          "envelope",
+          "floor heating",
+          "electrical"
+        ],
+        "urgency": "MEDIUM_HIGH",
+        "incidence_refs": [
+          "FI_ONE_TWO_DWELLINGS_2025"
+        ],
+        "seasonality": "heating_season",
+        "geography": "national",
+        "solution_categories": [
+          "thermal cameras",
+          "moisture meters"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_THERMAL_CAMERA",
+          "FI_Q_THERMAL_BUILDING"
+        ],
+        "fulfilment_mode": "parcel",
+        "safety": "LOW",
+        "evidence_status": "STRUCTURAL_PLUS_MARKET_PRICE",
+        "unknowns": [
+          "paid query demand and professional vs consumer mix"
+        ]
+      },
+      {
+        "problem_id": "FI_BUILDING_PIPE",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "country": "FI",
+        "name": "Pipe/drain inspection diagnosis",
+        "trigger_types": [
+          "blockage",
+          "leak",
+          "maintenance"
+        ],
+        "components": [
+          "drains",
+          "pipes",
+          "camera"
+        ],
+        "urgency": "HIGH",
+        "incidence_refs": [],
+        "seasonality": "all_year",
+        "geography": "national",
+        "solution_categories": [
+          "inspection reels",
+          "locators",
+          "monitors"
+        ],
+        "native_query_seed_ids": [
+          "FI_Q_RIDGID_SEESNAKE"
+        ],
+        "fulfilment_mode": "parcel/B2B",
+        "safety": "LOW",
+        "evidence_status": "PRODUCT_MARKET_OBSERVED",
+        "unknowns": [
+          "Finnish local professional demand and authorized dealer economics"
+        ]
+      }
+    ],
+    "business_hypotheses": [
+      {
+        "business_hypothesis_id": "BH_FI_HP_AFTERMARKET_V1",
+        "country": "FI",
+        "created_at": "2026-09-07",
+        "status": "RESEARCH_ONLY",
+        "hypothesis_id": "H_FI_HP_REPLACEMENT_V1",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "product_market_id": "FI_HEATPUMP_CONTROLS",
+        "customer_jobs": [
+          "identify compatible Wi-Fi/controller/filter for installed heat-pump model",
+          "replace/maintain ageing installed base",
+          "get Finnish-language compatibility and installation boundary guidance"
+        ],
+        "catalog_architecture": [
+          "exact model \u2192 compatible control/filter/accessory",
+          "replacement cohort pages",
+          "problem/job landing pages"
+        ],
+        "source_archetype_ids": [
+          "SE_HEATPUMP_REPLACEMENT_SPECIALIST"
+        ],
+        "proposed_moat": [
+          "installed-base/model graph",
+          "Finnish compatibility decision support",
+          "source-target replacement-market lag intelligence"
+        ],
+        "acquisition_wedges": [
+          "exact-model organic/Shopping queries",
+          "maintenance/replacement problem queries"
+        ],
+        "fulfilment_requirement": [
+          "Nordic/EU stock",
+          "clear electrical/installer boundaries",
+          "authorized resale and warranty"
+        ],
+        "economics_required": [
+          "verified dealer net",
+          "landed CM0",
+          "Finland CPC",
+          "return/RMA cost"
+        ],
+        "falsifiers": [
+          "merchant census shows no service lag",
+          "compatible products inaccessible",
+          "queries too small/high-CPC",
+          "dealer contribution fails"
+        ],
+        "launchable": false
+      }
+    ],
+    "queries": [
+      {
+        "query_id": "FI_Q_COTTAGE_TEMP",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "problem_id": "FI_COTTAGE_FROST",
+        "native_phrase": "m\u00f6kin l\u00e4mp\u00f6tilan et\u00e4seuranta",
+        "normalized_intent": "remote cottage temperature monitoring",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_COTTAGE_FROST",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "problem_id": "FI_COTTAGE_FROST",
+        "native_phrase": "pakkasvahti m\u00f6kille wifi",
+        "normalized_intent": "wifi frost alarm cottage",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_COTTAGE_LEAK",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "problem_id": "FI_COTTAGE_WATER",
+        "native_phrase": "vesivuotovahti m\u00f6kille",
+        "normalized_intent": "cottage water leak alarm",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_HP_WIFI",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "problem_id": "FI_HP_REMOTE_CONTROL",
+        "native_phrase": "ilmal\u00e4mp\u00f6pumpun wifi ohjaus",
+        "normalized_intent": "heat pump wifi control",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_HP_REMOTE",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "problem_id": "FI_HP_REMOTE_CONTROL",
+        "native_phrase": "ilmal\u00e4mp\u00f6pumpun et\u00e4ohjaus",
+        "normalized_intent": "heat pump remote control",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_HP_FILTER",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "problem_id": "FI_HP_MAINTENANCE",
+        "native_phrase": "ilmal\u00e4mp\u00f6pumpun suodatin",
+        "normalized_intent": "heat pump filter",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_EV_ACCESSORY",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_EV_AFTERMARKET",
+        "problem_id": "FI_EV_EXACT_ACCESSORY",
+        "native_phrase": "s\u00e4hk\u00f6auton lis\u00e4varusteet",
+        "normalized_intent": "EV accessories",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_MODEL_Y",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_EV_AFTERMARKET",
+        "problem_id": "FI_EV_EXACT_ACCESSORY",
+        "native_phrase": "tesla model y lis\u00e4varusteet",
+        "normalized_intent": "Tesla Model Y accessories",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_THERMAL_CAMERA",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "problem_id": "FI_BUILDING_THERMAL",
+        "native_phrase": "l\u00e4mp\u00f6kamera pocket 2",
+        "normalized_intent": "Pocket 2 thermal camera",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_THERMAL_BUILDING",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "problem_id": "FI_BUILDING_THERMAL",
+        "native_phrase": "l\u00e4mp\u00f6kamera rakennuksen tarkastus",
+        "normalized_intent": "building inspection thermal camera",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      },
+      {
+        "query_id": "FI_Q_RIDGID_SEESNAKE",
+        "country": "FI",
+        "language": "fi",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "problem_id": "FI_BUILDING_PIPE",
+        "native_phrase": "ridgid seesnake putkikamera",
+        "normalized_intent": "RIDGID SeeSnake pipe camera",
+        "status": "SEED_UNMEASURED",
+        "vocabulary_source": "first-party Finnish terminology + product/source-market vocabulary",
+        "metrics": {
+          "avg_monthly_searches": null,
+          "avg_cpc": null,
+          "competition_index": null,
+          "trends_score": null
+        },
+        "metric_source_refs": [
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "measured_at": null,
+        "serp_snapshot_ref": null,
+        "notes": "Seed only; must not be treated as demand until Finland-specific metrics are captured."
+      }
+    ],
+    "ecosystems": [
+      {
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "country": "FI",
+        "name": "Free-time homes / remote cottage systems",
+        "state": "PRIORITY_RESEARCH",
+        "definition": "Statistics Finland free-time residential buildings plus remote-property systems; do not conflate with all second homes.",
+        "installed_base_refs": [
+          "FI_COTTAGES_2025"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [
+          "FI_COTTAGES_BUILT_2020_25"
+        ],
+        "replacement_refs": [],
+        "geography_refs": [
+          "FI_COTTAGES_KUOPIO_2025",
+          "FI_COTTAGES_MIKKELI_2025",
+          "FI_COTTAGES_PARAINEN_2025"
+        ],
+        "problem_refs": [
+          "FI_COTTAGE_FROST",
+          "FI_COTTAGE_WATER",
+          "FI_COTTAGE_CONNECTIVITY",
+          "FI_COTTAGE_POWER"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "NO",
+          "DE"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 19,
+          "growth_replacement_pressure": 7,
+          "problem_incidence_urgency": 10,
+          "native_search_demand": null,
+          "target_merchant_service_lag": null,
+          "source_market_proof": null,
+          "localization_geographic_edge": 10
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "FI_COTTAGES_2025"
+          ],
+          "growth_replacement_pressure": [
+            "FI_COTTAGES_BUILT_2020_25"
+          ],
+          "localization_geographic_edge": [
+            "FI_COTTAGES_KUOPIO_2025",
+            "FI_COTTAGES_MIKKELI_2025",
+            "FI_COTTAGES_PARAINEN_2025",
+            "FI_COTTAGE_DISTANCE"
+          ]
+        },
+        "falsifiers": [
+          "native problem queries lack purchase intent",
+          "strong local specialists already solve remote cottage stack",
+          "installation/safety burden dominates parcel commerce"
+        ],
+        "next_action": "Join cottage density with FMI exposure, connectivity/outage data, native problem queries and merchant census.",
+        "discovery_score": {
+          "measured_points": 46,
+          "max_measured_points": 60,
+          "evidence_coverage": 0.6,
+          "normalized_measured_score": 76.7,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      },
+      {
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "country": "FI",
+        "name": "Heat-pump installed base and replacement aftermarket",
+        "state": "PRIORITY_RESEARCH",
+        "definition": "Installed heat pump stock, replacement cohorts, controls, maintenance and model-compatible aftermarket.",
+        "installed_base_refs": [
+          "FI_HEATPUMP_BASE_2025"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [
+          "FI_HEATPUMP_GROWTH_2025"
+        ],
+        "replacement_refs": [
+          "FI_HP_REPLACEMENT_SHARE_2025"
+        ],
+        "geography_refs": [],
+        "problem_refs": [
+          "FI_HP_REMOTE_CONTROL",
+          "FI_HP_REPLACEMENT",
+          "FI_HP_MAINTENANCE"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "DE",
+          "NO"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 20,
+          "growth_replacement_pressure": 15,
+          "problem_incidence_urgency": 11,
+          "native_search_demand": null,
+          "target_merchant_service_lag": null,
+          "source_market_proof": 7,
+          "localization_geographic_edge": 6
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "FI_HEATPUMP_BASE_2025"
+          ],
+          "growth_replacement_pressure": [
+            "FI_HEATPUMP_GROWTH_2025",
+            "FI_HP_REPLACEMENT_SHARE_2025"
+          ],
+          "source_market_proof": [
+            "FI_HP_REPLACEMENT_SHARE_2025"
+          ]
+        },
+        "falsifiers": [
+          "replacement work is installer/OEM locked",
+          "exact parts are unavailable to ecommerce",
+          "merchant/service density already equals mature source markets"
+        ],
+        "next_action": "Build model/cohort compatibility graph; measure Finnish exact-model/control/filter queries and target merchant service depth.",
+        "discovery_score": {
+          "measured_points": 59,
+          "max_measured_points": 70,
+          "evidence_coverage": 0.7,
+          "normalized_measured_score": 84.3,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      },
+      {
+        "ecosystem_id": "FI_EV_AFTERMARKET",
+        "country": "FI",
+        "name": "Exact-model EV aftermarket",
+        "state": "PRIORITY_RESEARCH",
+        "definition": "Commissioned/registered vehicle stock by exact make/model, power source and geography, converted into cohorts for accessories/replacement needs.",
+        "installed_base_refs": [
+          "FI_VEHICLE_MODEL_DATA_AVAILABLE"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [],
+        "replacement_refs": [],
+        "geography_refs": [],
+        "problem_refs": [
+          "FI_EV_EXACT_ACCESSORY",
+          "FI_EV_WINTER_CHARGING"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "DE",
+          "NL"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 14,
+          "growth_replacement_pressure": null,
+          "problem_incidence_urgency": null,
+          "native_search_demand": null,
+          "target_merchant_service_lag": null,
+          "source_market_proof": null,
+          "localization_geographic_edge": 9
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "FI_VEHICLE_MODEL_DATA_AVAILABLE"
+          ],
+          "localization_geographic_edge": [
+            "FI_VEHICLE_MUNI_DATA_AVAILABLE"
+          ]
+        },
+        "falsifiers": [
+          "exact-model accessory demand is marketplace-commoditized",
+          "no model-specific native intent",
+          "shipping/return economics fail"
+        ],
+        "next_action": "Ingest 2026 Traficom make/model stock and normalize cohorts before generating exact-model query forest.",
+        "discovery_score": {
+          "measured_points": 23,
+          "max_measured_points": 30,
+          "evidence_coverage": 0.3,
+          "normalized_measured_score": 76.7,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      },
+      {
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "country": "FI",
+        "name": "Detached-home building diagnostics / thermal / pipe inspection",
+        "state": "PRIORITY_RESEARCH",
+        "definition": "Large one-/two-dwelling active building stock with heating, thermal-loss, moisture and pipe-inspection jobs.",
+        "installed_base_refs": [
+          "FI_ONE_TWO_DWELLINGS_2025"
+        ],
+        "cohort_refs": [],
+        "growth_refs": [],
+        "replacement_refs": [],
+        "geography_refs": [],
+        "problem_refs": [
+          "FI_BUILDING_THERMAL",
+          "FI_BUILDING_PIPE"
+        ],
+        "source_market_candidates": [
+          "SE",
+          "DE",
+          "NL"
+        ],
+        "discovery_components": {
+          "installed_base_magnitude": 20,
+          "growth_replacement_pressure": 6,
+          "problem_incidence_urgency": 10,
+          "native_search_demand": null,
+          "target_merchant_service_lag": 8,
+          "source_market_proof": 6,
+          "localization_geographic_edge": 5
+        },
+        "component_evidence_refs": {
+          "installed_base_magnitude": [
+            "FI_ONE_TWO_DWELLINGS_2025"
+          ],
+          "target_merchant_service_lag": [
+            "FI_HIK_POCKET2_SHOPS_20260907",
+            "FI_RIDGID_COMPACT2_SHOPS"
+          ],
+          "source_market_proof": [
+            "FI_RIDGID_COMPACT2_SHOPS"
+          ]
+        },
+        "falsifiers": [
+          "professional demand too service-led for ecommerce",
+          "good local merchants are numerous once hidden B2B is counted",
+          "dealer margin/rights do not support resale"
+        ],
+        "next_action": "Measure native thermal/pipe queries; complete merchant census and dealer economics for HIKMICRO/RIDGID exact SKUs.",
+        "discovery_score": {
+          "measured_points": 55,
+          "max_measured_points": 85,
+          "evidence_coverage": 0.85,
+          "normalized_measured_score": 64.7,
+          "promotion_eligible": false,
+          "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+        }
+      }
+    ],
+    "decisions": [
+      {
+        "decision_id": "D_FI_FREE_TIME_HOME",
+        "country": "FI",
+        "object_type": "ecosystem",
+        "object_id": "FI_FREE_TIME_HOME",
+        "as_of": "2026-09-07",
+        "decision": "RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_FREE_TIME_HOME",
+        "reason": "Structural signal strong but discovery components remain missing; no launch inference.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_HEATPUMP_INSTALLED",
+        "country": "FI",
+        "object_type": "ecosystem",
+        "object_id": "FI_HEATPUMP_INSTALLED",
+        "as_of": "2026-09-07",
+        "decision": "RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_HEATPUMP_INSTALLED",
+        "reason": "Structural signal strong but discovery components remain missing; no launch inference.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_EV_AFTERMARKET",
+        "country": "FI",
+        "object_type": "ecosystem",
+        "object_id": "FI_EV_AFTERMARKET",
+        "as_of": "2026-09-07",
+        "decision": "RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_EV_AFTERMARKET",
+        "reason": "Structural signal strong but discovery components remain missing; no launch inference.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "country": "FI",
+        "object_type": "ecosystem",
+        "object_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "as_of": "2026-09-07",
+        "decision": "RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "reason": "Structural signal strong but discovery components remain missing; no launch inference.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_HIKMICRO_THERMAL",
+        "country": "FI",
+        "object_type": "product_market",
+        "object_id": "FI_HIKMICRO_THERMAL",
+        "as_of": "2026-09-07",
+        "decision": "HOLD_VALIDATE",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_HIKMICRO_THERMAL",
+        "reason": "Obtain authorized Nordic dealer quote/terms and measure Finnish query forest before any paid launch.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_RIDGID_SEESNAKE",
+        "country": "FI",
+        "object_type": "product_market",
+        "object_id": "FI_RIDGID_SEESNAKE",
+        "as_of": "2026-09-07",
+        "decision": "HOLD_VALIDATE",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_RIDGID_SEESNAKE",
+        "reason": "Enumerate Finnish RIDGID distributors/installers, request dealer quote, measure exact SKU/problem queries.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_HEATPUMP_CONTROLS",
+        "country": "FI",
+        "object_type": "product_market",
+        "object_id": "FI_HEATPUMP_CONTROLS",
+        "as_of": "2026-09-07",
+        "decision": "RESEARCH",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_HEATPUMP_CONTROLS",
+        "reason": "Build top model/cohort registry from service/retailer data and generate exact compatibility query forest; no launch until exact SKU layer exists.",
+        "prospective": false
+      },
+      {
+        "decision_id": "D_FI_WIREFREE_MOWER",
+        "country": "FI",
+        "object_type": "product_market",
+        "object_id": "FI_WIREFREE_MOWER",
+        "as_of": "2026-09-07",
+        "decision": "KILL",
+        "strategy_id": null,
+        "score_snapshot_ref": "SS_FI_WIREFREE_MOWER",
+        "reason": "Do not launch generic robot-mower specialist; retain as negative training example for merchant-quality gate.",
+        "prospective": false
+      }
+    ],
+    "product_markets": [
+      {
+        "product_market_id": "FI_HIKMICRO_THERMAL",
+        "country": "FI",
+        "name": "HIKMICRO Pocket 2 / building thermal diagnostics",
+        "state": "HOLD_VALIDATE",
+        "score": 72,
+        "confidence": 0.78,
+        "confidence_adjusted_score": 56.2,
+        "components": {
+          "demand": 14,
+          "merchant_gap": 13,
+          "economics": 12,
+          "supply": 14,
+          "localization_edge": 8,
+          "structural_demand": 11
+        },
+        "hard_gates": {
+          "native_query_set_defined": true,
+          "content_gap_evidence": true,
+          "resale_allowed": null,
+          "supplier_path_verified": true,
+          "landed_cost_verified": false,
+          "positive_pre_ad_contribution": false,
+          "delivery_feasible": true,
+          "returns_warranty_known": false,
+          "local_checkout_feasible": true,
+          "exact_sku_identity": true,
+          "keyword_planner_measured": false,
+          "cpc_measured": false,
+          "three_viable_anchor_skus": false,
+          "base_case_headroom_gte_1_2": false
+        },
+        "evidence_refs": [
+          "FI_ONE_TWO_DWELLINGS_2025",
+          "FI_HIK_POCKET2_LOW_20260907",
+          "FI_HIK_POCKET2_SHOPS_20260907",
+          "FI_HIK_FINNPARTTIA_EXVAT",
+          "FI_HIK_FINNPARTTIA_BULK8",
+          "FI_HIK_DEALER_NET",
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "exact_skus": [
+          "HM-TP42-3AQF/W-POCKET2",
+          "6974004641245"
+        ],
+        "source_market_archetype": "DE/Nordic technical thermal-camera retail",
+        "thesis": "The wedge is not mere availability; it would require Finnish building-diagnostics decision support and viable authorized dealer economics. Public bulk price alone is insufficient margin proof.",
+        "unknowns": [
+          "authorized dealer/resale rights",
+          "dealer net cost",
+          "RMA/warranty allocation",
+          "Finnish exact-query volume/CPC",
+          ">=3 economically viable anchor SKUs"
+        ],
+        "next_action": "Obtain authorized Nordic dealer quote/terms and measure Finnish query forest before any paid launch.",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "hypothesis_id": "H_FI_HIK_TRANSPLANT_V1",
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      },
+      {
+        "product_market_id": "FI_RIDGID_SEESNAKE",
+        "country": "FI",
+        "name": "RIDGID SeeSnake professional pipe-inspection specialist",
+        "state": "HOLD_VALIDATE",
+        "score": 70,
+        "confidence": 0.75,
+        "confidence_adjusted_score": 52.5,
+        "components": {
+          "demand": 13,
+          "merchant_gap": 15,
+          "economics": 10,
+          "supply": 12,
+          "localization_edge": 8,
+          "structural_demand": 12
+        },
+        "hard_gates": {
+          "native_query_set_defined": true,
+          "content_gap_evidence": true,
+          "resale_allowed": null,
+          "supplier_path_verified": false,
+          "landed_cost_verified": false,
+          "positive_pre_ad_contribution": false,
+          "delivery_feasible": true,
+          "returns_warranty_known": false,
+          "local_checkout_feasible": true,
+          "exact_sku_identity": true,
+          "keyword_planner_measured": false,
+          "cpc_measured": false,
+          "three_viable_anchor_skus": false,
+          "base_case_headroom_gte_1_2": false
+        },
+        "evidence_refs": [
+          "FI_ONE_TWO_DWELLINGS_2025",
+          "FI_RIDGID_COMPACT2_LOW",
+          "FI_RIDGID_COMPACT2_SHOPS",
+          "FI_RIDGID_70808_ID",
+          "FI_RIDGID_DEALER_NET",
+          "FI_GADS_SEARCHVOL_ACTIVE",
+          "FI_GADS_CPC_ACTIVE"
+        ],
+        "exact_skus": [
+          "70808",
+          "75848",
+          "75853",
+          "78118"
+        ],
+        "source_market_archetype": "Swedish/Nordic professional tool retailer exact-model catalogue",
+        "thesis": "Sparse price-comparison supply and exact professional SKUs justify validation, but cross-border offers cannot be mistaken for a Finnish merchant gap and dealer economics are unknown.",
+        "unknowns": [
+          "authorized Finland dealer net",
+          "local hidden B2B merchant census",
+          "warranty/RMA",
+          "Finnish query/CPC",
+          "viable bundle economics"
+        ],
+        "next_action": "Enumerate Finnish RIDGID distributors/installers, request dealer quote, measure exact SKU/problem queries.",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "hypothesis_id": "H_FI_RIDGID_TRANSPLANT_V1",
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      },
+      {
+        "product_market_id": "FI_HEATPUMP_CONTROLS",
+        "country": "FI",
+        "name": "Heat-pump replacement controls / Wi-Fi / maintenance exact-model aftermarket",
+        "state": "RESEARCH",
+        "score": 76,
+        "confidence": 0.73,
+        "confidence_adjusted_score": 55.5,
+        "components": {
+          "demand": 17,
+          "merchant_gap": 10,
+          "economics": 8,
+          "supply": 8,
+          "localization_edge": 9,
+          "structural_demand": 14
+        },
+        "hard_gates": {
+          "native_query_set_defined": true,
+          "content_gap_evidence": false,
+          "resale_allowed": null,
+          "supplier_path_verified": false,
+          "landed_cost_verified": false,
+          "positive_pre_ad_contribution": false,
+          "delivery_feasible": null,
+          "returns_warranty_known": false,
+          "local_checkout_feasible": true,
+          "exact_sku_identity": false,
+          "keyword_planner_measured": false,
+          "cpc_measured": false,
+          "three_viable_anchor_skus": false,
+          "base_case_headroom_gte_1_2": false
+        },
+        "evidence_refs": [
+          "FI_HEATPUMP_BASE_2025",
+          "FI_HEATPUMP_SALES_2025",
+          "FI_HEATPUMP_GROWTH_2025",
+          "FI_HP_REPLACEMENT_SHARE_2025",
+          "FI_GADS_SEARCHVOL_ACTIVE"
+        ],
+        "exact_skus": [],
+        "source_market_archetype": "Swedish mature heat-pump replacement specialist",
+        "thesis": "Finland\u2019s very large and now replacement-heavy heat-pump stock is a high-information ecosystem, but opportunity must be discovered at exact model/control/filter compatibility level rather than generic heat-pump retail.",
+        "unknowns": [
+          "model/cohort installed base",
+          "exact replacement/accessory catalogue",
+          "merchant census",
+          "query demand",
+          "supplier rights/economics"
+        ],
+        "next_action": "Build top model/cohort registry from service/retailer data and generate exact compatibility query forest; no launch until exact SKU layer exists.",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "hypothesis_id": "H_FI_HP_REPLACEMENT_V1",
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      },
+      {
+        "product_market_id": "FI_WIREFREE_MOWER",
+        "country": "FI",
+        "name": "Wire-free / difficult-yard robot mowers",
+        "state": "KILLED",
+        "score": 40,
+        "confidence": 0.91,
+        "confidence_adjusted_score": 36.4,
+        "components": {
+          "demand": 13,
+          "merchant_gap": 2,
+          "economics": 6,
+          "supply": 8,
+          "localization_edge": 3,
+          "structural_demand": 8
+        },
+        "hard_gates": {
+          "native_query_set_defined": true,
+          "content_gap_evidence": false,
+          "resale_allowed": true,
+          "supplier_path_verified": true,
+          "landed_cost_verified": false,
+          "positive_pre_ad_contribution": false,
+          "delivery_feasible": true,
+          "returns_warranty_known": true,
+          "local_checkout_feasible": true,
+          "exact_sku_identity": true,
+          "keyword_planner_measured": false,
+          "cpc_measured": false,
+          "three_viable_anchor_skus": true,
+          "base_case_headroom_gte_1_2": false
+        },
+        "evidence_refs": [
+          "FI_MOWER_PIHABOTTI_COUNT",
+          "FI_MOWER_LUBA5000_PRICE",
+          "FI_MOWER_LUBA5000_STOCK"
+        ],
+        "exact_skus": [
+          "Mammotion Luba 3 3000X",
+          "Mammotion Luba 3 5000X"
+        ],
+        "source_market_archetype": "not needed - strong target specialist already present",
+        "thesis": "Initial sparse-specialist hypothesis is falsified by strong local specialist execution: broad range, yard-fit navigation/survey, local stock, fast delivery, expert support and compatibility accessories.",
+        "unknowns": [
+          "none material to merchant-gap falsification"
+        ],
+        "next_action": "Do not launch generic robot-mower specialist; retain as negative training example for merchant-quality gate.",
+        "ecosystem_id": "FI_FREE_TIME_HOME",
+        "hypothesis_id": null,
+        "score_model": "PRODUCT_MARKET_LAUNCH_V2@2.0.0",
+        "score_type": "LAUNCH_SCORE",
+        "as_of": "2026-09-07"
+      }
+    ],
+    "source_archetypes": [
+      {
+        "archetype_id": "SE_HEATPUMP_REPLACEMENT_SPECIALIST",
+        "source_country": "SE",
+        "target_country": "FI",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "domain": "polarpumpen.se",
+        "merchant_type": "heat_pump_specialist",
+        "evidence_type": "merchant_first_party+industry_benchmark",
+        "evidence_refs": [
+          "FI_HP_REPLACEMENT_SHARE_2025"
+        ],
+        "catalog_metrics": {
+          "quantitative_catalogue_snapshot": null,
+          "source_replacement_share_percent": 50
+        },
+        "capabilities": [
+          "model/category guidance",
+          "replacement-market maturity"
+        ],
+        "profitability_proven": false,
+        "transferable_elements": [
+          "compatibility decision support",
+          "replacement education",
+          "maintenance/accessory catalogue"
+        ],
+        "unknowns": [
+          "source merchant catalogue snapshot",
+          "profitability",
+          "Finnish transfer economics"
+        ]
+      },
+      {
+        "archetype_id": "SE_PRO_TOOL_CROSSBORDER",
+        "source_country": "SE",
+        "target_country": "FI",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "domain": "staypro.se",
+        "merchant_type": "professional_tool_retailer",
+        "evidence_type": "price_comparison_crossborder",
+        "evidence_refs": [
+          "FI_RIDGID_COMPACT2_LOW",
+          "FI_RIDGID_COMPACT2_SHOPS"
+        ],
+        "catalog_metrics": {
+          "target_comparison_offers": 2
+        },
+        "capabilities": [
+          "professional exact-model catalogue",
+          "cross-border shipping"
+        ],
+        "profitability_proven": false,
+        "transferable_elements": [
+          "exact model pages",
+          "professional assortment"
+        ],
+        "unknowns": [
+          "source depth vs Finland",
+          "profitability"
+        ]
+      }
+    ],
+    "merchants": [
+      {
+        "merchant_id": "FI_MERCHANT_PIHABOTTI",
+        "country": "FI",
+        "domain": "pihabotti.fi",
+        "legal_name": "Pihabotti",
+        "merchant_type": "specialist_retailer",
+        "ecosystems": [
+          "FI_FREE_TIME_HOME"
+        ],
+        "brands": [
+          "Mammotion",
+          "Segway",
+          "Gardena",
+          "Roborock"
+        ],
+        "evidence_refs": [
+          "FI_MOWER_PIHABOTTI_COUNT",
+          "FI_MOWER_LUBA5000_PRICE",
+          "FI_MOWER_LUBA5000_STOCK"
+        ],
+        "merchant_quality_score": 88,
+        "good_seller": true,
+        "capabilities": [
+          "yard-size navigation",
+          "free yard survey",
+          "expert sales support",
+          "local stock",
+          "fast delivery",
+          "compatibility accessories"
+        ],
+        "unknowns": [
+          "legal entity enrichment via PRH",
+          "full sales/profitability"
+        ]
+      },
+      {
+        "merchant_id": "FI_MERCHANT_FINNPARTTIA",
+        "country": "FI",
+        "domain": "finnparttia.fi",
+        "legal_name": "Finnparttia",
+        "merchant_type": "technical_retailer",
+        "ecosystems": [
+          "FI_INDOOR_BUILDING_DIAGNOSTICS"
+        ],
+        "brands": [
+          "HIKMICRO"
+        ],
+        "evidence_refs": [
+          "FI_HIK_FINNPARTTIA_EXVAT",
+          "FI_HIK_FINNPARTTIA_BULK8"
+        ],
+        "merchant_quality_score": 76,
+        "good_seller": true,
+        "capabilities": [
+          "stock signal",
+          "1-3 day delivery",
+          "technical specifications",
+          "tiered public quantity pricing"
+        ],
+        "unknowns": [
+          "authorized dealer status",
+          "RMA depth",
+          "thermal-specialist breadth"
+        ]
+      },
+      {
+        "merchant_id": "FI_MERCHANT_STAYPRO",
+        "country": "FI",
+        "domain": "staypro.fi",
+        "legal_name": "Staypro Finland",
+        "merchant_type": "crossborder_tool_retailer",
+        "ecosystems": [
+          "FI_INDOOR_BUILDING_DIAGNOSTICS"
+        ],
+        "brands": [
+          "RIDGID"
+        ],
+        "evidence_refs": [
+          "FI_RIDGID_COMPACT2_LOW",
+          "FI_RIDGID_COMPACT2_SHOPS"
+        ],
+        "merchant_quality_score": 72,
+        "good_seller": true,
+        "capabilities": [
+          "professional tool catalogue",
+          "cross-border fulfilment",
+          "exact model listings"
+        ],
+        "unknowns": [
+          "Finnish local entity/stock status",
+          "RMA handling",
+          "catalog depth snapshot"
+        ]
+      }
+    ],
+    "raw_snapshot_manifest": [
+      {
+        "snapshot_id": "FI_PUBLIC_WEB_RESEARCH_20260907",
+        "country": "FI",
+        "dataset": "GeoDrop public Finland evidence first-seen manifest",
+        "observed_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "retrieved_at": "2026-09-07",
+        "storage_uri": "source_urls_in_sources_jsonl",
+        "sha256": null,
+        "immutable": true,
+        "point_in_time_safe": true,
+        "notes": "Source URLs and first-seen availability frozen at pack creation. Production connectors should archive raw responses with hashes."
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "postnord_fi_consumer_2026",
+        "title": "Finnish e-commerce consumer behavior - spring 2026",
+        "url": "https://www.postnord.com/insights/finland/finland-spring-2026/finnish-e-commerce-consumer-behavior-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "84% shopped online in last 30 days.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_fi_crossborder_2026",
+        "title": "Cross-border shopping and marketplaces in Finland - spring 2026",
+        "url": "https://www.postnord.com/insights/finland/finland-spring-2026/cross-border-shopping-and-marketplaces-in-finland-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "80% bought cross-border in prior year; Temu top; Sweden/Germany valued for faster delivery by younger consumers.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_fi_delivery_2026",
+        "title": "Delivery in Finland - spring 2026",
+        "url": "https://www.postnord.com/insights/finland/finland-spring-2026/delivery-in-finland-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Parcel lockers are Finland\u2019s strongest delivery preference in Nordics.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_fi_payment_2026",
+        "title": "Payment and checkout in Finland - spring 2026",
+        "url": "https://www.postnord.com/insights/finland/finland-spring-2026/payment-in-finland-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Online bank payment preferred; checkout friction and shipping costs material.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "postnord_fi_returns_2026",
+        "title": "Returns in Finland - spring 2026",
+        "url": "https://www.postnord.com/insights/finland/finland-spring-2026/returns-in-finland-spring-2026/",
+        "publisher": "PostNord",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "22% returned a product in prior 3 months.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "vero_vat_rates_2026",
+        "title": "Rates of VAT",
+        "url": "https://www.vero.fi/en/businesses-and-corporations/taxes-and-charges/vat/rates-of-vat/",
+        "publisher": "Finnish Tax Administration",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Standard VAT 25.5%; selected reduced rate 13.5% from 2026.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "vero_import_vat_2026",
+        "title": "VAT on imports",
+        "url": "https://www.vero.fi/en/businesses-and-corporations/taxes-and-charges/vat/international-commerce/vat-on-imports/",
+        "publisher": "Finnish Tax Administration",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "kkv_withdrawal_2026",
+        "title": "Right of withdrawal in e-commerce",
+        "url": "https://www.kkv.fi/en/consumer-affairs/online-stores/right-of-withdrawal-in-e-commerce/",
+        "publisher": "Finnish Competition and Consumer Authority",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Most online goods have 14-day withdrawal; online withdrawal function required from 19 June 2026.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "kkv_info_online_2026",
+        "title": "Obligation to provide information in online stores",
+        "url": "https://www.kkv.fi/en/consumer-affairs/online-stores/obligation-to-provide-information-in-online-stores/",
+        "publisher": "Finnish Competition and Consumer Authority",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "kkv_price_info_2026",
+        "title": "Price information",
+        "url": "https://www.kkv.fi/en/consumer-affairs/marketing-sales-and-indicating-prices/price-information/",
+        "publisher": "Finnish Competition and Consumer Authority",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "statfi_population_2026",
+        "title": "Preliminary population statistics",
+        "url": "https://stat.fi/en/statistics/vamuu",
+        "publisher": "Statistics Finland",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Preliminary July 2026 population 5,655,296 reported in Aug 2026 release.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "statfi_building_stock_2026",
+        "title": "Building stock and new production",
+        "url": "https://stat.fi/en/statistics/raku",
+        "publisher": "Statistics Finland",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "2025 free-time residential buildings 485,475.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "statfi_building_px_15f7",
+        "title": "Number of buildings by region, intended use and heating fuel 2005-2025",
+        "url": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__raku/statfin_raku_pxt_15f7.px/",
+        "publisher": "Statistics Finland",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "statfi_households_2025",
+        "title": "Household-dwelling units and housing conditions",
+        "url": "https://stat.fi/en/statistics/asas",
+        "publisher": "Statistics Finland",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "2.865m household-dwelling units at end 2025.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "statfi_trade_2026",
+        "title": "Turnover of trade",
+        "url": "https://stat.fi/en/statistics/klv",
+        "publisher": "Statistics Finland",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Adjusted total trade turnover +5.6% YoY in July 2026.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "statfi_pxweb_api_2026",
+        "title": "StatFin PxWeb API instructions",
+        "url": "https://stat.fi/en/services/statistical-data-services/statistical-databases/pxweb-api",
+        "publisher": "Statistics Finland",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "API structure changed 8 June 2026; integrations must use current table/variable identifiers.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "sulpu_heatpumps_2026",
+        "title": "Heat pump sales returned to a growth path",
+        "url": "https://www.sulpu.fi/heat-pump-sales-returned-to-a-growth-path-a-rise-of-10-pump-sales-in-finland-already-worth-10-billion/",
+        "publisher": "Finnish Heat Pump Association SULPU",
+        "evidence_type": "industry_report",
+        "published_at": "2026-01-23",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "112k heat pumps sold in 2025, +10.7%; 1.8m historical installed/sold base; ~1/3 sales replacements.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "traficom_vehicle_stock_2026",
+        "title": "Vehicle stock statistics",
+        "url": "https://tieto.traficom.fi/en/statistics/vehicle-stock-statistics",
+        "publisher": "Traficom",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Quarterly data by vehicle category, power source, make/model and owner/holder geography.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "traficom_open_vehicle_2026",
+        "title": "Open vehicle data",
+        "url": "https://www.traficom.fi/en/services/open-data",
+        "publisher": "Traficom",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Downloadable vehicle records current through 30 June 2026.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "fmi_open_data_2026",
+        "title": "FMI Open Data manual - time series",
+        "url": "https://en.ilmatieteenlaitos.fi/open-data-manual-time-series-data",
+        "publisher": "Finnish Meteorological Institute",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "prh_open_data_2026",
+        "title": "PRH open company data API",
+        "url": "https://avoindata.prh.fi/en/info/swagger-ui",
+        "publisher": "Finnish Patent and Registration Office",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Daily-updated basic company data; CC BY 4.0.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "tulli_uljas_2026",
+        "title": "Finnish Customs Uljas country report",
+        "url": "https://uljas.tulli.fi/v3rti/reports/maaraportti/maaraportti.html",
+        "publisher": "Finnish Customs",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Monthly import/export and commodity-level data surfaces.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "stuk_radon_2026",
+        "title": "Radon measurement guidance",
+        "url": "https://stuk.fi/en/radon",
+        "publisher": "Radiation and Nuclear Safety Authority STUK",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Long-term home radon measurement is 2-3 months during the heating season.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "hintaopas_partner_2026",
+        "title": "Hintaopas Finland price comparison",
+        "url": "https://hintaopas.fi/",
+        "publisher": "Hintaopas / Prisjakt",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Finnish exact-product offer/price-comparison surface.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "hinta_fi_2026",
+        "title": "Hinta.fi price comparison",
+        "url": "https://hinta.fi/",
+        "publisher": "Hinta.fi",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "google_ads_keyword_2026",
+        "title": "Google Ads Keyword Planning historical metrics",
+        "url": "https://developers.google.com/google-ads/api/docs/keyword-planning/generate-historical-metrics",
+        "publisher": "Google",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "google_trends_api_2026",
+        "title": "Google Trends API alpha",
+        "url": "https://developers.google.com/search/apis/trends",
+        "publisher": "Google",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "gmc_bigquery_2026",
+        "title": "Merchant Center transfer to BigQuery",
+        "url": "https://cloud.google.com/bigquery/docs/merchant-center-transfer",
+        "publisher": "Google Cloud",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "hikmicro_pocket2_hintaopas_2026",
+        "title": "HIKMICRO Pocket 2 price comparison",
+        "url": "https://hintaopas.fi/product.php?p=7301064",
+        "publisher": "Hintaopas",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Current lowest 813.90 EUR; 3 shops identified.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "hikmicro_pocket2_hinta_2026",
+        "title": "HIKMICRO HM-TP42-3AQF/W-Pocket2 product data",
+        "url": "https://hinta.fi/4095359/hikmicro-hm-tp42-3aqf-w-pocket2/tuotetiedot",
+        "publisher": "Hinta.fi",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Current price 831.24 EUR; MPN and GTIN visible.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "finnparttia_hik_pocket2_2026",
+        "title": "HIK POCKET2 thermal camera",
+        "url": "https://www.finnparttia.fi/HIKPOCKET2-Lampokamera",
+        "publisher": "Finnparttia",
+        "evidence_type": "merchant_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "630 EUR ex VAT, tiered bulk pricing down to 590 EUR at 8 units; stock 1-3 working days.",
+        "evidence_tier": "C",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ridgid_microreel_fi_2026",
+        "title": "SeeSnake microREEL APX with TruSense",
+        "url": "https://www.ridgid.eu/fi/fi/seesnake-microreel-apx-trusense-teknologialla",
+        "publisher": "RIDGID",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Catalog 70808 and compatible systems/accessories.",
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ridgid_compact2_hinta_2026",
+        "title": "RIDGID SeeSnake Compact2 CS6Pak price comparison",
+        "url": "https://hinta.fi/2595166/ridgid-seesnake-compact2-cs6pak-paketti-sis-akkua-ja-laturia",
+        "publisher": "Hinta.fi",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "12,008.90 EUR lowest; two cross-border shops surfaced.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "staypro_microreel_2026",
+        "title": "RIDGID SeeSnake MicroReel 30m",
+        "url": "https://www.staypro.fi/koneet-tyokalut/mittatyokalut/hakutyokalut/kamerakela/ridgid-seesnake-microreel-kamerakela-30-m-ca-300-laskuriin-ok10402-4",
+        "publisher": "Staypro Finland",
+        "evidence_type": "merchant_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "6,817.50 EUR public retail.",
+        "evidence_tier": "C",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "pihabotti_home_2026",
+        "title": "Pihabotti expert robot mower shop",
+        "url": "https://pihabotti.fi/",
+        "publisher": "Pihabotti",
+        "evidence_type": "merchant_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Finnish specialist with yard sizing, free yard survey and 2026 product navigation.",
+        "evidence_tier": "C",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "pihabotti_mowers_2026",
+        "title": "Robot mower category",
+        "url": "https://pihabotti.fi/collections/robottiruohonleikkurit",
+        "publisher": "Pihabotti",
+        "evidence_type": "merchant_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "41 products in category.",
+        "evidence_tier": "C",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "pihabotti_luba5000_2026",
+        "title": "Mammotion Luba 3 5000X",
+        "url": "https://pihabotti.fi/products/mammotion-luba-3-5000x-awd-lidar-rtk-robottiruohonleikkuri",
+        "publisher": "Pihabotti",
+        "evidence_type": "merchant_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "2,990 EUR, 6 units in stock, 1-3 day delivery when observed.",
+        "evidence_tier": "C",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "cdon_hik_pocket2_2026",
+        "title": "HIKMICRO Pocket2 on CDON Finland",
+        "url": "https://cdon.fi/tuote/hikmicro-pocket2-lommekamera-termisk-kamera-256x192-pixel-20degc-400degc-inkl-tilbehor-3d44e9d6c2084c52/",
+        "publisher": "CDON Finland",
+        "evidence_type": "marketplace",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Marketplace offer 949 EUR from CS MEGASTORE.",
+        "evidence_tier": "D",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "ridgid_essentials_fi",
+        "title": "RIDGID Essentials Finland catalogue",
+        "url": "https://cdn.ridgid.com/eu/Website/SCANENGLISH/Essentials/ESSENTIALS20FI.pdf",
+        "publisher": "RIDGID",
+        "evidence_type": "platform_first_party",
+        "published_at": "2020",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": "Historic Finnish catalogue demonstrates professional pipe-camera category and list pricing; historical only.",
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "eurostat_comext_2026",
+        "title": "Eurostat Comext trade database",
+        "url": "https://ec.europa.eu/eurostat/web/international-trade-in-goods/database",
+        "publisher": "Eurostat",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "un_comtrade_2026",
+        "title": "UN Comtrade database",
+        "url": "https://comtradeplus.un.org/",
+        "publisher": "United Nations",
+        "evidence_type": "primary_official",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": null,
+        "notes": null,
+        "evidence_tier": "A",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "posti_ecommerce_2026",
+        "title": "E-commerce and parcel services",
+        "url": "https://www.posti.fi/en/for-businesses/parcels-and-logistics/ecommerce",
+        "publisher": "Posti",
+        "evidence_type": "platform_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "paytrail_ecommerce_2026",
+        "title": "Finnish e-commerce reports and payment insight",
+        "url": "https://www.paytrail.com/en/reports",
+        "publisher": "Paytrail",
+        "evidence_type": "industry_report",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "FI",
+        "notes": null,
+        "evidence_tier": "B",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      },
+      {
+        "source_id": "polarpumpen_se_source",
+        "title": "Swedish heat pump specialist retail archetype",
+        "url": "https://www.polarpumpen.se/",
+        "publisher": "Polarpumpen",
+        "evidence_type": "merchant_first_party",
+        "published_at": "2026",
+        "accessed_at": "2026-09-07",
+        "country": "SE",
+        "notes": "Source-market specialist candidate; quantitative catalogue/profitability not yet frozen.",
+        "evidence_tier": "C",
+        "retrieved_at": "2026-09-07",
+        "available_at": "2026-09-07",
+        "point_in_time_safe": true,
+        "coverage_notes": null,
+        "availability_basis": "first_seen_by_geodrop"
+      }
+    ],
+    "source_target_gaps": [
+      {
+        "gap_id": "FI_GAP_HP_SE",
+        "country": "FI",
+        "ecosystem_id": "FI_HEATPUMP_INSTALLED",
+        "source_country": "SE",
+        "source_archetype_ids": [
+          "SE_HEATPUMP_REPLACEMENT_SPECIALIST"
+        ],
+        "target_merchant_ids": [],
+        "status": "PARTIAL_MEASURED",
+        "metrics": {
+          "source_replacement_share_percent": 50,
+          "target_replacement_share_percent": 33.3,
+          "good_target_merchants": null,
+          "assortment_delta": null
+        },
+        "evidence_refs": [
+          "FI_HP_REPLACEMENT_SHARE_2025"
+        ],
+        "conclusion": "Replacement-market maturity lag is observed at industry level, but merchant/assortment/service delta is not yet quantified."
+      },
+      {
+        "gap_id": "FI_GAP_RIDGID_SE",
+        "country": "FI",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "source_country": "SE",
+        "source_archetype_ids": [
+          "SE_PRO_TOOL_CROSSBORDER"
+        ],
+        "target_merchant_ids": [
+          "FI_MERCHANT_STAYPRO"
+        ],
+        "status": "PARTIAL_MEASURED",
+        "metrics": {
+          "comparison_shop_count": 2,
+          "local_specialist_count": null,
+          "good_seller_count": null
+        },
+        "evidence_refs": [
+          "FI_RIDGID_COMPACT2_SHOPS"
+        ],
+        "conclusion": "Sparse comparison surface exists, but observed offers are cross-border; hidden Finnish B2B census is required before declaring merchant gap."
+      },
+      {
+        "gap_id": "FI_GAP_THERMAL_SOURCE",
+        "country": "FI",
+        "ecosystem_id": "FI_INDOOR_BUILDING_DIAGNOSTICS",
+        "source_country": "DE",
+        "source_archetype_ids": [],
+        "target_merchant_ids": [
+          "FI_MERCHANT_FINNPARTTIA"
+        ],
+        "status": "MISSING_REQUIRED",
+        "metrics": {
+          "target_shop_count_observed": 3,
+          "source_shop_count": null,
+          "feature_depth_delta": null
+        },
+        "evidence_refs": [
+          "FI_HIK_POCKET2_SHOPS_20260907"
+        ],
+        "conclusion": "Target retail availability is proven; source-target service/assortment lag remains unmeasured."
+      }
+    ]
+  },
+  "installed_base": [
+    {
+      "error": "400 Unrecognized name: installed_base at [4:13]; reason: invalidQuery, location: query, message: Unrecognized name: installed_base at [4:13]\n\nLocation: EU\nJob ID: b8b56bc9-161c-496e-8b35-545b0013408f\n"
+    }
+  ],
+  "ecosystems": [],
+  "merchants": [],
+  "products": [
+    {
+      "error": "400 Unrecognized name: country_code at [3:15]; reason: invalidQuery, location: query, message: Unrecognized name: country_code at [3:15]\n\nLocation: EU\nJob ID: 3244b8c8-32de-4477-b7a2-d6edf95e337a\n"
+    }
+  ],
+  "graph_nodes": [
+    {
+      "node_type": "country",
+      "node_id": "COUNTRY_FI",
+      "properties_json": "{\"code\": \"FI\", \"name\": \"Finland\", \"currency\": \"EUR\", \"language\": \"fi\", \"ecommerce_penetration\": 0.84, \"cross_border_rate\": 0.8}"
+    },
+    {
+      "node_type": "ecosystem",
+      "node_id": "ECO_FI_HEAT_PUMP",
+      "properties_json": "{\"system\": \"heat_pump\", \"country\": \"FI\", \"installed_base\": 2000000, \"growth_rate\": 0.63, \"replacement_share\": 0.33}"
+    },
+    {
+      "node_type": "problem",
+      "node_id": "PROB_HEAT_PUMP_FILTER",
+      "properties_json": "{\"ecosystem\": \"ECO_FI_HEAT_PUMP\", \"component\": \"filter\", \"trigger\": \"MAINTENANCE\"}"
+    }
+  ]
+}
