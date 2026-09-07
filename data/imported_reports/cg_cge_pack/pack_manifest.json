@@ -1,0 +1,43 @@
+{
+  "pack": "drop-cg-cge-campaign-evolution-spec",
+  "version": "1.0",
+  "generated": "2026-09-07",
+  "files": [
+    "ACTIVE_LEARNING_EVI.md",
+    "ANTI_GOODHART.md",
+    "ARCHITECTURE.md",
+    "BIGQUERY_EVIDENCE_MODEL.md",
+    "CAMPAIGN_STATE_MACHINE.md",
+    "CGE_INTEGRATION.md",
+    "CG_INTEGRATION.md",
+    "CODING_AGENT_HANDOFF.md",
+    "EVALUATION_SUITE.md",
+    "IMPLEMENTATION_PLAN.md",
+    "LIVE_LEARNING_LOOP.md",
+    "OPERATOR_CLI.md",
+    "README.md",
+    "REPO_AUDIT.md",
+    "SOURCES.md",
+    "TEST_PLAN.md",
+    "TRUST_BOUNDARIES.md",
+    "code_skeleton/drop_campaign_world.py",
+    "code_skeleton/evidence_compiler.py",
+    "code_skeleton/mutation_admission.py",
+    "code_skeleton/orchestrator_pseudocode.py",
+    "config/mutation_operators.v1.yaml",
+    "config/rubric.drop-hcc-v2.yaml",
+    "examples/FI_UFH_campaign_v2.json",
+    "examples/FI_UFH_cycle_example.json",
+    "examples/NO_AKVA_B2B_campaign_v2.json",
+    "schemas/campaign.schema.v2.json",
+    "schemas/mutation.schema.v1.json",
+    "sql/BIGQUERY_DDL.sql",
+    "sql/DERIVED_VIEWS.sql"
+  ],
+  "repo_roles": {
+    "drop": "domain/control plane",
+    "cg": "trusted deterministic judge",
+    "cge": "untrusted proposer/space expander",
+    "bigquery": "evidence and analytics plane"
+  }
+}

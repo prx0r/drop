@@ -1,0 +1,89 @@
+rubric_version: drop-hcc-v2.0
+judge: cg
+unknown_policy: BLOCK
+track_router_required: true
+
+d2c:
+  hard_gates:
+    G1_installed_base:
+      metric: g1_installed_base_pass
+      require: 1
+    G2_lifecycle:
+      metric: g2_lifecycle_pass
+      require: 1
+    G3_compatibility:
+      metric: g3_compatibility_pass
+      require: 1
+    G4_buyer_autonomy:
+      metric: g4_buyer_autonomy_pass
+      require: 1
+    G5_local_supply:
+      metric: g5_supply_pass
+      require: 1
+    G6_ownership_gap:
+      metric: g6_ownership_gap_pass
+      require: 1
+    G7_reseller:
+      metric: g7_reseller_pass
+      require: 1
+    G8_economics:
+      metric: g8_economics_pass
+      require: 1
+    G9_demand:
+      metric: g9_demand_pass
+      require: 1
+    G10_operations:
+      metric: g10_operations_pass
+      require: 1
+    G11_feed:
+      metric: g11_feed_pass
+      require: 1
+    G12_retrieval:
+      metric: g12_retrieval_whitespace_pass
+      require: 1
+
+  thresholds:
+    min_surviving_units: 10000
+    min_annual_addressable_events: 1000
+    min_positive_compatibility_edges: 25
+    min_negative_or_supersession_edges: 5
+    min_buyer_role_sample_n: 30
+    min_consumer_selector_lower95: 0.35
+    hard_fail_consumer_selector_upper95: 0.25
+    min_incumbent_benchmark_n: 30
+    max_incumbent_resolution_rate_strong_gap: 0.70
+    hard_fail_incumbent_resolution_rate: 0.85
+    min_our_resolution_lcb: 0.90
+    min_pre_ad_contribution_eur: 15
+    min_contribution_margin: 0.20
+    max_required_market_share: 0.05
+    max_manual_presale_rate: 0.20
+    min_feed_complete_sku_share: 0.80
+
+  objectives:
+    - metric: annual_contribution_pool_low
+      direction: max
+    - metric: our_resolution_lcb
+      direction: max
+    - metric: required_market_share
+      direction: min
+    - metric: manual_presale_rate_ucb
+      direction: min
+    - metric: research_debt
+      direction: min
+
+b2b:
+  note: "Buyer autonomy means professional requisitioner autonomy, not consumer DIY."
+  hard_gates:
+    - installed_asset/event base
+    - professional requisitioner is identifiable
+    - compatibility/BOM can be proven
+    - executable supplier/RFQ route exists
+    - economics or buyer willingness-to-pay verified
+    - compliance/warranty route explicit
+    - incumbent resolution gap verified
+  objectives:
+    - downtime_value_low
+    - requisition_resolution_accuracy
+    - supplier_execution_rate
+    - time_to_executable_quote

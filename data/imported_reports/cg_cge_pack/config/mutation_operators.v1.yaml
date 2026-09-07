@@ -1,0 +1,71 @@
+version: 1
+mutation_operators:
+
+  - id: NARROW_GENERATION
+    family: NARROW
+    allowed_paths: ["/atom/generation_scope"]
+    use_when: ["G3_FAIL_OR_UNKNOWN", "G6_FAIL", "G10_FAIL"]
+
+  - id: NARROW_COMPONENT
+    family: NARROW
+    allowed_paths: ["/atom/component_scope"]
+    use_when: ["G4_FAIL", "G6_FAIL", "G10_FAIL"]
+
+  - id: REROUTE_SERVICE
+    family: REROUTE
+    allowed_paths: ["/track", "/distribution_strategy", "/supplier_strategy/transaction_route"]
+    use_when: ["G4_FAIL", "G10_FAIL"]
+
+  - id: REROUTE_B2B
+    family: REROUTE
+    allowed_paths: ["/track", "/distribution_strategy", "/supplier_strategy/transaction_route"]
+    use_when: ["professional_is_sku_selector"]
+
+  - id: TRANSFER_COUNTRY
+    family: GEOGRAPHIC_TRANSFER
+    allowed_paths: ["/country", "/language", "/supplier_strategy/candidate_supplier_ids"]
+    use_when: ["G6_FAIL", "G5_FAIL"]
+    constraint: "new country must exist in typed BigQuery neighborhood"
+
+  - id: SWAP_SUPPLIER_SET
+    family: SUPPLY_SWAP
+    allowed_paths: ["/supplier_strategy/candidate_supplier_ids", "/supplier_strategy/transaction_route"]
+    use_when: ["G5_FAIL", "G7_FAIL", "G8_FAIL"]
+
+  - id: GRAPH_DEEPEN_SUPERSESSION
+    family: GRAPH_DEEPEN
+    allowed_paths: ["/atom/component_scope", "/atom/triggers"]
+    use_when: ["G6_FAIL"]
+    constraint: "must bind to verified graph neighbors"
+
+  - id: SPLIT_CAMPAIGN
+    family: SPLIT
+    allowed_paths: ["/atom/generation_scope", "/atom/component_scope"]
+    use_when: ["broad_atom", "mixed_buyer_roles", "mixed_install_burden"]
+
+  - id: PROPOSE_BUYER_ROLE_TEST
+    family: RESEARCH_ACTION
+    mutates_campaign: false
+    use_when: ["G4_UNKNOWN"]
+
+  - id: PROPOSE_SUPPLIER_CONTACT
+    family: RESEARCH_ACTION
+    mutates_campaign: false
+    use_when: ["G7_UNKNOWN", "G8_UNKNOWN"]
+
+  - id: PROPOSE_INCUMBENT_BENCHMARK
+    family: RESEARCH_ACTION
+    mutates_campaign: false
+    use_when: ["G6_UNKNOWN"]
+
+  - id: PROPOSE_COMPATIBILITY_EXTRACTION
+    family: RESEARCH_ACTION
+    mutates_campaign: false
+    use_when: ["G3_UNKNOWN"]
+
+forbidden_paths:
+  - "/evidence_bindings"
+  - "/hard_gate_results"
+  - "/observed_metrics"
+  - "/economics/observed_*"
+  - "/installed_base/observed_*"

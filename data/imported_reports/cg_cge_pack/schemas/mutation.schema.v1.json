@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Campaign Mutation Proposal",
+  "type": "object",
+  "required": [
+    "mutation_id",
+    "parent_campaign_version_id",
+    "mutation_type",
+    "operations",
+    "target_gate",
+    "rationale"
+  ],
+  "properties": {
+    "mutation_id": {
+      "type": "string"
+    },
+    "parent_campaign_version_id": {
+      "type": "string"
+    },
+    "mutation_type": {
+      "enum": [
+        "NARROW",
+        "REROUTE",
+        "SUPPLY_SWAP",
+        "GEOGRAPHIC_TRANSFER",
+        "GRAPH_DEEPEN",
+        "SPLIT",
+        "COMPOSE",
+        "RESEARCH_ACTION",
+        "KILL"
+      ]
+    },
+    "target_gate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "op",
+          "path"
+        ],
+        "properties": {
+          "op": {
+            "enum": [
+              "add",
+              "remove",
+              "replace"
+            ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "value": {}
+        }
+      }
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "expected_effect": {
+      "type": "object",
+      "properties": {
+        "gate_target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hypothesis_only": {
+          "const": true
+        }
+      }
+    },
+    "forbidden_evidence_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "/evidence_bindings",
+        "/observed_metrics",
+        "/hard_gate_results"
+      ]
+    }
+  }
+}

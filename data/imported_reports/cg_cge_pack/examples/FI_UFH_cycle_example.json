@@ -1,0 +1,43 @@
+{
+  "parent_campaign_id": "FI-UFH-LEGACY-CONTROLS-0001",
+  "cg_public_result": {
+    "verdict": "BLOCKED",
+    "gates": {
+      "G1_installed_base": "UNKNOWN",
+      "G2_lifecycle": "PASS",
+      "G3_compatibility": "UNKNOWN",
+      "G4_buyer_autonomy": "UNKNOWN",
+      "G5_local_supply": "PASS",
+      "G6_ownership_gap": "UNKNOWN",
+      "G7_reseller": "UNKNOWN",
+      "G8_economics": "UNKNOWN",
+      "G9_demand": "UNKNOWN",
+      "G10_operations": "UNKNOWN",
+      "G11_feed": "UNKNOWN",
+      "G12_retrieval": "UNKNOWN"
+    }
+  },
+  "cge_proposals": [
+    {
+      "mutation_type": "RESEARCH_ACTION",
+      "target_gate": "G4",
+      "action": "sample >=30 Finnish replacement journeys and estimate exact-SKU selector role"
+    },
+    {
+      "mutation_type": "NARROW",
+      "target_gate": "G4",
+      "child_hypothesis": "24V owner-selectable retrofit actuators only",
+      "note": "must still be re-evaluated; narrowing does not flip gate itself"
+    },
+    {
+      "mutation_type": "REROUTE",
+      "target_gate": "G4",
+      "child_hypothesis": "SERVICE_ORCHESTRATION for legacy control migration",
+      "note": "preserves opportunity if technician is the SKU selector"
+    }
+  ],
+  "selected_next_action": {
+    "type": "BUYER_ROLE_SAMPLE",
+    "reason": "fatal early routing uncertainty; cheaper/higher kill power than supplier or ad work"
+  }
+}
