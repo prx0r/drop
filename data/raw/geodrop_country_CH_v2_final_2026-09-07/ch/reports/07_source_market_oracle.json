@@ -1,0 +1,27 @@
+{
+  "report_id": "CH_07_SOURCE_MARKET_ORACLE",
+  "country": "CH",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "source_market_candidates": [
+    "DE",
+    "AT",
+    "FR",
+    "IT",
+    "CH"
+  ],
+  "archetype_refs": [
+    "CH_ARCH_DE_HP_PARTS",
+    "CH_ARCH_DE_SOLAR",
+    "CH_ARCH_DE_BIKE",
+    "CH_ARCH_CH_LOCALIZED"
+  ],
+  "gap_refs": [
+    "CH_GAP_HP_LEGACY",
+    "CH_GAP_SOLAR_STORAGE",
+    "CH_GAP_EV_EMERGING",
+    "CH_GAP_EBIKE",
+    "CH_GAP_RADON"
+  ],
+  "principle": "Use mature neighboring catalogues as vocabulary/assortment/business-model oracles, then test Swiss merchant lag after customs, language and local checkout are priced in."
+}

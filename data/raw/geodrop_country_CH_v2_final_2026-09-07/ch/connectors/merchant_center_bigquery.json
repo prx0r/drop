@@ -1,0 +1,22 @@
+{
+  "connector_id": "CH_MERCHANT_BQ",
+  "status": "AUTH_REQUIRED",
+  "source_id": "ch_merchant_bq",
+  "purpose": [
+    "best sellers",
+    "price competitiveness",
+    "price insights",
+    "own product performance"
+  ],
+  "method": "Merchant Center BigQuery Data Transfer",
+  "rules": [
+    "country-code filter CH",
+    "retain GTIN/brand/category",
+    "separate own-store outcome from market benchmark"
+  ],
+  "outputs": [
+    "series/price_snapshots.csv",
+    "series/seller_snapshots.csv",
+    "series/experiment_metrics.csv"
+  ]
+}

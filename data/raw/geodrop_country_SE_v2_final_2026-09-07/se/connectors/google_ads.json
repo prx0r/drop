@@ -1,0 +1,22 @@
+{
+  "connector_id": "SE_GOOGLE_ADS_KEYWORD",
+  "status": "AUTH_REQUIRED",
+  "source_id": "se_google_ads_api",
+  "purpose": [
+    "Swedish monthly search volume",
+    "CPC",
+    "competition",
+    "monthly history"
+  ],
+  "geo": "Sweden",
+  "language": "Swedish",
+  "rules": [
+    "MISSING_REQUIRED until authenticated",
+    "exact geo/language/network",
+    "archive pre-launch snapshot"
+  ],
+  "outputs": [
+    "queries.jsonl",
+    "series/search.csv"
+  ]
+}

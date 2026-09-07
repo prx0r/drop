@@ -1,0 +1,40 @@
+{
+  "report_id": "SE_04_ACQUISITION_QUERY_FOREST",
+  "country": "SE",
+  "as_of": "2026-09-07",
+  "status": "SEEDS_ONLY_AUTH_REQUIRED",
+  "query_count": 21,
+  "query_refs": [
+    "SE_Q_HP_NIBE_PARTS",
+    "SE_Q_HP_IVT_PARTS",
+    "SE_Q_HP_OLD_MODEL",
+    "SE_Q_HP_CONTROL_BOARD",
+    "SE_Q_HAN_ADAPTER",
+    "SE_Q_P1_METER",
+    "SE_Q_EFFECT_FEE",
+    "SE_Q_LOAD_BALANCE",
+    "SE_Q_SOLAREDGE_OPT",
+    "SE_Q_FRONIUS_PART",
+    "SE_Q_SOLAR_BATTERY",
+    "SE_Q_SOLAR_EMS",
+    "SE_Q_XPENG_G6_ACC",
+    "SE_Q_XPENG_G6_BOOT",
+    "SE_Q_XPENG_G6_RACK",
+    "SE_Q_TESLA_MODELY",
+    "SE_Q_COTTAGE_TEMP",
+    "SE_Q_COTTAGE_POWER",
+    "SE_Q_COTTAGE_WATER",
+    "SE_Q_RADON_METER",
+    "SE_Q_RADON_MEASURE"
+  ],
+  "required_metric_refs": [
+    "SE_GADS_SEARCHVOL_ACTIVE",
+    "SE_GADS_CPC_ACTIVE"
+  ],
+  "rules": [
+    "No seed phrase counts as demand until geo=Sweden/language=Swedish metrics are measured.",
+    "Preserve exact-model vs generic/problem intent.",
+    "Freeze query universe before prospective paid probe."
+  ],
+  "summary": "21 Swedish native query seeds encode lifecycle, compatibility, exact-model and negative-control intent. All search/CPC metrics remain MISSING_REQUIRED."
+}

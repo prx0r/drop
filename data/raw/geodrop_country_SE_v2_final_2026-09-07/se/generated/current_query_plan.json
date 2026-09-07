@@ -1,0 +1,19 @@
+{
+  "country": "SE",
+  "as_of": "2026-09-07",
+  "status": "AUTH_REQUIRED",
+  "priority_query_ids": [
+    "SE_Q_XPENG_G6_ACC",
+    "SE_Q_XPENG_G6_BOOT",
+    "SE_Q_XPENG_G6_RACK",
+    "SE_Q_SOLAREDGE_OPT",
+    "SE_Q_FRONIUS_PART",
+    "SE_Q_SOLAR_BATTERY"
+  ],
+  "negative_controls": [
+    "SE_Q_TESLA_MODELY",
+    "SE_Q_P1_METER",
+    "SE_Q_COTTAGE_TEMP"
+  ],
+  "rule": "Freeze this universe before authenticated query pull if used for prospective comparison."
+}

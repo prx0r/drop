@@ -1,0 +1,37 @@
+{
+  "country": "CH",
+  "as_of": "2026-09-07",
+  "queue": [
+    {
+      "priority": 1,
+      "action": "Pull Google Ads Keyword Planner metrics for all CH query seeds by language/region",
+      "blocking_refs": [
+        "CH_GADS_SEARCHVOL_ACTIVE",
+        "CH_GADS_CPC_ACTIVE"
+      ]
+    },
+    {
+      "priority": 2,
+      "action": "Freeze Toppreise + Shopping + organic/OEM seller census for active product markets",
+      "blocking_refs": [
+        "CH_EXHAUSTIVE_MERCHANT_CENSUS"
+      ]
+    },
+    {
+      "priority": 3,
+      "action": "Extract ASTRA exact make/model/cohort vehicle universe prospectively",
+      "blocking_refs": [
+        "CH_EV_MODEL_COHORT_ACTIVE"
+      ]
+    },
+    {
+      "priority": 4,
+      "action": "Request dealer net/reseller/warranty terms for survivors only",
+      "blocking_refs": [
+        "CH_DEALER_NET_ACTIVE",
+        "CH_RESELLER_TERMS_ACTIVE"
+      ]
+    }
+  ],
+  "rule": "Resolve highest decision-value unknowns; do not spend supplier outreach or ads on killed generic markets."
+}

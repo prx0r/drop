@@ -1,0 +1,5 @@
+date,country,ecosystem_id,problem_id,metric,value,unit,observation_id
+2026-09-07,SE,SE_HEAT_PUMP_LIFECYCLE,SE_HP_OBSOLETE_CONTROL,replacement_wave_explicit,1,boolean,SE_HP_REPLACEMENT_WAVE_2026
+2026-09-07,SE,SE_RADON_INDOOR_AIR,SE_RADON_MEASURE,homes_above_reference,400000,homes_approx,SE_RADON_HIGH_HOMES_2026
+2026-09-07,SE,SE_FRITIDSHUS_REMOTE,SE_COTTAGE_FROST_POWER,holiday_home_exposure,633861,holiday_homes,SE_HOLIDAY_HOMES_2026
+2026-09-07,SE,SE_SOLAR_LIFECYCLE,SE_SOLAR_INVERTER_REPLACE,solar_installed_base,314600,installations,SE_SOLAR_INSTALLATIONS_2025

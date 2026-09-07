@@ -1,0 +1,15 @@
+{
+  "report_id": "CH_05_COMPETITION",
+  "country": "CH",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL",
+  "merchant_census_report": "05_competition_merchant_census",
+  "source_target_gap_refs": [
+    "CH_GAP_HP_LEGACY",
+    "CH_GAP_SOLAR_STORAGE",
+    "CH_GAP_EV_EMERGING",
+    "CH_GAP_EBIKE",
+    "CH_GAP_RADON"
+  ],
+  "summary": "Switzerland has strong generalist and specialist competition. Merchant lag must survive Toppreise, Galaxus, organic, OEM/service and neighboring-market checks."
+}

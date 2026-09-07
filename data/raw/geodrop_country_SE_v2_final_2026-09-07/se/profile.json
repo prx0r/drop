@@ -1,0 +1,51 @@
+{
+  "country": "SE",
+  "country_name": "Sweden",
+  "pack_as_of": "2026-09-07",
+  "languages": [
+    "sv"
+  ],
+  "primary_language": "sv",
+  "currency": "SEK",
+  "timezone": "Europe/Stockholm",
+  "population_observation": "SE_POP_2026_07",
+  "standard_vat_observation": "SE_VAT_STANDARD_2026",
+  "ecommerce_tax_scheme": {
+    "name": "EU VAT / Swedish VAT + OSS/IOSS/import rules",
+    "note": "Validate OSS/IOSS, customs, WEEE/battery producer responsibility, GPSR and category-specific obligations per seller/SKU."
+  },
+  "local_payment_methods": [
+    "Swish",
+    "cards",
+    "Klarna/invoice",
+    "Apple Pay",
+    "Google Pay"
+  ],
+  "preferred_delivery_patterns": [
+    "home delivery most used/preferred",
+    "parcel lockers second preferred",
+    "delivery choice/pickup-location flexibility crucial"
+  ],
+  "price_comparison_sources": [
+    "prisjakt.nu",
+    "pricerunner.se"
+  ],
+  "official_data_api": "Statistics Sweden PxWebApi v2",
+  "source_market_candidates": [
+    "DE",
+    "NL",
+    "SE",
+    "CN/global specialty"
+  ],
+  "research_principle": "Sweden is a mature ecommerce and source-oracle market. Large installed bases must be penalized when local specialist execution is already deep. Prioritize transient lifecycle or emerging-model cohorts where catalogue/service growth demonstrably lags installed-base/problem demand.",
+  "pack_version": "2.0.0",
+  "intelligence_model": "installed_base_problem_source_target_outcome_graph",
+  "geographic_levels": [
+    "country",
+    "county",
+    "municipality",
+    "postcode/cell when source supports"
+  ],
+  "evidence_policy": "docs/CANONICAL_SPEC.md",
+  "backtesting_policy": "docs/BACKTESTING.md"
+}

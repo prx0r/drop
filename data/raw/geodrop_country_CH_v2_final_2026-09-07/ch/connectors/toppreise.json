@@ -1,0 +1,23 @@
+{
+  "connector_id": "CH_TOPPREISE",
+  "status": "READY_WEB_RESEARCH",
+  "source_id": "ch_toppreise_platform",
+  "purpose": [
+    "seller census",
+    "Swiss delivered price",
+    "stock/location",
+    "exact product offer depth"
+  ],
+  "method": "Toppreise web/partner-access where permitted",
+  "rules": [
+    "freeze snapshot timestamp/query",
+    "count unique underlying sellers",
+    "distinguish Swiss vs foreign warehouse",
+    "capture VAT/recycling/shipping-inclusive price semantics"
+  ],
+  "outputs": [
+    "merchants.jsonl",
+    "series/price_snapshots.csv",
+    "series/seller_snapshots.csv"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "connector_id": "SE_EI_GRID",
+  "status": "READY_PUBLIC",
+  "source_id": "se_ei_smartmeters_2025",
+  "purpose": [
+    "smart meter stock",
+    "customer interface regulation",
+    "grid reliability",
+    "network/tariff geography"
+  ],
+  "method": "Ei published/open statistics",
+  "rules": [
+    "version policy changes",
+    "do not treat repealed 2027 effect-fee mandate as current requirement"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/problem_incidence.csv"
+  ]
+}

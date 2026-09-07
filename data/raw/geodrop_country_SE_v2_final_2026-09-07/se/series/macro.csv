@@ -1,0 +1,7 @@
+period,country,metric,value,observation_id
+2025,SE,ecommerce_turnover_SEK_billion,166,SE_ECOM_SPEND_2025
+2026-07,SE,population,10613531,SE_POP_2026_07
+2026-07,SE,retail_volume_yoy_pct,6.2,SE_RETAIL_YOY_2026_07
+2026-07,SE,durable_retail_volume_yoy_pct,8.6,SE_DURABLE_RETAIL_YOY_2026_07
+2026-spring,SE,ecommerce_30d_pct,88,SE_ECOM_30D_2026
+2026-spring,SE,crossborder_year_pct,57,SE_CROSSBORDER_YEAR_2026

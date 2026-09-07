@@ -1,0 +1,19 @@
+{
+  "connector_id": "SE_TRANSPORT_VEHICLES",
+  "status": "READY_PUBLIC_OR_DATA_REQUEST",
+  "source_id": "se_transport_vehicle_2025",
+  "purpose": [
+    "vehicle stock",
+    "make/model cohorts",
+    "municipality geography"
+  ],
+  "method": "Transportstyrelsen statistics/data service",
+  "rules": [
+    "archive exact model mapping",
+    "freeze cohort universe before lag tests"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/installed_base.csv"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "connector_id": "CH_ASTRA_VEHICLE",
+  "status": "READY_PUBLIC",
+  "source_id": "ch_astra_vehicle_open",
+  "purpose": [
+    "vehicle stock",
+    "new registrations",
+    "vehicle types",
+    "make/model cohort discovery"
+  ],
+  "method": "ASTRA IVZ open-data files",
+  "rules": [
+    "archive exact file and last-modified timestamp",
+    "join type data carefully",
+    "no owner-location inference from restricted data",
+    "freeze candidate cohort universe before scoring"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/installed_base.csv"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "report_id": "CH_05_COMPETITION_MERCHANT_CENSUS",
+  "country": "CH",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL",
+  "merchant_refs": [
+    "CH_MERCHANT_GALAXUS",
+    "CH_MERCHANT_NIBE",
+    "CH_MERCHANT_STIEBEL",
+    "CH_MERCHANT_VELOPLUS",
+    "CH_MERCHANT_UPVOLT",
+    "CH_MERCHANT_BIKEIMPORT",
+    "CH_MERCHANT_AUTOMUNDO",
+    "CH_MERCHANT_SRS",
+    "CH_MERCHANT_TOPPREISE"
+  ],
+  "price_comparison_refs": [
+    "CH_TOPPREISE_LANDED_PRICE"
+  ],
+  "required_missing_refs": [
+    "CH_EXHAUSTIVE_MERCHANT_CENSUS"
+  ],
+  "negative_controls": [
+    "CH_EBIKE_BATTERY_PM",
+    "CH_RADON_GENERIC_PM",
+    "CH_XPENG_G6_PM"
+  ],
+  "rule": "Few search results is never sufficient; count underlying good sellers, OEM/service channels and local logistics/returns quality."
+}

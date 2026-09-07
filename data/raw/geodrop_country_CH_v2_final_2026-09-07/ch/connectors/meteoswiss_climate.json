@@ -1,0 +1,19 @@
+{
+  "connector_id": "CH_METEOSWISS",
+  "status": "READY_PUBLIC",
+  "source_id": "ch_meteoswiss_ogd",
+  "purpose": [
+    "temperature",
+    "heating/frost/climate exposure",
+    "regional risk features"
+  ],
+  "method": "MeteoSwiss Open Government Data",
+  "rules": [
+    "retain station/grid and aggregation method",
+    "avoid climate-to-demand causality without observed job evidence"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/problem_incidence.csv"
+  ]
+}

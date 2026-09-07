@@ -1,0 +1,16 @@
+{
+  "connector_id": "SE_COMPANIES",
+  "status": "READY_PUBLIC_OR_TERMS_REVIEW",
+  "source_id": "se_bolagsverket_api",
+  "purpose": [
+    "merchant legal-entity validation",
+    "industry census enrichment"
+  ],
+  "method": "Bolagsverket/open company data where permitted",
+  "rules": [
+    "do not treat company registrations as active ecommerce merchants"
+  ],
+  "outputs": [
+    "merchants.jsonl"
+  ]
+}

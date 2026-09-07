@@ -1,0 +1,23 @@
+{
+  "report_id": "CH_09_GEOGRAPHIC_OPPORTUNITY",
+  "country": "CH",
+  "as_of": "2026-09-07",
+  "status": "SCHEMA_READY_DATA_PARTIAL",
+  "geographic_dimensions": [
+    "canton",
+    "municipality",
+    "language region",
+    "MeteoSwiss climate grid",
+    "BAG radon 1km grid",
+    "vehicle cohort where ASTRA permits"
+  ],
+  "opportunity_layers": [
+    "building/heat-pump stock",
+    "renovation programme",
+    "radon probability",
+    "climate/heating exposure",
+    "language",
+    "merchant/service density"
+  ],
+  "next_action": "Ingest canton/municipality-level BFS/BAG/MeteoSwiss/ASTRA layers and compute opportunity only where denominators are definition-compatible."
+}

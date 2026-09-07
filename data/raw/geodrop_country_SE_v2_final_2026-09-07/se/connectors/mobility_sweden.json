@@ -1,0 +1,17 @@
+{
+  "connector_id": "SE_MOBILITY_SWEDEN",
+  "status": "READY_PUBLIC",
+  "source_id": "se_mobility_aug_2026",
+  "purpose": [
+    "monthly new registrations",
+    "powertrain shares",
+    "model-market changes"
+  ],
+  "method": "published monthly statistics",
+  "rules": [
+    "distinguish registrations from active stock"
+  ],
+  "outputs": [
+    "observations.jsonl"
+  ]
+}

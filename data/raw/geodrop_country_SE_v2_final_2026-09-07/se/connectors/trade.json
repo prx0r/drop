@@ -1,0 +1,20 @@
+{
+  "connector_id": "SE_TRADE_COMEXT",
+  "status": "READY_PUBLIC",
+  "source_id": "se_eurostat_comext",
+  "purpose": [
+    "monthly imports/exports",
+    "origin country",
+    "CN commodity flows"
+  ],
+  "method": "Eurostat Comext API",
+  "rules": [
+    "use only validated CN mappings",
+    "flag broad proxy codes",
+    "archive query parameters"
+  ],
+  "outputs": [
+    "series/imports.csv",
+    "trade_code_map.jsonl"
+  ]
+}

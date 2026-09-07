@@ -1,0 +1,7 @@
+date,country,ecosystem_id,metric,value,unit,observation_id
+2023-12-31,CH,CH_HEAT_PUMP_LIFECYCLE,residential_buildings_heat_pump_share,21,percent,CH_BUILDINGS_HP_SHARE_2023
+2025-12-31,CH,CH_SOLAR_STORAGE_LIFECYCLE,installed_battery_systems,93000,systems_plus,CH_BATTERY_SYSTEMS_2025
+2025-12-31,CH,CH_SOLAR_STORAGE_LIFECYCLE,battery_total_capacity,1380,MWh,CH_BATTERY_TOTAL_CAPACITY_2025_STAT
+2025-12-31,CH,CH_EV_AFTERMARKET,bev_fleet_share,5.3,percent_approx,CH_BEV_FLEET_SHARE_2025
+2025-12-31,CH,CH_EBIKE_LIFECYCLE,ebike_fleet_estimate,1400000,ebikes_approx,CH_EBIKE_FLEET_ESTIMATE
+2023-12-31,CH,CH_HOME_RETROFIT,residential_buildings,1790000,buildings,CH_RESIDENTIAL_BUILDINGS_2023

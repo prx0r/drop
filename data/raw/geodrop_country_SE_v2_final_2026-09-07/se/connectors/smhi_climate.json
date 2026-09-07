@@ -1,0 +1,20 @@
+{
+  "connector_id": "SE_SMHI_CLIMATE",
+  "status": "READY_PUBLIC",
+  "source_id": "se_smhi_open_data",
+  "purpose": [
+    "frost",
+    "temperature",
+    "precipitation",
+    "weather exposure geography"
+  ],
+  "method": "SMHI Open Data API",
+  "rules": [
+    "freeze station/grid methodology",
+    "avoid post-decision weather leakage in backtests"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/problem_incidence.csv"
+  ]
+}

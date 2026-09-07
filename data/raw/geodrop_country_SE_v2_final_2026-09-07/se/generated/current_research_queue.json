@@ -1,0 +1,36 @@
+{
+  "country": "SE",
+  "as_of": "2026-09-07",
+  "items": [
+    {
+      "priority": 1,
+      "action": "Pull exact make/model EV cohorts and freeze emerging-model candidate universe",
+      "resolves": [
+        "SE_EV_MODEL_COHORT_ACTIVE"
+      ]
+    },
+    {
+      "priority": 2,
+      "action": "Measure Swedish Keyword Planner query forest",
+      "resolves": [
+        "SE_GADS_SEARCHVOL_ACTIVE",
+        "SE_GADS_CPC_ACTIVE"
+      ]
+    },
+    {
+      "priority": 3,
+      "action": "Build exact solar inverter/optimizer target merchant census",
+      "resolves": [
+        "SE_EXHAUSTIVE_MERCHANT_CENSUS"
+      ]
+    },
+    {
+      "priority": 4,
+      "action": "Request supplier/dealer net and reseller/warranty terms for surviving cells",
+      "resolves": [
+        "SE_DEALER_NET_ACTIVE",
+        "SE_RESELLER_TERMS_ACTIVE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "report_id": "SE_09_GEOGRAPHIC_OPPORTUNITY",
+  "country": "SE",
+  "as_of": "2026-09-07",
+  "status": "FRAMEWORK_READY_PARTIAL_DATA",
+  "geographic_layers": [
+    "SCB municipality dwelling/holiday-home stock",
+    "Energy Agency municipality solar stock",
+    "Transportstyrelsen vehicle geography/model cohorts",
+    "SMHI weather/climate exposure",
+    "Ei network reliability/operator geography"
+  ],
+  "candidate_indices": [
+    "solar_lifecycle_density = installed_solar × cohort_age × merchant_gap",
+    "ev_cohort_lag = model_growth × query_growth / good_seller_growth",
+    "holiday_home_risk = holiday_home_density × frost/outage exposure × interoperability_gap"
+  ],
+  "summary": "Sweden has unusually rich municipal data. Geographic joins should be computed only after raw API snapshots are persisted; no synthetic municipality scores are included in this bootstrap."
+}

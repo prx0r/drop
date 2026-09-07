@@ -1,0 +1,20 @@
+{
+  "connector_id": "SE_MERCHANT_BQ",
+  "status": "AUTH_REQUIRED",
+  "source_id": "se_merchant_bigquery",
+  "purpose": [
+    "Best Sellers",
+    "Performance",
+    "Price Competitiveness",
+    "Price Insights"
+  ],
+  "rules": [
+    "preserve report_country_code",
+    "archive transfer snapshots",
+    "join exact GTIN/SKU identities"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/price_snapshots.csv"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "report_id": "CH_04_ACQUISITION_QUERY_FOREST",
+  "country": "CH",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL_AUTH_REQUIRED",
+  "languages": [
+    "de",
+    "fr",
+    "it"
+  ],
+  "query_count": 23,
+  "query_refs": [
+    "CH_Q_HP_NIBE_DE",
+    "CH_Q_HP_FILTER_DE",
+    "CH_Q_HP_CTRL_DE",
+    "CH_Q_HP_FR",
+    "CH_Q_HP_IT",
+    "CH_Q_SOLAR_BATTERY_DE",
+    "CH_Q_SOLAREDGE_DE",
+    "CH_Q_SOLAR_INV_DE",
+    "CH_Q_SOLAR_FR",
+    "CH_Q_SOLAR_IT",
+    "CH_Q_EV_MODEL_DE",
+    "CH_Q_XPENG_G6_DE",
+    "CH_Q_EV_FR",
+    "CH_Q_EBIKE_BATT_DE",
+    "CH_Q_EBIKE_REPAIR_DE",
+    "CH_Q_EBIKE_FR",
+    "CH_Q_RADON_DE",
+    "CH_Q_RADON_RENO_DE",
+    "CH_Q_RADON_FR",
+    "CH_Q_THERMAL_DE",
+    "CH_Q_THERMAL_FR",
+    "CH_Q_LANDED_DE",
+    "CH_Q_LANDED_FR"
+  ],
+  "required_missing_refs": [
+    "CH_GADS_SEARCHVOL_ACTIVE",
+    "CH_GADS_CPC_ACTIVE"
+  ],
+  "rules": [
+    "measure each language/region separately",
+    "never use Germany search volume as Swiss proxy",
+    "cluster concepts across languages but preserve native query metrics",
+    "exact-model/problem queries outrank generic category terms for GeoDrop testing"
+  ]
+}

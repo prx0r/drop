@@ -1,0 +1,22 @@
+{
+  "report_id": "SE_01_MARKET_OVERVIEW",
+  "country": "SE",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "population_ref": "SE_POP_2026_07",
+  "online_spend_refs": [
+    "SE_ECOM_SPEND_2025",
+    "SE_ECOM_SPEND_GROWTH_2025",
+    "SE_MONTHLY_ECOM_AVG_PURCHASE_2026_06"
+  ],
+  "ecommerce_penetration_refs": [
+    "SE_ECOM_30D_2026",
+    "SE_MONTHLY_ECOM_SHARE_2026_06"
+  ],
+  "cross_border_ref": "SE_CROSSBORDER_YEAR_2026",
+  "macro_refs": [
+    "SE_RETAIL_YOY_2026_07",
+    "SE_DURABLE_RETAIL_YOY_2026_07"
+  ],
+  "summary": "Sweden is a large, mature Nordic ecommerce market with recovering durable-goods demand, high online penetration and unusually sophisticated domestic merchants. It is often a source-market oracle rather than a whitespace target."
+}

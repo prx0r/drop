@@ -1,0 +1,89 @@
+{
+  "report_id": "SE_03_STRUCTURAL_DEMAND",
+  "country": "SE",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "ecosystems": [
+    {
+      "ecosystem_id": "SE_HEAT_PUMP_LIFECYCLE",
+      "state": "TARGET_MATURE_ORACLE",
+      "score": {
+        "measured_points": 62,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 72.9,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "SE_SMART_METER_ENERGY",
+      "state": "TARGET_MATURE_ORACLE",
+      "score": {
+        "measured_points": 56,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 65.9,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "SE_SOLAR_LIFECYCLE",
+      "state": "PRIORITY_RESEARCH",
+      "score": {
+        "measured_points": 67,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 78.8,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "SE_EV_AFTERMARKET",
+      "state": "PRIORITY_RESEARCH",
+      "score": {
+        "measured_points": 65,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 76.5,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "SE_FRITIDSHUS_REMOTE",
+      "state": "TARGET_MATURE_ORACLE",
+      "score": {
+        "measured_points": 57,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 67.1,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "SE_RADON_INDOOR_AIR",
+      "state": "STRUCTURAL_DEMAND_MERCHANT_MATURE",
+      "score": {
+        "measured_points": 56,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 65.9,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    }
+  ],
+  "core_refs": [
+    "SE_HOLIDAY_HOMES_2026",
+    "SE_HP_REPLACEMENT_WAVE_2026",
+    "SE_SMART_METER_POINTS_2025",
+    "SE_SOLAR_INSTALLATIONS_2025",
+    "SE_BEV_VOLUME_GROWTH_2026_08",
+    "SE_RADON_HIGH_HOMES_2026"
+  ],
+  "summary": "Sweden has several enormous installed-base ecosystems, but merchant maturity sharply separates structural demand from ecommerce whitespace. Solar lifecycle and emerging non-Tesla EV cohorts remain unresolved; heat pumps, smart meters and holiday-home monitoring are mature-oracle negative controls."
+}
