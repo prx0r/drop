@@ -1,6 +1,6 @@
 # Norway (NO)
 
-*First market. Template for all others.*
+*First market. Primary probe. Cloned from Finland schema with cabin/EV focus.*
 
 ---
 
@@ -8,75 +8,102 @@
 
 | Field | Value |
 |-------|-------|
-| **Country Code** | NO |
-| **Country Name** | Norway |
-| **Currency** | NOK |
-| **Language** | Norwegian (Bokmål) |
-| **Population** | 5.5M |
-| **GDP per capita** | $82,000 |
-| **E-commerce market** | $10.35B (2026) |
-| **Online shoppers** | 86% |
-| **Primary payment** | Vipps, Klarna, cards |
-| **VAT** | 25% (standard) |
-| **Shipping expectation** | 2-5 business days |
-| **Mobile commerce** | 65%+ |
+| Country Code | NO |
+| Currency | NOK |
+| Language | Norwegian |
+| Population | 5.5M |
+| E-commerce market | $10.35B |
+| Ecommerce penetration | 86% within 30 days |
+| Cross-border rate | 78% |
+| Consumer confidence | Rising |
+| Ecommerce momentum | Strong (+10% YoY non-store retail) |
 
 ---
 
-## Market Intel
+## Structural Markets
 
-### E-commerce Landscape
-- Highest AOV in Nordics
-- Strong consumer protection (14-day withdrawal, 2-year warranty)
-- VOEC customs for non-EU imports (25% VAT on orders <NOK 3,000)
-- Price comparison via Prisjakt.no (8M+ monthly visits)
-- Vipps dominant mobile payment (4.6M/5.5M population)
+### 1. EV Aftermarket (945,182 BEVs)
+- **32.2% of passenger car fleet** — oldest mass-market EV ecosystem in Europe
+- 98.7% of new cars are electric (Aug 2026)
+- Replacement tail beginning: 6-year-old Easee failures, Zaptec offline issues
+- Chinese brands rising: Xpeng + BYD = 11.4% of registrations
+- Query clusters: charging fault, load balancing, cable replacement, home assistant, wifi, three-phase
 
-### Key Comparison Sites
-| Site | Monthly Visits | Data Quality |
-|------|---------------|--------------|
-| Prisjakt.no | 8M+ | Excellent |
-| Prisguiden.no | 2M+ | Good |
+### 2. Cabin/Hytte Systems (483,631 holiday homes)
+- Water damage >10,000 cases in 2026 (+50% YoY)
+- Frost-damaged pipes, mould, structural damage
+- Remote monitoring essential
+- Query clusters: water alarm, frost alarm, pipe freeze, power outage, heat pump remote
 
-### Payment Methods
-| Method | Share | Notes |
-|--------|-------|-------|
-| Vipps | 45% | Must have |
-| Klarna | 25% | Buy now, pay later |
-| Cards | 25% | Visa/Mastercard |
-| Invoice | 5% | 14-30 day terms |
+### 3. Weather Stations (Davis)
+- 8 retailers, no specialists
+- NOK 15,400-39,400 AOV
+- Strong demand, weak merchant content
+- Query clusters: værstasjon, davis, cabin, farm, winter
 
-### Shipping
-| Carrier | Speed | Cost |
-|---------|-------|------|
-| Posten/Bring | 1-3 days | NOK 49-99 |
-| Helthjem | 1-2 days | NOK 49-79 |
-| Free threshold | NOK 500-1000 | Industry standard |
+### 4. Indoor Air/Radon
+- 300 lung-cancer deaths/year from radon
+- Only 23% of population measured
+- Regulation active
+- Query clusters: radonmåler, radon sensor, ilmanlaatu
 
 ---
 
-## Active Categories
+## Consumer Behaviour
 
-### 1. Davis Weather Stations
-- **Status:** Supplier emails sent (Flak, Hovdan)
-- **Score:** 85/100
-- **AOV:** NOK 15,400-39,400
-- **Gap:** No specialist retailer
-- **Pages:** /davis, /davis/vantage-vue-vs-pro2, /davis/hytte, /davis/vinter-drift, /davis/home-assistant
+- 72% prefer smartphone shopping
+- Vipps dominant (most used + preferred)
+- 60% abandoned checkout in 3 months
+- Shipping cost = #1 abandonment reason
+- 51% paid extra for home delivery
+- 64% of 18-29s would pay for same-day
 
-### 2. Sleeping Bags
-- **Status:** Supplier emails sent (Helsport, XC Sports, Mammut)
-- **Score:** TBD
-- **AOV:** NOK 3,200-18,500
-- **Gap:** Weak specialist content
-- **Pages:** /sovepose
+---
 
-### 3. Heat Pumps
-- **Status:** Research complete
-- **Score:** TBD
-- **AOV:** NOK 8,990-12,000
-- **Gap:** Technical comparison needed
-- **Pages:** /varmepumpe
+## Delivery Preferences
+
+- Home delivery preferred
+- Parcel-lockers doubled vs 2024
+- Service points still important
+- Bring/PostNord dominant carriers
+
+---
+
+## Checkout Requirements
+
+| Requirement | Priority |
+|-------------|----------|
+| Vipps | MUST |
+| Transparent shipping cost | MUST |
+| Specific delivery date | MUST |
+| Norwegian language | MUST |
+| Easy returns | MUST |
+
+---
+
+## Active Hypotheses
+
+| ID | Category | Statement | Target |
+|----|----------|-----------|--------|
+| NO-EV-001 | EV aftermarket | EV charger repair market underserved | <5 good specialists |
+| NO-EV-002 | EV aftermarket | Diagnostic guide converts | >1.5% CVR |
+| NO-CABIN-001 | Cabin systems | Cabin monitoring demand exists | >500 monthly searches |
+| NO-CABIN-002 | Cabin systems | Water leak sensor bundle sells | >0.3% CVR |
+| NO-WS-001 | Weather stations | Davis specialist beats marine stores | >3% CTR |
+
+---
+
+## Pages Live
+
+| Page | Content |
+|------|---------|
+| /davis | Davis weather stations (Norwegian) |
+| /davis/vantage-vue-vs-pro2 | Vue vs Pro2 comparison |
+| /davis/hytte | Davis for cabin monitoring |
+| /davis/vinter-drift | Winter operation guide |
+| /davis/home-assistant | Davis + Home Assistant |
+| /sovepose | Sleeping bags (Norwegian) |
+| /varmepumpe | Heat pumps (Norwegian) |
 
 ---
 
@@ -85,45 +112,17 @@
 | Supplier | Email | Status | Products |
 |----------|-------|--------|----------|
 | Flak AS | Flak@flak.no | ACKNOWLEDGED | Davis weather stations |
-| Hovdan-Poly | Post@hovdan.no | SENT | Davis backup |
+| Hovdan-Poly | Post@hovdan.no | FOLLOWED UP | Davis backup |
 | Helsport | helsport@helsport.no | SENT | Sleeping bags |
 | XC Sports | post@xcsports.com | SENT | Mountain Equipment |
 | Mammut | forhandler@shopmammut.no | SENT | Sleeping bags |
 
 ---
 
-## Competitors Analyzed
+## What's Next
 
-| Competitor | Score | Products | Price | Website |
-|------------|-------|----------|-------|---------|
-| BestMarin | 7.8/10 | 40 | Mid | Shopify |
-| Dalebakken | 6.0/10 | 49 | Lowest | Legacy |
-| Marineshop | 5.5/10 | 60+ | Mid | Legacy |
-
----
-
-## SEO Keywords
-
-| Keyword | Volume | CPC | Competition |
-|---------|--------|-----|-------------|
-| værstasjon | 1,200 | NOK 5 | Low |
-| davis værstasjon | 400 | NOK 8 | Low |
-| robotstøvsuger test | 3,600 | NOK 12 | Medium |
-| ladeboks elbil | 2,400 | NOK 15 | Medium |
-| sovepose vinter | 800 | NOK 6 | Low |
-| varmepumpe pris | 1,800 | NOK 20 | Medium |
-
----
-
-## Launch Status
-
-| Item | Status |
-|------|--------|
-| Domain | moltwork.com |
-| Store | Not built |
-| Content pages | 5 live |
-| Product feeds | 2 ready (Davis, sleeping bags) |
-| Merchant Center | Account active (5849184805) |
-| Search Console | Not set up |
-| Vipps | Not enabled |
-| Klarna | Not enabled |
+1. Wait for Flak dealer response
+2. Build EV charger diagnostic comparison page
+3. Build cabin monitoring comparison page
+4. Research EV charger repair suppliers
+5. Research cabin monitoring suppliers
