@@ -188,8 +188,71 @@ assert observations[0]["field_name"] == "price"
 
 ---
 
+## Anti-Cheat Measures
+
+Agents cannot claim work is done without verifiable proof.
+
+### Evidence Gates
+
+Every claim must pass an evidence gate:
+
+| Claim | Required Proof |
+|-------|----------------|
+| "Tests pass" | Test log output showing "RESULT: PASS" |
+| "BigQuery works" | BigQuery query showing row count > 0 |
+| "Pipeline works" | End-to-end test output with timestamps |
+| "Code committed" | Git diff showing actual changes |
+
+### Behavioral Analysis
+
+Detect anomalies:
+- Agent claims "11 observations" but BigQuery has 0
+- Agent claims "tests pass" but log shows failures
+- Agent claims "BigQuery works" but connection test fails
+
+### Content-Addressed Verification
+
+Hash test output, store in BigQuery, verify hash matches claimed output.
+
+### Cross-Reference Checking
+
+Agent says X, reality shows Y:
+```python
+# Agent claims:
+assert observations_written == 11
+
+# Reality check:
+result = bigquery.query("SELECT COUNT(*) FROM ... WHERE candidate_id = '...'")
+assert result == observations_written  # Must match
+```
+
+### Verification Script
+
+```python
+from tests.anti_cheat import AntiCheatVerifier
+
+verifier = AntiCheatVerifier()
+
+# Add gates
+verifier.add_gate("test_pass", "Tests pass", "Test output shows PASS", "check log", "RESULT: PASS")
+verifier.add_gate("bq_write", "BigQuery write", "Data written", "query BigQuery", "count > 0")
+
+# Verify
+verifier.verify_test_output("test_schemas", 11, test_log_output)
+verifier.verify_bigquery_write("TEST-001", 11)
+
+# Generate report
+report = verifier.generate_report()
+assert report["verdict"] == "PASS"
+```
+
+---
+
 ## The Rule
 
 > **If you didn't test it, you didn't build it.**
+> **If you didn't log it, you didn't test it.**
+> **If you didn't verify it, you didn't prove it.**
+> **If the proof doesn't match the claim, you cheated.**
 > **If you didn't log it, you didn't test it.**
 > **If you didn't report it, you didn't learn from it.**

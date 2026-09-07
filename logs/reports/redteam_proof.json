@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-07T05:35:38.649655+00:00",
+  "log_file": "/tmp/test_logs/test_all_20260907_052102.log",
+  "log_hash": "b43bb815baf04f78",
+  "claims": {
+    "schema_passed": 11,
+    "pipeline_passed": 4,
+    "storage_passed": 3,
+    "e2e_passed": 2,
+    "total_passed": 20,
+    "total_failed": 0
+  },
+  "facts": {
+    "schema_passed": 11,
+    "schema_failed": 0,
+    "pipeline_passed": 4,
+    "pipeline_failed": 0,
+    "storage_passed": 3,
+    "storage_failed": 0,
+    "e2e_passed": 1,
+    "e2e_failed": 1,
+    "total_passed": 19,
+    "total_failed": 1
+  },
+  "verdict": "FAIL"
+}

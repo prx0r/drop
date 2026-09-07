@@ -201,11 +201,7 @@ class BigQueryStorage:
 
     def write_hypothesis(self, hypothesis) -> None:
         """Write a single hypothesis to BigQuery."""
-        table_ref = self._table_ref(TABLES["hypotheses"])
-        row = self._to_bq_row(hypothesis)
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        self._insert_row(TABLES["hypotheses"], self._to_bq_row(hypothesis))
 
     def read_hypotheses(
         self,
@@ -249,11 +245,7 @@ class BigQueryStorage:
 
     def write_kernel(self, kernel) -> None:
         """Write a single kernel to BigQuery."""
-        table_ref = self._table_ref(TABLES["kernels"])
-        row = self._to_bq_row(kernel)
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        self._insert_row(TABLES["kernels"], self._to_bq_row(kernel))
 
     def read_kernels(
         self,
@@ -297,11 +289,7 @@ class BigQueryStorage:
 
     def write_candidate(self, candidate) -> None:
         """Write a single candidate to BigQuery."""
-        table_ref = self._table_ref(TABLES["candidates"])
-        row = self._to_bq_row(candidate)
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        self._insert_row(TABLES["candidates"], self._to_bq_row(candidate))
 
     def read_candidates(
         self,
@@ -345,43 +333,33 @@ class BigQueryStorage:
 
     def write_probe_result(self, probe_result) -> None:
         """Write a single probe result to BigQuery."""
-        table_ref = self._table_ref(TABLES["probe_results"])
-        row = self._to_bq_row(probe_result)
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        self._insert_row(TABLES["probe_results"], self._to_bq_row(probe_result))
 
     # --- Graph ---
 
     def write_graph_node(self, node_id: str, node_type: str, properties: dict, confidence: float = 1.0) -> None:
         """Write a node to the knowledge graph."""
-        table_ref = self._table_ref(TABLES["graph_nodes"])
         row = {
             "node_id": node_id,
             "node_type": node_type,
             "properties_json": json.dumps(properties),
             "confidence": confidence,
         }
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
+        self._insert_row(TABLES["graph_nodes"], row)
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
     def write_graph_edge(self, source: str, target: str, edge_type: str, weight: float = 1.0) -> None:
         """Write an edge to the knowledge graph."""
-        table_ref = self._table_ref(TABLES["graph_edges"])
         row = {
             "source_node": source,
             "target_node": target,
             "edge_type": edge_type,
             "weight": weight,
         }
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        self._insert_row(TABLES["graph_edges"], row)
 
     def write_graph_observation(self, node_id: str, metric_name: str, metric_value: float, evidence_type: str = "OBSERVED", source: str = "") -> None:
         """Write an observation to the knowledge graph."""
-        table_ref = self._table_ref(TABLES["graph_observations"])
         row = {
             "node_id": node_id,
             "observed_at": datetime.now(timezone.utc).isoformat(),
@@ -390,9 +368,7 @@ class BigQueryStorage:
             "evidence_type": evidence_type,
             "source": source,
         }
-        self._insert_row(TABLES["hypotheses"], row)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        self._insert_row(TABLES["graph_observations"], row)
 
     # --- Generic query ---
 
