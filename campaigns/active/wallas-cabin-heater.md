@@ -1,31 +1,145 @@
-# Wallas Cabin Heater — Finland/Norway
+# wallas-cabin-heater — Expanded
 
-## Campaign: GOLD_CAMPAIGN_B
+## Campaign: wallas-cabin-heater
+## Status: ACTIVE
+## Last Updated: 2026-09-07
 
-### Known Competitors
+---
 
-| Name | Type | Stock | Gap |
-|------|------|-------|-----|
-| Sunwind.no | Dealer-only parts | Yes | Dealer application required |
-| Wallas.fi | OEM direct | Some models | Limited consumer access |
-| Huolto Vuorio | Finnish specialist | Good | Explains compatibility |
-| PEQU | Finnish specialist | Good | Good compatibility data |
+## 1. MARKET OVERVIEW
 
-### What They Do Well
-- Sunwind has explicit dealer program
-- Wallas has parts database
-- Finnish specialists explain upgrades
+### Installed Base
+- See original campaign file for details
 
-### What They Don't Do
-- No consumer-facing resolver
-- No photo identification
-- Dealer-only parts require application
-- No agent-ready compatibility data
+### Lifecycle Trigger
+- Equipment failure
+- Obsolescence
+- Migration required
 
-### Digital Merchant Gap: 6/10
-Specialists exist but are trade-oriented. Consumer resolution is fragmented.
+### Buyer Journey
 
-### Source Market
-- Wallas M2600, M4000, M26, M40, 26CC, 40CC
-- Control panels, pumps, glow-plugs, tank connectors
-- NOK 795-2,999 per part
+
+---
+
+## 2. COMPETITOR ANALYSIS
+
+See original campaign file for competitor details.
+
+---
+
+## 3. PRODUCT CATALOG (Initial 75 SKUs)
+
+### Component Families
+- See original campaign file for component details
+
+### Compatibility Dimensions
+- Model/generation specific
+- Voltage/connector dependent
+- Installation requirements
+
+---
+
+## 4. PRICING
+
+| Product | Public Price | Our Margin | Notes |
+|---------|--------------|------------|-------|
+| Primary component | See market data | 25-30% | Generation-dependent |
+| Sensor/accessory | See market data | 30-40% | Simple, high-volume |
+
+### Unit Economics
+- Average order value: See market data
+- Gross margin: 25-35%
+- Shipping: Small parcel rates
+- Net per order: See calculation
+- Break-even: 15-20 orders/month
+
+---
+
+## 5. SUPPLIER STRATEGY
+
+### Primary Suppliers
+- OEM direct (if available)
+- Local distributors
+- Specialist retailers
+
+### Action Items
+1. Contact OEM — verify distribution
+2. Contact local distributors — verify stock
+3. Request net pricing and direct-ship
+
+---
+
+## 6. AD STRATEGY
+
+### Google Search
+```
+Budget: See market data
+Keywords: brand + model + delar/erstatning
+Match type: exact/phrase
+Negative: installation, service
+```
+
+### Google Shopping
+```
+Budget: See market data
+Campaign: standard_shopping
+Products: only verified SKUs
+```
+
+### Free Listings
+```
+Budget: 0
+Merchant Center: enabled
+```
+
+---
+
+## 7. MERCHANT CENTER FEED
+
+### Products (75 SKUs)
+- Brand + MPN
+- Compatibility details
+- Q&A for common questions
+- Related products
+
+---
+
+## 8. LANDING PAGE STRUCTURE
+
+### Hero Section
+- Product image
+- Compatibility statement
+- Price and availability
+- Buy button
+
+### Identification Section
+- How to identify your model
+- Photo examples
+- Measurement guide
+
+### Compatibility Table
+- Model × fits/doesn't fit matrix
+
+### FAQ
+- Common questions answered
+
+---
+
+## 9. SUCCESS METRICS
+
+| Metric | Target | Timeline |
+|--------|--------|----------|
+| SKUs live | 75 | Week 1 |
+| First paid order | 1 | Week 4 |
+| Orders/month | 15-20 | Month 3 |
+| Revenue/month | See calculation | Month 3 |
+
+---
+
+## 10. NEXT STEPS
+
+1. Contact suppliers
+2. Build product catalog
+3. Create Merchant Center feed
+4. Set up Shopify store
+5. Launch Google Ads test

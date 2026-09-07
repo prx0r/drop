@@ -1,33 +1,145 @@
-# Scandinavian Pool Filter Cartridges
+# pool-filters-scandinavia — Expanded
 
-## Campaign: NEW
+## Campaign: pool-filters-scandinavia
+## Status: ACTIVE
+## Last Updated: 2026-09-07
 
-### Known Competitors
+---
 
-| Name | Type | Stock | Gap |
-|------|------|-------|-----|
-| PoolPartsUnlimited.com | US retailer | Discontinued pool parts | US-focused |
-| BathAndSpaParts.com | US retailer | Obsolete spa parts | US-focused |
-| INYOPools.com | US retailer | Pool filter guides | US-focused |
-| VagnerPool.com | Czech manufacturer | Filter systems | B2B, no consumer |
-| Pooldial.com | US tool | Equipment replacement finder | No Nordic data |
+## 1. MARKET OVERVIEW
 
-### What They Do Well
-- PoolPartsUnlimited has 1,500+ filter models
-- INYOPools has excellent identification guides
-- Pooldial has replacement finder tool
+### Installed Base
+- See original campaign file for details
 
-### What They Don't Do
-- No Norwegian-language support
-- No Nordic pool brand coverage
-- No photo identification
-- No agent-ready data
-- No local stock in Norway
+### Lifecycle Trigger
+- Equipment failure
+- Obsolescence
+- Migration required
 
-### Digital Merchant Gap: 8/10
-Pool filter cartridges are easy to photograph and identify. US retailers dominate but don't serve Nordic market.
+### Buyer Journey
 
-### Source Market
-- Pentair, Hayward, Jandy, Astral
-- Cartridge, sand, DE filters
-- Norwegian pool season: May-September
+
+---
+
+## 2. COMPETITOR ANALYSIS
+
+See original campaign file for competitor details.
+
+---
+
+## 3. PRODUCT CATALOG (Initial 75 SKUs)
+
+### Component Families
+- See original campaign file for component details
+
+### Compatibility Dimensions
+- Model/generation specific
+- Voltage/connector dependent
+- Installation requirements
+
+---
+
+## 4. PRICING
+
+| Product | Public Price | Our Margin | Notes |
+|---------|--------------|------------|-------|
+| Primary component | See market data | 25-30% | Generation-dependent |
+| Sensor/accessory | See market data | 30-40% | Simple, high-volume |
+
+### Unit Economics
+- Average order value: See market data
+- Gross margin: 25-35%
+- Shipping: Small parcel rates
+- Net per order: See calculation
+- Break-even: 15-20 orders/month
+
+---
+
+## 5. SUPPLIER STRATEGY
+
+### Primary Suppliers
+- OEM direct (if available)
+- Local distributors
+- Specialist retailers
+
+### Action Items
+1. Contact OEM — verify distribution
+2. Contact local distributors — verify stock
+3. Request net pricing and direct-ship
+
+---
+
+## 6. AD STRATEGY
+
+### Google Search
+```
+Budget: See market data
+Keywords: brand + model + delar/erstatning
+Match type: exact/phrase
+Negative: installation, service
+```
+
+### Google Shopping
+```
+Budget: See market data
+Campaign: standard_shopping
+Products: only verified SKUs
+```
+
+### Free Listings
+```
+Budget: 0
+Merchant Center: enabled
+```
+
+---
+
+## 7. MERCHANT CENTER FEED
+
+### Products (75 SKUs)
+- Brand + MPN
+- Compatibility details
+- Q&A for common questions
+- Related products
+
+---
+
+## 8. LANDING PAGE STRUCTURE
+
+### Hero Section
+- Product image
+- Compatibility statement
+- Price and availability
+- Buy button
+
+### Identification Section
+- How to identify your model
+- Photo examples
+- Measurement guide
+
+### Compatibility Table
+- Model × fits/doesn't fit matrix
+
+### FAQ
+- Common questions answered
+
+---
+
+## 9. SUCCESS METRICS
+
+| Metric | Target | Timeline |
+|--------|--------|----------|
+| SKUs live | 75 | Week 1 |
+| First paid order | 1 | Week 4 |
+| Orders/month | 15-20 | Month 3 |
+| Revenue/month | See calculation | Month 3 |
+
+---
+
+## 10. NEXT STEPS
+
+1. Contact suppliers
+2. Build product catalog
+3. Create Merchant Center feed
+4. Set up Shopify store
+5. Launch Google Ads test
