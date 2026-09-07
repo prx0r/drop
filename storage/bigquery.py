@@ -26,12 +26,12 @@ DATASET = "drop"
 # Table names — must match actual BigQuery table names
 TABLES = {
     "observations": "fact_market_observation",
-    "hypotheses": "fact_decision_event",  # Using decision events as proxy
-    "kernels": "fact_market_observation",  # Kernels stored as observations
+    "hypotheses": "fact_decision_event",
+    "kernels": "country_graph_nodes",  # Kernels stored in graph nodes
     "candidates": "products",  # Using products table as proxy
     "probe_results": "probe_reports",
     "graph_nodes": "graph_nodes",
-    "graph_edges": "graph_edges",
+    "graph_edges": "country_graph_edges",
     "graph_observations": "graph_observations",
 }
 
