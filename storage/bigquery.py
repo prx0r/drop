@@ -346,7 +346,6 @@ class BigQueryStorage:
             "confidence": confidence,
         }
         self._insert_row(TABLES["graph_nodes"], row)
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
 
     def write_graph_edge(self, source: str, target: str, edge_type: str, weight: float = 1.0) -> None:
         """Write an edge to the knowledge graph."""

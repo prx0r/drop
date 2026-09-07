@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-09-07T05:44:04.386094+00:00",
+  "email": {
+    "subject": "[GeoDrop Demand Surface Probe] 2026-09-07 12:20 \u2014 cabled 6313 demand falsified; wireless successor probe survives",
+    "body_length": 6551,
+    "message_id": "1a07a4f5921cbfca"
+  },
+  "pipeline": {
+    "observations_extracted": 8,
+    "observations_written": 4,
+    "candidate_id": "C-a60001239073",
+    "candidate_state": "DISCOVERED",
+    "hypothesis_id": "H-cb136c3c020f",
+    "hypothesis_state": "OPEN",
+    "state_transition": "DISCOVERED \u2192 HUMAN_ACTION_REQUIRED: External action required",
+    "kernels_generated": 8
+  },
+  "downstream_effects": {
+    "bigquery_observations": 0,
+    "hypothesis_evidence_for": 0,
+    "hypothesis_evidence_against": 0,
+    "kernel_types": [
+      "DEMAND_DISCOVERY",
+      "PRICE_COMPRESSION",
+      "SUPPLIER_PATH_DISCOVERY"
+    ]
+  },
+  "receipts": {
+    "email_hash": "864c951e94a03e5d",
+    "observations_hash": "cec0b1a575c71d9b"
+  }
+}
