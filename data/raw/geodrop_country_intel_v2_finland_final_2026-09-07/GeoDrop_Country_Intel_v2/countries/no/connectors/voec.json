@@ -1,0 +1,17 @@
+{
+  "connector_id": "NO_VOEC_FOREIGN_MERCHANT",
+  "status": "READY_PUBLIC",
+  "source_id": "voec_register_live",
+  "purpose": [
+    "foreign merchant universe"
+  ],
+  "rules": [
+    "snapshot registry count/list",
+    "marketplaces are not individual sellers",
+    "category classification requires separate evidence"
+  ],
+  "outputs": [
+    "merchants.jsonl",
+    "series/seller_snapshots.csv"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "tiers": [
+    {
+      "tier": 1,
+      "types": [
+        "government statistics/APIs",
+        "tax/customs/consumer authorities",
+        "Google/marketplace first-party APIs",
+        "manufacturer/distributor first party"
+      ],
+      "use": "facts and hard gates"
+    },
+    {
+      "tier": 2,
+      "types": [
+        "PostNord/national commerce associations",
+        "price comparison platforms",
+        "peer-reviewed research"
+      ],
+      "use": "consumer behavior and market interpretation"
+    },
+    {
+      "tier": 3,
+      "types": [
+        "merchant pages",
+        "review platforms",
+        "community/operator traces"
+      ],
+      "use": "discovery and corroboration; do not treat as causal proof"
+    }
+  ],
+  "rule": "Prefer the most direct current source. Store access date and period; never overwrite old observations—append new rows."
+}

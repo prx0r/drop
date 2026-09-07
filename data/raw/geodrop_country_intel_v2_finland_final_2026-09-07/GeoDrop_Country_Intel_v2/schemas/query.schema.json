@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Native Query",
+  "type": "object",
+  "required": [
+    "query_id",
+    "country",
+    "language",
+    "ecosystem_id",
+    "problem_id",
+    "native_phrase",
+    "status",
+    "metrics"
+  ],
+  "properties": {
+    "query_id": {
+      "type": "string"
+    },
+    "native_phrase": {
+      "type": "string"
+    },
+    "measured_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,17 @@
+{
+  "connector_id": "NO_NKOM_COVERAGE",
+  "status": "READY_PUBLIC_DOWNLOAD",
+  "source_id": "nkom_coverage_2025",
+  "purpose": [
+    "holiday-home/broadband/connectivity geography"
+  ],
+  "rules": [
+    "prefer raw address CSV for reproducible aggregates",
+    "store survey year/technology threshold",
+    "do not expose raw personal data; source is address infrastructure coverage"
+  ],
+  "outputs": [
+    "series/problem_incidence.csv",
+    "reports/09_geographic_opportunity.json"
+  ]
+}

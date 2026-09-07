@@ -1,0 +1,24 @@
+{
+  "report_id": "06_supply_logistics_compliance",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "observation_refs": [
+    "FI_VAT_STANDARD_2026",
+    "FI_WITHDRAWAL_DAYS_2026",
+    "FI_WITHDRAWAL_FUNCTION_2026",
+    "FI_LOCKER_PREF_2026",
+    "FI_HIK_DEALER_NET",
+    "FI_RIDGID_DEALER_NET"
+  ],
+  "active_blockers": [
+    "authorized reseller/dealer terms",
+    "true landed cost and RMA allocation",
+    "size-specific return logistics",
+    "electrical/installation boundaries per SKU"
+  ],
+  "rules": [
+    "public quantity pricing is not dealer authorization",
+    "distance-sale withdrawal requirements included in operating model",
+    "use local/EU stock when economically feasible"
+  ]
+}

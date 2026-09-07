@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "publisher",
+    "evidence_type",
+    "evidence_tier",
+    "retrieved_at"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_tier": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "available_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "point_in_time_safe": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,48 @@
+{
+  "pack_version": "2.0.0",
+  "country": "NO",
+  "country_name": "Norway",
+  "as_of": "2026-09-07",
+  "state": "REFERENCE_IMPLEMENTATION",
+  "required_reports": [
+    "01_market_overview",
+    "02_consumer_behavior",
+    "03_structural_demand",
+    "04_acquisition_query_forest",
+    "05_competition_merchant_census",
+    "06_supply_logistics_compliance",
+    "07_source_market_oracle",
+    "08_opportunity_summary",
+    "09_geographic_opportunity",
+    "10_experiment_backtest_learning"
+  ],
+  "validation": "PENDING_V2_VALIDATION",
+  "known_required_missing": [
+    "Authenticated Google Ads Keyword Planner metrics for active query forests",
+    "Dealer net prices/reseller/warranty/direct-ship terms for active exact-SKU candidates",
+    "Quantitative source-target merchant/assortment deltas for unvalidated ecosystems",
+    "Raw historical snapshots required for TRUE_HISTORICAL backtests"
+  ],
+  "note": "Public evidence populated; private/authenticated fields remain explicit blockers.",
+  "required_data_objects": [
+    "sources",
+    "raw_snapshot_manifest",
+    "observations",
+    "ecosystems",
+    "problems",
+    "queries",
+    "merchants",
+    "source_archetypes",
+    "source_target_gaps",
+    "trade_code_map",
+    "product_markets",
+    "business_hypotheses",
+    "hypotheses",
+    "candidate_universes",
+    "score_snapshots",
+    "decisions",
+    "experiments",
+    "outcomes",
+    "backtests"
+  ]
+}

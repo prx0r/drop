@@ -1,0 +1,23 @@
+{
+  "report_id": "07_source_markets",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL",
+  "summary": "Sweden is strongest heat-pump replacement benchmark; cross-border professional-tool archetype observed.",
+  "evidence_refs": [
+    "FI_HP_REPLACEMENT_SHARE_2025",
+    "FI_RIDGID_COMPACT2_SHOPS"
+  ],
+  "required_missing": [
+    "quantitative source merchant catalogue snapshots",
+    "profitability proof"
+  ],
+  "data": {
+    "source_countries": [
+      "SE",
+      "DE",
+      "NL",
+      "NO"
+    ]
+  }
+}

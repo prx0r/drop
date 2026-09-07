@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Business Hypothesis",
+  "type": "object",
+  "required": [
+    "business_hypothesis_id",
+    "country",
+    "created_at",
+    "status",
+    "ecosystem_id",
+    "customer_jobs",
+    "proposed_moat",
+    "falsifiers",
+    "launchable"
+  ],
+  "properties": {
+    "launchable": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

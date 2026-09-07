@@ -1,0 +1,19 @@
+{
+  "report_id": "09_geographic_opportunity",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "target_model": "asset density × problem/risk exposure × native demand ÷ good local merchant/service density",
+  "candidate_layers": [
+    "municipal free-time-home density",
+    "FMI cold/weather exposure",
+    "Traficom exact-model stock geography",
+    "building heating/age geography",
+    "PRH merchant geography"
+  ],
+  "status": "PUBLIC_CONNECTORS_DEFINED_PARTIAL_INGEST",
+  "rules": [
+    "never infer municipality from national average",
+    "respect Traficom 2025 comparability break",
+    "geographic score is discovery input not ad-targeting proof"
+  ]
+}

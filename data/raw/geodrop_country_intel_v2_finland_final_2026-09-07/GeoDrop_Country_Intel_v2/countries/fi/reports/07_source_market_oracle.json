@@ -1,0 +1,20 @@
+{
+  "report_id": "07_source_market_oracle",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "archetype_ids": [
+    "SE_HEATPUMP_REPLACEMENT_SPECIALIST",
+    "SE_PRO_TOOL_CROSSBORDER"
+  ],
+  "source_market_priority": [
+    "SE",
+    "DE",
+    "NL",
+    "NO"
+  ],
+  "method": "Compare exact-model assortment, compatibility guidance, fulfilment/service and replacement maturity; never infer target gap from source excellence alone.",
+  "observation_refs": [
+    "FI_HP_REPLACEMENT_SHARE_2025",
+    "FI_RIDGID_COMPACT2_SHOPS"
+  ]
+}

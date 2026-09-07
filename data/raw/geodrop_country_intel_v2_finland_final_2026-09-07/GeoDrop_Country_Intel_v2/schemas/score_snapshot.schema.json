@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Score Snapshot",
+  "type": "object",
+  "required": [
+    "score_snapshot_id",
+    "country",
+    "object_type",
+    "object_id",
+    "as_of",
+    "score_model",
+    "score",
+    "backtest_eligible"
+  ],
+  "properties": {
+    "backtest_eligible": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

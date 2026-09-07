@@ -1,0 +1,19 @@
+{
+  "connector_id": "NO_GOOGLE_TRENDS",
+  "status": "ALPHA_ACCESS_MAY_BE_REQUIRED",
+  "source_id": "google_trends_api_alpha",
+  "purpose": [
+    "longitudinal growth",
+    "seasonality",
+    "regional interest"
+  ],
+  "geo": "NO",
+  "rules": [
+    "store raw consistently-scaled series when API available",
+    "archive weekly/monthly",
+    "do not compare independently normalized UI extracts as absolute volumes"
+  ],
+  "outputs": [
+    "series/search.csv"
+  ]
+}

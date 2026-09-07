@@ -1,0 +1,19 @@
+{
+  "report_id": "03_structural_demand",
+  "country": "NO",
+  "as_of": "2026-09-07",
+  "ecosystem_ids": [
+    "NO_HYTTE_HOME",
+    "NO_EV_AFTERMARKET",
+    "NO_INDOOR_AIR",
+    "NO_PRO_WEATHER_REMOTE"
+  ],
+  "priority_order": [
+    "NO_HYTTE_HOME",
+    "NO_EV_AFTERMARKET",
+    "NO_INDOOR_AIR",
+    "NO_PRO_WEATHER_REMOTE"
+  ],
+  "definition_warning": "452,150 cabin/leisure buildings and 483,631 holiday houses are different SSB statistical concepts. Preserve both; do not average/merge.",
+  "discovery_rule": "Promote ecosystems only after native demand + target lag + source proof are measured; structural magnitude alone is not commerce proof."
+}

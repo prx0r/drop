@@ -1,0 +1,19 @@
+{
+  "report_id": "05_competition_merchant_census",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "merchant_records": 3,
+  "gap_records": 3,
+  "connectors": [
+    "FI_HINTAOPAS",
+    "FI_PRH",
+    "GMC_BIGQUERY"
+  ],
+  "rules": [
+    "GOOD_SELLER_COUNT not raw offers",
+    "include hidden B2B distributors/installers",
+    "content gap distinct from merchant gap",
+    "record local vs cross-border fulfilment"
+  ],
+  "current_warning": "Robot mower generic specialist gap is falsified by Pihabotti. HIKMICRO/RIDGID merchant census remains partial."
+}

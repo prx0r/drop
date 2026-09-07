@@ -1,0 +1,18 @@
+{
+  "report_id": "04_acquisition",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "status": "MISSING_REQUIRED_AUTH",
+  "summary": "Native Finnish query forest seeded; Keyword Planner/Trends metrics not authenticated in this build.",
+  "evidence_refs": [
+    "FI_GADS_SEARCHVOL_ACTIVE",
+    "FI_GADS_CPC_ACTIVE"
+  ],
+  "required_missing": [
+    "Finland Keyword Planner volume/CPC/competition"
+  ],
+  "data": {
+    "query_count": 11,
+    "measured": 0
+  }
+}

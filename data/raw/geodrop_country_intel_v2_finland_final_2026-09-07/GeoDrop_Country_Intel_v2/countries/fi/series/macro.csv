@@ -1,0 +1,4 @@
+period,country,metric,value,unit,source_id,available_at
+2026-07,FI,population,5655296,persons,statfi_population_2026,2026-09-07
+2026-07,FI,total_trade_turnover_yoy,5.6,percent,statfi_trade_2026,2026-09-07
+2026,FI,standard_vat_rate,25.5,percent,vero_vat_rates_2026,2026-09-07

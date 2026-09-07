@@ -1,0 +1,18 @@
+{
+  "connector_id": "FI_FMI_OPEN",
+  "status": "READY_PUBLIC",
+  "source_id": "fmi_open_data_2026",
+  "purpose": [
+    "weather/climate exposure",
+    "municipality/geographic risk"
+  ],
+  "rules": [
+    "cache WFS results",
+    "respect request limits",
+    "preserve station/coordinate/time definitions"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/problem_incidence.csv"
+  ]
+}

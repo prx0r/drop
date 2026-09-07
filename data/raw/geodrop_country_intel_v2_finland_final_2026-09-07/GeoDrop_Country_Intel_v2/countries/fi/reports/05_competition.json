@@ -1,0 +1,20 @@
+{
+  "report_id": "05_competition",
+  "country": "FI",
+  "as_of": "2026-09-07",
+  "status": "PARTIAL",
+  "summary": "Three merchants frozen; mower merchant-gap thesis falsified; technical/B2B censuses incomplete.",
+  "evidence_refs": [
+    "FI_MOWER_PIHABOTTI_COUNT",
+    "FI_HIK_POCKET2_SHOPS_20260907",
+    "FI_RIDGID_COMPACT2_SHOPS"
+  ],
+  "required_missing": [
+    "PRH/domain enrichment",
+    "Hintaopas/Shopping exact seller snapshots across active SKUs",
+    "hidden distributor/installer census"
+  ],
+  "data": {
+    "merchant_records": 3
+  }
+}
