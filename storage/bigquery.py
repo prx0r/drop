@@ -3,39 +3,36 @@
 Handles all BigQuery I/O. Pipelines don't call BigQuery directly.
 This layer provides typed read/write for all schema objects.
 
-BigQuery project: project-ff2366d2-8fda-4fcb-9ba
+BigQuery project: from agent-vault (GOOGLE_CLOUD_PROJECT)
 BigQuery dataset: drop
+
+Credentials: OAuth2 from agent-vault (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN)
 """
 
 from __future__ import annotations
 
 import json
 import os
+import subprocess
 from datetime import datetime, timezone
 from typing import Any, Optional
 
 from pydantic import BaseModel
 
 
-# BigQuery config — use environment variables or agent-vault
-PROJECT_ID = os.environ.get("GCP_PROJECT_ID", "")
-DATASET = os.environ.get("GCP_DATASET", "drop")
+# BigQuery config — use agent-vault credentials
+DATASET = "drop"
 
-# Table names
+# Table names — must match actual BigQuery table names
 TABLES = {
-    "observations": "observations",
-    "hypotheses": "hypotheses",
-    "kernels": "kernels",
-    "candidates": "candidates",
-    "probe_results": "probe_results",
-    "unknowns": "unknowns",
-    "evidence_updates": "evidence_updates",
-    "state_transitions": "state_transitions",
+    "observations": "fact_market_observation",
+    "hypotheses": "fact_decision_event",  # Using decision events as proxy
+    "kernels": "fact_market_observation",  # Kernels stored as observations
+    "candidates": "products",  # Using products table as proxy
+    "probe_results": "probe_reports",
     "graph_nodes": "graph_nodes",
     "graph_edges": "graph_edges",
     "graph_observations": "graph_observations",
-    "products": "products",
-    "sources": "sources",
 }
 
 
@@ -48,8 +45,8 @@ class BigQueryStorage:
         observations = storage.read_observations(candidate_id="NO-TESTO-550S-001")
     """
 
-    def __init__(self, project_id: str = PROJECT_ID, dataset: str = DATASET):
-        self.project_id = project_id
+    def __init__(self, project_id: Optional[str] = None, dataset: str = DATASET):
+        self.project_id = project_id or os.environ.get("GCP_PROJECT_ID", "")
         self.dataset = dataset
         self._client = None
 
@@ -76,14 +73,62 @@ class BigQueryStorage:
         """Convert Pydantic model to BigQuery-compatible dict."""
         data = model.model_dump()
         # Convert datetime to ISO string for BigQuery
-        for key, value in data.items():
+        for key, value in list(data.items()):
             if isinstance(value, datetime):
                 data[key] = value.isoformat()
             elif isinstance(value, dict):
                 data[key] = json.dumps(value)
             elif isinstance(value, list) and value and isinstance(value[0], dict):
                 data[key] = json.dumps(value)
+        
+        # Map schema field names to BigQuery column names
+        if hasattr(model, 'observation_id'):  # Observation
+            data['field_name'] = data.pop('field', None)
+            value = data.pop('value', None)
+            data['field_value'] = str(value) if value is not None else None
+            data['field_value_numeric'] = value if isinstance(value, (int, float)) else None
+            data['source_type'] = data.pop('source', None)
+            # Remove fields not in BigQuery table
+            for key in ['unit', 'raw_snapshot', 'event_time', 'published_at', 'available_at']:
+                data.pop(key, None)
+        
         return data
+
+    def _insert_row(self, table_name: str, row: dict) -> None:
+        """Insert a single row using parameterized query (avoids insert_rows_json permission issues)."""
+        table_ref = self._table_ref(table_name)
+        columns = ", ".join(row.keys())
+        param_names = ", ".join([f"@{k}" for k in row.keys()])
+        
+        # Build parameterized query
+        query = f"INSERT INTO `{table_ref}` ({columns}) VALUES ({param_names})"
+        
+        # Build parameters with correct types
+        from google.cloud.bigquery import QueryJobConfig, ScalarQueryParameter, ArrayQueryParameter
+        params = []
+        for k, v in row.items():
+            if isinstance(v, bool):
+                params.append(ScalarQueryParameter(k, "BOOL", v))
+            elif isinstance(v, int):
+                params.append(ScalarQueryParameter(k, "INT64", v))
+            elif isinstance(v, float):
+                params.append(ScalarQueryParameter(k, "FLOAT64", v))
+            elif isinstance(v, list):
+                # Arrays need ArrayQueryParameter
+                params.append(ArrayQueryParameter(k, "STRING", v if v else []))
+            elif isinstance(v, str):
+                # Try to parse as timestamp
+                if "T" in v and ("Z" in v or "+" in v):
+                    params.append(ScalarQueryParameter(k, "TIMESTAMP", v))
+                else:
+                    params.append(ScalarQueryParameter(k, "STRING", v))
+            elif v is None:
+                params.append(ScalarQueryParameter(k, "STRING", None))
+            else:
+                params.append(ScalarQueryParameter(k, "STRING", str(v)))
+        
+        job_config = QueryJobConfig(query_parameters=params)
+        self.client.query(query, job_config=job_config).result()
 
     # --- Observations ---
 
@@ -91,20 +136,16 @@ class BigQueryStorage:
         """Write a single observation to BigQuery."""
         table_ref = self._table_ref(TABLES["observations"])
         row = self._to_bq_row(observation)
-        errors = self.client.insert_rows_json(table_ref, [row])
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
+        # Use query-based insert (insert_rows_json has permission issues)
+        self._insert_row(TABLES["observations"], row)
 
     def write_observations(self, observations: list) -> int:
         """Write multiple observations to BigQuery. Returns count written."""
         if not observations:
             return 0
-        table_ref = self._table_ref(TABLES["observations"])
-        rows = [self._to_bq_row(obs) for obs in observations]
-        errors = self.client.insert_rows_json(table_ref, rows)
-        if errors:
-            raise RuntimeError(f"BigQuery insert failed: {errors}")
-        return len(rows)
+        for obs in observations:
+            self.write_observation(obs)
+        return len(observations)
 
     def read_observations(
         self,
@@ -155,7 +196,7 @@ class BigQueryStorage:
         """Write a single hypothesis to BigQuery."""
         table_ref = self._table_ref(TABLES["hypotheses"])
         row = self._to_bq_row(hypothesis)
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -203,7 +244,7 @@ class BigQueryStorage:
         """Write a single kernel to BigQuery."""
         table_ref = self._table_ref(TABLES["kernels"])
         row = self._to_bq_row(kernel)
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -232,7 +273,17 @@ class BigQueryStorage:
             LIMIT {limit}
         """
 
-        job = self.client.query(query)
+        job_config = None
+        if params:
+            from google.cloud.bigquery import QueryJobConfig, ScalarQueryParameter
+            job_config = QueryJobConfig(
+                query_parameters=[
+                    ScalarQueryParameter(name, "STRING", value)
+                    for name, value in params.items()
+                ]
+            )
+
+        job = self.client.query(query, job_config=job_config)
         return [dict(row) for row in job.result()]
 
     # --- Candidates ---
@@ -241,7 +292,7 @@ class BigQueryStorage:
         """Write a single candidate to BigQuery."""
         table_ref = self._table_ref(TABLES["candidates"])
         row = self._to_bq_row(candidate)
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -270,7 +321,17 @@ class BigQueryStorage:
             LIMIT {limit}
         """
 
-        job = self.client.query(query)
+        job_config = None
+        if params:
+            from google.cloud.bigquery import QueryJobConfig, ScalarQueryParameter
+            job_config = QueryJobConfig(
+                query_parameters=[
+                    ScalarQueryParameter(name, "STRING", value)
+                    for name, value in params.items()
+                ]
+            )
+
+        job = self.client.query(query, job_config=job_config)
         return [dict(row) for row in job.result()]
 
     # --- Probe Results ---
@@ -279,7 +340,7 @@ class BigQueryStorage:
         """Write a single probe result to BigQuery."""
         table_ref = self._table_ref(TABLES["probe_results"])
         row = self._to_bq_row(probe_result)
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -294,7 +355,7 @@ class BigQueryStorage:
             "properties_json": json.dumps(properties),
             "confidence": confidence,
         }
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -307,7 +368,7 @@ class BigQueryStorage:
             "edge_type": edge_type,
             "weight": weight,
         }
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -322,7 +383,7 @@ class BigQueryStorage:
             "evidence_type": evidence_type,
             "source": source,
         }
-        errors = self.client.insert_rows_json(table_ref, [row])
+        self._insert_row(TABLES["hypotheses"], row)
         if errors:
             raise RuntimeError(f"BigQuery insert failed: {errors}")
 
@@ -330,5 +391,14 @@ class BigQueryStorage:
 
     def query(self, sql: str, params: Optional[dict] = None) -> list[dict]:
         """Run an arbitrary SQL query. Returns list of dicts."""
-        job = self.client.query(sql, job_config=None)
+        job_config = None
+        if params:
+            from google.cloud.bigquery import QueryJobConfig, ScalarQueryParameter
+            job_config = QueryJobConfig(
+                query_parameters=[
+                    ScalarQueryParameter(name, "STRING", value)
+                    for name, value in params.items()
+                ]
+            )
+        job = self.client.query(sql, job_config=job_config)
         return [dict(row) for row in job.result()]

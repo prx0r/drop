@@ -37,6 +37,34 @@ Agents = the execution layer (probes, emails, stores, data pulls)
 
 ## 10 Binding Rules
 
+### Rule 0: TEST AGAINST REAL INFRASTRUCTURE (CRITICAL)
+**Never claim code works until it runs against real BigQuery with real credentials.**
+
+The worst mistake is writing code that "should work" but never tested. Every storage method, every pipeline, every schema must be verified end-to-end against actual BigQuery tables with real agent-vault credentials.
+
+```bash
+# This is the ONLY way to verify BigQuery works:
+python3 -c "
+import subprocess
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from google.cloud import bigquery
+
+creds = Credentials(
+    token=None,
+    refresh_token=subprocess.run(['agent-vault', 'vault', 'credential', 'get', 'GOOGLE_REFRESH_TOKEN', '--vault', 'oracle'], capture_output=True, text=True).stdout.strip(),
+    token_uri='https://oauth2.googleapis.com/token',
+    client_id=subprocess.run(['agent-vault', 'vault', 'credential', 'get', 'GOOGLE_CLIENT_ID', '--vault', 'oracle'], capture_output=True, text=True).stdout.strip(),
+    client_secret=subprocess.run(['agent-vault', 'vault', 'credential', 'get', 'GOOGLE_CLIENT_SECRET', '--vault', 'oracle'], capture_output=True, text=True).stdout.strip(),
+)
+creds.refresh(Request())
+client = bigquery.Client(project=subprocess.run(['agent-vault', 'vault', 'credential', 'get', 'GOOGLE_CLOUD_PROJECT', '--vault', 'oracle'], capture_output=True, text=True).stdout.strip(), credentials=creds)
+print('Connected:', list(client.list_tables('drop'))[:3])
+"
+```
+
+**If you can't run this successfully, nothing else matters.**
+
 ### Rule 1: Never push directly
 The owner pushes. Agents commit locally only when asked. Never `git push` without explicit instruction.
 
