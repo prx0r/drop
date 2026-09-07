@@ -206,6 +206,28 @@ Train on the full funnel: 3,000 discovered → 1,200 killed → 600 killed → .
 | `hypotheses.json` | Generated hypotheses |
 | `designed_probes.json` | Designed probes |
 
+### GitGoblin (`/root/gitgoblin/`)
+| File | Purpose |
+|------|---------|
+| `configs/sectors/agent_commerce.yaml` | Agent-commerce sector config |
+| `gitgoblin/` | Core engine |
+| `schemas/` | Data schemas |
+
+**Running GitGoblin:**
+```bash
+# Initialize (first time only)
+cd /root/gitgoblin && gitgoblin init
+
+# Seed with sector
+gitgoblin seed agent_commerce igrigorik
+
+# Scan for signals (background)
+nohup gitgoblin scan agent_commerce --seed igrigorik --expand 2 > /tmp/gitgoblin_scan.log 2>&1 &
+
+# Check results
+gitgoblin rank --sector agent_commerce
+```
+
 ---
 
 ## Procedures
