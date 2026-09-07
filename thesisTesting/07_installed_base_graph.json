@@ -1,0 +1,53 @@
+{
+  "thesis_id": "INSTALLED_BASE_GRAPH_007",
+  "title": "Installed-Base Graph \u2014 Household Infrastructure Memory",
+  "status": "EXPERIMENT",
+  "created": "2026-09-07",
+  "description": "Every transaction tells us a household owns something. Household has: Bosch SMS46MI08E, Zappi v2 charger, Vaillant boiler, Tesla Model 3. Agent knows: 'Your dishwasher pump is failing again'. Creates recurring demand rather than constantly reacquiring customers.",
+  "architecture": {
+    "installed_base_structure": {
+      "household_id": "string",
+      "assets": [
+        {
+          "asset_type": "string (appliance, ev_charger, boiler, solar, battery)",
+          "manufacturer": "string",
+          "model": "string",
+          "serial": "string",
+          "installed_date": "date",
+          "installed_by": "string (supplier_id)",
+          "warranty_until": "date",
+          "expected_maintenance": "date",
+          "last_service": "date",
+          "condition": "string (excellent, good, fair, poor)"
+        }
+      ],
+      "household_profile": {
+        "property_type": "string (detached, semi-detached, terraced, flat)",
+        "bedrooms": "number",
+        "electrical_supply": "string (single_phase, three_phase)",
+        "parking": "string (off_street, on_street, garage, driveway)",
+        "solar_installed": "boolean",
+        "battery_installed": "boolean"
+      }
+    },
+    "demand_generation": [
+      "Proactive maintenance reminders",
+      "Warranty expiration alerts",
+      "Compatibility-based recommendations",
+      "Seasonal service suggestions",
+      "Upgrade opportunities"
+    ]
+  },
+  "bigquery_data": {
+    "installed_base_data": 0,
+    "ecosystem_data": 0,
+    "household_patterns": [
+      {
+        "error": "400 Table \"fact_series_installed_base\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: fact_series_installed_base, message: Table \"fact_series_installed_base\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 5c37a68a-294c-4b88-9c44-5b44d37b8b64\n"
+      }
+    ],
+    "graph_metrics": {
+      "error": "400 Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: graph_edges, message: Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 5b1e5bc1-648d-4aeb-becc-52d2dd469dd5\n"
+    }
+  }
+}

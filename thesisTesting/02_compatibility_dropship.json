@@ -1,0 +1,140 @@
+{
+  "thesis_id": "COMPATIBILITY_DROPSHIP_002",
+  "title": "Agentic Compatibility Dropshipping \u2014 Photo \u2192 Exact Part \u2192 One-Click Buy",
+  "status": "EXPERIMENT",
+  "created": "2026-09-07",
+  "description": "Customer takes picture of broken component. System identifies exact part, validates compatibility, finds cheapest supplier relative to location, one-click buy via Shopify. We normalize supplier data that's shit.",
+  "architecture": {
+    "customer_flow": [
+      "Customer takes photo of broken part",
+      "System identifies appliance + component",
+      "Reads model/serial evidence",
+      "Checks compatibility graph",
+      "Checks supersessions",
+      "Shows: 'Yes \u2014 this is Bosch part 00631200. It fits SMS46MI08E. \u00a371.40 delivered tomorrow.'",
+      "One-click buy via Shopify"
+    ],
+    "supplier_normalization": {
+      "problem": "Suppliers have: warehouse, purchasing relationships, stock, packing, courier contracts. They're terrible at: titles, images, structured compatibility, GTIN/MPN normalization, model mappings, supersessions, product discovery, customer support, machine-readable stock, agentic checkout.",
+      "solution": "We fix the bad half. Margin = compensation for solving information entropy."
+    },
+    "dropship_flow": [
+      "Customer buys from our Shopify store",
+      "Order routes to cheapest supplier relative to location",
+      "Supplier ships directly to customer",
+      "We never touch inventory"
+    ]
+  },
+  "schema": {
+    "component_identification": {
+      "photo_url": "string",
+      "appliance_manufacturer": "string",
+      "appliance_model": "string",
+      "appliance_serial": "string",
+      "component_type": "string (pump, valve, pcb, sensor, bearing, filter, seal)",
+      "oem_part_number": "string",
+      "confidence": "number (0-1)",
+      "evidence": [
+        "string"
+      ]
+    },
+    "compatibility_graph": {
+      "oem_part_number": "string",
+      "supersedes": [
+        "string"
+      ],
+      "superseded_by": [
+        "string"
+      ],
+      "compatible_appliances": [
+        {
+          "manufacturer": "string",
+          "model": "string",
+          "variant": "string",
+          "confidence": "number (0-1)"
+        }
+      ],
+      "alternatives": [
+        {
+          "part_number": "string",
+          "manufacturer": "string",
+          "confidence": "number (0-1)"
+        }
+      ]
+    },
+    "normalized_listing": {
+      "sku": "string",
+      "title": "string",
+      "description": "string",
+      "manufacturer": "string",
+      "part_number": "string",
+      "compatible_with": [
+        "string"
+      ],
+      "images": [
+        "url"
+      ],
+      "price": {
+        "amount": "number",
+        "currency": "string (GBP)",
+        "includes_vat": "boolean"
+      },
+      "availability": {
+        "in_stock": "boolean",
+        "stock_level": "number",
+        "delivery_days": "number",
+        "delivery_cost": "number"
+      },
+      "specifications": {
+        "voltage": "string",
+        "wattage": "string",
+        "dimensions": "string",
+        "weight": "string",
+        "material": "string"
+      },
+      "schema_org": {
+        "isAccessoryOrSparePartFor": [
+          "string"
+        ],
+        "isConsumableFor": [
+          "string"
+        ]
+      }
+    }
+  },
+  "bigquery_data": {
+    "total_case_studies": 0,
+    "total_products": 0,
+    "total_demand_signals": 0,
+    "total_competition_signals": 0,
+    "countries": [
+      {
+        "error": "400 Table \"country_data\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: country_data, message: Table \"country_data\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 85aec8da-9045-4e79-bd62-a2995fbb495c\n"
+      }
+    ],
+    "graph_nodes": 0,
+    "graph_edges": 0,
+    "probe_reports": 0,
+    "economics_signals": 0,
+    "products_with_compatibility": 0,
+    "appliance_parts": 0,
+    "product_categories": [
+      {
+        "error": "400 Table \"products\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: products, message: Table \"products\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: dcd30876-ef93-438e-857c-dd10518a33b5\n"
+      }
+    ],
+    "competition_by_type": [
+      {
+        "error": "400 Table \"competition_signals\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: competition_signals, message: Table \"competition_signals\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: f02f9611-e979-40f6-8bac-9a1b05f8c035\n"
+      }
+    ],
+    "graph_metrics": {
+      "error": "400 Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: graph_edges, message: Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 584e5e8e-4a23-40f3-b936-152ddd86d94c\n"
+    },
+    "probe_insights": [
+      {
+        "error": "400 Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: probe_reports, message: Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 27636c31-0340-4e97-91e9-c8c8737f6c75\n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "thesis_id": "VERIFICATION_TRUST_GRAPH_008",
+  "title": "Verification/Trust Graph \u2014 Machine-Useful Trust",
+  "status": "EXPERIMENT",
+  "created": "2026-09-07",
+  "description": "Don't reduce to star ratings. Store empirical outcomes: quoted \u00a3950, actually invoiced \u00a3975; promised Thursday, arrived Thursday; estimated 3h, took 2h47; 187 booked, 181 completed, 3 cancelled supplier-side, 3 customer-side. Machine-useful trust that AI agents can rank on.",
+  "architecture": {
+    "trust_metrics": {
+      "supplier_id": "string",
+      "total_jobs": "number",
+      "completed_jobs": "number",
+      "cancelled_supplier_side": "number",
+      "cancelled_customer_side": "number",
+      "disputes": "number",
+      "disputes_resolved": "number",
+      "price_accuracy": {
+        "quoted_average": "number",
+        "invoiced_average": "number",
+        "variance_percent": "number"
+      },
+      "time_accuracy": {
+        "promised_arrival": "datetime",
+        "actual_arrival": "datetime",
+        "variance_minutes": "number"
+      },
+      "duration_accuracy": {
+        "estimated_hours": "number",
+        "actual_hours": "number",
+        "variance_percent": "number"
+      },
+      "response_time_seconds": "number",
+      "first_time_completion_rate": "number",
+      "customer_satisfaction": "number"
+    },
+    "key_insight": "Machine-useful trust is empirical outcomes, not star ratings. AI agents can rank on it."
+  },
+  "bigquery_data": {
+    "merchant_data": 0,
+    "economic_outcomes": 0,
+    "merchant_metrics": [
+      {
+        "error": "400 Table \"fact_merchants\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: fact_merchants, message: Table \"fact_merchants\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 3cf86cc7-8579-41c9-b948-9690ee07fbf4\n"
+      }
+    ],
+    "graph_metrics": {
+      "error": "400 Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: graph_edges, message: Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 42b8e4d3-58ce-402c-808d-6bca4cf88799\n"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "thesis_id": "AGENTIC_BROKER_001",
+  "title": "Agentic RFQ Broker \u2014 Customer Submits, We Send Bids to Tradesmens",
+  "status": "EXPERIMENT",
+  "created": "2026-09-07",
+  "description": "Customer submits job requirement. System sends structured bids to tradesmens WhatsApp/phone. They tick yes/no. We get details. Free trial, charge for lead, no platform fee.",
+  "architecture": {
+    "customer_flow": [
+      "Customer submits job (photo + description + location + preferred time)",
+      "System constructs standardized job object",
+      "Agents contact qualified suppliers via WhatsApp/API/email/phone",
+      "Each response turns into structured quote",
+      "Customer receives three actually executable offers, not three phone numbers"
+    ],
+    "supplier_flow": [
+      "Tradesman receives WhatsApp: NEW LEAD + job details",
+      "They tick Accept/Suggest time/Call customer/Decline",
+      "If Accept: customer gets confirmation",
+      "System captures: service_area, acceptance_behaviour, actual_availability, price, job_types_accepted, response_time, conversion"
+    ],
+    "monetization": "Charge for lead, no platform fee. Loss leader to build graph."
+  },
+  "schema": {
+    "job_request": {
+      "job_type": "string (ev_charger_installation, boiler_service, fuseboard_upgrade)",
+      "postcode": "string",
+      "parking": "string (off_street, on_street, garage, driveway)",
+      "electrical_supply": "string (single_phase, three_phase)",
+      "charger": "string (zappi, myenergi, pod_point, alien)",
+      "cable_run_m": "number",
+      "wall_type": "string (brick, stone, render, timber)",
+      "preferred_dates": [
+        "datetime"
+      ],
+      "description": "string",
+      "photos": [
+        "url"
+      ],
+      "budget_range": {
+        "min": "number",
+        "max": "number",
+        "currency": "string (GBP)"
+      }
+    },
+    "supplier_quote": {
+      "supplier_id": "string",
+      "job_type": "string",
+      "price": "number",
+      "currency": "string (GBP)",
+      "includes_vat": "boolean",
+      "available_dates": [
+        "datetime"
+      ],
+      "estimated_duration_hours": "number",
+      "certifications": [
+        "string"
+      ],
+      "equipment_supported": [
+        "string"
+      ],
+      "notes": "string",
+      "response_time_seconds": "number"
+    },
+    "booking": {
+      "booking_id": "string",
+      "job_request_id": "string",
+      "supplier_id": "string",
+      "quote_id": "string",
+      "scheduled_date": "datetime",
+      "estimated_duration_hours": "number",
+      "total_price": "number",
+      "currency": "string (GBP)",
+      "status": "string (pending, confirmed, in_progress, completed, cancelled)"
+    }
+  },
+  "bigquery_data": {
+    "total_case_studies": 0,
+    "total_products": 0,
+    "total_demand_signals": 0,
+    "total_competition_signals": 0,
+    "countries": [
+      {
+        "error": "400 Table \"country_data\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: country_data, message: Table \"country_data\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: c1ec4518-421f-47a3-8109-22b3bd694171\n"
+      }
+    ],
+    "graph_nodes": 0,
+    "graph_edges": 0,
+    "probe_reports": 0,
+    "economics_signals": 0,
+    "ev_installers": 0,
+    "service_providers": 0,
+    "uk_market": 0,
+    "demand_by_category": [
+      {
+        "error": "400 Table \"demand_signals\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: demand_signals, message: Table \"demand_signals\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 81f5d949-919f-4a64-92f0-15439120ceb5\n"
+      }
+    ],
+    "graph_metrics": {
+      "error": "400 Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: graph_edges, message: Table \"graph_edges\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: af0fbff2-7eb2-41f9-aaed-a05e19315e1e\n"
+    },
+    "probe_insights": [
+      {
+        "error": "400 Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).; reason: invalid, location: probe_reports, message: Table \"probe_reports\" must be qualified with a dataset (e.g. dataset.table).\n\nLocation: US\nJob ID: 98fe2fe9-cc8c-4d7e-bbc4-238555d1476f\n"
+      }
+    ]
+  }
+}
