@@ -1,0 +1,15 @@
+{
+  "connector_id": "DE_COMPANY_REGISTRY",
+  "status": "PUBLIC_REGISTER_SEARCH_LIMITED_AUTOMATION",
+  "source_id": null,
+  "purpose": [
+    "merchant legal identity",
+    "company validation"
+  ],
+  "rules": [
+    "do not infer ecommerce activity from registration alone"
+  ],
+  "outputs": [
+    "merchants.jsonl"
+  ]
+}

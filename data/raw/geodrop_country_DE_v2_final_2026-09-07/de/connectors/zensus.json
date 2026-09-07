@@ -1,0 +1,20 @@
+{
+  "connector_id": "DE_ZENSUS_2022",
+  "status": "READY_PUBLIC_DOWNLOADS",
+  "source_id": "de_zensus_grid_2022",
+  "purpose": [
+    "building age",
+    "heating type",
+    "energy carrier",
+    "building type",
+    "100m/1km geography"
+  ],
+  "rules": [
+    "preserve Census date",
+    "do not treat grid counts as current without update model"
+  ],
+  "outputs": [
+    "series/installed_base.csv",
+    "reports/09_geographic_opportunity.json"
+  ]
+}

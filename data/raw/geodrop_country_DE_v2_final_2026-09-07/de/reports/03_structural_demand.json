@@ -1,0 +1,25 @@
+{
+  "report_id": "DE_03_STRUCTURAL_DEMAND",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "priority_ecosystems": [
+    "DE_HEATING_REPLACEMENT",
+    "DE_DISTRIBUTED_ENERGY",
+    "DE_SMART_METER_ENERGY",
+    "DE_EV_AFTERMARKET",
+    "DE_BUILDING_RETROFIT"
+  ],
+  "summary": "Germany offers exceptional installed-base data: 43.8m dwellings, >5m heating systems over 30 years, 299k heat pumps sold in 2025, 117GW solar, 430k new balcony-solar registrations, 56.5m metering locations, 49.5m passenger cars and >212k public charge points.",
+  "evidence_refs": [
+    "DE_DWELLINGS_2024",
+    "DE_HEATERS_OVER30Y_2026",
+    "DE_HP_SALES_2025",
+    "DE_SOLAR_CAPACITY_2025",
+    "DE_BALCONY_NEW_2025",
+    "DE_SMARTMETER_METERING_POINTS_2025",
+    "DE_CAR_STOCK_2026",
+    "DE_PUBLIC_NORMAL_CHARGEPOINTS_202608",
+    "DE_PUBLIC_FAST_CHARGEPOINTS_202608"
+  ],
+  "warning": "Installed-base magnitude is discovery evidence, not launch evidence."
+}

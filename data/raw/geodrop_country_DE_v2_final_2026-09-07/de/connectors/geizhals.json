@@ -1,0 +1,18 @@
+{
+  "connector_id": "DE_GEIZHALS",
+  "status": "PUBLIC_WEB_PARTNER_TERMS_FOR_AUTOMATION",
+  "source_id": "de_geizhals_2026",
+  "purpose": [
+    "technical SKU offer density",
+    "price/stock",
+    "merchant discovery"
+  ],
+  "rules": [
+    "exact model first",
+    "do not call offer count complete market census"
+  ],
+  "outputs": [
+    "series/price_snapshots.csv",
+    "series/seller_snapshots.csv"
+  ]
+}

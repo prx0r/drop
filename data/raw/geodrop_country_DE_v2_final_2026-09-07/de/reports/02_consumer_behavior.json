@@ -1,0 +1,21 @@
+{
+  "report_id": "DE_02_CONSUMER_BEHAVIOR",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "summary": "70% of ages 16-74 bought online in the prior three months in 2025. Germany is home-delivery led, PayPal-led, cross-border open but highly sensitive to returns/logistics trust.",
+  "evidence_refs": [
+    "DE_ECOM_3M_2025",
+    "DE_ECOM_25_44_3M_2025",
+    "DE_ECOM_65_74_3M_2025",
+    "DE_PAYPAL_LEADER_2025",
+    "DE_DELIVERY_HOME_PREF_2026",
+    "DE_RETURN_PARCELSHOP_PREF_2026",
+    "DE_RETURN_ABORT_2025",
+    "DE_XBORDER_2026"
+  ],
+  "conversion_implications": [
+    "PayPal must be supported.",
+    "Clear returns and trusted carrier matter materially.",
+    "Home delivery should be default; parcel lockers/shops must remain available."
+  ]
+}

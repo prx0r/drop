@@ -1,0 +1,22 @@
+{
+  "connector_id": "DE_GOOGLE_ADS_KEYWORD",
+  "status": "AUTH_REQUIRED",
+  "source_id": null,
+  "purpose": [
+    "German monthly search volume",
+    "CPC",
+    "competition",
+    "monthly history"
+  ],
+  "geo": "Germany",
+  "language": "German",
+  "rules": [
+    "MISSING_REQUIRED until authenticated",
+    "exact geo/language/network",
+    "archive pre-launch snapshot"
+  ],
+  "outputs": [
+    "queries.jsonl",
+    "series/search.csv"
+  ]
+}

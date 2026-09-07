@@ -1,0 +1,23 @@
+{
+  "connector_id": "DE_DESTATIS_GENESIS",
+  "status": "READY_PUBLIC",
+  "source_id": "de_genesis_api_2026",
+  "purpose": [
+    "population",
+    "retail",
+    "housing",
+    "construction",
+    "vehicle/household statistics"
+  ],
+  "method": "RESTful/JSON POST API",
+  "rules": [
+    "archive raw response",
+    "record table/statistic codes",
+    "respect post-2025 POST-only API change"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/macro.csv",
+    "series/installed_base.csv"
+  ]
+}

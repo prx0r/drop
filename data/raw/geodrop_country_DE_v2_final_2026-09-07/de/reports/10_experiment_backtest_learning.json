@@ -1,0 +1,15 @@
+{
+  "report_id": "DE_10_EXPERIMENT_BACKTEST",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "backtest_eligible": false,
+  "reason": "Fresh exploratory research; no historical precommitted candidate universe and raw snapshots.",
+  "prospective_contract": [
+    "freeze candidate universe",
+    "freeze feature/evidence snapshot with available_at <= decision_time",
+    "freeze strategy/model version",
+    "log decision before outcome",
+    "store negative/killed candidates",
+    "mature outcomes before model training"
+  ]
+}

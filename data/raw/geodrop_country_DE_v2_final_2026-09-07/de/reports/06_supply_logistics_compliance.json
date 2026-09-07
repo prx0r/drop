@@ -1,0 +1,20 @@
+{
+  "report_id": "DE_06_SUPPLY_LOGISTICS_COMPLIANCE",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "summary": "EU/Germany execution requires VAT/customs, GPSR, packaging/EPR, electrical/electronic producer obligations where applicable, 14-day withdrawal rights and from 2026 an electronic withdrawal function for relevant online contracts.",
+  "evidence_refs": [
+    "DE_WITHDRAWAL_DAYS",
+    "DE_ELECTRONIC_WITHDRAWAL_FUNCTION",
+    "DE_NON_EU_CUSTOMS_FLAT_2026",
+    "DE_IMPORT_VAT_STANDARD_2026"
+  ],
+  "launch_gates": [
+    "reseller authorization",
+    "GPSR responsible economic operator/traceability",
+    "LUCID/packaging obligations",
+    "ElektroG/BattG/ear where applicable",
+    "exact product electrical/install safety",
+    "returns/warranty/RMA"
+  ]
+}

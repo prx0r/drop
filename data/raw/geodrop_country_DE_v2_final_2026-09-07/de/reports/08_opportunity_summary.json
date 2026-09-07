@@ -1,0 +1,50 @@
+{
+  "report_id": "DE_08_OPPORTUNITY_SUMMARY",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "ranked_product_markets": [
+    {
+      "id": "DE_HP_SPARES_PM",
+      "state": "DISCOVERED",
+      "score": 72,
+      "confidence": 0.62
+    },
+    {
+      "id": "DE_SMART_READER_PM",
+      "state": "DISCOVERED",
+      "score": 67,
+      "confidence": 0.61
+    },
+    {
+      "id": "DE_SOLAR_AFTERMARKET_PM",
+      "state": "HOLD_RESEARCH",
+      "score": 59,
+      "confidence": 0.7
+    },
+    {
+      "id": "DE_EV_NEW_MODEL_PM",
+      "state": "DISCOVERED",
+      "score": 63,
+      "confidence": 0.55
+    },
+    {
+      "id": "DE_DIAGNOSTICS_PM",
+      "state": "HOLD_RESEARCH",
+      "score": 54,
+      "confidence": 0.72
+    },
+    {
+      "id": "DE_GENERIC_BALCONY_SOLAR",
+      "state": "KILLED",
+      "score": 33,
+      "confidence": 0.9
+    },
+    {
+      "id": "DE_GENERIC_MODEL_Y",
+      "state": "KILLED",
+      "score": 29,
+      "confidence": 0.9
+    }
+  ],
+  "bottom_line": "Germany is valuable primarily as a mature benchmark/source oracle. The strongest target-country research frontier is heating lifecycle/parts and smart-meter transition; generic solar/Model-Y hypotheses are explicitly killed."
+}

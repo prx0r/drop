@@ -1,0 +1,52 @@
+{
+  "country": "DE",
+  "country_name": "Germany",
+  "pack_as_of": "2026-09-07",
+  "languages": [
+    "de"
+  ],
+  "primary_language": "de",
+  "currency": "EUR",
+  "timezone": "Europe/Berlin",
+  "population_observation": "DE_POP_2026Q1",
+  "standard_vat_observation": "DE_IMPORT_VAT_STANDARD_2026",
+  "ecommerce_tax_scheme": {
+    "name": "EU VAT / Germany VAT + import/customs rules",
+    "note": "Validate OSS/IOSS/importer/EPR/product-safety obligations per seller and SKU."
+  },
+  "local_payment_methods": [
+    "PayPal",
+    "invoice",
+    "cards",
+    "direct debit",
+    "wallets"
+  ],
+  "preferred_delivery_patterns": [
+    "home delivery dominant",
+    "parcel lockers meaningful",
+    "parcel shops important for returns"
+  ],
+  "price_comparison_sources": [
+    "idealo.de",
+    "geizhals.de"
+  ],
+  "official_data_api": "Destatis GENESIS RESTful/JSON API",
+  "source_market_candidates": [
+    "NL",
+    "AT",
+    "SE",
+    "PL"
+  ],
+  "research_principle": "Germany is a mature source/benchmark market; demand alone is never whitespace. Prefer lifecycle/exact-model/regulatory transition gaps with measured merchant lag.",
+  "pack_version": "2.0.0",
+  "intelligence_model": "installed_base_problem_source_target_outcome_graph",
+  "geographic_levels": [
+    "country",
+    "Bundesland",
+    "Kreis",
+    "Gemeinde",
+    "grid/cell when source supports"
+  ],
+  "evidence_policy": "docs/CANONICAL_SPEC.md",
+  "backtesting_policy": "docs/BACKTESTING.md"
+}

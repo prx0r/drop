@@ -1,0 +1,21 @@
+{
+  "report_id": "DE_05_MERCHANT_CENSUS",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "merchant_ids": [
+    "DE_MERCHANT_BOSCH_PARTS",
+    "DE_MERCHANT_NIBE_PARTS",
+    "DE_MERCHANT_TIBBER",
+    "DE_MERCHANT_HORNBACH_SOLAR",
+    "DE_MERCHANT_TESLA",
+    "DE_MERCHANT_FLIR",
+    "DE_MERCHANT_TESTO"
+  ],
+  "summary": "Germany has strong manufacturer DTC, professional parts portals, energy-platform incumbents, OEM vehicle catalogues and big-box solar. Generic whitespace hypotheses are penalized heavily.",
+  "critical_negative_evidence": [
+    "Bosch parts finder + NIBE pro shop reduce generic heat-pump parts gap.",
+    "HORNBACH has extensive balcony-solar/storage assortment.",
+    "Tesla OEM directly serves Model Y accessory demand.",
+    "Testo and FLIR are strong domestic/pro DTC diagnostics suppliers."
+  ]
+}

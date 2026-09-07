@@ -1,0 +1,19 @@
+{
+  "report_id": "DE_01_MARKET_OVERVIEW",
+  "country": "DE",
+  "as_of": "2026-09-07",
+  "summary": "Germany is a huge mature ecommerce market: online sales are growing again, but marketplace/big-box/manufacturer competition is intense. Treat Germany more often as a source-market oracle than an easy GeoDrop target.",
+  "key_observations": [
+    "DE_POP_2026Q1",
+    "DE_HDE_ONLINE_NET_2025",
+    "DE_BEVH_H1_GROWTH_2026",
+    "DE_ECOM_3M_2025",
+    "DE_XBORDER_2026",
+    "DE_INFLATION_AUG_2026"
+  ],
+  "interpretation": [
+    "Large TAM does not imply merchant gap.",
+    "Q2 2026 ecommerce growth coexists with weak July official mail-order index; preserve time/definition differences.",
+    "DIY and auto accessories are growing online but must pass incumbent density gates."
+  ]
+}
