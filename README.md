@@ -18,15 +18,24 @@ drop/
 ├── THESIS.md              # Core thesis
 ├── README.md              # This file
 ├── HANDOVER.md            # State for next agent
+├── ONBOARDING.md          # New agent guide
+├── SPEC.md                # Architecture decisions
 ├── campaigns/             # Active campaigns
-│   └── active/            # 25 campaigns
+│   ├── active/            # 25 campaigns
+│   └── stale/             # Archived campaigns
 ├── docs/                  # Documentation
 │   ├── guides/            # Setup guides
+│   │   ├── DEV_INSTRUCTIONS.md
+│   │   ├── SHOPIFY_SETUP_GUIDE.md
+│   │   └── BUILD_GUIDE_CUSTOM_STACK.md
 │   ├── maritime/          # Maritime opportunities
+│   │   ├── MARITIME_NORWAY.md
+│   │   └── MARITIME_CAMPAIGN_AKVA.md
 │   ├── plans/             # Queued plans
-│   └── verification/      # Campaign verification
-├── data/                  # Data files
-│   └── dropcomp/          # Competitor intelligence
+│   │   └── PLANS_MERCHANT_CENTER_LATER.md
+│   ├── verification/      # Campaign verification
+│   │   └── VERIFICATION_HELIOS_ELS.md
+│   └── HCC_V2.md          # 20 campaigns with corrected scoring
 ├── bigquery/              # BigQuery schemas
 ├── corpus/                # Case studies
 └── secrets/               # Credentials (not in git)
