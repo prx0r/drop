@@ -1,0 +1,88 @@
+{
+  "report_id": "DK_03_STRUCTURAL_DEMAND",
+  "country": "DK",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "ecosystems": [
+    {
+      "ecosystem_id": "DK_SUMMERHOUSE_REMOTE",
+      "state": "RESEARCH_NARROW",
+      "score": {
+        "measured_points": 57,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 67.1,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "DK_HEAT_PUMP_LIFECYCLE",
+      "state": "PRIORITY_RESEARCH",
+      "score": {
+        "measured_points": 62,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 72.9,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "DK_EV_AFTERMARKET",
+      "state": "PRIORITY_RESEARCH",
+      "score": {
+        "measured_points": 60,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 70.6,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "DK_DISTRIBUTED_ENERGY",
+      "state": "RESEARCH",
+      "score": {
+        "measured_points": 46,
+        "max_measured_points": 70,
+        "evidence_coverage": 0.714,
+        "normalized_measured_score": 65.7,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "DK_RURAL_WOOD_HEAT",
+      "state": "SATURATED_REFERENCE",
+      "score": {
+        "measured_points": 47,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 55.3,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    },
+    {
+      "ecosystem_id": "DK_DYNAMIC_ENERGY_CONTROL",
+      "state": "RESEARCH",
+      "score": {
+        "measured_points": 53,
+        "max_measured_points": 85,
+        "evidence_coverage": 0.857,
+        "normalized_measured_score": 62.4,
+        "promotion_eligible": false,
+        "score_model": "ECOSYSTEM_DISCOVERY_V2@2.0.0"
+      }
+    }
+  ],
+  "core_refs": [
+    "DK_SUMMERHOUSES_2026",
+    "DK_HP_DWELLINGS_2025",
+    "DK_BEV_STOCK_2026_07",
+    "DK_SOLAR_INSTALLATIONS_2025Q2",
+    "DK_WOOD_INSTALLATIONS_2025"
+  ],
+  "summary": "Denmark exposes several large/growing installed bases. The key discriminator is whether merchant/service depth has lagged: EV non-Tesla cohorts and heat-pump lifecycle deserve measurement; wood and generic summerhouse monitoring demonstrate mature local execution."
+}

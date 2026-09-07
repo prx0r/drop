@@ -1,0 +1,18 @@
+{
+  "connector_id": "DK_COMPLIANCE",
+  "status": "READY_PUBLIC",
+  "source_id": "dk_forbrug_withdrawal",
+  "purpose": [
+    "consumer withdrawal/returns",
+    "GPSR/category obligations",
+    "electrical/battery safety"
+  ],
+  "rules": [
+    "validate per SKU",
+    "block launch on unknown regulated obligations"
+  ],
+  "outputs": [
+    "reports/06_supply_logistics_compliance.json",
+    "observations.jsonl"
+  ]
+}

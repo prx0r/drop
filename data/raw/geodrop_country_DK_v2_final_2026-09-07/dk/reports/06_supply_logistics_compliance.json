@@ -1,0 +1,21 @@
+{
+  "report_id": "DK_06_SUPPLY_LOGISTICS_COMPLIANCE",
+  "country": "DK",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "vat_ref": "DK_VAT_STANDARD_2026",
+  "import_ref": "DK_IMPORT_DUTY_LOWVALUE_2026",
+  "withdrawal_refs": [
+    "DK_WITHDRAWAL_RIGHT_2026",
+    "DK_RETURN_FOREIGN_WAREHOUSE_RULE_2026"
+  ],
+  "delivery_refs": [
+    "DK_DELIVERY_PAID_2026",
+    "DK_DELIVERY_SINGLE_PREF_2026"
+  ],
+  "hard_missing": [
+    "DK_DEALER_NET_ACTIVE",
+    "DK_RESELLER_TERMS_ACTIVE"
+  ],
+  "launch_rule": "No regulated/electrical SKU or paid launch without verified resale rights, delivered landed cost, warranty/RMA, return path and compliance obligations."
+}

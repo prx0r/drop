@@ -1,0 +1,25 @@
+{
+  "report_id": "DK_02_CONSUMER_BEHAVIOR",
+  "country": "DK",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "payment_refs": [
+    "DK_MOBILEPAY_PREF_2026",
+    "DK_CARD_USED_2026",
+    "DK_SMOOTH_CHECKOUT_IMPORTANCE_2026"
+  ],
+  "delivery_refs": [
+    "DK_DELIVERY_PAID_2026",
+    "DK_DELIVERY_SINGLE_PREF_2026"
+  ],
+  "returns_refs": [
+    "DK_RETURN_3M_2026",
+    "DK_RETURN_METHOD_2026"
+  ],
+  "planning_ref": "DK_ECOM_PLANNED_2026",
+  "cross_border_refs": [
+    "DK_CROSSBORDER_YEAR_2026",
+    "DK_GERMANY_SOURCE_SHIFT_2026"
+  ],
+  "implication": "MobilePay, transparent shipping and low-friction returns are conversion infrastructure. Planned purchasing strengthens comparison/exact-fit content relative to impulse-only creative."
+}

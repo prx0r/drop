@@ -1,0 +1,17 @@
+{
+  "connector_id": "DK_GOOGLE_TRENDS",
+  "status": "ALPHA_ACCESS_REQUIRED",
+  "source_id": "dk_google_trends_api",
+  "purpose": [
+    "5-year scaled trend series",
+    "country/subregion trend"
+  ],
+  "rules": [
+    "store raw scaled series",
+    "record API response time and geography"
+  ],
+  "outputs": [
+    "queries.jsonl",
+    "series/search.csv"
+  ]
+}

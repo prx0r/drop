@@ -1,0 +1,14 @@
+{
+  "report_id": "DK_05_COMPETITION_MERCHANT_CENSUS",
+  "country": "DK",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "merchant_count": 9,
+  "good_seller_count": 9,
+  "negative_controls": [
+    "DK_GENERIC_MODELY_PM",
+    "DK_GENERIC_WOOD_SPARES_PM"
+  ],
+  "key_finding": "Denmark frequently has high-quality niche merchants. Installed base must be joined to exact seller/service lag, not interpreted as whitespace.",
+  "required_next": "Automate GTIN/exact-model census through Prisjagt, Google Shopping, organic SERPs and manufacturer/dealer locators."
+}

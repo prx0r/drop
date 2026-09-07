@@ -1,0 +1,24 @@
+{
+  "report_id": "DK_07_SOURCE_MARKET_ORACLE",
+  "country": "DK",
+  "as_of": "2026-09-07",
+  "status": "POPULATED",
+  "primary_source_market": "DE",
+  "reason_refs": [
+    "DK_GERMANY_SOURCE_SHIFT_2026"
+  ],
+  "archetypes": [
+    "DE_HP_OEM_LIFECYCLE",
+    "SE_HP_CROSSBRAND",
+    "DE_EV_MODEL_SPECIFIC",
+    "DK_SUMMERHOUSE_SPECIALIST_REFERENCE"
+  ],
+  "gaps": [
+    "DK_GAP_HP_DE_SE",
+    "DK_GAP_EV_DE",
+    "DK_GAP_SUMMERHOUSE",
+    "DK_GAP_WOOD",
+    "DK_GAP_SOLAR"
+  ],
+  "summary": "Germany is the natural foreign catalogue benchmark; Sweden is unusually useful for heat-pump lifecycle parts. Source-market depth is evidence of a business/job pattern, never proof of Danish whitespace."
+}

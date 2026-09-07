@@ -1,0 +1,21 @@
+{
+  "connector_id": "DK_PRISJAGT",
+  "status": "PUBLIC_PLUS_PARTNER",
+  "source_id": "dk_prisjagt_method",
+  "purpose": [
+    "seller counts",
+    "prices",
+    "stock",
+    "price history"
+  ],
+  "rules": [
+    "exact GTIN/MPN where possible",
+    "separate international sellers",
+    "archive seller list"
+  ],
+  "outputs": [
+    "merchants.jsonl",
+    "series/seller_snapshots.csv",
+    "series/price_snapshots.csv"
+  ]
+}

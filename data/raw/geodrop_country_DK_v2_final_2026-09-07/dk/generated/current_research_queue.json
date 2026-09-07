@@ -1,0 +1,170 @@
+[
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_SUMMERHOUSE_REMOTE",
+    "missing_component": "native_search_demand",
+    "next_action": "Join summerhouse density to DMI frost/precipitation and measure exact fail-safe/interoperability queries; do not launch generic alarm or heat-pump advice."
+  },
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_HEAT_PUMP_LIFECYCLE",
+    "missing_component": "native_search_demand",
+    "next_action": "Extract Danish heat-pump make/model/age proxies; build exact part compatibility graph; measure old-model/controller queries before requesting dealer terms."
+  },
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_EV_AFTERMARKET",
+    "missing_component": "native_search_demand",
+    "next_action": "Pull StatBank exact make/model cohorts monthly; identify high-growth models excluding Tesla; freeze universe then measure Danish merchant/query lag."
+  },
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_DISTRIBUTED_ENERGY",
+    "missing_component": "native_search_demand",
+    "next_action": "Map inverter/battery installed cohorts and price-data interoperability; measure exact retrofit queries and merchant coverage."
+  },
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_DISTRIBUTED_ENERGY",
+    "missing_component": "target_merchant_service_lag",
+    "next_action": "Map inverter/battery installed cohorts and price-data interoperability; measure exact retrofit queries and merchant coverage."
+  },
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_RURAL_WOOD_HEAT",
+    "missing_component": "native_search_demand",
+    "next_action": "Use as negative training case; only reopen exact model families after measured demand + zero-good-seller evidence."
+  },
+  {
+    "priority": "DISCOVERY_REQUIRED",
+    "ecosystem_id": "DK_DYNAMIC_ENERGY_CONTROL",
+    "missing_component": "native_search_demand",
+    "next_action": "Enumerate SG Ready/Modbus/vendor protocol gaps not supported by incumbent products; measure exact compatibility queries."
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_HP_LIFECYCLE_PM",
+    "gate": "keyword_planner",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_HP_LIFECYCLE_PM",
+    "gate": "dealer_net",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_HP_LIFECYCLE_PM",
+    "gate": "reseller_rights",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_HP_LIFECYCLE_PM",
+    "gate": "warranty_rma",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_EV_NEW_MODEL_PM",
+    "gate": "exact_model_cohort",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_EV_NEW_MODEL_PM",
+    "gate": "keyword_planner",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_EV_NEW_MODEL_PM",
+    "gate": "merchant_census",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_EV_NEW_MODEL_PM",
+    "gate": "supplier_margin",
+    "state": "DISCOVERED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SUMMER_FAILSAFE_PM",
+    "gate": "keyword_planner",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SUMMER_FAILSAFE_PM",
+    "gate": "protocol_gap",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SUMMER_FAILSAFE_PM",
+    "gate": "bundle_margin",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SUMMER_FAILSAFE_PM",
+    "gate": "installation_safety",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SOLAR_RETROFIT_PM",
+    "gate": "keyword_planner",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SOLAR_RETROFIT_PM",
+    "gate": "merchant_census",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SOLAR_RETROFIT_PM",
+    "gate": "electrical_compliance",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_SOLAR_RETROFIT_PM",
+    "gate": "supplier_margin",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_DYNAMIC_CONTROL_PM",
+    "gate": "keyword_planner",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_DYNAMIC_CONTROL_PM",
+    "gate": "protocol_gap",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_DYNAMIC_CONTROL_PM",
+    "gate": "supplier_margin",
+    "state": "HOLD_RESEARCH"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_GENERIC_MODELY_PM",
+    "gate": "merchant_gap",
+    "state": "KILLED"
+  },
+  {
+    "priority": "LAUNCH_GATE",
+    "product_market_id": "DK_GENERIC_WOOD_SPARES_PM",
+    "gate": "merchant_gap",
+    "state": "KILLED"
+  }
+]

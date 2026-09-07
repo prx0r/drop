@@ -1,0 +1,57 @@
+[
+  {
+    "language": "da",
+    "ecosystem_id": "DK_SUMMERHOUSE_REMOTE",
+    "queries": [
+      "frostalarm sommerhus",
+      "strømsvigt alarm sommerhus",
+      "vandlækage alarm sommerhus",
+      "fjernstyring varmepumpe sommerhus",
+      "sommerhus energistyring"
+    ]
+  },
+  {
+    "language": "da",
+    "ecosystem_id": "DK_HEAT_PUMP_LIFECYCLE",
+    "queries": [
+      "wifi modul varmepumpe kompatibel",
+      "varmepumpe reservedele model",
+      "nibe reservedele Danmark",
+      "gammel varmepumpe fjernstyring"
+    ]
+  },
+  {
+    "language": "da",
+    "ecosystem_id": "DK_EV_AFTERMARKET",
+    "queries": [
+      "ID.4 tilbehør Danmark",
+      "Enyaq tilbehør Danmark",
+      "Volvo EX30 tilbehør Danmark",
+      "XPENG G6 tilbehør Danmark",
+      "elbils tilbehør brugt bil"
+    ]
+  },
+  {
+    "language": "da",
+    "ecosystem_id": "DK_DISTRIBUTED_ENERGY",
+    "queries": [
+      "solcelle inverter overvågning",
+      "batteri eftermontering solceller"
+    ]
+  },
+  {
+    "language": "da",
+    "ecosystem_id": "DK_RURAL_WOOD_HEAT",
+    "queries": [
+      "brændeovn reservedele model",
+      "pillefyr reservedele"
+    ]
+  },
+  {
+    "language": "da",
+    "ecosystem_id": "DK_DYNAMIC_ENERGY_CONTROL",
+    "queries": [
+      "styr varmepumpe efter elpris"
+    ]
+  }
+]

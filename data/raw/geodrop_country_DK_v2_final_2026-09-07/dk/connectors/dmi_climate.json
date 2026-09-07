@@ -1,0 +1,21 @@
+{
+  "connector_id": "DK_DMI_CLIMATE",
+  "status": "READY_PUBLIC",
+  "source_id": "dk_dmi_climate_api",
+  "purpose": [
+    "frost",
+    "temperature",
+    "precipitation",
+    "wind",
+    "municipality/grid climate risk"
+  ],
+  "method": "Climate Data API v2",
+  "rules": [
+    "preserve station/grid/municipality geometry",
+    "derive risk indices only from archived raw series"
+  ],
+  "outputs": [
+    "observations.jsonl",
+    "series/problem_incidence.csv"
+  ]
+}
