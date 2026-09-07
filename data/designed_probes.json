@@ -1,0 +1,68 @@
+[
+  {
+    "hypothesis_id": "Red-light therapy mask",
+    "test_type": "free_listing",
+    "products": [
+      "Red-light therapy mask"
+    ],
+    "country": "FI",
+    "budget": 0,
+    "duration_days": 14,
+    "minimum_clicks": 100,
+    "data_to_collect": [
+      "impressions",
+      "clicks",
+      "ctr",
+      "conversions"
+    ],
+    "break_even_cvr": 0.01044932079414838,
+    "falsification_threshold": 0.5,
+    "stopping_rule": "100 clicks OR 14 days",
+    "expected_cost": "\u20ac0",
+    "notes": "Headroom: 1.20x, Margin: \u20ac201, CPC: \u20ac2.10"
+  },
+  {
+    "hypothesis_id": "Lumbar support pillow",
+    "test_type": "free_listing",
+    "products": [
+      "Lumbar support pillow"
+    ],
+    "country": "FI",
+    "budget": 0,
+    "duration_days": 14,
+    "minimum_clicks": 100,
+    "data_to_collect": [
+      "impressions",
+      "clicks",
+      "ctr",
+      "conversions"
+    ],
+    "break_even_cvr": 0.08693877551020408,
+    "falsification_threshold": 0.5,
+    "stopping_rule": "100 clicks OR 14 days",
+    "expected_cost": "\u20ac0",
+    "notes": "Headroom: 1.15x, Margin: \u20ac24, CPC: \u20ac2.13"
+  },
+  {
+    "hypothesis_id": "Premium baby stroller",
+    "test_type": "free_listing",
+    "products": [
+      "Premium baby stroller"
+    ],
+    "country": "FI",
+    "budget": 0,
+    "duration_days": 14,
+    "minimum_clicks": 100,
+    "data_to_collect": [
+      "impressions",
+      "clicks",
+      "ctr",
+      "conversions"
+    ],
+    "break_even_cvr": 0.004712350284704496,
+    "falsification_threshold": 0.5,
+    "stopping_rule": "100 clicks OR 14 days",
+    "expected_cost": "\u20ac0",
+    "notes": "Headroom: 1.06x, Margin: \u20ac255, CPC: \u20ac1.20"
+  }
+]

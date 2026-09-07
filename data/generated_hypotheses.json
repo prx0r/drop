@@ -1,0 +1,115 @@
+[
+  {
+    "product": "Red-light therapy mask",
+    "statement": "Red-light therapy mask has headroom 1.20x (margin \u20ac201 at CPC \u20ac2.10). Break-even CVR: 1.04%",
+    "prediction": "P(profitable) > 50% if CVR > 1.04%",
+    "falsifier": "100 clicks, 0 orders at CPC \u20ac2.10",
+    "confidence": 0.39999999999999997,
+    "status": "TESTABLE",
+    "headroom": 1.2,
+    "margin": 200.97,
+    "cpc": 2.1,
+    "break_even_cvr": 0.01044932079414838
+  },
+  {
+    "product": "Lumbar support pillow",
+    "statement": "Lumbar support pillow has headroom 1.15x (margin \u20ac24 at CPC \u20ac2.13). Break-even CVR: 8.69%",
+    "prediction": "P(profitable) > 50% if CVR > 8.69%",
+    "falsifier": "100 clicks, 0 orders at CPC \u20ac2.13",
+    "confidence": 0.3833333333333333,
+    "status": "TESTABLE",
+    "headroom": 1.15,
+    "margin": 24.5,
+    "cpc": 2.13,
+    "break_even_cvr": 0.08693877551020408
+  },
+  {
+    "product": "Premium baby stroller",
+    "statement": "Premium baby stroller has headroom 1.06x (margin \u20ac255 at CPC \u20ac1.20). Break-even CVR: 0.47%",
+    "prediction": "P(profitable) > 50% if CVR > 0.47%",
+    "falsifier": "100 clicks, 0 orders at CPC \u20ac1.20",
+    "confidence": 0.35333333333333333,
+    "status": "TESTABLE",
+    "headroom": 1.06,
+    "margin": 254.65,
+    "cpc": 1.2,
+    "break_even_cvr": 0.004712350284704496
+  },
+  {
+    "product": "Home wellness massage chair",
+    "statement": "Home wellness massage chair has headroom 0.90x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.9,
+    "margin": 1354.5,
+    "cpc": 4.5
+  },
+  {
+    "product": "Cotton basic t-shirt 3-pack",
+    "statement": "Cotton basic t-shirt 3-pack has headroom 0.26x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.26,
+    "margin": 14.57,
+    "cpc": 0.85
+  },
+  {
+    "product": "Summer floral maxi dress",
+    "statement": "Summer floral maxi dress has headroom 0.76x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.76,
+    "margin": 28.37,
+    "cpc": 0.75
+  },
+  {
+    "product": "Ergonomic office chair",
+    "statement": "Ergonomic office chair has headroom 0.56x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.56,
+    "margin": 169.16,
+    "cpc": 1.8
+  },
+  {
+    "product": "Cordless handheld vacuum cleaner",
+    "statement": "Cordless handheld vacuum cleaner has headroom 0.96x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.96,
+    "margin": 75.76,
+    "cpc": 0.95
+  },
+  {
+    "product": "Heated eyelash curler",
+    "statement": "Heated eyelash curler has headroom 0.66x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.66,
+    "margin": 15.94,
+    "cpc": 0.6
+  },
+  {
+    "product": "Standing desk converter",
+    "statement": "Standing desk converter has headroom 0.74x \u2014 economics don't work",
+    "prediction": "P(profitable) < 10%",
+    "falsifier": "N/A \u2014 already killed by economics",
+    "confidence": 0.9,
+    "status": "KILLED",
+    "headroom": 0.74,
+    "margin": 101.98,
+    "cpc": 1.1
+  }
+]
