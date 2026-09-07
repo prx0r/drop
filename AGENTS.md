@@ -304,6 +304,59 @@ for t in ['graph_nodes', 'graph_edges', 'probes_v2', 'outcomes']:
 
 ---
 
+## Testing Protocol
+
+See `docs/TESTING.md` for the complete testing protocol.
+
+**Core rule:** If you didn't test it, you didn't build it.
+
+**Test complexity ladder:**
+- Level 1-2: Schema tests (import + instantiate)
+- Level 3: Pipeline tests (mock data)
+- Level 4-5: Storage tests (real BigQuery)
+- Level 6-7: End-to-end tests (real Gmail → BigQuery)
+
+**Before starting work:** Run tests, check RAM (>500MB), check BigQuery connectivity.
+**After any code change:** Run the affected test.
+**Before committing:** Run all tests, show output.
+
+**Starting tests:**
+```bash
+nohup python3 test_script.py > /tmp/test_logs/test_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+echo "Test started, PID: $!"
+# NEVER sleep, NEVER pkill. Always be available.
+# Check results later.
+```
+
+**Kill by PID:**
+```bash
+kill $TEST_PID  # NEVER pkill
+```
+
+**After test completes:** Read log, write report to `logs/reports/`.
+
+---
+
+## Recipes
+
+See `docs/RECIPES.md` for agentic workflow recipes.
+
+**Core recipes:**
+1. Morning Intelligence Briefing
+2. Candidate Evaluation
+3. Research Priority Ranking
+4. Market Intelligence Synthesis
+5. Hypothesis Testing Workflow
+6. Daily Probe Processing
+7. Anomaly Detection
+8. Candidate Lifecycle Management
+9. Economic Ledger Update
+10. Full Autonomous Research Cycle
+
+**Pattern:** INPUT (data) → TRANSFORM (pipeline) → OUTPUT (insight + action)
+
+---
+
 ## Stale File Rules
 
 ### When to Move to Stale

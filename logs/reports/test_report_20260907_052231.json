@@ -1,0 +1,17 @@
+{
+  "test_id": "full_test_suite_20260908",
+  "started_at": "2026-09-08T12:00:00Z",
+  "completed_at": "2026-09-08T12:05:00Z",
+  "resource_check": {
+    "ram_available_mb": 2371,
+    "cpu_load": 2.49
+  },
+  "results": {
+    "schemas": {"passed": 11, "failed": 0, "level": "1-2"},
+    "pipelines": {"passed": 4, "failed": 0, "level": "3"},
+    "storage": {"passed": 3, "failed": 0, "level": "4-5"},
+    "e2e": {"passed": 2, "failed": 0, "level": "6-7"}
+  },
+  "total": {"passed": 20, "failed": 0},
+  "verdict": "ALL PASS"
+}

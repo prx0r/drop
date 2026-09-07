@@ -1,602 +1,436 @@
-# RECIPES.md — Probe Execution Recipes
+# RECIPES.md — Agentic Workflow Recipes
 
-**Status:** Active
-**Last updated:** 2026-09-08
-
----
-
-## What is a Recipe?
-
-A recipe is a reusable, typed workflow for executing a specific task. Recipes combine multiple pipeline steps into a complete operation.
-
-Each recipe has:
-- **Name** (snake_case)
-- **Input** (typed schemas)
-- **Output** (typed schemas)
-- **Steps** (sequential operations)
-- **Failure modes** (what can go wrong)
-- **Success criteria** (how to know it worked)
+*How to combine primitives into higher-order agentic workflows.*
+*Each recipe is a complete, tested workflow that an agent can execute.*
 
 ---
 
-## Recipe 1: Import Probe Report
+## Why Recipes Matter
 
-**Purpose:** Convert a raw email probe report into structured observations, update candidate state, and generate kernels.
+A schema is a noun. A pipeline is a verb. A recipe is a sentence.
 
-**Input:** Email subject + body
-**Output:** `ImportResult` (observations, state transitions, kernels)
+Recipes show agents how to combine primitives into meaningful work. They are the vocabulary of autonomous commerce.
+
+---
+
+## Recipe 1: Morning Intelligence Briefing
+
+**Purpose:** Start the day with complete situational awareness.
+**Primitives:** Gmail fetch → parse → BigQuery read → synthesis
 
 ```python
-from schemas.observation import Observation
-from schemas.candidate import Candidate
-from schemas.hypothesis import Hypothesis
-from pipelines.gmail_import import GmailImportPipeline
-from pipelines.state_machine import StateMachinePipeline
-from pipelines.hypothesis_ledger import HypothesisLedgerPipeline
-from pipelines.kernel_generator import KernelGeneratorPipeline
-
-def import_probe_report(
-    email_subject: str,
-    email_body: str,
-    candidate: Candidate,
-    hypothesis: Hypothesis,
-    probe_id: str,
-) -> dict:
-    """Recipe: Import a probe report and update all state."""
+def morning_briefing():
+    """What happened overnight? What needs attention?"""
     
-    # Step 1: Extract observations from email
-    gmail = GmailImportPipeline()
-    observations = gmail.run(email_subject, email_body, probe_id=probe_id)
+    # 1. Check for new probe reports
+    emails = fetch_gmail("to:tradesprior@gmail.com subject:GeoDrop")
+    new_reports = [e for e in emails if e.date > last_check]
     
-    # Step 2: Evaluate state transitions
-    sm = StateMachinePipeline()
-    state_result = sm.run(candidate, observations)
+    # 2. Parse each report
+    for email in new_reports:
+        observations = gmail_import.run(email.subject, email.body)
+        bigquery.write_observations(observations)
     
-    # Step 3: Update hypothesis evidence
-    hl = HypothesisLedgerPipeline()
-    hypothesis_updates = hl.run([hypothesis], observations)
+    # 3. Read current state
+    candidates = bigquery.read_candidates(state!="KILLED")
+    hypotheses = bigquery.read_hypotheses(state="OPEN")
     
-    # Step 4: Generate kernels
-    kg = KernelGeneratorPipeline()
-    kernels = kg.run(observations, [hypothesis])
-    
+    # 4. Generate briefing
     return {
-        "observations": observations,
-        "state_result": state_result,
-        "hypothesis_updates": hypothesis_updates,
-        "kernels": kernels,
+        "new_reports": len(new_reports),
+        "active_candidates": len(candidates),
+        "open_hypotheses": len(hypotheses),
+        "top_priority": select_highest_evi(candidates, hypotheses),
     }
 ```
 
-**Failure modes:**
-- Email parsing fails → log and continue with partial observations
-- State transition invalid → log and skip
-- Hypothesis not found → create new hypothesis
-
-**Success criteria:**
-- At least 1 observation extracted
-- State transition logged
-- At least 1 kernel generated
+**Output:** "3 new reports, 5 active candidates, 2 need attention."
 
 ---
 
-## Recipe 2: Score Candidate
+## Recipe 2: Candidate Evaluation
 
-**Purpose:** Evaluate a candidate through the full scoring pipeline.
-
-**Input:** `Candidate`, `List[Observation]`
-**Output:** `ScoredCandidate` (score, gates, recommendation)
+**Purpose:** Evaluate a candidate from discovery to decision.
+**Primitives:** Gmail import → state machine → hypothesis ledger → kernel generator → BigQuery
 
 ```python
-from schemas.candidate import Candidate
-from schemas.observation import Observation
-from services.scoring.gates import run_all_gates
-from services.scoring.score import score_candidate
-
-def score_candidate_recipe(
-    candidate: Candidate,
-    observations: list[Observation],
-) -> dict:
-    """Recipe: Score a candidate through gates and scoring."""
+def evaluate_candidate(email_subject, email_body, candidate_id):
+    """Full evaluation of a candidate from a probe report."""
     
-    # Step 1: Run hard gates
-    gate_report = run_all_gates(candidate)
+    # 1. Extract observations
+    observations = gmail_import.run(email_subject, email_body, candidate_id=candidate_id)
     
-    # Step 2: Calculate score (if gates pass)
-    if gate_report.all_pass:
-        score_report = score_candidate(candidate)
-    else:
-        score_report = None
+    # 2. Create or load candidate
+    candidate = get_or_create_candidate(candidate_id)
     
-    # Step 3: Generate recommendation
-    recommendation = generate_recommendation(gate_report, score_report)
+    # 3. State transition
+    sm_result = state_machine.run(candidate, observations)
+    
+    # 4. Update hypotheses
+    hypotheses = bigquery.read_hypotheses(candidate_id=candidate_id)
+    hl_result = hypothesis_ledger.run(hypotheses, observations)
+    
+    # 5. Generate kernels
+    kernels = kernel_generator.run(observations, hypotheses)
+    
+    # 6. Store everything
+    bigquery.write_observations(observations)
+    for kernel in kernels:
+        bigquery.write_kernel(kernel)
     
     return {
         "candidate": candidate,
-        "gate_report": gate_report,
-        "score_report": score_report,
-        "recommendation": recommendation,
+        "state_transition": sm_result.summary,
+        "hypothesis_updates": hl_result,
+        "kernels": len(kernels),
+        "next_action": determine_next_action(candidate, observations),
     }
-
-def generate_recommendation(gate_report, score_report):
-    """Generate ADVANCE/HOLD/KILL recommendation."""
-    if not gate_report.all_pass:
-        return "KILL"
-    if score_report and score_report.total_score >= 70:
-        return "ADVANCE"
-    if score_report and score_report.total_score >= 50:
-        return "HOLD"
-    return "KILL"
 ```
 
-**Failure modes:**
-- Missing data → mark fields as UNKNOWN
-- Score outlier → flag for manual review
-
-**Success criteria:**
-- All 7 gates evaluated
-- Score calculated (if gates pass)
-- Recommendation generated
+**Output:** "Candidate advanced to DEMAND_VERIFIED. 3 kernels generated. Next: verify supplier."
 
 ---
 
-## Recipe 3: Design and Execute Probe
+## Recipe 3: Research Priority Ranking
 
-**Purpose:** Design the cheapest test for a hypothesis and execute it.
-
-**Input:** `Hypothesis`, `Candidate`
-**Output:** `ProbeExecution` (probe design, execution plan, expected outcomes)
+**Purpose:** Determine the most valuable next research action.
+**Primitives:** UnknownField → EVI planner → BigQuery read
 
 ```python
-from schemas.hypothesis import Hypothesis
-from schemas.candidate import Candidate
-
-def design_probe_recipe(
-    hypothesis: Hypothesis,
-    candidate: Candidate,
-) -> dict:
-    """Recipe: Design the cheapest test for a hypothesis."""
+def rank_research_priorities(candidate_id):
+    """What should we research next?"""
     
-    # Step 1: Determine cheapest test
-    test_type = determine_cheapest_test(hypothesis, candidate)
+    # 1. Get candidate
+    candidate = bigquery.read_candidate(candidate_id)
     
-    # Step 2: Set budget and duration
-    budget = set_budget(test_type)
-    duration = set_duration(test_type)
+    # 2. Get unknowns
+    unknowns = bigquery.read_unknowns(candidate_id=candidate_id)
     
-    # Step 3: Set falsification threshold
-    falsification_threshold = set_falsification_threshold(test_type)
+    # 3. Rank by EVI
+    rankings = evi_planner.run(unknowns, candidate)
     
-    # Step 4: Generate execution plan
-    execution_plan = generate_execution_plan(test_type, budget, duration)
-    
-    return {
-        "hypothesis": hypothesis,
-        "candidate": candidate,
-        "test_type": test_type,
-        "budget": budget,
-        "duration": duration,
-        "falsification_threshold": falsification_threshold,
-        "execution_plan": execution_plan,
-    }
-
-def determine_cheapest_test(hypothesis, candidate):
-    """Determine the cheapest test for a hypothesis."""
-    # Free listing test
-    if hypothesis.state == "DEMAND_VERIFIED":
-        return "FREE_LISTING"
-    
-    # SERP check
-    if hypothesis.state == "MERCHANT_GAP_VERIFIED":
-        return "SERP_CHECK"
-    
-    # Supplier email
-    if hypothesis.state == "SUPPLY_PATH_VERIFIED":
-        return "SUPPLIER_EMAIL"
-    
-    # Paid probe
-    return "PAID_PROBE_5"
-```
-
-**Failure modes:**
-- Budget insufficient → escalate to human
-- Test type invalid → fallback to cheapest option
-
-**Success criteria:**
-- Test type determined
-- Budget set
-- Execution plan generated
-
----
-
-## Recipe 4: Evaluate Research Priority
-
-**Purpose:** Rank unknowns by Expected Value of Information and select the best next action.
-
-**Input:** `List[UnknownField]`, `Candidate`
-**Output:** `ResearchPriority` (ranked actions, EVI scores)
-
-```python
-from schemas.observation import UnknownField
-from schemas.candidate import Candidate
-from pipelines.evi_planner import EVIPlannerPipeline
-
-def evaluate_research_priority_recipe(
-    unknowns: list[UnknownField],
-    candidate: Candidate,
-) -> dict:
-    """Recipe: Rank research priorities by EVI."""
-    
-    # Step 1: Calculate EVI for each unknown
-    evi = EVIPlannerPipeline()
-    rankings = evi.run(unknowns, candidate)
-    
-    # Step 2: Select best next action
-    best_action = rankings[0] if rankings else None
-    
-    # Step 3: Generate research plan
-    research_plan = generate_research_plan(rankings)
-    
-    return {
-        "candidate": candidate,
-        "rankings": rankings,
-        "best_action": best_action,
-        "research_plan": research_plan,
-    }
-
-def generate_research_plan(rankings):
-    """Generate a research plan from ranked unknowns."""
-    plan = []
-    for ranking in rankings[:3]:  # Top 3 actions
-        plan.append({
-            "field": ranking.field,
-            "action": ranking.recommended_action,
-            "evi": ranking.evi,
-            "cost": ranking.research_cost,
-        })
-    return plan
-```
-
-**Failure modes:**
-- No unknowns → return empty plan
-- All unknowns blocked → escalate to human
-
-**Success criteria:**
-- All unknowns ranked by EVI
-- Best action selected
-- Research plan generated
-
----
-
-## Recipe 5: Generate Market Intelligence
-
-**Purpose:** Convert observations into market-intelligence kernels.
-
-**Input:** `List[Observation]`, `List[Hypothesis]`, `ProbeResult`
-**Output:** `List[Kernel]`
-
-```python
-from schemas.observation import Observation
-from schemas.hypothesis import Hypothesis
-from schemas.probe import ProbeResult
-from pipelines.kernel_generator import KernelGeneratorPipeline
-
-def generate_market_intelligence_recipe(
-    observations: list[Observation],
-    hypotheses: list[Hypothesis],
-    probe_result: ProbeResult = None,
-) -> list:
-    """Recipe: Generate kernels from observations."""
-    
-    kg = KernelGeneratorPipeline()
-    kernels = kg.run(observations, hypotheses, probe_result)
-    
-    # Filter for high-value kernels
-    high_value_kernels = [
-        k for k in kernels
-        if k.information_gain in ["HIGH", "MEDIUM"]
+    # 4. Return top 3
+    return [
+        {
+            "field": r.field,
+            "evi": r.evi,
+            "action": r.recommended_action,
+            "cost": r.research_cost,
+        }
+        for r in rankings[:3]
     ]
-    
-    return high_value_kernels
 ```
 
-**Failure modes:**
-- No observations → return empty list
-- All kernels low information → log and continue
-
-**Success criteria:**
-- At least 1 kernel generated
-- Kernel type classified
-- Belief delta calculated
+**Output:** "1. dealer_price (EVI=0.76, email supplier), 2. reseller_eligibility (EVI=0.45, check website)"
 
 ---
 
-## Recipe 6: Full Candidate Evaluation
+## Recipe 4: Market Intelligence Synthesis
 
-**Purpose:** Complete evaluation of a candidate from discovery to decision.
-
-**Input:** `Candidate`, `List[Observation]`, `List[Hypothesis]`, `List[UnknownField]`
-**Output:** `EvaluationResult` (full evaluation with all components)
+**Purpose:** Synthesize observations across multiple candidates into market intelligence.
+**Primitives:** BigQuery read → kernel aggregation → insight generation
 
 ```python
-from schemas.candidate import Candidate
-from schemas.observation import Observation, UnknownField
-from schemas.hypothesis import Hypothesis
-from pipelines.state_machine import StateMachinePipeline
-from pipelines.hypothesis_ledger import HypothesisLedgerPipeline
-from pipelines.evi_planner import EVIPlannerPipeline
-from pipelines.kernel_generator import KernelGeneratorPipeline
-
-def full_candidate_evaluation_recipe(
-    candidate: Candidate,
-    observations: list[Observation],
-    hypotheses: list[Hypothesis],
-    unknowns: list[UnknownField],
-) -> dict:
-    """Recipe: Full evaluation of a candidate."""
+def synthesize_market_intelligence(country_code, ecosystem):
+    """What do we know about this market?"""
     
-    # Step 1: State machine
-    sm = StateMachinePipeline()
-    state_result = sm.run(candidate, observations)
-    
-    # Step 2: Hypothesis updates
-    hl = HypothesisLedgerPipeline()
-    hypothesis_updates = hl.run(hypotheses, observations)
-    
-    # Step 3: Research priorities
-    evi = EVIPlannerPipeline()
-    research_rankings = evi.run(unknowns, candidate)
-    
-    # Step 4: Generate kernels
-    kg = KernelGeneratorPipeline()
-    kernels = kg.run(observations, hypotheses)
-    
-    # Step 5: Generate recommendation
-    recommendation = generate_recommendation_from_evaluation(
-        state_result, hypothesis_updates, research_rankings
+    # 1. Get all observations for this market
+    observations = bigquery.read_observations(
+        candidate_id=f"{country_code}-{ecosystem}"
     )
     
-    return {
-        "candidate": candidate,
-        "state_result": state_result,
-        "hypothesis_updates": hypothesis_updates,
-        "research_rankings": research_rankings,
-        "kernels": kernels,
-        "recommendation": recommendation,
-    }
-```
-
-**Failure modes:**
-- Pipeline error → log and continue with partial results
-- Missing data → mark as UNKNOWN
-
-**Success criteria:**
-- All pipeline steps complete
-- Recommendation generated
-- All results logged
-
----
-
-## Recipe 7: Daily Morning Routine
-
-**Purpose:** Execute the daily morning routine as defined in AGENTS.md.
-
-**Input:** None
-**Output:** `DailyStatus` (current state summary)
-
-```python
-def daily_morning_routine_recipe() -> dict:
-    """Recipe: Execute daily morning routine."""
-    
-    # Step 1: Check blockers
-    blockers = check_blockers()
-    
-    # Step 2: Check candidates
-    candidates = check_candidates()
-    
-    # Step 3: Check what you last did
-    last_actions = check_last_actions()
-    
-    # Step 4: Check probe freshness
-    probe_freshness = check_probe_freshness()
-    
-    # Step 5: Check Gmail for new reports
-    new_reports = check_gmail_for_reports()
-    
-    # Step 6: Check BigQuery for new data
-    bigquery_status = check_bigquery_status()
-    
-    return {
-        "blockers": blockers,
-        "candidates": candidates,
-        "last_actions": last_actions,
-        "probe_freshness": probe_freshness,
-        "new_reports": new_reports,
-        "bigquery_status": bigquery_status,
-    }
-```
-
-**Failure modes:**
-- Gmail auth fails → skip and log
-- BigQuery unavailable → skip and log
-
-**Success criteria:**
-- All checks complete
-- Status summary generated
-- Issues logged
-
----
-
-## Recipe 8: Process Email Response
-
-**Purpose:** Process an incoming email response from a supplier or partner.
-
-**Input:** Email subject + body
-**Output:** `EmailProcessingResult` (parsed data, actions taken)
-
-```python
-def process_email_response_recipe(
-    email_subject: str,
-    email_body: str,
-    sender: str,
-) -> dict:
-    """Recipe: Process an incoming email response."""
-    
-    # Step 1: Classify email
-    email_type = classify_email(email_subject, email_body, sender)
-    
-    # Step 2: Extract data
-    extracted_data = extract_data_from_email(email_body, email_type)
-    
-    # Step 3: Update relevant entities
-    updates = update_entities_from_email(extracted_data)
-    
-    # Step 4: Log email
-    log_email(sender, email_subject, email_type)
-    
-    # Step 5: Schedule follow-up if needed
-    followup = schedule_followup_if_needed(email_type, updates)
-    
-    return {
-        "email_type": email_type,
-        "extracted_data": extracted_data,
-        "updates": updates,
-        "followup": followup,
-    }
-```
-
-**Failure modes:**
-- Email parsing fails → log and manual review
-- Unknown sender → classify as UNKNOWN
-
-**Success criteria:**
-- Email classified
-- Data extracted
-- Entities updated
-- Email logged
-
----
-
-## Recipe 9: Update Knowledge Graph
-
-**Purpose:** Update the BigQuery knowledge graph with new observations.
-
-**Input:** `List[Observation]`, `List[Kernel]`
-**Output:** `GraphUpdate` (nodes and edges updated)
-
-```python
-from storage.bigquery import BigQueryStorage
-
-def update_knowledge_graph_recipe(
-    observations: list[Observation],
-    kernels: list[Kernel],
-) -> dict:
-    """Recipe: Update knowledge graph with new data."""
-    
-    storage = BigQueryStorage()
-    
-    # Step 1: Identify affected nodes
-    affected_nodes = identify_affected_nodes(observations, kernels)
-    
-    # Step 2: Update node properties
-    for node in affected_nodes:
-        storage.write_graph_node(
-            node_id=node["id"],
-            node_type=node["type"],
-            properties=node["properties"],
-        )
-    
-    # Step 3: Update edges
-    edges = extract_edges_from_kernels(kernels)
-    for edge in edges:
-        storage.write_graph_edge(
-            source=edge["source"],
-            target=edge["target"],
-            edge_type=edge["type"],
-            weight=edge["weight"],
-        )
-    
-    # Step 4: Insert observations
-    for obs in observations:
-        storage.write_graph_observation(
-            node_id=obs.entity_id,
-            metric_name=obs.field,
-            metric_value=obs.value if isinstance(obs.value, (int, float)) else 0,
-            evidence_type=obs.source_grade.value,
-            source=obs.source_name or "",
-        )
-    
-    return {
-        "nodes_updated": len(affected_nodes),
-        "edges_updated": len(edges),
-        "observations_inserted": len(observations),
-    }
-```
-
-**Failure modes:**
-- BigQuery insert fails → retry with backoff
-- Node not found → create new node
-
-**Success criteria:**
-- Nodes updated
-- Edges updated
-- Observations inserted
-
----
-
-## Recipe 10: End-to-End Probe Pipeline
-
-**Purpose:** Complete end-to-end probe processing from email to stored results.
-
-**Input:** Email subject + body
-**Output:** `ProbePipelineResult` (full pipeline output)
-
-def end_to_end_probe_pipeline_recipe(
-    email_subject: str,
-    email_body: str,
-    probe_id: str,
-) -> dict:
-    """Recipe: End-to-end probe processing."""
-    
-    # Step 1: Import probe report
-    import_result = import_probe_report(
-        email_subject, email_body,
-        candidate=None,  # Will be created
-        hypothesis=None,  # Will be created
-        probe_id=probe_id,
+    # 2. Get all kernels
+    kernels = bigquery.read_kernels(
+        candidate_id=f"{country_code}-{ecosystem}"
     )
     
-    # Step 2: Score candidate (if exists)
-    if import_result["state_result"].candidate:
-        score_result = score_candidate_recipe(
-            import_result["state_result"].candidate,
-            import_result["observations"],
-        )
-    else:
-        score_result = None
+    # 3. Aggregate by type
+    kernel_counts = {}
+    for k in kernels:
+        kernel_counts[k.kernel_type] = kernel_counts.get(k.kernel_type, 0) + 1
     
-    # Step 3: Evaluate research priorities
-    if import_result["observations"]:
-        research_result = evaluate_research_priority_recipe(
-            unknowns=[],  # Extract from observations
-            candidate=import_result["state_result"].candidate,
-        )
-    else:
-        research_result = None
-    
-    # Step 4: Generate kernels
-    kernels = import_result["kernels"]
-    
-    # Step 5: Update knowledge graph
-    graph_update = update_knowledge_graph_recipe(
-        import_result["observations"],
-        kernels,
-    )
+    # 4. Find generalizable rules
+    rules = [k.generalisable_rule for k in kernels if k.generalisable_rule]
     
     return {
-        "import_result": import_result,
-        "score_result": score_result,
-        "research_result": research_result,
-        "kernels": kernels,
-        "graph_update": graph_update,
+        "observations": len(observations),
+        "kernels": len(kernels),
+        "kernel_types": kernel_counts,
+        "generalizable_rules": rules,
+        "market_maturity": assess_maturity(observations, kernels),
     }
+```
+
+**Output:** "12 observations, 8 kernels, 3 generalizable rules. Market is DEMAND_VERIFIED."
+
+---
+
+## Recipe 5: Hypothesis Testing Workflow
+
+**Purpose:** Test a hypothesis through the full pipeline.
+**Primitives:** Hypothesis → probe design → execution → evaluation
+
+```python
+def test_hypothesis(hypothesis_id):
+    """Test a hypothesis end-to-end."""
+    
+    # 1. Load hypothesis
+    hypothesis = bigquery.read_hypothesis(hypothesis_id)
+    
+    # 2. Design cheapest test
+    test_design = design_probe(hypothesis)
+    
+    # 3. Execute test (free listing, SERP check, etc.)
+    results = execute_test(test_design)
+    
+    # 4. Extract observations
+    observations = extract_observations(results)
+    
+    # 5. Update hypothesis
+    updates = hypothesis_ledger.run([hypothesis], observations)
+    
+    # 6. Generate kernels
+    kernels = kernel_generator.run(observations, [hypothesis])
+    
+    # 7. Store
+    bigquery.write_observations(observations)
+    for kernel in kernels:
+        bigquery.write_kernel(kernel)
+    
+    return {
+        "hypothesis": hypothesis.claim,
+        "old_state": hypothesis.state,
+        "new_state": updates[0].hypothesis.state,
+        "kernels": len(kernels),
+        "falsified": updates[0].hypothesis.state == "FALSIFIED",
+    }
+```
+
+**Output:** "Hypothesis SUPPORTED → STRONGLY_SUPPORTED. 2 kernels generated."
+
+---
+
+## Recipe 6: Daily Probe Processing
+
+**Purpose:** Process all probe reports from the last 24 hours.
+**Primitives:** Gmail fetch → batch parse → BigQuery write → synthesis
+
+```python
+def daily_probe_processing():
+    """Process all overnight probe reports."""
+    
+    # 1. Fetch all reports from last 24h
+    emails = fetch_gmail("to:tradesprior@gmail.com subject:GeoDrop newer_than:1d")
+    
+    results = []
+    for email in emails:
+        # 2. Parse
+        observations = gmail_import.run(email.subject, email.body)
+        
+        # 3. Write to BigQuery
+        bigquery.write_observations(observations)
+        
+        # 4. Track result
+        results.append({
+            "subject": email.subject,
+            "observations": len(observations),
+            "candidate": extract_candidate_id(email.subject),
+        })
+    
+    # 5. Generate daily summary
+    return {
+        "reports_processed": len(results),
+        "total_observations": sum(r["observations"] for r in results),
+        "candidates_affected": list(set(r["candidate"] for r in results if r["candidate"])),
+    }
+```
+
+**Output:** "5 reports processed, 47 observations, 3 candidates affected."
+
+---
+
+## Recipe 7: Anomaly Detection
+
+**Purpose:** Detect unusual patterns in market data.
+**Primitives:** BigQuery query → statistical analysis → alert
+
+```python
+def detect_anomalies():
+    """Find unusual patterns in our data."""
+    
+    # 1. Query for price anomalies
+    price_anomalies = bigquery.query("""
+        SELECT candidate_id, field_name, 
+               AVG(field_value_numeric) as avg_price,
+               STDDEV(field_value_numeric) as std_price
+        FROM drop.fact_market_observation
+        WHERE field_name = 'price_observed'
+        GROUP BY candidate_id, field_name
+        HAVING STDDEV(field_value_numeric) > AVG(field_value_numeric) * 0.3
+    """)
+    
+    # 2. Query for demand spikes
+    demand_spikes = bigquery.query("""
+        SELECT candidate_id, field_name, field_value_numeric
+        FROM drop.fact_market_observation
+        WHERE field_name = 'search_volume'
+        AND field_value_numeric > 10000
+    """)
+    
+    return {
+        "price_anomalies": len(price_anomalies),
+        "demand_spikes": len(demand_spikes),
+        "alerts": generate_alerts(price_anomalies, demand_spikes),
+    }
+```
+
+**Output:** "2 price anomalies, 1 demand spike. Alert: Davis Norway price dispersion."
+
+---
+
+## Recipe 8: Candidate Lifecycle Management
+
+**Purpose:** Manage candidates through their lifecycle.
+**Primitives:** State machine → decisions → actions
+
+```python
+def manage_lifecycle():
+    """Advance, hold, or kill candidates based on current state."""
+    
+    # 1. Get all active candidates
+    candidates = bigquery.read_candidates(state!="KILLED")
+    
+    actions = []
+    for candidate in candidates:
+        # 2. Check state
+        if candidate.state == "HUMAN_ACTION_REQUIRED":
+            # Check if action was taken
+            if check_human_action(candidate):
+                actions.append({"candidate": candidate.candidate_id, "action": "RESUME"})
+        
+        elif candidate.state == "FROZEN":
+            # Check if freeze reason resolved
+            if check_freeze_resolved(candidate):
+                actions.append({"candidate": candidate.candidate_id, "action": "UNFREEZE"})
+        
+        elif candidate.state in ["DEMAND_VERIFIED", "MERCHANT_GAP_VERIFIED"]:
+            # Check if ready to advance
+            if ready_to_advance(candidate):
+                actions.append({"candidate": candidate.candidate_id, "action": "ADVANCE"})
+    
+    return actions
+```
+
+**Output:** "2 candidates ready to advance, 1 frozen candidate resolved."
+
+---
+
+## Recipe 9: Economic Ledger Update
+
+**Purpose:** Update the economic ledger with new cost/revenue data.
+**Primitives:** CostLedger → BigQuery write → CM0-CM3 calculation
+
+```python
+def update_economic_ledger(experiment_id, cost_data, revenue_data):
+    """Update the economic ledger for an experiment."""
+    
+    # 1. Create cost ledger
+    ledger = CostLedger(
+        gross_revenue=revenue_data["total"],
+        cogs=cost_data["cogs"],
+        supplier_freight=cost_data["shipping"],
+        paid_acquisition=cost_data["ads"],
+        ai_tokens=cost_data["ai"],
+        agent_compute=cost_data["compute"],
+    )
+    ledger.calculate()
+    
+    # 2. Write to BigQuery
+    bigquery.write_cost_ledger(ledger, experiment_id=experiment_id)
+    
+    # 3. Return CM breakdown
+    return {
+        "cm0": ledger.cm0,
+        "cm1": ledger.cm1,
+        "cm2": ledger.cm2,
+        "cm3": ledger.cm3,
+        "cm2_margin": ledger.cm2_margin,
+    }
+```
+
+**Output:** "CM0=70, CM1=60, CM2=55. CM2 margin=55%."
+
+---
+
+## Recipe 10: Full Autonomous Research Cycle
+
+**Purpose:** Complete autonomous research cycle from hypothesis to decision.
+**Primitives:** All pipelines combined
+
+```python
+def autonomous_research_cycle(candidate_id):
+    """Full autonomous research cycle."""
+    
+    # 1. Load current state
+    candidate = bigquery.read_candidate(candidate_id)
+    hypotheses = bigquery.read_hypotheses(candidate_id=candidate_id)
+    unknowns = bigquery.read_unknowns(candidate_id=candidate_id)
+    
+    # 2. Rank research priorities
+    rankings = evi_planner.run(unknowns, candidate)
+    
+    # 3. Execute top priority research
+    if rankings:
+        top_action = rankings[0]
+        results = execute_research_action(top_action)
+        
+        # 4. Extract observations
+        observations = extract_observations(results)
+        
+        # 5. Update state machine
+        sm_result = state_machine.run(candidate, observations)
+        
+        # 6. Update hypotheses
+        hl_result = hypothesis_ledger.run(hypotheses, observations)
+        
+        # 7. Generate kernels
+        kernels = kernel_generator.run(observations, hypotheses)
+        
+        # 8. Store everything
+        bigquery.write_observations(observations)
+        for kernel in kernels:
+            bigquery.write_kernel(kernel)
+        
+        # 9. Decision
+        decision = make_decision(candidate, observations, kernels)
+        
+        return {
+            "action_taken": top_action.recommended_action,
+            "observations_gained": len(observations),
+            "state_changed": sm_result.transitioned,
+            "kernels_generated": len(kernels),
+            "decision": decision,
+        }
+    
+    return {"action_taken": "none", "reason": "no unresolved unknowns"}
+```
+
+**Output:** "Researched dealer_price. 5 observations. State advanced. 3 kernels. Decision: ADVANCE."
+
+---
+
+## The Pattern
+
+Every recipe follows the same pattern:
+
+```
+INPUT (data)
+    ↓
+TRANSFORM (pipeline)
+    ↓
+OUTPUT (insight + action)
+```
+
+The primitives are the atoms.
+The recipes are the molecules.
+The agent is the chemist.

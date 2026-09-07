@@ -80,13 +80,20 @@ class BigQueryStorage:
                 data[key] = json.dumps(value)
             elif isinstance(value, list) and value and isinstance(value[0], dict):
                 data[key] = json.dumps(value)
+            # Convert enums to strings
+            elif hasattr(value, 'value'):
+                data[key] = value.value
         
         # Map schema field names to BigQuery column names
         if hasattr(model, 'observation_id'):  # Observation
             data['field_name'] = data.pop('field', None)
             value = data.pop('value', None)
             data['field_value'] = str(value) if value is not None else None
-            data['field_value_numeric'] = value if isinstance(value, (int, float)) else None
+            # Ensure field_value_numeric is actually numeric or None
+            if isinstance(value, (int, float)):
+                data['field_value_numeric'] = float(value)
+            else:
+                data['field_value_numeric'] = None
             data['source_type'] = data.pop('source', None)
             # Remove fields not in BigQuery table
             for key in ['unit', 'raw_snapshot', 'event_time', 'published_at', 'available_at']:

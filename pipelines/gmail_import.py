@@ -9,7 +9,8 @@ This pipeline:
 1. Parses email headers (subject, date, probe name)
 2. Extracts structured facts from the email body
 3. Maps facts to Observation objects
-4. Tags each observation with probe_id, candidate_id, hypothesis_id
+4. Deduplicates observations
+5. Tags each observation with probe_id, candidate_id, hypothesis_id
 
 Side effects: NONE. This is a pure transform.
 I/O happens in the storage layer.
@@ -49,6 +50,11 @@ class GmailImportPipeline:
         "Free-Traffic Query Radar": "free-traffic-query-radar",
         "Supplier Margin Radar": "supplier-margin-radar",
         "Store Launch Blueprint Engine": "store-launch-blueprint",
+        "Market Anomaly Probe": "market-anomaly-probe",
+        "Channel Economics Probe": "channel-economics-probe",
+        "Demand Surface Probe": "demand-surface-probe",
+        "Outcome Trace Probe": "outcome-trace-probe",
+        "Portfolio Decision Probe": "portfolio-decision-probe",
     }
 
     # Candidate ID patterns
@@ -56,16 +62,12 @@ class GmailImportPipeline:
         r"(?:candidate|product|product_family)[=:]\s*([A-Z]{2}-[A-Z]+-\d{3,})"
     )
 
-    # Evidence grade mapping
-    EVIDENCE_GRADE_MAP = {
-        "official": EvidenceGrade.A,
-        "authorized": EvidenceGrade.A,
-        "major retailer": EvidenceGrade.B,
-        "multiple sellers": EvidenceGrade.B,
-        "single seller": EvidenceGrade.C,
-        "forum": EvidenceGrade.D,
-        "reddit": EvidenceGrade.D,
-        "social media": EvidenceGrade.D,
+    # Known suppliers (exact match only)
+    KNOWN_SUPPLIERS = {
+        "Flak AS", "Flak", "Max Sievert", "Onninen", "RIDGID", "Testo",
+        "Hikmicro", "Hunter", "Røros", "Homely", "Waterguard", "WSMFix",
+        "Putney Electrical", "Birmingham specialist", "Meteo-Shopping",
+        "Weerspecialist", "Tanks.ie", "QuoteHub", "OnlineTradesmen",
     }
 
     def parse_email_metadata(self, subject: str, body: str) -> EmailMetadata:
@@ -146,6 +148,9 @@ class GmailImportPipeline:
         )
         observations.extend(decision_observations)
 
+        # Deduplicate
+        observations = self._deduplicate(observations)
+
         return observations
 
     def _extract_supplier_observations(
@@ -157,24 +162,18 @@ class GmailImportPipeline:
     ) -> list[Observation]:
         """Extract supplier-related observations."""
         observations = []
+        found_suppliers = set()
 
-        # Look for supplier names
-        supplier_patterns = [
-            r"(?:supplier|distributor|wholesaler|retailer)[:\s]+([A-Z][a-zA-Z\s]+)",
-            r"(?:contacted?|emailed?|quoted?)[:\s]+([A-Z][a-zA-Z\s]+)",
-            r"(?:Max Sievert|Flak|Onninen|RIDGID|Testo|Hikmicro|Hunter)",
-        ]
-
-        for pattern in supplier_patterns:
-            matches = re.finditer(pattern, body)
-            for match in matches:
-                supplier_name = match.group(1) if match.lastindex else match.group(0)
+        # Only match known suppliers (exact match)
+        for supplier in self.KNOWN_SUPPLIERS:
+            if supplier in body and supplier not in found_suppliers:
+                found_suppliers.add(supplier)
                 observations.append(
                     Observation(
                         entity_type="supplier",
-                        entity_id=f"{metadata.candidate_mentioned or candidate_id or 'UNKNOWN'}-SUPPLIER",
+                        entity_id=f"{candidate_id or 'UNKNOWN'}-SUPPLIER",
                         field="supplier_name",
-                        value=supplier_name.strip(),
+                        value=supplier,
                         source=EvidenceSource.MANUAL,
                         source_grade=EvidenceGrade.C,
                         probe_id=probe_id,
@@ -194,46 +193,38 @@ class GmailImportPipeline:
     ) -> list[Observation]:
         """Extract price observations."""
         observations = []
+        found_prices = set()
 
-        # Look for price patterns
-        price_patterns = [
-            r"(?:NOK|EUR|USD|GBP|SEK|DKK)\s*[\d,]+\.?\d*",
-            r"[\d,]+\.?\d*\s*(?:NOK|EUR|USD|GBP|SEK|DKK)",
-            r"(?:price|cost|margin)[:\s]+[\d,]+\.?\d*",
-        ]
+        # Look for price patterns with currency
+        price_pattern = re.compile(
+            r"(NOK|EUR|USD|GBP|SEK|DKK)\s*([\d,]+\.?\d*)"
+        )
 
-        for pattern in price_patterns:
-            matches = re.finditer(pattern, body, re.IGNORECASE)
-            for match in matches:
-                price_text = match.group(0)
-                # Try to extract numeric value
-                numeric_match = re.search(r"[\d,]+\.?\d*", price_text)
-                if numeric_match:
-                    try:
-                        value = float(numeric_match.group(0).replace(",", ""))
-                        # Determine currency
-                        currency = "UNKNOWN"
-                        for c in ["NOK", "EUR", "USD", "GBP", "SEK", "DKK"]:
-                            if c in price_text.upper():
-                                currency = c
-                                break
-
-                        observations.append(
-                            Observation(
-                                entity_type="candidate",
-                                entity_id=candidate_id or metadata.candidate_mentioned or "UNKNOWN",
-                                field="price_observed",
-                                value=value,
-                                unit=currency,
-                                source=EvidenceSource.RETAILER_SITE,
-                                source_grade=EvidenceGrade.C,
-                                probe_id=probe_id,
-                                candidate_id=candidate_id,
-                                tags=["price", "market_data"],
-                            )
+        for match in price_pattern.finditer(body):
+            currency = match.group(1)
+            price_str = match.group(2).replace(",", "")
+            try:
+                price = float(price_str)
+                # Deduplicate by (currency, price)
+                key = (currency, price)
+                if key not in found_prices and price > 10:  # Skip tiny numbers
+                    found_prices.add(key)
+                    observations.append(
+                        Observation(
+                            entity_type="candidate",
+                            entity_id=candidate_id or "UNKNOWN",
+                            field="price_observed",
+                            value=price,
+                            unit=currency,
+                            source=EvidenceSource.RETAILER_SITE,
+                            source_grade=EvidenceGrade.C,
+                            probe_id=probe_id,
+                            candidate_id=candidate_id,
+                            tags=["price", "market_data"],
                         )
-                    except ValueError:
-                        pass
+                    )
+            except ValueError:
+                pass
 
         return observations
 
@@ -249,7 +240,7 @@ class GmailImportPipeline:
 
         # Look for demand signals
         demand_patterns = [
-            (r"(?:search volume|queries|impressions)[:\s]+[\d,]+", "search_volume"),
+            (r"(?:search volume|queries|impressions)[:\s]+([\d,]+)", "search_volume"),
             (r"(?:demand|popularity|interest)[:\s]+(high|medium|low|strong|weak)", "demand_level"),
             (r"(?:trend|growth|increasing|decreasing)[:\s]+([+\-]?\d+%)", "demand_trend"),
         ]
@@ -257,7 +248,7 @@ class GmailImportPipeline:
         for pattern, field_name in demand_patterns:
             matches = re.finditer(pattern, body, re.IGNORECASE)
             for match in matches:
-                value_text = match.group(1) if match.lastindex else match.group(0)
+                value_text = match.group(1)
                 # Try to extract numeric
                 numeric_match = re.search(r"[\d,]+", value_text)
                 if numeric_match:
@@ -266,7 +257,7 @@ class GmailImportPipeline:
                         observations.append(
                             Observation(
                                 entity_type="candidate",
-                                entity_id=candidate_id or metadata.candidate_mentioned or "UNKNOWN",
+                                entity_id=candidate_id or "UNKNOWN",
                                 field=field_name,
                                 value=value,
                                 source=EvidenceSource.SERP,
@@ -293,9 +284,10 @@ class GmailImportPipeline:
 
         # Look for seller counts
         seller_patterns = [
-            (r"(?:total sellers?|seller count|retailer count)[:\s]+(\d+)", "total_sellers"),
-            (r"(?:good sellers?|competent sellers?|quality sellers?)[:\s]+(\d+)", "good_sellers"),
-            (r"(?:merchant count|shop count)[:\s]+(\d+)", "total_sellers"),
+            (r"total sellers?[:\s]+(\d+)", "total_sellers"),
+            (r"good sellers?[:\s]+(\d+)", "good_sellers"),
+            (r"seller count[:\s]+(\d+)", "total_sellers"),
+            (r"merchant count[:\s]+(\d+)", "total_sellers"),
         ]
 
         for pattern, field_name in seller_patterns:
@@ -306,7 +298,7 @@ class GmailImportPipeline:
                     observations.append(
                         Observation(
                             entity_type="candidate",
-                            entity_id=candidate_id or metadata.candidate_mentioned or "UNKNOWN",
+                            entity_id=candidate_id or "UNKNOWN",
                             field=field_name,
                             value=value,
                             source=EvidenceSource.SERP,
@@ -333,8 +325,8 @@ class GmailImportPipeline:
 
         # Look for decision keywords
         decision_patterns = [
-            (r"\bKILL\b", "KILLED", "Hypothesis falsified"),
-            (r"\bADVANCE\b", "ADVANCED", "Candidate advanced"),
+            (r"\bKILLED?\b", "KILLED", "Hypothesis falsified"),
+            (r"\bADVANCE[DS]?\b", "ADVANCED", "Candidate advanced"),
             (r"\bHOLD\b", "HELD", "Candidate on hold"),
             (r"\bLAUNCH\b", "LAUNCH_READY", "Candidate ready to launch"),
             (r"\bFROZEN\b", "FROZEN", "Candidate frozen pending external action"),
@@ -346,7 +338,7 @@ class GmailImportPipeline:
                 observations.append(
                     Observation(
                         entity_type="candidate",
-                        entity_id=candidate_id or metadata.candidate_mentioned or "UNKNOWN",
+                        entity_id=candidate_id or "UNKNOWN",
                         field="decision",
                         value=decision,
                         source=EvidenceSource.MANUAL,
@@ -359,6 +351,24 @@ class GmailImportPipeline:
                 )
 
         return observations
+
+    def _deduplicate(self, observations: list[Observation]) -> list[Observation]:
+        """Deduplicate observations by (entity_id, field, value)."""
+        seen = set()
+        unique = []
+
+        for obs in observations:
+            # Create a dedup key
+            if isinstance(obs.value, (int, float)):
+                key = (obs.entity_id, obs.field, obs.value)
+            else:
+                key = (obs.entity_id, obs.field, str(obs.value))
+
+            if key not in seen:
+                seen.add(key)
+                unique.append(obs)
+
+        return unique
 
     def run(
         self,
